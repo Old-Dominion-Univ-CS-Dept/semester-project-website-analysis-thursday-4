@@ -1,15 +1,17 @@
 **Replace the items in square brackets `[...]` with your teams information** 
 
-# [Team Name]
+# [Thursday-4]
 |Name|GitHub Username|Email|
 |:---|:--------------|:----|
-|Person 1| person1 |person1@odu.edu|
-|Person 2| person2 |person2@odu.edu|
-
+|Zachery Elledge| zack931 |zelle001@odu.edu|
+|Kyle Munoz| Baeduh |kmunoz003@odu.edu|
+|Cody Bonham| cs-cbonh002 |cbonh002@odu.edu|
+|Ivy Garrenton| iv-g |igarr001@odu.edu|
+|Victor Olabiyi| Desmond757 |volab001@odu.edu|
 
 # Trello Board
 
-Our Trello Board is located at <[Trello Board URL]>.
+Our Trello Board is located at <[https://trello.com/b/scpmaEQO]>.
 
 # Design Notes
 
