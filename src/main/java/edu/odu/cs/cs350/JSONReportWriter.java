@@ -1,13 +1,27 @@
-package edu.odu.cs.cs350; 
-import com.cedarsoftware.util.io.JsonWriter; // ** need to use gradle
-import java.io.FileWriter;
+package edu.odu.cs.cs350;
 
+
+import com.cedarsoftware.util.io.JsonWriter;
 import java.io.File;
-
-import java.util.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Map;
 
 public class JSONReportWriter extends ReportWriter {
     private File outputFile;
+
+    // Override the writeReport method from the ReportWriter class
+    @Override
+    public void writeReport(Map<String, Object> reportData) {
+        try (FileWriter fileWriter = new FileWriter("report.json")) {
+            String jsonString = JsonWriter.objectToJson(reportData);
+            fileWriter.write(jsonString);
+        } catch (IOException e) {
+            // If an IOException is thrown, print the stack trace for debugging
+            e.printStackTrace();
+        }
+    }
+
 
 
     // JSONReportWriter class is responsible for generating a JSON report of a website analysis. 
