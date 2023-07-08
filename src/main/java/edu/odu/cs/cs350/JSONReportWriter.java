@@ -10,6 +10,15 @@ import java.util.Map;
 public class JSONReportWriter extends ReportWriter {
     private File outputFile;
 
+  // Constructor
+    public JSONReportWriter() {
+        this.outputFile = new File("report.json");
+    }
+//get the output file
+    public File getOutputFile() {
+        return outputFile;
+    }
+
     // Override the writeReport method from the ReportWriter class
     @Override
     public void writeReport(Map<String, Object> reportData) {
