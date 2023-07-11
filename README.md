@@ -4,7 +4,7 @@
 |Name|GitHub Username|Email|
 |:---|:--------------|:----|
 |Zachery Elledge| zack931 |zelle001@odu.edu|
-|Kyle Munoz| Baeduh |kmunoz003@odu.edu|
+|Kyle Munoz| Baeduh |kmuno003@odu.edu|
 |Cody Bonham| cs-cbonh002 |cbonh002@odu.edu|
 |Ivy Garrenton| iv-g |igarr001@odu.edu|
 |Victor Olabiyi| Desmond757 |volab001@odu.edu|
