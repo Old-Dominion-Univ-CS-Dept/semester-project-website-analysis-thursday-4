@@ -1,8 +1,0 @@
-{
-    "java.project.sourcePaths": [
-        "FileGen\\main",
-        "src\\main\\java",
-        "src\\test\\java",
-        "FileGen\\test"
-    ]
-}
