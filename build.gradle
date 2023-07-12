@@ -17,16 +17,15 @@ dependencies {
     implementation "org.jsoup:jsoup:1.16.1"
     implementation "com.cedarsoftware:json-io:4.14.0"
     implementation 'com.cedarsoftware:json-io:4.14.0'
+    implementation"org.codehaus.groovy:groovy-all:2.5.15"
+    implementation "org.apache.poi:poi:5.2.3"
+    implementation "org.apache.poi:poi-ooxml:5.2.3"
 
     // Everything in src/test (test code). 
     testImplementation "org.junit.jupiter:junit-jupiter:5.8.2"
     testImplementation "org.hamcrest:hamcrest-library:2.2"
 
-    // For using Apache POI for read/write Microsoft documentation formats
-    //runtime "org.codehaus.groovy:groovy-all:2.5.15"
-    //runtime "org.apache.poi:poi:5.2.3"
-    //runtime "org.apache.poi:poi-ooxml:5.2.3"
-  
+    
 }
 
 test {
