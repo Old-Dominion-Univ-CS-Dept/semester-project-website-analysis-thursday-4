@@ -7,19 +7,41 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * The JSONReportWriter class extends the ReportWriter class and 
+ * overrides its method to write reports in JSON format.
+ * 
+ * It uses the JsonWriter library to convert data into a JSON string
+ *  and writes it to a file.
+ */
+
 public class JSONReportWriter extends ReportWriter {
     private File outputFile;
 
-  // Constructor
+   /**
+     * Default constructor initializing the outputFile with the 
+     * filename "report.json".
+     */
     public JSONReportWriter() {
         this.outputFile = new File("report.json");
     }
-//get the output file
+    /**
+     * Getter method for the outputFile.
+     *
+     * @return File The output file object where the report will be written.
+     */
     public File getOutputFile() {
         return outputFile;
     }
 
-    // Override the writeReport method from the ReportWriter class
+       /**
+     * Overrides the writeReport method from the ReportWriter class.
+     * This method receives a Map containing the report data, converts it to a JSON string 
+     * and writes it to the output file.
+     *
+     * @param reportData A map of report data to be written into the file.
+     */
+
     @Override
     public void writeReport(Map<String, Object> reportData) {
         try (FileWriter fileWriter = new FileWriter("report.json")) {
@@ -31,20 +53,6 @@ public class JSONReportWriter extends ReportWriter {
         }
     }
 
-
-
-    // JSONReportWriter class is responsible for generating a JSON report of a website analysis. 
-    // It extends the ReportWriter class and overrides its write method (?). 
-    // The class takes a Website object and a base file name as input, 
-    // constructs a JSON object that includes various details about the website (such as the base path, 
-    // URLs, pages, images, and files), and then writes this JSON object to a file. 
-
-    
-    
-    // the JSON file that provides a detailed account of each page and resource on the site, 
-    // including counts and listings of local and external images, scripts, stylesheets, and links. 
-    // The JSON file shall also provide specific details for each image, archive file, video file, audio file, 
-    // and non-categorized file, such as file size, path to resource, and number of pages on which an image is displayed
 
 
 }
