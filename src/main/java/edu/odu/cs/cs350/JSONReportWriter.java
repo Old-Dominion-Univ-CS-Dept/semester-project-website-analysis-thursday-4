@@ -17,6 +17,7 @@ import java.util.HashMap;
  */
 
 public class JSONReportWriter extends ReportWriter {
+    private static final String OUTPUT_FILE_NAME = "report.json";
     private File outputFile;
 
    /**
@@ -36,7 +37,7 @@ public class JSONReportWriter extends ReportWriter {
     }
 
        /**
-     * Overrides the writeReport method from the ReportWriter class.
+     * Overrides the writeReport (not yet written) method from the ReportWriter class.
      * This method receives a Map containing the report data, converts it to a JSON string 
      * and writes it to the output file.
      *
@@ -46,16 +47,36 @@ public class JSONReportWriter extends ReportWriter {
   
      @Override
      public void writeReport(Map<String, Object> reportData) {
-         try (FileWriter fileWriter = new FileWriter("report.json")) {
-             Map<String, Object> args = new HashMap<>();
-             args.put(JsonWriter.TYPE, false);
-             String jsonString = JsonWriter.objectToJson(reportData, args);
-             fileWriter.write(jsonString);
+         try (FileWriter fileWriter = new FileWriter(OUTPUT_FILE_NAME)) {
+             String jsonString = convertToJson(reportData);
+             writeToFile(fileWriter, jsonString);
          } catch (IOException e) {
-             // If an IOException is thrown, print the stack trace for debugging
              e.printStackTrace();
          }
      }
+
+    /**
+     * Converts the report data into a JSON string.
+     *
+     * @param reportData A map of report data to be converted into a JSON string.
+     * @return  The JSON string representation of the report data.
+     */
+    private String convertToJson(Map<String, Object> reportData) {
+        Map<String, Object> args = new HashMap<>();
+        args.put(JsonWriter.TYPE, false);
+        return JsonWriter.objectToJson(reportData, args);
+    }
+
+    /**
+     * Writes a string to a file using a FileWriter.
+     *
+     * @param fileWriter The FileWriter to be used for writing the string.
+     * @param jsonString The string to be written to the file.
+     * @throws IOException If an I/O error occurs.
+     */
+    private void writeToFile(FileWriter fileWriter, String jsonString) throws IOException {
+        fileWriter.write(jsonString);
+    }
      
 }
 

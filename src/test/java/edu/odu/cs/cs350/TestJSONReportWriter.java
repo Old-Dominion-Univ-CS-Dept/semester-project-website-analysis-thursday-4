@@ -25,6 +25,7 @@ public class TestJSONReportWriter {
         assertNotNull(outputFile);
         assertTrue(outputFile.exists());
     }
+    
 
     @Test
 public void testGetOutputFile() {
