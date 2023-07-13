@@ -1,15 +1,16 @@
-//<<<<<<< HEAD
+
 package edu.odu.cs.cs350;
-import org.apache.poi.usermodel.*!
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 
 
-
-public class TestExcelGenerator {
-    public void testExcelGeneration(){
-
-    }
-//=======
 
 
 public class TestCreateTextFile {
@@ -17,9 +18,13 @@ public class TestCreateTextFile {
     ///test file to see if it creates a file
     @Test
     public void TestTextFileGeneration(){
+        Date thisDate = new Date();
+        Date thisDate2 = new Date();
+        SimpleDateFormat dateForm = new SimpleDateFormat("YYYYMMdd-hhmmss-");
+        assertEquals(dateForm.format(thisDate),dateForm.format(thisDate2));
         
     }
 
     
-//>>>>>>> 7b13082e670899d466a6ef81241b6f0fa7d7584e
+
 }

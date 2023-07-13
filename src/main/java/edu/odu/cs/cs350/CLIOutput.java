@@ -30,19 +30,20 @@ public class CLIOutput {
         File[] fJSON = getJSON(directory);
 
         for(File file : fJSON) {
-            System.out.println(file.getName());
+            System.out.println(file.getName() + System.lineSeparator());
+
         }
 
         File[] fTXT = getTXT(directory);
 
         for(File file : fTXT) {
-            System.out.println(file.getName());
+            System.out.println(file.getName() + System.lineSeparator());
         }
 
         File[] fXLSX = getXLSX(directory);
 
         for(File file : fXLSX) {
-            System.out.println(file.getName());
+            System.out.println(file.getName() + System.lineSeparator());
         }
 
     }
