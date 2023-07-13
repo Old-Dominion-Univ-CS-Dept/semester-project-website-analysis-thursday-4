@@ -24,4 +24,8 @@ gradle-app.setting
 .classpath
 /bin/
 
+# VScode specific file
 *.vscode
+
+#eclipse specific setting files
+.settings
