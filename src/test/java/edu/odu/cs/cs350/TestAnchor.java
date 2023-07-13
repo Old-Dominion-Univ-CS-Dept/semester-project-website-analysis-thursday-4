@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestAnchor {
     @Test
-    public void testConstructor() {
-        // TODO: Implement test
+    public void testGetHref() {
+        Anchor anchor = new Anchor("<a href=\"http://example.com\">Example</a>");
+        assertEquals("http://example.com", anchor.getHref());
     }
 }
