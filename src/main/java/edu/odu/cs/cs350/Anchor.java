@@ -42,6 +42,9 @@ import java.util.regex.*;
         if (textMatcher.find()) {
             this.text = textMatcher.group(1);
         }
+
+         // Set the type of resource to ANCHOR
+         typeOfResource = ResourceKind.ANCHOR;
         
             /**
              * TODO: Update this section once siteUrl is defined
@@ -66,6 +69,10 @@ import java.util.regex.*;
 
     public LinkType getLinkType() {
         return linkType;
+    }
+
+    public ResourceKind getTypeOfResource() {
+        return typeOfResource;
     }
 }
 

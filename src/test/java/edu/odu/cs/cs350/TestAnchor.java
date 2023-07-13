@@ -12,6 +12,7 @@ public class TestAnchor {
 
         assertEquals("https://example.com", anchor.getHref());
         assertEquals("Example", anchor.getText());
+        assertEquals(ResourceKind.ANCHOR, anchor.getTypeOfResource());
         // TODO: Add assertion for linkType 
     }
 
@@ -55,5 +56,13 @@ public class TestAnchor {
         assertEquals("https://external.com", anchor.getHref());
         assertEquals("External", anchor.getText());
         // TODO: Add assertion for linkType
+    }
+
+    @Test
+    public void testGetTypeOfResource() {
+        String htmlRepresentation = "<a href=\"https://example.com\">Example</a>";
+        Anchor anchor = new Anchor(htmlRepresentation);
+
+        assertEquals(ResourceKind.ANCHOR, anchor.getTypeOfResource());
     }
 }
