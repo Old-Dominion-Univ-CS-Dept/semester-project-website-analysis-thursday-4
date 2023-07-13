@@ -14,16 +14,15 @@ repositories {
 
 dependencies {
     // Everything in src/main (production code). 
-    implementation "org.jsoup:jsoup:1.16.1"
-    implementation "com.cedarsoftware:json-io:4.14.0"
+    implementation 'org.jsoup:jsoup:1.16.1'
     implementation 'com.cedarsoftware:json-io:4.14.0'
-    implementation"org.codehaus.groovy:groovy-all:2.5.15"
-    implementation "org.apache.poi:poi:5.2.3"
-    implementation "org.apache.poi:poi-ooxml:5.2.3"
+    implementation 'org.codehaus.groovy:groovy-all:2.5.15'
+    implementation 'org.apache.poi:poi:5.2.3+'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3+'
 
     // Everything in src/test (test code). 
-    testImplementation "org.junit.jupiter:junit-jupiter:5.8.2"
-    testImplementation "org.hamcrest:hamcrest-library:2.2"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.hamcrest:hamcrest-library:2.2'
 
     
 }
