@@ -1,8 +1,7 @@
 package edu.odu.cs.cs350;
 
-import java.io.IOException;
 import java.io.FileOutputStream;
-
+import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -21,7 +20,7 @@ public class ExcelGenerator {
         // Create a new workbook
         Workbook workbook = new XSSFWorkbook();
         // Create a new sheet
-        Sheet sheet = workbook.createSheet("ExcelGen");
+        Sheet sheet = workbook.createSheet("summary");
 
         // Create the headings row
         Row headingsRow = sheet.createRow(0);
@@ -53,7 +52,7 @@ public class ExcelGenerator {
         }
               
         // Write the workbook to a file
-        try (FileOutputStream outputStream = new FileOutputStream("ExcelGen.xlsx")) {
+        try (FileOutputStream outputStream = new FileOutputStream("summary.xlsx")) {
             workbook.write(outputStream);
             System.out.println("Excel file generated successfully.");
         } catch (IOException e) {

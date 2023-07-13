@@ -16,7 +16,15 @@ import java.io.PrintStream;
 
 public class TestCLIOutput {
     
+    /*
+     * String to get the user directory for testing.
+     */
+
    String testDirectory = System.getProperty("user.dir");
+
+    /*
+     * Test for basic system output.
+     */
 
     @Test
     public void testBasicOut() {
@@ -29,12 +37,19 @@ public class TestCLIOutput {
         // Restore System.out
         System.setOut(System.out);
 
+     /*
+     * Strings to test for expected vs. actual output.
+     */
+
         String expectedOutput = " ";
         String actualOutput = outputStream.toString().trim();
         assertEquals(expectedOutput, actualOutput);
     }
 
-    //Test for .txt
+    /*
+     * Test to run and check for the search and output of any .txt files 
+     * within a certain directory
+     */
      @Test public void testGetTXT(String Directory) {
         File[] testTXT = CLIOutput.getTXT(testDirectory);
         for(File file :testTXT) {
@@ -42,7 +57,10 @@ public class TestCLIOutput {
         }
      }
 
-     //Test for JSON
+     /*
+     * Test to run and check for the search and output of any .json files 
+     * within a certain directory
+     */
       @Test public void testGetJSON(String Directory) {
         File[] testJSON = CLIOutput.getJSON(testDirectory);
         for(File file :testJSON) {
@@ -50,7 +68,10 @@ public class TestCLIOutput {
         }
      }
 
-     //Test for XLSX
+     /*
+     * Test to run and check for the search and output of any .xlsx files 
+     * within a certain directory
+     */
       @Test public void testGetXLSX(String Directory) {
          File[] testXLSX = CLIOutput.getXLSX(testDirectory);
          for (File file : testXLSX) {
@@ -58,7 +79,9 @@ public class TestCLIOutput {
          }
      }
 
-     //Test the directory.
+     /*
+     * Test to run and check that the directory returned is the correct one.
+     */
      @Test public void testCurrentDirectory() {
       String expectedDirectory = System.getProperty("user.dir");
       String actualDirectory = CLIOutput.currentDirectory();
