@@ -6,13 +6,21 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
+/*
+ * This Class will generate a text file and format the file to "YYYYMMDD-HHMMSS- "summary"".
+ * Include one entry per line with the size and namem of each page encountered.
+ */
 public class CreateTextFile {
     
+    /*
+     * Create a new Text File
+     * Format text file to "YYYYMMDD-HHMMSS- "summary""
+     */
     public static void createtxtfile() throws IOException{
-        /// Create a new Text file
-    /// in format YYYYMMDD-HHMMSS- summary
 
-    
+
+    //
     Date thisDate = new Date();
 
     ///Formating date to Year/Month/Day - Hours/Minutes/Seconds
