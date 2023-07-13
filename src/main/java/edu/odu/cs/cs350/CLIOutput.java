@@ -51,7 +51,7 @@ public class CLIOutput {
 
     }
 
-    private static File[] getJSON(String Directory) {
+    public static File[] getJSON(String Directory) {
         File dir = new File(Directory);
 
         File[] fList = dir.listFiles(new FilenameFilter() {
@@ -62,7 +62,7 @@ public class CLIOutput {
         return fList;
     }
 
-    private static File[] getTXT(String Directory) {
+    public static File[] getTXT(String Directory) {
         File dir = new File(Directory);
 
         File[] fList = dir.listFiles(new FilenameFilter() {
@@ -73,7 +73,7 @@ public class CLIOutput {
         return fList;
     }
 
-    private static File[] getXLSX(String Directory) {
+    public static File[] getXLSX(String Directory) {
         File dir = new File(Directory);
 
         File[] fList = dir.listFiles(new FilenameFilter() {

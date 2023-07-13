@@ -1,48 +1,63 @@
 package edu.odu.cs.cs350;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.PrintStream;
+
 
 
 public class TestCLIOutput {
     
-    //private CLIOutput output = new CLIOutput(String[] args); 
+   String testDirectory = System.getProperty("user.dir");
 
-     @Test public void testCon() {
-        CLIOutput out1 = new CLIOutput();
-     } 
+    @Test
+    public void testBasicOut() {
+        // Redirect System.out to capture the output
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        CLIOutput.basicOut();
+
+        // Restore System.out
+        System.setOut(System.out);
+
+        String expectedOutput = " ";
+        String actualOutput = outputStream.toString().trim();
+        Assertions.assertEquals(expectedOutput, actualOutput);
+    }
 
 
-     @Test public void testout(String[] args) throws Exception{
-
-
+    //Test for .txt
+     @Test public void testGetTXT(String Directory) {
+        File[] testTXT = CLIOutput.getTXT(testDirectory);
+        for(File file :testTXT) {
+         Assertions.assertTrue(file.getName().endsWith(".txt"));
+        }
      }
 
-     @Test public static void testGetTXT(String Directory) {
-        
+     //Test for JSON
+      @Test public void testGetJSON(String Directory) {
+        File[] testJSON = CLIOutput.getJSON(testDirectory);
+        for(File file :testJSON) {
+         Assertions.assertTrue(file.getName().endsWith(".json"));
+        }
      }
 
-      @Test public static void testGetJSON(String Directory) {
-        
+     //Test for XLSX
+      @Test public void testGetXLSX(String Directory) {
+         File[] testXLSX = CLIOutput.getXLSX(testDirectory);
+         for (File file : testXLSX) {
+             Assertions.assertTrue(file.getName().endsWith(".xlsx"));
+         }
      }
 
-      @Test public static void testGetXLSX(String Directory) {
-        
+     //Test the directory.
+     @Test public void testCurrentDirectory() {
+      String expectedDirectory = System.getProperty("user.dir");
+      String actualDirectory = CLIOutput.currentDirectory();
+      Assertions.assertEquals(expectedDirectory, actualDirectory);
      }
-
-     @Test public static void testCurrentDirectory() {
-        
-     }
-
 
 }
