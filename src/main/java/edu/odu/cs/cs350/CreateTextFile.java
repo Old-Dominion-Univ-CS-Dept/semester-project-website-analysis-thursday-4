@@ -20,11 +20,13 @@ public class CreateTextFile {
     public static void createtxtfile() throws IOException{
 
 
-    //
+    // Generate
     Date thisDate = new Date();
 
-    ///Formating date to Year/Month/Day - Hours/Minutes/Seconds
+    // Formating date to Year/Month/Day - Hours/Minutes/Seconds
     SimpleDateFormat dateForm = new SimpleDateFormat("YYYYMMdd-hhmmss-");
+    
+    // Print to date to console with format
     System.out.println(dateForm.format(thisDate) + "summary");
     
     
