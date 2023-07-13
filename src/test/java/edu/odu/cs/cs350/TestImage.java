@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class TestImageAnalysis
+public class TestImage
 {
     @Test
     public void testImage()
