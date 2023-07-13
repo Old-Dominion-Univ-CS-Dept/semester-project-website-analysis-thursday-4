@@ -4,16 +4,9 @@ package edu.odu.cs.cs350;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.io.File;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
 
 
 public class TestImage
@@ -21,6 +14,10 @@ public class TestImage
     @Test
     public void testImage()
     {
-        fail("This test needs to be implemented."); 
+        Image testerImage = new Image(); 
+        assertThat(testerImage.typeOfResource, is(ResourceKind.IMAGE)); 
+        
+        
+        
     }
 }
