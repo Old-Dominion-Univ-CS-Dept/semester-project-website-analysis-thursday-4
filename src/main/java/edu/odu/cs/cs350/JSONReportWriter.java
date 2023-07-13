@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
+import java.util.HashMap;
 
 /**
  * The JSONReportWriter class extends the ReportWriter class and 
@@ -42,17 +43,22 @@ public class JSONReportWriter extends ReportWriter {
      * @param reportData A map of report data to be written into the file.
      */
 
-    @Override
-    public void writeReport(Map<String, Object> reportData) {
-        try (FileWriter fileWriter = new FileWriter("report.json")) {
-            String jsonString = JsonWriter.objectToJson(reportData);
-            fileWriter.write(jsonString);
-        } catch (IOException e) {
-            // If an IOException is thrown, print the stack trace for debugging
-            e.printStackTrace();
-        }
-    }
-
-
-
+  
+     @Override
+     public void writeReport(Map<String, Object> reportData) {
+         try (FileWriter fileWriter = new FileWriter("report.json")) {
+             Map<String, Object> args = new HashMap<>();
+             args.put(JsonWriter.TYPE, false);
+             String jsonString = JsonWriter.objectToJson(reportData, args);
+             fileWriter.write(jsonString);
+         } catch (IOException e) {
+             // If an IOException is thrown, print the stack trace for debugging
+             e.printStackTrace();
+         }
+     }
+     
 }
+
+
+
+
