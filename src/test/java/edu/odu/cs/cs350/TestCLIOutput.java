@@ -16,6 +16,33 @@ import java.util.Map;
 
 public class TestCLIOutput {
     
-    //@Test
+    //private CLIOutput output = new CLIOutput(String[] args); 
+
+     @Test public void testCon() {
+        CLIOutput out1 = new CLIOutput();
+     } 
+
+
+     @Test public void testout(String[] args) throws Exception{
+
+
+     }
+
+     @Test public static void testGetTXT(String Directory) {
+        
+     }
+
+      @Test public static void testGetJSON(String Directory) {
+        
+     }
+
+      @Test public static void testGetXLSX(String Directory) {
+        
+     }
+
+     @Test public static void testCurrentDirectory() {
+        
+     }
+
 
 }
