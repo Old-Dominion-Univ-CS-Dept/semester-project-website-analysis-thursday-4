@@ -2,8 +2,8 @@ plugins {
     id "java"
     id "application"
     id "jacoco"
-    
-    id "org.barfuin.gradle.jacocolog" version "2.0.0"
+   
+   	//id "org.barfuin.gradle.jacocolog" version "2.0.0"
 }
 
 java {
@@ -42,6 +42,10 @@ jar {
 
 test {
     useJUnitPlatform()
+    
+    reports {
+    	html.required = true
+    }
     
     ignoreFailures = true; 
     
