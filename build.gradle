@@ -1,6 +1,9 @@
 plugins {
     id "java"
     id "application"
+    id "jacoco"
+    
+    id "org.barfuin.gradle.jacocolog" version "2.0.0"
 }
 
 java {
@@ -27,6 +30,31 @@ dependencies {
     
 }
 
+jar {
+	archiveBaseName = "WebisteAnalysis"
+	
+	manifest {
+		attributes(
+			"Main-Class": "edu.odu.cs.cs350.WebsiteAnalysisDriver"
+		)
+	}
+}
+
 test {
     useJUnitPlatform()
+    
+    ignoreFailures = true; 
+    
+    testLogging {
+    	events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+    
+    finalizedBy jacocoTestReport
+}
+
+//----------------------------------------------------------------------------
+// Documentation Tool(s)
+//----------------------------------------------------------------------------
+javadoc {
+	failOnError false
 }
