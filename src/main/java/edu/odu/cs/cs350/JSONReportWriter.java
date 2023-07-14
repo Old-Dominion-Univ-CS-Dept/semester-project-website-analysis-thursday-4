@@ -17,7 +17,8 @@ import java.util.HashMap;
  */
 
 public class JSONReportWriter extends ReportWriter {
-    private static final String OUTPUT_FILE_NAME = "report.json";
+        private static final String OUTPUT_FILE_NAME = "src/main/data/report.json";
+
     private File outputFile;
 
    /**
@@ -25,7 +26,7 @@ public class JSONReportWriter extends ReportWriter {
      * filename "report.json".
      */
     public JSONReportWriter() {
-        this.outputFile = new File("report.json");
+        this.outputFile = new File(OUTPUT_FILE_NAME);
     }
     /**
      * Getter method for the outputFile.
@@ -47,7 +48,17 @@ public class JSONReportWriter extends ReportWriter {
   
      @Override
      public void writeReport(Map<String, Object> reportData) {
-         try (FileWriter fileWriter = new FileWriter(OUTPUT_FILE_NAME)) {
+          // Check if file exists, and if not, create it
+          if (!outputFile.exists()) {
+            outputFile.getParentFile().mkdirs(); // Create parent directories if not exist
+            try {
+                outputFile.createNewFile(); // Create the file itself
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+         try (FileWriter fileWriter = new FileWriter(outputFile)) {
              String jsonString = convertToJson(reportData);
              writeToFile(fileWriter, jsonString);
          } catch (IOException e) {

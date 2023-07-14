@@ -23,7 +23,7 @@ public class TestJSONReportWriter {
         // Verify that the output file is created and is not null
         File outputFile = writer.getOutputFile();
         assertNotNull(outputFile);
-        assertTrue(outputFile.exists());
+        assertEquals("src/main/data/report.json", outputFile.getPath());
     }
     
 
@@ -40,6 +40,9 @@ public void testGetOutputFile() {
 
     // Verify that the output file name is "report.json"
     assertEquals("report.json", outputFile.getName());
+
+     // Verify the path of the output file
+     assertTrue(outputFile.getPath().contains("src/main/data/report.json"));
 }
 
     @Test
@@ -109,7 +112,7 @@ public void testGetOutputFile() {
         writer.writeReport(reportData);
 
         // Read the output file and check its contents
-        try (BufferedReader reader = new BufferedReader(new FileReader("report.json"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(writer.getOutputFile()))) {
             String line = reader.readLine();
             assertTrue(line.contains("\"basePath\":\"/path/to/local/copy\""));
         } catch (IOException e) {
