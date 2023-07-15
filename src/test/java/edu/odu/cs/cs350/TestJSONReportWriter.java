@@ -73,7 +73,7 @@ public class TestJSONReportWriter {
     }
 
     @Test
-    public void testWriteReport() {
+    public void testWriteReport() throws IOException {
                 // Load dummy data from JSON file
         ObjectMapper mapper = new ObjectMapper();
         Map<String, Object> reportData = null;
@@ -87,7 +87,12 @@ public class TestJSONReportWriter {
         }
 
         // Write the report
-        writer.writeReport(reportData);
+        try {
+            writer.writeReport(reportData);
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail("IOException should not have been thrown.");
+        }
 
         // Read the output file and check its contents
         try (BufferedReader reader = new BufferedReader(new FileReader(writer.getOutputFile()))) {
@@ -99,14 +104,19 @@ public class TestJSONReportWriter {
     }
 
     @Test
-    public void testGetSourceData() {
+    public void testGetSourceData() throws IOException {
         // Create dummy report data
         Map<String, Object> reportData = new HashMap<>();
         reportData.put("basePath", "/path/to/local/copy");
         reportData.put("urls", Arrays.asList("http://www.url1.com", "https://www.url2.com"));
 
         // Write the report
-        writer.writeReport(reportData);
+        try {
+            writer.writeReport(reportData);
+        } catch (IOException e) {
+            e.printStackTrace();
+            fail("IOException should not have been thrown.");
+        }
 
         // Get the source data and verify its content
         Map<String, Object> sourceData = writer.getSourceData();

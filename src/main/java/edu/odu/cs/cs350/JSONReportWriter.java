@@ -68,16 +68,16 @@ public class JSONReportWriter extends ReportWriter {
         return sourceData;
     }
 
-      /**
+    /**
      * Writes a string to a file using a FileWriter.
      *
      * @param fileWriter The FileWriter to be used for writing the string.
      * @param jsonString The string to be written to the file.
      * @throws IOException If an I/O error occurs.
      */
-    private void writeToFile(Writer writer, String jsonString) throws IOException {
+     private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
         writer.write(jsonString);
-    }
+     }
 
     /**
      * Overrides the writeReport method from the ReportWriter class.
@@ -85,27 +85,22 @@ public class JSONReportWriter extends ReportWriter {
      * and writes it to the output file.
      *
      * @param reportData A map of report data to be written into the file.
+     * @throws IOException If an I/O error occurs.
      */
      @Override
-     public void writeReport(Map<String, Object> reportData) {
-          // Check if file exists, and if not, create it
-          if (!outputFile.exists()) {
+     public void writeReport(Map<String, Object> reportData) throws IOException {
+        // Check if file exists, and if not, create it
+        if (!outputFile.exists()) {
             outputFile.getParentFile().mkdirs(); // Create parent directories if not exist
-            try {
-                outputFile.createNewFile(); // Create the file itself
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            outputFile.createNewFile(); // Create the file itself
         }
-
-         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
-             String jsonString = convertToJson(reportData);
-             writeToFile(bufferedWriter, jsonString);
-             this.sourceData = reportData;
-         } catch (IOException e) {
-             e.printStackTrace();
-         }
-     }
+    
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
+            String jsonString = convertToJson(reportData);
+            writeToFile(bufferedWriter, jsonString);
+            this.sourceData = reportData;
+        }
+    }
 
     /**
      * Converts the report data into a JSON string.
