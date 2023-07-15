@@ -21,7 +21,7 @@ public class TestJSONReportWriter {
         // Verify that the output file is created and is not null
         File outputFile = writer.getOutputFile();
         assertNotNull(outputFile);
-        assertEquals("src/main/data/testJsonReport.json", outputFile.getPath());
+        assertEquals("src/main/data/report.json", outputFile.getPath());
     }
     
 
@@ -53,7 +53,7 @@ public void testGetOutputFile() {
         Map<String, Object> reportData = null;
         try {
             reportData = mapper.readValue(
-                new File("src/resources/dummyData.json"),
+                new File("src/test/resources/testJsonReport.json"),
                 new TypeReference<Map<String, Object>>(){}
             );
         } catch (IOException e) {
