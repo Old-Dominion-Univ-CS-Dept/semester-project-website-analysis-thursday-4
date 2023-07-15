@@ -1,20 +1,27 @@
 package edu.odu.cs.cs350;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import java.io.File;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
-import java.util.Map;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.type.TypeReference;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 public class TestJSONReportWriter {
@@ -51,19 +58,19 @@ public class TestJSONReportWriter {
     
 
     @Test
-public void testGetOutputFile() {
-    // Get the output file
-    File outputFile = writer.getOutputFile();
+    public void testGetOutputFile() {
+        // Get the output file
+        File outputFile = writer.getOutputFile();
 
-    // Verify that the output file is not null
-    assertThat(outputFile, is(notNullValue()));
+        // Verify that the output file is not null
+        assertThat(outputFile, is(notNullValue()));
 
-    // Verify that the output file name is "report.json"
-    assertThat(outputFile.getName(), is(equalTo("report.json")));
+        // Verify that the output file name is "report.json"
+        assertThat(outputFile.getName(), is(equalTo("report.json")));
 
-     // Verify the path of the output file
-     assertThat(outputFile.getPath(), containsString("src/main/data/report.json"));
-}
+        // Verify the path of the output file
+        assertThat(outputFile.getPath(), containsString("src/main/data/report.json"));
+    }
 
     @Test
     public void testWriteReport() {
@@ -89,5 +96,21 @@ public void testGetOutputFile() {
         } catch (IOException e) {
             fail("Error reading output file: " + e.getMessage());
         }
+    }
+
+    @Test
+    public void testGetSourceData() {
+        // Create dummy report data
+        Map<String, Object> reportData = new HashMap<>();
+        reportData.put("basePath", "/path/to/local/copy");
+        reportData.put("urls", Arrays.asList("http://www.url1.com", "https://www.url2.com"));
+
+        // Write the report
+        writer.writeReport(reportData);
+
+        // Get the source data and verify its content
+        Map<String, Object> sourceData = writer.getSourceData();
+        assertNotNull(sourceData);
+        assertEquals(reportData, sourceData);
     }
 }
