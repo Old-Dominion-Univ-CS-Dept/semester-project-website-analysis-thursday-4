@@ -14,7 +14,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 public class TestJSONReportWriter {
     
     @Test
-    public void testConstructor() {
+    public void testDefaultConstructor() {
         // Create a JSONReportWriter instance
         JSONReportWriter writer = new JSONReportWriter();
 
@@ -23,6 +23,19 @@ public class TestJSONReportWriter {
         assertNotNull(outputFile);
         assertEquals("src/main/data/report.json", outputFile.getPath());
     }
+
+    @Test
+    public void testNonDefaultConstructor() {
+   
+        File customOutputFile = new File("src/main/data/custom-report.json");
+        JSONReportWriter writer = new JSONReportWriter(customOutputFile);
+
+        File outputFile = writer.getOutputFile();
+        assertNotNull(outputFile);
+        assertEquals(customOutputFile.getPath(), outputFile.getPath());
+    }
+
+
     
 
     @Test

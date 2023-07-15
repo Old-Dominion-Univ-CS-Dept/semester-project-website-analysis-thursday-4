@@ -28,6 +28,17 @@ public class JSONReportWriter extends ReportWriter {
     public JSONReportWriter() {
         this.outputFile = new File(OUTPUT_FILE_NAME);
     }
+
+    /**
+     * Constructor allows specifying the output file.
+     * 
+     * @param outputFile The output file where the report will be written.
+     */
+    public JSONReportWriter(File outputFile) {
+        this.outputFile = outputFile;
+    }
+
+
     /**
      * Getter method for the outputFile.
      *
