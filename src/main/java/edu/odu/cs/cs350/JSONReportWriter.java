@@ -1,12 +1,15 @@
 package edu.odu.cs.cs350;
 
 
-import com.cedarsoftware.util.io.JsonWriter;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Map;
+import java.io.Writer;
 import java.util.HashMap;
+import java.util.Map;
+import java.io.FileWriter;
+
+import com.cedarsoftware.util.io.JsonWriter;
 
 /**
  * The JSONReportWriter class extends the ReportWriter class and 
@@ -65,6 +68,24 @@ public class JSONReportWriter extends ReportWriter {
         return sourceData;
     }
 
+      /**
+     * Writes a string to a file using a FileWriter.
+     *
+     * @param fileWriter The FileWriter to be used for writing the string.
+     * @param jsonString The string to be written to the file.
+     * @throws IOException If an I/O error occurs.
+     */
+    private void writeToFile(Writer writer, String jsonString) throws IOException {
+        writer.write(jsonString);
+    }
+
+    /**
+     * Overrides the writeReport method from the ReportWriter class.
+     * This method receives a map containing the report data, converts it to a JSON string,
+     * and writes it to the output file.
+     *
+     * @param reportData A map of report data to be written into the file.
+     */
      @Override
      public void writeReport(Map<String, Object> reportData) {
           // Check if file exists, and if not, create it
@@ -77,9 +98,9 @@ public class JSONReportWriter extends ReportWriter {
             }
         }
 
-         try (FileWriter fileWriter = new FileWriter(outputFile)) {
+         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
              String jsonString = convertToJson(reportData);
-             writeToFile(fileWriter, jsonString);
+             writeToFile(bufferedWriter, jsonString);
              this.sourceData = reportData;
          } catch (IOException e) {
              e.printStackTrace();
@@ -98,16 +119,7 @@ public class JSONReportWriter extends ReportWriter {
         return JsonWriter.objectToJson(reportData, args);
     }
 
-    /**
-     * Writes a string to a file using a FileWriter.
-     *
-     * @param fileWriter The FileWriter to be used for writing the string.
-     * @param jsonString The string to be written to the file.
-     * @throws IOException If an I/O error occurs.
-     */
-    private void writeToFile(FileWriter fileWriter, String jsonString) throws IOException {
-        fileWriter.write(jsonString);
-    }
+  
      
 }
 
