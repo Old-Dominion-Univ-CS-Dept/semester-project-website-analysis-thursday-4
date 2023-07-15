@@ -27,6 +27,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     testImplementation 'org.hamcrest:hamcrest-library:2.2'
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    testImplementation 'org.testng:testng:7.4.0'  
 
     
 }
