@@ -54,23 +54,43 @@ import java.util.regex.*;
              * 
              */
     }
-
+       /**
+     * Returns the HTML representation of the anchor tag.
+     *
+     * @return The HTML representation of the anchor tag.
+     */
     public String getHtmlRepresentation() {
         return htmlRepresentation;
     }
-
+    /**
+     * Returns the href attribute of the anchor tag.
+     *
+     * @return The href attribute of the anchor tag.
+     */
     public String getHref() {
         return href;
     }
-
+    /**
+     * Returns the text between the opening and closing tags of the anchor tag.
+     *
+     * @return The text between the opening and closing tags of the anchor tag.
+     */
     public String getText() {
         return text;
     }
-
+      /**
+     * Returns the type of link: intra-page, intra-site, or external.
+     *
+     * @return The type of link.
+     */
     public LinkType getLinkType() {
         return linkType;
     }
-
+     /**
+     * Returns the type of resource, which is always ANCHOR for Anchor objects.
+     *
+     * @return The type of resource.
+     */
     public ResourceKind getTypeOfResource() {
         return typeOfResource;
     }
