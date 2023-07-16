@@ -36,7 +36,7 @@ public class TestHTMLDocumentBuilder
     {
         String htmlSource = "<img src=\"img_girl.jpg\" alt=\"Girl in a jacket\" width=\"500\" height=\"600\">"; 
         
-        HTMLDocumentBuilder tester = new HTMLDocumentBuilder("img", "src"); 
+        HTMLDocumentBuilder tester = new HTMLDocumentBuilder(); 
         
         List<Element> images = tester.extractImages(htmlSource); 
         
@@ -49,11 +49,17 @@ public class TestHTMLDocumentBuilder
     {
         BufferedReader htmlSource = new BufferedReader(new FileReader("src/test/resources/images.html")); 
         
-        HTMLDocumentBuilder tester = new HTMLDocumentBuilder("img", "src"); 
+        HTMLDocumentBuilder tester = new HTMLDocumentBuilder(); 
         
         List<Element> images = tester.extractImages(htmlSource); 
         
         assertThat(images, is(notNullValue())); 
         assertThat(images.size(), equalTo(5)); 
+    }
+    
+    @Test 
+    public void testBuild()
+    {
+        fail("test needs to be implemented."); 
     }
 }

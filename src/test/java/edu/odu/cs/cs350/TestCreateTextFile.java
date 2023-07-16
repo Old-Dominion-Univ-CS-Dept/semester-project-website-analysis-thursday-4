@@ -20,6 +20,8 @@ public class TestCreateTextFile {
     public void TestTextFileGeneration(){
         Date thisDate = new Date();
         Date thisDate2 = new Date();
+
+        //format the date
         SimpleDateFormat dateForm = new SimpleDateFormat("YYYYMMdd-hhmmss-");
         assertEquals(dateForm.format(thisDate),dateForm.format(thisDate2));
         

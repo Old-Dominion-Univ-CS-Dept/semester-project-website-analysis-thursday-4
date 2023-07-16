@@ -1,7 +1,23 @@
 package edu.odu.cs.cs350;
 
 import java.util.Map;
-// this is a stub class to allow JSONReportWriter to run
+import java.io.IOException;
+
+
+/**
+ * Abstract base class for report writers. It provides a contract
+ * for writing reports with method writeReport which subclasses implement.
+ * 
+ */
 public abstract class ReportWriter {
-    public abstract void writeReport(Map<String, Object> data);
+
+    /**
+     * Abstract method to write a report to various format depending on the subclass. 
+     * JSON,  XML, and text.    
+     *
+     * @param data The data for the report.
+     * @throws IOException If an I/O error occurs.
+     */
+    public abstract void writeReport(Map<String, Object> data) throws IOException;
+
 }
