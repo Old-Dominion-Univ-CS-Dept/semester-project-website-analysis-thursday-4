@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 // Write the workbook to a file
 
 public class ExcelGenerator {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Create a new workbook
         Workbook workbook = new XSSFWorkbook();
         // Create a new sheet
@@ -25,11 +25,12 @@ public class ExcelGenerator {
         // Create the headings row
         Row headingsRow = sheet.createRow(0);
         headingsRow.createCell(0).setCellValue("Page");
-        headingsRow.createCell(1).setCellValue("Number of Images");
-        headingsRow.createCell(2).setCellValue("Number of CSS Scripts");
-        headingsRow.createCell(3).setCellValue("Number of Links (Intra-Page)");
-        headingsRow.createCell(4).setCellValue("Number of Links (Internal)");
-        headingsRow.createCell(5).setCellValue("Number of Links (External)");
+        headingsRow.createCell(1).setCellValue("No. of Images");
+        headingsRow.createCell(2).setCellValue("No. of  CSS");
+        headingsRow.createCell(3).setCellValue("Scripts");
+        headingsRow.createCell(4).setCellValue("No. of Links (Intra-Page)");
+        headingsRow.createCell(5).setCellValue("No. of Links (Internal)");
+        headingsRow.createCell(6).setCellValue("No. of Links (External)");
 
         // Add data for internal pages
         String[][] data = {
@@ -58,5 +59,8 @@ public class ExcelGenerator {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    
+    workbook.close();
     }
+    
 }
