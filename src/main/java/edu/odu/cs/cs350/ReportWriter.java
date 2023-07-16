@@ -9,7 +9,7 @@ import java.io.IOException;
  * for writing reports with method writeReport which subclasses implement.
  * currently takes a Map containing report data, but will later take a Website object after further development.
  * 
- */s
+ */
 public abstract class ReportWriter {
 
     /**

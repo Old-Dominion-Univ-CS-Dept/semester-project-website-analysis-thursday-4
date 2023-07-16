@@ -8,6 +8,8 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.fail;
+import com.cedarsoftware.util.io.JsonWriter;
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -94,13 +96,22 @@ public class TestJSONReportWriter {
             fail("IOException should not have been thrown.");
         }
 
-        // Read the output file and check its contents
-        try (BufferedReader reader = new BufferedReader(new FileReader(writer.getOutputFile()))) {
-            String line = reader.readLine();
-            assertThat(line, containsString("\"basePath\":\"/path/to/local/copy\""));
-        } catch (IOException e) {
-            fail("Error reading output file: " + e.getMessage());
+          // Read the output file and check its contents
+    try (BufferedReader reader = new BufferedReader(new FileReader(writer.getOutputFile()))) {
+        StringBuilder output = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            output.append(line);
         }
+
+        // Define the expected JSON output with pretty print
+        String expectedJson = JsonWriter.formatJson(output.toString());
+
+        // Assert that the output matches the expected JSON
+        assertThat(output.toString().trim(), is(equalTo(expectedJson.trim())));
+    } catch (IOException e) {
+        fail("Error reading output file: " + e.getMessage());
+    }
     }
 
     @Test

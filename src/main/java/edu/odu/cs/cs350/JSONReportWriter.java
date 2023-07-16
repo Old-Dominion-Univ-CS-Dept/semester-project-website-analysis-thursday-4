@@ -113,6 +113,7 @@ public class JSONReportWriter extends ReportWriter {
     private String convertToJson(Map<String, Object> reportData) {
         Map<String, Object> args = new HashMap<>();
         args.put(JsonWriter.TYPE, false);
+        args.put(JsonWriter.PRETTY_PRINT, true); // Enable pretty print for readable JSON output
         return JsonWriter.objectToJson(reportData, args);
     }
 
