@@ -16,9 +16,11 @@ import com.cedarsoftware.util.io.JsonWriter;
  * overrides its method to write reports in JSON format.
  * 
  * It uses the JsonWriter library to convert data into a JSON string
- *  and writes it to a file.
+ * and writes it to a file.
+ * 
+ * Currently this class takes a Map containing test report data,
+ * After further development, this method will take a Website object as a parameter.
  */
-
 public class JSONReportWriter extends ReportWriter {
     private static final String OUTPUT_FILE_NAME = "src/main/data/report.json";
     private Map<String, Object> sourceData;

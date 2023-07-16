@@ -3,12 +3,13 @@ package edu.odu.cs.cs350;
 import java.util.Map;
 import java.io.IOException;
 
-
 /**
+ *
  * Abstract base class for report writers. It provides a contract
  * for writing reports with method writeReport which subclasses implement.
+ * currently takes a Map containing report data, but will later take a Website object after further development.
  * 
- */
+ */s
 public abstract class ReportWriter {
 
     /**
