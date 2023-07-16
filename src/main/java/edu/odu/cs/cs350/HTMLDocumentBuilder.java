@@ -28,27 +28,20 @@ public class HTMLDocumentBuilder
 {
     private String theTag; 
     private String theAttribute; 
+    private List<Elements> images;
+    
     
     /*
      * Default constructor for HTMLBuilder, may be implemented later.
      */    
     public HTMLDocumentBuilder()
     {
-        
+        this.theTag = null; 
+        this.theAttribute = null; 
+        this.images = new ArrayList<>(); 
     }
     
-    /* 
-     * Constructor that sets the current tag and attribute being extracted.
-     * 
-     * @param tag: the current tag being extracted. 
-     * 
-     * @param attribute: the current attribute being extracted. 
-     */ 
-    public HTMLDocumentBuilder(String tag, String attribute)
-    {
-        this.theTag = tag; 
-        this.theAttribute = attribute; 
-    }
+    
     
     /*
      * Extract all HTML image tags.
@@ -59,6 +52,9 @@ public class HTMLDocumentBuilder
      */    
     public List<Element> extractImages(BufferedReader htmlSource)
     {
+        theTag = "img"; 
+        theAttribute = "src"; 
+        
         String htmlAsString = htmlSource.lines()
                 .collect(Collectors.joining(System.lineSeparator())); 
         
@@ -75,6 +71,9 @@ public class HTMLDocumentBuilder
      */  
     public List<Element> extractImages(String htmlSource)
     {
+        theTag = "img"; 
+        theAttribute = "src"; 
+        
         Document doc = Jsoup.parse(htmlSource);
         Elements elements = doc.select(this.theTag);
 
@@ -84,6 +83,15 @@ public class HTMLDocumentBuilder
         }
 
         return elementList;
+    }
+    
+    /*
+     * Builds an HTMLDocument object that contains the scripts, stylesheets, 
+     * images, and anchors lists.
+     */
+    public HTMLDocument build()
+    {
+        return null; 
     }
     
     

@@ -9,6 +9,9 @@ package edu.odu.cs.cs350;
 
 public class Image extends Resource
 {
+    /* 
+     * Default constructor sets typeOfResource to IMAGE. 
+     */
     public Image()
     {
         typeOfResource = ResourceKind.IMAGE; 
