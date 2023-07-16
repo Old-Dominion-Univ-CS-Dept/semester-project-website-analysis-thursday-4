@@ -34,8 +34,8 @@ public class ExcelGenerator {
 
         // Add data for internal pages
         String[][] data = {
-                {"Page 1", "10", "2", "5", "10", "3"},
-                {"Page 2", "5", "1", "3", "7", "2"}
+                {"Page 1", "10", "2", "5", "10", "3", "11"},
+                {"Page 2", "5", "1", "3", "7", "2", "4"}
         };
 
         int rowCount = 1;
