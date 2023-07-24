@@ -28,10 +28,13 @@ public class HTMLDocumentBuilder
 {
     private String theTag; 
     private String theAttribute; 
-    private List<Elements> images;
+    private List<Element> images;
+    private List<Element> scripts;
+    private List<Element> stylesheets;
+    private List<Element> anchors;
     
     
-    /*
+    /**
      * Default constructor for HTMLBuilder, may be implemented later.
      */    
     public HTMLDocumentBuilder()
@@ -43,7 +46,7 @@ public class HTMLDocumentBuilder
     
     
     
-    /*
+    /**
      * Extract all HTML image tags.
      * 
      * @param: HTML source code. 
@@ -62,7 +65,7 @@ public class HTMLDocumentBuilder
     }
     
     
-    /*
+    /**
      * Extract all HTML image tags.
      * 
      * @param: HTML source code. 
@@ -80,18 +83,24 @@ public class HTMLDocumentBuilder
         List<Element> elementList = new ArrayList<>();
         for (Element elm : elements) {
             elementList.add(elm);
+            images.add(elm); 
         }
 
         return elementList;
     }
     
-    /*
+    /**
      * Builds an HTMLDocument object that contains the scripts, stylesheets, 
      * images, and anchors lists.
+     * 
+     * @return: a new HTMLDocument object that contains the lists of all 
+     * extracted content. 
      */
     public HTMLDocument build()
     {
-        return null; 
+        HTMLDocument htmlDocument = new HTMLDocument(scripts, stylesheets, images, anchors); 
+        
+        return htmlDocument; 
     }
     
     
