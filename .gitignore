@@ -1,5 +1,21 @@
-.gradle
+# General Ignore Rules
+**.o
+**.exe
+**.zip
+**.class
+**.jar
+!**gradle/wrapper/gradle-wrapper.jar
+!gradle-wrapper.jar
+**.pyc
+
 **/build/
+**/.gradle/
+
+# Eclipse Project Ignore Rules
+**.project
+**.settings
+**.classpath
+
 !src/**/build/
 
 # Ignore Gradle GUI config
@@ -26,6 +42,3 @@ gradle-app.setting
 
 # VScode specific file
 *.vscode
-
-#eclipse specific setting files
-.settings
