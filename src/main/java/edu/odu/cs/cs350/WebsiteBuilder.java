@@ -6,9 +6,10 @@
  */
 package edu.odu.cs.cs350;
 
-import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -20,8 +21,8 @@ import java.util.List;
 public class WebsiteBuilder 
 {
     
-    private String basePath;
-    private String url;
+    private Path basePath;
+    private Collection<URL> urls;
 
     /**
      * Constructs a new WebsiteBuilder.
@@ -29,7 +30,7 @@ public class WebsiteBuilder
      */
     public WebsiteBuilder() {
         this.basePath = null;
-        this.url = null;
+        this.urls = new ArrayList<>();
     }
 
       /**
@@ -37,17 +38,28 @@ public class WebsiteBuilder
      *
      * @return the base path of the website
      */
-    public String getBasePath() {
+    public Path getBasePath() {
         return this.basePath;
     }
 
     /**
-     * Returns the URL of the website.
+     * Returns the URLs of the website.
      *
-     * @return the URL of the website
+     * @return the URLs of the website
      */
-    public String getUrl() {
-        return this.url;
+    public Collection<URL> getUrls() {
+        return this.urls;
+    }
+
+    /**
+     * Walks through the directory  and returns a list of Path objects
+     * 
+     * @param directoryPath the path to the directory to walk through
+     * @return a list of Path objects for all the files in the directory 
+     */
+    public List<Path> walkDirectory(String directoryPath) {
+        // Initial implementation to compile
+        return Collections.emptyList();
     }
   
     
