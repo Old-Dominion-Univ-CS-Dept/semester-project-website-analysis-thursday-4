@@ -1,4 +1,4 @@
-title=Prime Number Generator - Integration Test Coverage
+title=Website Analysis - Thursday 4 - Integration Test Coverage
 type=reportPage
 status=published
 report_file=jacoco/jacocoIntegrationTestReport/html/index.html

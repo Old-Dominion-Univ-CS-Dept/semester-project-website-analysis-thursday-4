@@ -1,4 +1,4 @@
-title=Prime Number Generator - Dependency Report
+title=Website Analysis - Thursday 4 - Dependency Report
 type=reportPage
 status=published
 report_file=project/dependencies/index.html

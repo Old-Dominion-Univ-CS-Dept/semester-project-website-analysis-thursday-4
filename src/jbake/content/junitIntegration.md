@@ -1,4 +1,4 @@
-title=Prime Number Generator - Integration Tests
+title=Website Analysis - Thursday 4 - Integration Tests
 type=reportPage
 status=published
 report_file=tests/integrationTest/index.html

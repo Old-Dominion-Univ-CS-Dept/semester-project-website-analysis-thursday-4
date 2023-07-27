@@ -1,4 +1,4 @@
-title=Prime Number Generator - Unit Test Coverage
+title=Website Analysis - Thursday 4 - Unit Test Coverage
 type=reportPage
 status=published
 report_file=jacoco/test/html/index.html

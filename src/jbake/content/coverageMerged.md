@@ -1,4 +1,4 @@
-title=Prime Number Generator - Overall (Merged) Test Coverage
+title=Website Analysis - Thursday 4 - Overall (Merged) Test Coverage
 type=reportPage
 status=published
 report_file=jacoco/mergedJacocoReportHTML/html/index.html

@@ -1,4 +1,4 @@
-title=Prime Number Generator - Checkstyle Report
+title=Website Analysis - Thursday 4 - Checkstyle Report
 type=reportPage
 status=published
 report_file=checkstyle/main.html

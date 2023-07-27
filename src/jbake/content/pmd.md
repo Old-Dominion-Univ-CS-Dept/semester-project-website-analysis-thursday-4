@@ -1,4 +1,4 @@
-title=Prime Number Generator - PMD Report
+title=Website Analysis - Thursday 4 - PMD Report
 type=reportPage
 status=published
 report_file=pmd/main.html

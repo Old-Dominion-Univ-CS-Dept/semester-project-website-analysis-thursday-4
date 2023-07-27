@@ -1,4 +1,4 @@
-title=Prime Number Generator - Gradle Tasks
+title=Website Analysis - Thursday 4 - Gradle Tasks
 type=reportPage
 status=published
 report_file=project/tasks.txt

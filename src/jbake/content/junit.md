@@ -1,4 +1,4 @@
-title=Prime Number Generator - Unit Tests
+title=Website Analysis - Thursday 4 - Unit Tests
 type=reportPage
 status=published
 report_file=tests/test/index.html
