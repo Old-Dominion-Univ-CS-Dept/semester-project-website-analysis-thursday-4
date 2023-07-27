@@ -3,6 +3,7 @@
  */
 package edu.odu.cs.cs350;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.jsoup.nodes.Element;
@@ -18,73 +19,20 @@ import org.jsoup.select.Elements;
  */
 public class HTMLDocument 
 {
-    private List<Element> scrips; 
-    private List<Element> stylesheets; 
-    private List<Element> images; 
-    private List<Element> anchors; 
+    private List<Resource> scripts; 
+    private List<Resource> stylesheets; 
+    private List<Resource> images; 
+    private List<Resource> anchors; 
     
-    /**
-     * @return: the list of scripts.
-     */
-    public List<Element> getScrips() {
-        return scrips;
-    }
-
-    /**
-     * @param: set scripts to list passed in. 
-     */
-    public void setScrips(List<Element> scrips) {
-        this.scrips = scrips;
-    }
-
-    /**
-     * @return: the list of stylesheets. 
-     */
-    public List<Element> getStylesheets() {
-        return stylesheets;
-    }
-
-    /**
-     * @param: set stylesheets to list passed in. 
-     */
-    public void setStylesheets(List<Element> stylesheets) {
-        this.stylesheets = stylesheets;
-    }
-
-    /**
-     * @return: the list of images. 
-     */
-    public List<Element> getImages() {
-        return images;
-    }
-
-    /**
-     * @param: set images to list passed in. 
-     */
-    public void setImages(List<Element> images) {
-        this.images = images;
-    }
-
-    /**
-     * @return: the list of anchors. 
-     */
-    public List<Element> getAnchors() {
-        return anchors;
-    }
-
-    /**
-     * @param: set anchors to list passed in. 
-     */
-    public void setAnchors(List<Element> anchors) {
-        this.anchors = anchors;
-    }
-
     /**
      * This default constructor that creates a new empty object. 
      */
     public HTMLDocument()
     {
-        
+        this.scripts = new ArrayList<>(); 
+        this.stylesheets = new ArrayList<>(); 
+        this.images = new ArrayList<>(); 
+        this.anchors = new ArrayList<>(); 
     }
     
     /**
@@ -102,13 +50,72 @@ public class HTMLDocument
      * @return: a new HTMLDocument object containing all lists
      * passed in as parameters. 
      */
-    public HTMLDocument(List<Element> script, List<Element> stylesheet,
-                        List<Element> image, List<Element> anchor)
+    public HTMLDocument(List<Resource> script, List<Resource> stylesheet,
+                        List<Resource> image, List<Resource> anchor)
     {
-        this.scrips = script; 
+        this.scripts = script; 
         this.stylesheets = stylesheet; 
         this.images = image; 
         this.anchors = anchor; 
         
     }
+    
+    /**
+     * @return: the list of scripts.
+     */
+    public List<Resource> getScrips() {
+        return scripts;
+    }
+
+    /**
+     * @param: set scripts to list passed in. 
+     */
+    public void setScrips(List<Resource> scrips) {
+        this.scripts = scrips;
+    }
+
+    /**
+     * @return: the list of stylesheets. 
+     */
+    public List<Resource> getStylesheets() {
+        return stylesheets;
+    }
+
+    /**
+     * @param: set stylesheets to list passed in. 
+     */
+    public void setStylesheets(List<Resource> stylesheets) {
+        this.stylesheets = stylesheets;
+    }
+
+    /**
+     * @return: the list of images. 
+     */
+    public List<Resource> getImages() {
+        return images;
+    }
+
+    /**
+     * @param: set images to list passed in. 
+     */
+    public void setImages(List<Resource> images) {
+        this.images = images;
+    }
+
+    /**
+     * @return: the list of anchors. 
+     */
+    public List<Resource> getAnchors() {
+        return anchors;
+    }
+
+    /**
+     * @param: set anchors to list passed in. 
+     */
+    public void setAnchors(List<Resource> anchors) {
+        this.anchors = anchors;
+    }
+
+    
+    
 }
