@@ -6,11 +6,31 @@
  */
 package edu.odu.cs.cs350;
 
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.util.Collections;
+import java.util.List;
+
+
 /**
  * @author bonham36
  *
  */
 public class WebsiteBuilder 
 {
-    // Class will be implemented in future sprint. 
+    
+    private String basePath;
+    private String url;
+
+    /**
+     * Constructs a new WebsiteBuilder.
+    * Initializes the 'basePath' and 'url' fields to null.
+     */
+    public WebsiteBuilder() {
+        this.basePath = null;
+        this.url = null;
+    }
+  
+    
 }
