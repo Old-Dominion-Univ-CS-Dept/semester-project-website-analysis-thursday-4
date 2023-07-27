@@ -1,7 +1,13 @@
 package edu.odu.cs.cs350;
 
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
+
 import org.junit.jupiter.api.Test;
+
+
 
 /**
  * Tests for the WebsiteBuilder class.
@@ -10,20 +16,40 @@ public class TestWebsiteBuilder {
 
     /**
      * Tests the WebsiteBuilder constructor.
-     * Checks that a new WebsiteBuilder has the expected initial state.
+     * Checks the expected initial default values.
      */
     @Test
     public void testDefaultConstructor() {
         WebsiteBuilder builder = new WebsiteBuilder();
 
         // Check that the builder's initial state is as expected
-        // This will depend on what fields the WebsiteBuilder class has and how they're initialized
-        // For example, if the WebsiteBuilder class has a 'basePath' and 'url' fields that are initialized to null, you could check that:
-        
-    
+        assertThat(builder.getBasePath(), is(nullValue()));
+        assertThat(builder.getUrl(), is(nullValue()));
     }
 
-    // Other tests...
+    /**
+     * Tests the getBasePath() method.
+     * Checks that the  basePath field is null.
+     */
+    @Test
+    public void testGetBasePath() {
+        WebsiteBuilder builder = new WebsiteBuilder();
+
+        assertThat(builder.getBasePath(), is(nullValue()));
+    }
+
+    /**
+     * Tests the getUrl() method.
+     * Checks that the url field is null.
+     */
+    @Test
+    public void testGetUrl() {
+        WebsiteBuilder builder = new WebsiteBuilder();
+        assertThat(builder.getUrl(), is(nullValue()));
+        assertThat(builder.getUrl(), is(nullValue()));
+    }   
+
+  
 }
 
 

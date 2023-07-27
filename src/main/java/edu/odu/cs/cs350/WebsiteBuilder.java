@@ -31,6 +31,24 @@ public class WebsiteBuilder
         this.basePath = null;
         this.url = null;
     }
+
+      /**
+     * Returns the base path of the website.
+     *
+     * @return the base path of the website
+     */
+    public String getBasePath() {
+        return this.basePath;
+    }
+
+    /**
+     * Returns the URL of the website.
+     *
+     * @return the URL of the website
+     */
+    public String getUrl() {
+        return this.url;
+    }
   
     
 }
