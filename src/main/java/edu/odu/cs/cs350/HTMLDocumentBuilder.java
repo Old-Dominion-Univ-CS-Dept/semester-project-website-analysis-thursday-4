@@ -6,8 +6,14 @@
 package edu.odu.cs.cs350;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
@@ -26,67 +32,133 @@ import org.jsoup.select.Elements;
  */
 public class HTMLDocumentBuilder 
 {
-    private String theTag; 
-    private String theAttribute; 
-    private List<Element> images;
-    private List<Element> scripts;
-    private List<Element> stylesheets;
-    private List<Element> anchors;
+    private List<Resource> images;
+    private List<Resource> scripts;
+    private List<Resource> stylesheets;
+    private List<Resource> anchors;
+    
+    private List<URL> baseUrls; 
+    private Path baseDirectory; 
+    
+    private BufferedReader readBuffer; 
     
     
     /**
-     * Default constructor for HTMLBuilder, may be implemented later.
+     * Default constructor for HTMLBuilder, initializes all data members. 
      */    
     public HTMLDocumentBuilder()
     {
-        this.theTag = null; 
-        this.theAttribute = null; 
         this.images = new ArrayList<>(); 
+        this.scripts = new ArrayList<>(); 
+        this.stylesheets = new ArrayList<>(); 
+        this.anchors = new ArrayList<>(); 
     }
     
     
-    
     /**
-     * Extract all HTML image tags.
+     * This functions takes in and sets members based on 
+     * what type of content is being passed in. 
      * 
-     * @param: HTML source code. 
-     * 
-     * @return: list of all image tags. 
-     */    
-    public List<Element> extractImages(BufferedReader htmlSource)
+     * @param: content from a BufferedReader source. 
+     */
+    public void withContentFrom(BufferedReader reader)
     {
-        theTag = "img"; 
-        theAttribute = "src"; 
+        //TODO: to be implemented later. 
+    }
+    
+    /**
+     * This functions takes in and sets members based on 
+     * what type of content is being passed in. 
+     * 
+     * @param: content from a file source. 
+     */
+    public void withContentFrom(File file)
+    {
+        //TODO: to be implemented later. 
+    }
+    
+    /**
+     * A function that passes in a piece of data needed for path 
+     * normalization and resource classification. 
+     * 
+     * @param: a path. 
+     */
+    public void withBaseDirectory(Path siteRoot)
+    {
+        //TODO: to be implemented later. 
+    }
+    
+    /**
+     * A function that passes in a piece of data needed for path 
+     * normalization and resource classification. 
+     * 
+     * @param: a path. 
+     */
+    public void withBaseURLs(Collection<URL> urls)
+    {
+        //TODO: to be implemented later. 
+    }
+    
+    /**
+     * Extract all HTML anchor tags. 
+     * 
+     * @return: list of all anchor tags. 
+     */
+    public List<Resource> extractAnchors() 
+            throws IOException, FileNotFoundException
+    {
+        //TODO: finish implementation. 
+        SimpleHTMLParser parser = new SimpleHTMLParser("a", "href"); 
+        List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
         
-        String htmlAsString = htmlSource.lines()
-                .collect(Collectors.joining(System.lineSeparator())); 
-        
-        return this.extractImages(htmlAsString); 
+        return this.anchors; 
     }
     
     
     /**
      * Extract all HTML image tags.
-     * 
-     * @param: HTML source code. 
      * 
      * @return: list of all image tags. 
      */  
-    public List<Element> extractImages(String htmlSource)
+    public List<Resource> extractImages() 
+            throws IOException, FileNotFoundException
     {
-        theTag = "img"; 
-        theAttribute = "src"; 
+        //TODO: finish implementation. 
+        SimpleHTMLParser parser = new SimpleHTMLParser("img", "src"); 
+        List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
         
-        Document doc = Jsoup.parse(htmlSource);
-        Elements elements = doc.select(this.theTag);
-
-        List<Element> elementList = new ArrayList<>();
-        for (Element elm : elements) {
-            elementList.add(elm);
-            images.add(elm); 
-        }
-
-        return elementList;
+        
+        return this.images; 
+    }
+    
+    /**
+     * Extract all HTML script tags. 
+     * 
+     * @return: list of all script tags. 
+     */
+    public List<Resource> extractScripts() 
+            throws IOException, FileNotFoundException
+    {
+      //TODO: finish implementation. 
+        SimpleHTMLParser parser = new SimpleHTMLParser("script", "src"); 
+        List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
+        
+        return this.scripts; 
+    }
+    
+    /**
+     * Extract all HTML stylesheet tags. 
+     * 
+     * @return: list of all stylesheet tags. 
+     */
+    public List<Resource> extractStylesheets() 
+            throws IOException, FileNotFoundException
+    {
+      //TODO: finish implementation. 
+        SimpleHTMLParser parser = new SimpleHTMLParser("link", "href"); 
+        List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
+        
+        return this.stylesheets; 
     }
     
     /**
@@ -98,9 +170,7 @@ public class HTMLDocumentBuilder
      */
     public HTMLDocument build()
     {
-        HTMLDocument htmlDocument = new HTMLDocument(scripts, stylesheets, images, anchors); 
-        
-        return htmlDocument; 
+        return null; 
     }
     
     

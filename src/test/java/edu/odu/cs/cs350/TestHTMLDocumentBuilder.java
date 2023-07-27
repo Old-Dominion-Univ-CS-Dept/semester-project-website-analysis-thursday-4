@@ -31,30 +31,16 @@ import org.jsoup.nodes.Element;
  */
 public class TestHTMLDocumentBuilder 
 {
-    @Test
-    public void testExtractImage()
+    @BeforeEach
+    public void setUp()
     {
-        String htmlSource = "<img src=\"img_girl.jpg\" alt=\"Girl in a jacket\" width=\"500\" height=\"600\">"; 
-        
-        HTMLDocumentBuilder tester = new HTMLDocumentBuilder(); 
-        
-        List<Element> images = tester.extractImages(htmlSource); 
-        
-        assertThat(images, is(notNullValue())); 
-        assertThat(images.size(), equalTo(1)); 
+        // Set up later. 
     }
     
     @Test
-    public void testExtractImages() throws IOException, FileNotFoundException
+    public void testExtractImages()
     {
-        BufferedReader htmlSource = new BufferedReader(new FileReader("src/test/resources/images.html")); 
-        
-        HTMLDocumentBuilder tester = new HTMLDocumentBuilder(); 
-        
-        List<Element> images = tester.extractImages(htmlSource); 
-        
-        assertThat(images, is(notNullValue())); 
-        assertThat(images.size(), equalTo(5)); 
+        fail("test needs to be implemented."); 
     }
     
     @Test 
