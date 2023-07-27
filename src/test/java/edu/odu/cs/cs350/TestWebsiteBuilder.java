@@ -5,6 +5,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Path;
 import java.util.List;
 
@@ -67,7 +69,20 @@ public class TestWebsiteBuilder {
         assertThat(files, is(empty()));
 }
 
-  
+    /**
+     * Tests the mapUrlToLocalPath() method.
+     * @throws MalformedURLException if the URL is malformed
+     */
+    @Test
+    public void testMapUrlToLocalPath() throws MalformedURLException {
+        WebsiteBuilder builder = new WebsiteBuilder();
+        URL url = new URL("https://www.example.com/dummy/path");
+        String localPath = builder.mapUrlToLocalPath(url);
+
+        //checking for dummy path for now for compilation
+        assertThat(localPath, is("dummy/path"));
+    }
+    
 }
 
 

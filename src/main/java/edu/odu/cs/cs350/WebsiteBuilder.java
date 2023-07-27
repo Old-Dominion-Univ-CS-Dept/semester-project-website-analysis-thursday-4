@@ -61,6 +61,17 @@ public class WebsiteBuilder
         // Initial implementation to compile
         return Collections.emptyList();
     }
+
+    /**
+     * Maps a given URL to its corresponding local path.
+     *
+     * @param url the URL to map
+     * @return the local path corresponding to the URL
+     */
+    public String mapUrlToLocalPath(URL url) {
+        //  returning dummy path so it will compile 
+        return "dummy/path";
+    }
   
     
 }
