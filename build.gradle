@@ -8,7 +8,7 @@ plugins {
    	id "pmd"
    	id "com.github.spotbugs" version "5.0.14"
    	
-   	//id "checkstyle"
+   	id "checkstyle"
     id "project-report"
 
     id "org.jbake.site" version "5.5.0"
@@ -103,21 +103,21 @@ spotbugsTest {
     enabled = false
 }
 
-// checkstyle {
-//     toolVersion "8.42"
-//     ignoreFailures = true
-//     showViolations = false
-// }
+checkstyle {
+    toolVersion "8.42"
+    ignoreFailures = true
+    showViolations = false
+}
 
-// tasks.withType(Checkstyle) {
-//     reports {
-//         html.destination project.file("build/reports/checkstyle/main.html")
-//     }
-// }
+tasks.withType(Checkstyle) {
+    reports {
+        html.destination project.file("build/reports/checkstyle/main.html")
+    }
+}
 
-// checkstyleTest {
-//     enabled = false
-// }
+checkstyleTest {
+    enabled = false
+}
 
 //------------------------------------------------------------------------------
 // Deploy Steps (Convenience Tasks)
@@ -125,7 +125,7 @@ spotbugsTest {
 task reportsAndStuff(dependsOn: [
     "test",
     "jacocoTestReport",
-    //"checkstyleMain",
+    "checkstyleMain",
     "javadoc",
     "check",
     "spotbugsMain",
@@ -198,4 +198,65 @@ task setUpWebsite()
 
 bake {
     dependsOn "setUpWebsite"
+}
+
+//------------------------------------------------------------------------------
+// Deploy/Update Project Website on GitHub Pages
+//------------------------------------------------------------------------------
+def websiteRepo = "git@github.com:Old-Dominion-Univ-CS-Dept/thursday-4-website.git"
+
+task clearPages(type: Delete)
+{
+    delete "build/gh-pages"
+}
+
+task clonePagesRepo(dependsOn: ["clearPages"])
+{
+    doLast {
+        exec {
+            workingDir = "."
+            commandLine = ["git", "clone", websiteRepo, "build/gh-pages"]
+        }
+        exec {
+            workingDir = "build/gh-pages"
+            commandLine = ["git", "config", "user.email", "\"cbonh002@odu.edu\""]
+        }
+        exec {
+            workingDir = "build/gh-pages"
+            commandLine = ["git", "config", "user.name", "\"Cody Bonham\""]
+        }
+    }
+}
+
+task copyJBakePagesForUse(dependsOn: ["bake", "clonePagesRepo"])
+{
+    group "GitHub Pages"
+
+    doLast {
+        ant.copy (todir: "build/gh-pages") {
+            fileset(dir: "build/jbake")
+        }
+    }
+}
+
+task updateGitHubPages(dependsOn: ["copyJBakePagesForUse"])
+{
+    group "GitHub Pages"
+    description "Copy everything into \"gh-pages\" directory and push to Report Website."
+
+    doLast {
+        def pagesDir = "$buildDir/gh-pages"
+        exec {
+            workingDir = "$buildDir/gh-pages"
+            commandLine = ["git", "add", "."]
+        }
+        exec {
+            workingDir = "$buildDir/gh-pages"
+            commandLine = ["git", "commit", "-m", "Update report site"]
+        }
+        exec {
+            workingDir = "$buildDir/gh-pages"
+            commandLine = ["git", "push"]
+        }
+    }
 }
