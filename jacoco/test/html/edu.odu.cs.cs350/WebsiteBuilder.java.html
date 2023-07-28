@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WebsiteBuilder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">semester-project-website-analysis-thursday-4</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">WebsiteBuilder.java</span></div><h1>WebsiteBuilder.java</h1><pre class="source lang-java linenums">/**
+ * The WebsiteBuilder class will be responsible for collecting all 
+ * information needed to create a Website object:
+ *      i. one local directory path
+ *     ii. one or more URLs
+ */
+package edu.odu.cs.cs350;
+
+import java.net.URL;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+
+/**
+ * @author bonham36
+ *
+ */
+public class WebsiteBuilder 
+{
+    
+    private Path basePath;
+    private Collection&lt;URL&gt; urls;
+
+    /**
+     * Constructs a new WebsiteBuilder.
+    * Initializes the 'basePath' and 'url' fields to null.
+     */
+<span class="fc" id="L31">    public WebsiteBuilder() {</span>
+<span class="fc" id="L32">        this.basePath = null;</span>
+<span class="fc" id="L33">        this.urls = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L34">    }</span>
+
+      /**
+     * Returns the base path of the website.
+     *
+     * @return the base path of the website
+     */
+    public Path getBasePath() {
+<span class="fc" id="L42">        return this.basePath;</span>
+    }
+
+    /**
+     * Returns the URLs of the website.
+     *
+     * @return the URLs of the website
+     */
+    public Collection&lt;URL&gt; getUrls() {
+<span class="fc" id="L51">        return this.urls;</span>
+    }
+
+    /**
+     * Walks through the directory  and returns a list of Path objects
+     * 
+     * @param directoryPath the path to the directory to walk through
+     * @return a list of Path objects for all the files in the directory 
+     */
+    public List&lt;Path&gt; walkDirectory(String directoryPath) {
+        // Initial implementation to compile
+<span class="fc" id="L62">        return Collections.emptyList();</span>
+    }
+
+    /**
+     * Maps a given URL to its corresponding local path.
+     *
+     * @param url the URL to map
+     * @return the local path corresponding to the URL
+     */
+    public String mapUrlToLocalPath(URL url) {
+        //  returning dummy path so it will compile 
+<span class="fc" id="L73">        return &quot;dummy/path&quot;;</span>
+    }
+  
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
