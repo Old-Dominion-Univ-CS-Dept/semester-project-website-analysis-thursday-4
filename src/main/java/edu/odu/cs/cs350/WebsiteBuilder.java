@@ -5,7 +5,8 @@
  *     ii. one or more URLs
  */
 package edu.odu.cs.cs350;
-
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ import java.nio.file.Paths;
 import java.io.IOException;
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
+import java.util.Objects;
 
 
 
@@ -120,15 +122,78 @@ public class WebsiteBuilder
     }
 
     /**
-     * Maps a given URL to its corresponding local path.
-     *
-     * @param url the URL to map
-     * @return the local path corresponding to the URL
+     * Takes a URLs and a base path, maps each URL to a local path. 
+     * Removes the common URL prefix from each URL and uses the remaining  
+     * URL with  prepended basePath. Initially writing the  transformed paths 
+     * are written to a text file named "processed_paths.txt" for testing.
+     * 
+     * @param urls A collection of URLs to be mapped.
+     * @param basePath The base path for the local files.
+     * @return A collection of local file paths.
      */
-    public String mapUrlToLocalPath(URL url) {
-        //  returning dummy path so it will compile 
-        return "dummy/path";
+
+     
+     public Collection<Path> mapUrlsToLocalPath(Collection<URL> urls, Path basePath) {
+        List<Path> localPaths = new ArrayList<>();
+        
+        String commonUrlPrefix = findCommonPrefix(urls);
+    
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/data/processed_paths.txt"))) {
+            for (URL url : urls) {
+                String urlPath = url.getPath();
+    
+                // Remove the common prefix from the URL path
+                String localPath = urlPath.replaceFirst(commonUrlPrefix, "");  
+    
+                if (localPath.startsWith("/")) {
+                    localPath = localPath.substring(1);
+                }
+    
+                Path transformedPath = basePath.resolve(localPath);
+                localPaths.add(transformedPath);
+    
+                // Write the transformed local path to the text file
+                writer.write(transformedPath.toString());
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    
+        return localPaths;
     }
-  
+    
+    
+
+    
+    
+    /**
+     * Helper method to find the common prefix in a collection of URLs. Compares
+     * the path of each URL to find the longest common prefix.
+     * 
+     * @param urls A collection of URLs 
+     * @return The common prefix of the URL paths.
+     */
+    
+    public String findCommonPrefix(Collection<URL> urls) {
+        String commonPrefix = urls.stream()
+                .map(URL::getPath)
+                .reduce((s1, s2) -> {
+                    int i = 0;
+                    while (i < s1.length() && i < s2.length() && s1.charAt(i) == s2.charAt(i)) {
+                        i++;
+                    }
+                    return s1.substring(0, i);
+                }).orElse("");
+        return commonPrefix;
+    }
+    
+    
+
+
+
+    public void setBasePath(Path basePath) {
+        this.basePath = basePath;
+    }
     
 }

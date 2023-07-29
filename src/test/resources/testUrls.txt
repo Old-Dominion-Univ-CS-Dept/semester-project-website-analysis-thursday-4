@@ -1,0 +1,3 @@
+https://www.example.com/home/user/website/index.html -> Directory/website/index.html
+https://www.example.com/home/user/about.html -> Directory/about.html
+https://www.example.com/home/user/contact.html -> Directory/contact.html
