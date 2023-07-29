@@ -111,7 +111,8 @@ public class TestWebsiteBuilder {
              expectedPaths.add(Paths.get(parts[1]));
          }
  
-         Collection<Path> actualPaths = websiteBuilder.mapUrlsToLocalPath(urls, basePath);
+         Collection<Path> actualPaths = builder.mapUrlsToLocalPath(urls, basePath);
+
  
          assertThat(actualPaths, containsInAnyOrder(expectedPaths.toArray()));
      }

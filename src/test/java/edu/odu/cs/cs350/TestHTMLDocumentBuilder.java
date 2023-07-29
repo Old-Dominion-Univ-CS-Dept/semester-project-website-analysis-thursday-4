@@ -31,6 +31,11 @@ import org.jsoup.nodes.Element;
  */
 public class TestHTMLDocumentBuilder 
 {
+    List<Resource> testAnchors = new ArrayList<>(); 
+    List<Resource> testImages = new ArrayList<>(); 
+    List<Resource> testScripts = new ArrayList<>(); 
+    List<Resource> testStylesheets = new ArrayList<>(); 
+
     @BeforeEach
     public void setUp()
     {
@@ -42,10 +47,30 @@ public class TestHTMLDocumentBuilder
     {
         fail("test needs to be implemented."); 
     }
+
+    @Test
+    public void testExtractContent()
+    {
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+        
+        
+    }
     
     @Test 
     public void testBuild()
     {
-        fail("test needs to be implemented."); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+        HTMLDocument testDoc = new HTMLDocument(); 
+
+        testDoc = testBuilder.build(); 
+
+        assertThat(testDoc, is(notNullValue())); 
+
+        assertThat(testDoc.getAnchors(), equalTo(testAnchors)); 
+        assertThat(testDoc.getImages(), equalTo(testImages)); 
+        assertThat(testDoc.getScrips(), equalTo(testScripts)); 
+        assertThat(testDoc.getStylesheets(), equalTo(testStylesheets)); 
+
+
     }
 }
