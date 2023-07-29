@@ -88,4 +88,24 @@ public class TestCLIOutput {
       assertEquals(expectedDirectory, actualDirectory);
      }
 
+     @Test public void TestCLIOutFromFileMaker() throws Exception {
+
+        //Set uf a variable to test against.
+        String fileName = "testFileName";
+
+        //Redirect output to capture message
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        //Call Function
+        CLIOutput.CLIOutFromFileMaker(fileName);
+
+        String expected = fileName + "/n";
+        String actual = outputStream.toString();
+
+        //Assert that messages match.
+        assertEquals(expected, actual);
+    
+    }
+
 }

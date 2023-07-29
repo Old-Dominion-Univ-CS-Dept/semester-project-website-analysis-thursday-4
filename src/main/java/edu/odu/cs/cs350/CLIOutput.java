@@ -137,7 +137,7 @@ public class CLIOutput {
 
     public static void CLIOutFromFileMaker(String fileName) throws Exception {
 
-        System.out.println(fileName);
+        System.out.println(fileName + "/n");
     }
 
 }

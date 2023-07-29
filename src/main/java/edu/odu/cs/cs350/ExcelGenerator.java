@@ -61,7 +61,7 @@ public class ExcelGenerator {
             workbook.write(outputStream);
 
             //added this to output filename to console.
-            System.out.println(outputStream);
+            System.out.println(outputStream + "/n");
 
             System.out.println("Excel file generated successfully.");
         } catch (IOException e) {
