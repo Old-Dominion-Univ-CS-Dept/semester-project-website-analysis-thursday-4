@@ -52,6 +52,7 @@ tasks - Displays the tasks runnable from root project 'semester-project-website-
 
 Reporting tasks
 ---------------
+deployReports - Commit and push website changes to GitHub
 projectReport - Generates a report about your project.
 
 Verification tasks

@@ -32,16 +32,19 @@ public class JSONReportWriter extends ReportWriter {
      */
 <span class="nc" id="L33">    public JSONReportWriter() {</span>
 <span class="nc" id="L34">        this.outputFile = new File(OUTPUT_FILE_NAME);</span>
-<span class="nc" id="L35">    }</span>
+
+        ///Added to simplfy CLI output
+<span class="nc" id="L37">        System.out.println(OUTPUT_FILE_NAME + &quot;/n&quot;);</span>
+<span class="nc" id="L38">    }</span>
 
     /**
      * Constructor allows specifying the output file.
      * 
      * @param outputFile The output file where the report will be written.
      */
-<span class="fc" id="L42">    public JSONReportWriter(File outputFile) {</span>
-<span class="fc" id="L43">        this.outputFile = outputFile;</span>
-<span class="fc" id="L44">    }</span>
+<span class="fc" id="L45">    public JSONReportWriter(File outputFile) {</span>
+<span class="fc" id="L46">        this.outputFile = outputFile;</span>
+<span class="fc" id="L47">    }</span>
 
 
     /**
@@ -50,7 +53,7 @@ public class JSONReportWriter extends ReportWriter {
      * @return File The output file object where the report will be written.
      */
     public File getOutputFile() {
-<span class="fc" id="L53">        return outputFile;</span>
+<span class="fc" id="L56">        return outputFile;</span>
     }
 
        /**
@@ -67,7 +70,7 @@ public class JSONReportWriter extends ReportWriter {
      * @return Map The source data of the report.
      */
     public Map&lt;String, Object&gt; getSourceData() {
-<span class="fc" id="L70">        return sourceData;</span>
+<span class="fc" id="L73">        return sourceData;</span>
     }
 
     /**
@@ -78,8 +81,8 @@ public class JSONReportWriter extends ReportWriter {
      * @throws IOException If an I/O error occurs.
      */
      private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
-<span class="fc" id="L81">        writer.write(jsonString);</span>
-<span class="fc" id="L82">     }</span>
+<span class="fc" id="L84">        writer.write(jsonString);</span>
+<span class="fc" id="L85">     }</span>
 
     /**
      * Overrides the writeReport method from the ReportWriter class.
@@ -92,17 +95,17 @@ public class JSONReportWriter extends ReportWriter {
      @Override
      public void writeReport(Map&lt;String, Object&gt; reportData) throws IOException {
         // Check if file exists, and if not, create it
-<span class="pc bpc" id="L95" title="1 of 2 branches missed.">        if (!outputFile.exists()) {</span>
-<span class="nc" id="L96">            outputFile.getParentFile().mkdirs(); // Create parent directories if not exist</span>
-<span class="nc" id="L97">            outputFile.createNewFile(); // Create the file itself</span>
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">        if (!outputFile.exists()) {</span>
+<span class="nc" id="L99">            outputFile.getParentFile().mkdirs(); // Create parent directories if not exist</span>
+<span class="nc" id="L100">            outputFile.createNewFile(); // Create the file itself</span>
         }
     
-<span class="fc" id="L100">        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {</span>
-<span class="fc" id="L101">            String jsonString = convertToJson(reportData);</span>
-<span class="fc" id="L102">            writeToFile(bufferedWriter, jsonString);</span>
-<span class="fc" id="L103">            this.sourceData = reportData;</span>
+<span class="fc" id="L103">        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {</span>
+<span class="fc" id="L104">            String jsonString = convertToJson(reportData);</span>
+<span class="fc" id="L105">            writeToFile(bufferedWriter, jsonString);</span>
+<span class="fc" id="L106">            this.sourceData = reportData;</span>
         }
-<span class="fc" id="L105">    }</span>
+<span class="fc" id="L108">    }</span>
 
     /**
      * Converts the report data into a JSON string.
@@ -111,10 +114,10 @@ public class JSONReportWriter extends ReportWriter {
      * @return  The JSON string representation of the report data.
      */
     private String convertToJson(Map&lt;String, Object&gt; reportData) {
-<span class="fc" id="L114">        Map&lt;String, Object&gt; args = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L115">        args.put(JsonWriter.TYPE, false);</span>
-<span class="fc" id="L116">        args.put(JsonWriter.PRETTY_PRINT, true); // Enable pretty print for readable JSON output</span>
-<span class="fc" id="L117">        return JsonWriter.objectToJson(reportData, args);</span>
+<span class="fc" id="L117">        Map&lt;String, Object&gt; args = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L118">        args.put(JsonWriter.TYPE, false);</span>
+<span class="fc" id="L119">        args.put(JsonWriter.PRETTY_PRINT, true); // Enable pretty print for readable JSON output</span>
+<span class="fc" id="L120">        return JsonWriter.objectToJson(reportData, args);</span>
     }
 
   

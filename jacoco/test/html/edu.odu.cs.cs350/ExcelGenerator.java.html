@@ -2,6 +2,9 @@
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+ import java.io.File;
+ import java.io.FilenameFilter;
+ import java.io.*;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -15,53 +18,59 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 // Populate the sheet with data
 // Write the workbook to a file
 
-<span class="nc" id="L18">public class ExcelGenerator {</span>
+<span class="nc" id="L21">public class ExcelGenerator {</span>
     public static void main(String[] args) throws IOException {
         // Create a new workbook
-<span class="fc" id="L21">        Workbook workbook = new XSSFWorkbook();</span>
+<span class="fc" id="L24">        Workbook workbook = new XSSFWorkbook();</span>
         // Create a new sheet
-<span class="fc" id="L23">        Sheet sheet = workbook.createSheet(&quot;summary&quot;);</span>
+<span class="fc" id="L26">        Sheet sheet = workbook.createSheet(&quot;summary&quot;);</span>
 
+  
         // Create the headings row
-<span class="fc" id="L26">        Row headingsRow = sheet.createRow(0);</span>
-<span class="fc" id="L27">        headingsRow.createCell(0).setCellValue(&quot;Page&quot;);</span>
-<span class="fc" id="L28">        headingsRow.createCell(1).setCellValue(&quot;No. of Images&quot;);</span>
-<span class="fc" id="L29">        headingsRow.createCell(2).setCellValue(&quot;No. of  CSS&quot;);</span>
-<span class="fc" id="L30">        headingsRow.createCell(3).setCellValue(&quot;Scripts&quot;);</span>
-<span class="fc" id="L31">        headingsRow.createCell(4).setCellValue(&quot;No. of Links (Intra-Page)&quot;);</span>
-<span class="fc" id="L32">        headingsRow.createCell(5).setCellValue(&quot;No. of Links (Internal)&quot;);</span>
-<span class="fc" id="L33">        headingsRow.createCell(6).setCellValue(&quot;No. of Links (External)&quot;);</span>
+<span class="fc" id="L30">        Row headingsRow = sheet.createRow(0);</span>
+<span class="fc" id="L31">        headingsRow.createCell(0).setCellValue(&quot;Page&quot;);</span>
+<span class="fc" id="L32">        headingsRow.createCell(1).setCellValue(&quot;No. of Images&quot;);</span>
+<span class="fc" id="L33">        headingsRow.createCell(2).setCellValue(&quot;No. of  CSS&quot;);</span>
+<span class="fc" id="L34">        headingsRow.createCell(3).setCellValue(&quot;Scripts&quot;);</span>
+<span class="fc" id="L35">        headingsRow.createCell(4).setCellValue(&quot;No. of Links (Intra-Page)&quot;);</span>
+<span class="fc" id="L36">        headingsRow.createCell(5).setCellValue(&quot;No. of Links (Internal)&quot;);</span>
+<span class="fc" id="L37">        headingsRow.createCell(6).setCellValue(&quot;No. of Links (External)&quot;);</span>
 
         // Add data for internal pages
-<span class="fc" id="L36">        String[][] data = {</span>
+<span class="fc" id="L40">        String[][] data = {</span>
                 {&quot;Page 1&quot;, &quot;10&quot;, &quot;2&quot;, &quot;5&quot;, &quot;10&quot;, &quot;3&quot;, &quot;11&quot;},
                 {&quot;Page 2&quot;, &quot;5&quot;, &quot;1&quot;, &quot;3&quot;, &quot;7&quot;, &quot;2&quot;, &quot;4&quot;}
         };
 
-<span class="fc" id="L41">        int rowCount = 1;</span>
-<span class="fc bfc" id="L42" title="All 2 branches covered.">        for (String[] rowData : data) {</span>
-<span class="fc" id="L43">            Row row = sheet.createRow(rowCount++);</span>
-<span class="fc" id="L44">            int columnCount = 0;</span>
-<span class="fc bfc" id="L45" title="All 2 branches covered.">            for (String cellData : rowData) {</span>
-<span class="fc" id="L46">                row.createCell(columnCount++).setCellValue(cellData);</span>
+<span class="fc" id="L45">        int rowCount = 1;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        for (String[] rowData : data) {</span>
+<span class="fc" id="L47">            Row row = sheet.createRow(rowCount++);</span>
+<span class="fc" id="L48">            int columnCount = 0;</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            for (String cellData : rowData) {</span>
+<span class="fc" id="L50">                row.createCell(columnCount++).setCellValue(cellData);</span>
             }
         }
 
         // Auto-size the columns
-<span class="fc bfc" id="L51" title="All 2 branches covered.">        for (int i = 0; i &lt; 6; i++) {</span>
-<span class="fc" id="L52">            sheet.autoSizeColumn(i);</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        for (int i = 0; i &lt; 6; i++) {</span>
+<span class="fc" id="L56">            sheet.autoSizeColumn(i);</span>
         }
               
         // Write the workbook to a file
-<span class="fc" id="L56">        try (FileOutputStream outputStream = new FileOutputStream(&quot;summary.xlsx&quot;)) {</span>
-<span class="fc" id="L57">            workbook.write(outputStream);</span>
-<span class="fc" id="L58">            System.out.println(&quot;Excel file generated successfully.&quot;);</span>
-<span class="nc" id="L59">        } catch (IOException e) {</span>
-<span class="nc" id="L60">            e.printStackTrace();</span>
-<span class="fc" id="L61">        }</span>
+<span class="fc" id="L60">        try (FileOutputStream outputStream = new FileOutputStream(&quot;summary.xlsx&quot;)) {</span>
+<span class="fc" id="L61">            workbook.write(outputStream);</span>
+
+            //added this to output filename to console.
+<span class="fc" id="L64">            System.out.println(outputStream + &quot;/n&quot;);</span>
+
+<span class="fc" id="L66">            System.out.println(&quot;Excel file generated successfully.&quot;);</span>
+<span class="nc" id="L67">        } catch (IOException e) {</span>
+<span class="nc" id="L68">            e.printStackTrace();</span>
+<span class="fc" id="L69">        }</span>
     
-<span class="fc" id="L63">    workbook.close();</span>
-<span class="fc" id="L64">    }</span>
+<span class="fc" id="L71">    workbook.close();</span>
+
+<span class="fc" id="L73">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

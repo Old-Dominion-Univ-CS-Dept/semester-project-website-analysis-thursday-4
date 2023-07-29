@@ -6,6 +6,24 @@ Root project 'semester-project-website-analysis-thursday-4'
 annotationProcessor - Annotation processors and their dependencies for source set 'main'.
 No dependencies
 
+checkstyle - The Checkstyle libraries to be used for this project.
+\--- com.puppycrawl.tools:checkstyle:8.42
+     +--- info.picocli:picocli:4.6.1
+     +--- antlr:antlr:2.7.7
+     +--- org.antlr:antlr4-runtime:4.9.2
+     +--- commons-beanutils:commons-beanutils:1.9.4
+     |    \--- commons-collections:commons-collections:3.2.2
+     +--- com.google.guava:guava:30.1.1-jre
+     |    +--- com.google.guava:failureaccess:1.0.1
+     |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+     |    +--- com.google.code.findbugs:jsr305:3.0.2
+     |    +--- org.checkerframework:checker-qual:3.8.0
+     |    +--- com.google.errorprone:error_prone_annotations:2.5.1
+     |    \--- com.google.j2objc:j2objc-annotations:1.3
+     +--- org.reflections:reflections:0.9.12
+     |    \--- org.javassist:javassist:3.26.0-GA
+     \--- net.sf.saxon:Saxon-HE:10.5
+
 compileClasspath - Compile classpath for source set 'main'.
 +--- org.jsoup:jsoup:1.16.1
 +--- com.cedarsoftware:json-io:4.14.0

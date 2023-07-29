@@ -17,7 +17,7 @@ import java.util.Date;
      * Create a new Text File
      * Format text file to &quot;YYYYMMDD-HHMMSS- &quot;summary&quot;&quot;
      */
-    public static void createtxtfile() throws IOException{
+    public static void createtxtfile() throws Exception{
 
 
     // Generate
@@ -32,16 +32,22 @@ import java.util.Date;
     
     /// Create a file
 <span class="nc" id="L34">    File file1 = new File(dateForm.format(thisDate) + &quot;summary&quot; + &quot;.txt&quot;);</span>
+    
+    //Creating a string to send the filename to CLIoutput
+<span class="nc" id="L37">    String fileName = file1.getName();</span>
+
+    //Send the filenamy to CLIOutput
+<span class="nc" id="L40">    CLIOutput.CLIOutFromFileMaker(fileName);</span>
 
     ///create file writer class
-<span class="nc" id="L37">    FileWriter fw = new FileWriter(file1);</span>
+<span class="nc" id="L43">    FileWriter fw = new FileWriter(file1);</span>
 
     /// create a print writer class
-<span class="nc" id="L40">    PrintWriter pw = new PrintWriter(fw);</span>
+<span class="nc" id="L46">    PrintWriter pw = new PrintWriter(fw);</span>
 
-<span class="nc" id="L42">    pw.write(&quot;test&quot;);</span>
-<span class="nc" id="L43">    pw.close();</span>
+<span class="nc" id="L48">    pw.write(&quot;test&quot;);</span>
+<span class="nc" id="L49">    pw.close();</span>
 
-<span class="nc" id="L45">    }</span>
+<span class="nc" id="L51">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

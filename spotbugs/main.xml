@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1690577006059" analysisTimestamp="1690577006059" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1690634620714" analysisTimestamp="1690634620714" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
     <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Locality.class</Jar>
     <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$2.class</Jar>
@@ -98,21 +98,21 @@
     <ShortMessage>Reliance on default encoding</ShortMessage>
     <LongMessage>Found reliance on default encoding in edu.odu.cs.cs350.CreateTextFile.createtxtfile(): new java.io.FileWriter(File)</LongMessage>
     <Class classname="edu.odu.cs.cs350.CreateTextFile" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="14" end="45" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
-        <Message>At CreateTextFile.java:[lines 14-45]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="14" end="51" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
+        <Message>At CreateTextFile.java:[lines 14-51]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.CreateTextFile</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.CreateTextFile" name="createtxtfile" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="24" end="45" startBytecode="0" endBytecode="197" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="24" end="51" startBytecode="0" endBytecode="226" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java"/>
       <Message>In method edu.odu.cs.cs350.CreateTextFile.createtxtfile()</Message>
     </Method>
     <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.FileWriter" start="96" end="97" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
       <Message>Called method new java.io.FileWriter(File)</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" primary="true" start="37" end="37" startBytecode="57" endBytecode="57" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
-      <Message>At CreateTextFile.java:[line 37]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" primary="true" start="43" end="43" startBytecode="66" endBytecode="66" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
+      <Message>At CreateTextFile.java:[line 43]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="1d29765c28eb8a430a0efd7b09c7508a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
@@ -660,34 +660,34 @@
     <ShortMessage>Reliance on default encoding</ShortMessage>
     <LongMessage>Found reliance on default encoding in edu.odu.cs.cs350.JSONReportWriter.writeReport(Map): new java.io.FileWriter(File)</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="117" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 33-117]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="120" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 33-120]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="writeReport" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="95" end="105" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="98" end="108" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</Message>
     </Method>
     <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.FileWriter" start="96" end="97" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
       <Message>Called method new java.io.FileWriter(File)</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="100" end="100" startBytecode="41" endBytecode="41" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 100]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="103" end="103" startBytecode="41" endBytecode="41" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 103]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="6a7a9aca47a1e6e330160cbfaf8ed200" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.JSONReportWriter.getSourceData() may expose internal representation by returning JSONReportWriter.sourceData</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="117" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 33-117]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="120" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 33-120]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="getSourceData" signature="()Ljava/util/Map;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="70" end="70" startBytecode="0" endBytecode="46" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="73" end="73" startBytecode="0" endBytecode="46" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.getSourceData()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.JSONReportWriter" name="sourceData" signature="Ljava/util/Map;" isStatic="false" primary="true">
@@ -696,21 +696,21 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.JSONReportWriter.sourceData</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="70" end="70" startBytecode="4" endBytecode="4" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 70]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="73" end="73" startBytecode="4" endBytecode="4" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 73]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="41f72e5eb8b60a1eb25c8ac28dbf47fc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.JSONReportWriter.writeReport(Map) may expose internal representation by storing an externally mutable object into JSONReportWriter.sourceData</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="117" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 33-117]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="120" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 33-120]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="writeReport" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="95" end="105" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="98" end="108" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.JSONReportWriter" name="sourceData" signature="Ljava/util/Map;" isStatic="false" primary="true">
@@ -722,50 +722,50 @@
     <LocalVariable name="reportData" register="1" pc="62" role="LOCAL_VARIABLE_NAMED">
       <Message>Local variable named reportData</Message>
     </LocalVariable>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="103" end="103" startBytecode="62" endBytecode="62" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 103]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="106" end="106" startBytecode="62" endBytecode="62" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 106]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="c0f9d886f9ca9dd3044bb196938a9358" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
     <ShortMessage>Method ignores exceptional return value</ShortMessage>
     <LongMessage>Exceptional return value of java.io.File.createNewFile() ignored in edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="117" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 33-117]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="120" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 33-120]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="writeReport" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="95" end="105" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="98" end="108" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</Message>
     </Method>
     <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.File" start="1029" end="1034" startBytecode="0" endBytecode="126" sourcefile="File.java" sourcepath="java/io/File.java"/>
       <Message>Called method java.io.File.createNewFile()</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="97" end="97" startBytecode="25" endBytecode="25" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 97]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="100" end="100" startBytecode="25" endBytecode="25" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 100]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="3e974cf4e1fdb56067fcbd372bb5824d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
     <ShortMessage>Method ignores exceptional return value</ShortMessage>
     <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="117" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 33-117]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="33" end="120" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 33-120]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="writeReport" signature="(Ljava/util/Map;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="95" end="105" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="98" end="108" startBytecode="0" endBytecode="286" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</Message>
     </Method>
     <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.File" start="1390" end="1404" startBytecode="0" endBytecode="230" sourcefile="File.java" sourcepath="java/io/File.java"/>
       <Message>Called method java.io.File.mkdirs()</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="96" end="96" startBytecode="17" endBytecode="17" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 96]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="99" end="99" startBytecode="17" endBytecode="17" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 99]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="eef399e04f8d1c0f8e3c7876582594d5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
@@ -1050,12 +1050,12 @@ signals unexpected behavior by returning an atypical return value.
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Fri, 28 Jul 2023 16:43:26 -0400" total_classes="0" referenced_classes="0" total_bugs="37" total_size="0" num_packages="1" java_version="16.0.2" vm_version="16.0.2+7" cpu_seconds="25.12" clock_seconds="9.24" peak_mbytes="394.54" alloc_mbytes="16384.00" gc_seconds="0.03" priority_2="35" priority_1="2">
+  <FindBugsSummary timestamp="Sat, 29 Jul 2023 08:43:40 -0400" total_classes="0" referenced_classes="0" total_bugs="37" total_size="0" num_packages="1" java_version="16.0.2" vm_version="16.0.2+7" cpu_seconds="25.05" clock_seconds="9.67" peak_mbytes="390.33" alloc_mbytes="16384.00" gc_seconds="0.03" priority_2="35" priority_1="2">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="7bb6a050e368016a87a8b5ee644496ee"/>
-    <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="94384c9f78c0451ab2dbbe3d8f69d832"/>
+    <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="1bde7cd05569888885c515f81749d16b"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocumentBuilder.java" bugCount="11" size="0" bugHash="78b4a13e95e552c4e7546a146a897124"/>
-    <FileStats path="edu/odu/cs/cs350/JSONReportWriter.java" bugCount="5" size="0" bugHash="bea66ef57033982c29aaf6384b7a9f95"/>
+    <FileStats path="edu/odu/cs/cs350/JSONReportWriter.java" bugCount="5" size="0" bugHash="3a7b1a209a13735fc3ba219a57387d27"/>
     <FileStats path="edu/odu/cs/cs350/Resource.java" bugCount="4" size="0" bugHash="140760c3c0d14c48c6dc5a7986c8c858"/>
     <FileStats path="edu/odu/cs/cs350/WebsiteBuilder.java" bugCount="2" size="0" bugHash="0cf06fce4221f67a5999afe0cb0ee46d"/>
     <FileStats path="edu/odu/cs/cs350/errorMessages.java" bugCount="1" size="0" bugHash="a667c910258d1b56fdcb0e98dcc5a7a0"/>
