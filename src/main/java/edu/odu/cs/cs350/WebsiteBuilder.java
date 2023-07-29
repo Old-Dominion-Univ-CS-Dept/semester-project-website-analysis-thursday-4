@@ -17,6 +17,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.IOException;
 import java.util.stream.Stream;
+import java.util.stream.Collectors;
+
 
 
 /**
@@ -28,6 +30,7 @@ public class WebsiteBuilder
     
     private Path basePath;
     private Collection<URL> urls;
+   
 
     /**
      * Constructs a new WebsiteBuilder.
@@ -36,6 +39,8 @@ public class WebsiteBuilder
     public WebsiteBuilder() {
         this.basePath = null;
         this.urls = new ArrayList<>();
+ 
+        
     }
 
       /**
@@ -56,22 +61,62 @@ public class WebsiteBuilder
         return this.urls;
     }
 
-    /**
-     * Walks through the directory  and returns a list of Path objects
-     * 
-     * @param directoryPath the path to the directory to walk through
-     * @return a list of Path objects for all the files in the directory 
-     * @throws IOException when accessing an invalid directory.
+  /**
+ * Walks through the directory structure starting from the specified path. 
+ * Extracts all subdirectories and files from the directory and its subdirectories.
+ *
+ * @param directoryPath the path to the directory to begin the walk from.
+ * @return a list of all  files in the directory.
+ * @throws IOException if an I/O error occurs when opening the directory.
  */
-    
+        
     public List<Path> walkDirectory(String directoryPath) throws IOException {
-        Path directoryToExamine = Paths.get(directoryPath);
+        Path pathToExamine = Paths.get(directoryPath);
+        List<Path> directories = examineDirectory(pathToExamine);
+        
         List<Path> allFiles = new ArrayList<>();
-        Files.walk(directoryToExamine)
-            .filter(Files::isRegularFile)
-            .forEach(allFiles::add);
-
+        for(Path directory : directories) {
+            allFiles.addAll(directoryWalker(directory));
+        }
+        
         return allFiles;
+    }
+
+    /**
+     * Examines the directory structure og the specified path and extracts all
+     * subdirectories.
+     *
+     * @param pathToExamine the path to the directory to examine.
+     * @return a list of Path objects for the subdirectories in the directory.
+     * @throws IOException if an I/O error occurs when opening the directory.
+     */
+    private List<Path> examineDirectory(Path pathToExamine) throws IOException {
+        List<Path> directoryList = new ArrayList<>();
+        Files.walk(pathToExamine)
+            .forEach((Path path) -> {
+                if (Files.isDirectory(path)) {
+                    directoryList.add(path);
+                }
+            });
+        return directoryList;
+    }
+
+    /**
+     * Walks through the  directory and extracts all files.
+     *
+     * @param directory the path to the directory to walk.
+     * @return a list of paths for  all files in the directory.
+     * @throws IOException if an I/O error occurs when opening the directory.
+     */
+    private List<Path> directoryWalker(Path directory) throws IOException {
+        List<Path> fileList = new ArrayList<>();
+        Files.walk(directory, 1)
+            .forEach((Path path) -> {
+                if (Files.isRegularFile(path)) {
+                    fileList.add(path);
+                }
+            });
+        return fileList;
     }
 
     /**

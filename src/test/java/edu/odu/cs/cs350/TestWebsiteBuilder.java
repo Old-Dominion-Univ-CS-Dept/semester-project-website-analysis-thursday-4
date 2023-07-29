@@ -68,9 +68,9 @@ public class TestWebsiteBuilder {
     public void testWalkDirectory() {
         try {
             WebsiteBuilder builder = new WebsiteBuilder();
-            List<Path> files = builder.walkDirectory("src/test/resources/cs417-one-lecture");
+            List<Path> files = builder.walkDirectory("src/test/resources/cs-landing-page");
            
-             // There should be three files: index.html and two image files.
+             // There should be three files which are in 2 directories: index.html, robots.txt, and test-layout.css.
              assertThat(files.size(), is(3));
             
         } catch (IOException e) {
