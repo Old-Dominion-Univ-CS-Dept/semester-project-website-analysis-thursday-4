@@ -2,6 +2,9 @@ package edu.odu.cs.cs350;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+ import java.io.File;
+ import java.io.FilenameFilter;
+ import java.io.*;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -22,6 +25,7 @@ public class ExcelGenerator {
         // Create a new sheet
         Sheet sheet = workbook.createSheet("summary");
 
+  
         // Create the headings row
         Row headingsRow = sheet.createRow(0);
         headingsRow.createCell(0).setCellValue("Page");
@@ -55,12 +59,17 @@ public class ExcelGenerator {
         // Write the workbook to a file
         try (FileOutputStream outputStream = new FileOutputStream("summary.xlsx")) {
             workbook.write(outputStream);
+
+            //added this to output filename to console.
+            System.out.println(outputStream);
+
             System.out.println("Excel file generated successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
     
     workbook.close();
+
     }
     
 }

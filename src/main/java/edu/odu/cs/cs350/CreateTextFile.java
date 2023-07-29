@@ -17,7 +17,7 @@ public class CreateTextFile {
      * Create a new Text File
      * Format text file to "YYYYMMDD-HHMMSS- "summary""
      */
-    public static void createtxtfile() throws IOException{
+    public static void createtxtfile() throws Exception{
 
 
     // Generate
@@ -32,6 +32,12 @@ public class CreateTextFile {
     
     /// Create a file
     File file1 = new File(dateForm.format(thisDate) + "summary" + ".txt");
+    
+    //Creating a string to send the filename to CLIoutput
+    String fileName = file1.getName();
+
+    //Send the filenamy to CLIOutput
+    CLIOutput.CLIOutFromFileMaker(fileName);
 
     ///create file writer class
     FileWriter fw = new FileWriter(file1);

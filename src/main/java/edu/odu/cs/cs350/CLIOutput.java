@@ -21,7 +21,7 @@ public class CLIOutput {
     }
     
 
-    public static void out(String[] args) throws Exception {
+    public static void out(String[] args){
 
     /*
      * String to hold the directory.
@@ -133,6 +133,11 @@ public class CLIOutput {
     public static String currentDirectory(){
         String directory = System.getProperty("user.dir");
         return directory;
+    }
+
+    public static void CLIOutFromFileMaker(String fileName) throws Exception {
+
+        System.out.println(fileName);
     }
 
 }
