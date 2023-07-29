@@ -15,7 +15,7 @@ public class TestImage
     public void testImage()
     {
         Image testerImage = new Image(); 
-        assertThat(testerImage.typeOfResource, is(ResourceKind.IMAGE)); 
+        assertThat(testerImage.getTypeOfResource(), is(ResourceKind.IMAGE)); 
         
         
         
