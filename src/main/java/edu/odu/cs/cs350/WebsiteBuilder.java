@@ -12,6 +12,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.IOException;
+import java.util.stream.Stream;
 
 
 /**
@@ -56,10 +61,17 @@ public class WebsiteBuilder
      * 
      * @param directoryPath the path to the directory to walk through
      * @return a list of Path objects for all the files in the directory 
-     */
-    public List<Path> walkDirectory(String directoryPath) {
-        // Initial implementation to compile
-        return Collections.emptyList();
+     * @throws IOException when accessing an invalid directory.
+ */
+    
+    public List<Path> walkDirectory(String directoryPath) throws IOException {
+        Path directoryToExamine = Paths.get(directoryPath);
+        List<Path> allFiles = new ArrayList<>();
+        Files.walk(directoryToExamine)
+            .filter(Files::isRegularFile)
+            .forEach(allFiles::add);
+
+        return allFiles;
     }
 
     /**

@@ -8,6 +8,10 @@ import static org.hamcrest.Matchers.nullValue;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.io.IOException;
+import static org.junit.Assert.fail;
+
+
 import java.util.List;
 
 import static org.hamcrest.Matchers.*;
@@ -62,11 +66,17 @@ public class TestWebsiteBuilder {
      */
     @Test
     public void testWalkDirectory() {
-        WebsiteBuilder builder = new WebsiteBuilder();
-        //dummy directory for initial test
-        List<Path> files = builder.walkDirectory("some/dummy/path");
-
-        assertThat(files, is(empty()));
+        try {
+            WebsiteBuilder builder = new WebsiteBuilder();
+            List<Path> files = builder.walkDirectory("src/test/resources/cs417-one-lecture");
+           
+             // There should be three files: index.html and two image files.
+             assertThat(files.size(), is(3));
+            
+        } catch (IOException e) {
+            
+            fail("Exception walking directory: " + e.getMessage());
+        }
 }
 
     /**
