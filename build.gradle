@@ -234,7 +234,7 @@ task copyReportsForWebsite (type: Copy, dependsOn: ['reports', 'workTree']) {
 }
 
 
-task copyWebsite (dependsOn: ['copyReports']) {
+task copyWebsite (dependsOn: ['copyReportsForWebsite']) {
 }
 
 task commitWebsite (dependsOn: 'copyWebsite') {
