@@ -32,11 +32,27 @@ public LinkExtraction(String htmlRepresentation) {
 //      }
 public static String LinkTypeExtraction(String link){
     /// Establish a pattern to check if hte link starts with a hash #
-    Pattern patternIntraPage = Pattern.compile("#,*$");
-    Matcher matcherIntraPage = matcherIntraPage.matcher(link);
+    Pattern patternIntraPage = Pattern.compile("#.*$");
+    Matcher matcherIntraPage = patternIntraPage.matcher(link);
 
     /// Establish a pattern to check if a link start with /
-   // Pattern patternIntraSite = Pattern.compile("^/.*$");
+    Pattern patternIntraSite = Pattern.compile("^/.*$");
+    Matcher matcherIntraSite = patternIntraSite.matcher(link);
+
+    ///Logic to set locality
+    //
+    if(matcherIntraPage.matches()){
+       
+       return "Intra_page";
+    }
+
+    else if (matcherIntraSite.matches()){
+        return "Intra-site";
+    }
+
+    else{
+        return "External";
+    }
 
 
 
