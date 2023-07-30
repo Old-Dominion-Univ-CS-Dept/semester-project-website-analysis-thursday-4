@@ -12,7 +12,11 @@ public class TestResourceBuilder {
     @Test
     public void testResolveRelativePath() {
         ResourceBuilder resourceBuilder = new ResourceBuilder(Paths.get("/Public/sshLab/subdir/"));
+        
         Path result = resourceBuilder.resolveRelativePath(Paths.get("./index.html"));
-        assertThat(result.toString(), is("/Public/sshLab/subdir/index.html"));
+        assertThat(result.toString(), is("/Public/sshLab/index.html"));
+
+        Path resultWithoutDot = resourceBuilder.resolveRelativePath(Paths.get("index.html"));
+        assertThat(resultWithoutDot.toString(), is("/Public/sshLab/index.html"));
     }
 }

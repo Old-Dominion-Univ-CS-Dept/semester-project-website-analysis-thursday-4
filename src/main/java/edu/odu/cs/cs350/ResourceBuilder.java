@@ -32,7 +32,8 @@ public class ResourceBuilder {
      * @return resolved absolute path
      */
     public Path resolveRelativePath(Path relativePath) {
-        return sourceDocumentPath.resolve(relativePath).normalize();
+        Path documentDirectory = sourceDocumentPath.getParent();
+        return documentDirectory.resolve(relativePath).normalize();
     }
     
 }
