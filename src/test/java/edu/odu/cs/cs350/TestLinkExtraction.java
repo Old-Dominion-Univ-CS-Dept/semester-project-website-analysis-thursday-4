@@ -48,4 +48,35 @@ public class TestLinkExtraction {
          assertEquals(link,link2);
 
     }
+
+    @Test
+    public void TestExternal(){
+        String link = "http:";
+        String link2 = "External";
+        String Intrapage;
+        String Intrasite;
+
+         Pattern patternIntraPage = Pattern.compile("#.*$");
+         Matcher matcherIntraPage = patternIntraPage.matcher(link);
+
+          /// Establish a pattern to check if a link start with /
+        Pattern patternIntraSite = Pattern.compile("^/.*$");
+        Matcher matcherIntraSite = patternIntraSite.matcher(link);
+
+        if(matcherIntraPage.matches()){
+       
+            Intrapage = "Intra-page";
+         }
+     
+         else if (matcherIntraSite.matches()){
+             Intrasite = "Intra-site";
+         }
+     
+         else{
+             link = "External";
+         }
+
+         assertEquals(link,link2);
+
+    }
 }
