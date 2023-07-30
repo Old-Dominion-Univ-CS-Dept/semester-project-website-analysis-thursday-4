@@ -10,12 +10,13 @@ import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.mp3.Mp3Parser;
 import org.apache.tika.parser.mp4.MP4Parser;
 import org.apache.tika.sax.BodyContentHandler;
+import org.json.simple.JSONObject;
 import org.xml.sax.SAXException;
 
 public class AudioAnalysis {
 
     public static void main(String[] args) {
-        String audioFilePath = "NastyC-Mrs-Me.mp3"; // the path to audio file
+        String audioFilePath = "audioFile.mp3"; // the path to audio file
 
         try {
             AudioInfo audioInfo = analyzeAudio(audioFilePath);
@@ -69,7 +70,7 @@ public class AudioAnalysis {
         }
         return "";
     }
-    public class AudioInfo {
+    public static class AudioInfo {
     private final String fileType;
     private final String fileSize;
     private final String audioPath;
@@ -85,7 +86,19 @@ public class AudioAnalysis {
         jsonObject.put("fileType", fileType);
         jsonObject.put("fileSize", fileSize);
         jsonObject.put("audioPath", audioPath);
-        return jsonObject.toString(4); // Use indentation of 4 spaces for pretty printing
+        return jsonObject.toString(audioPath, 4); // Use indentation of 4 spaces for pretty printing
+    }
+
+	public Object getFileType() {
+		return null;
+	}
+
+    public Object getFileSize() {
+        return null;
+    }
+
+    public Object getAudioPath() {
+        return null;
     }
 }
     @Override
