@@ -33,7 +33,7 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy-all:2.5.15'
     implementation 'org.apache.poi:poi:5.2.3'
     implementation 'org.apache.poi:poi-ooxml:5.2.3'
-    implementation 'org.json:json:202110307'
+    implementation 'org.json:json:20210307'
     // Apache Tika dependencies for MP3, MP4, OGG, and WAV
     implementation 'org.apache.tika:tika-core:1.27'
     implementation 'org.apache.tika:tika-parsers:1.27'
