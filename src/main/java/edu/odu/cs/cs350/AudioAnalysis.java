@@ -90,15 +90,15 @@ public class AudioAnalysis {
     }
 
 	public Object getFileType() {
-		return null;
+		return fileType;
 	}
 
     public Object getFileSize() {
-        return null;
+        return fileSize;
     }
 
     public Object getAudioPath() {
-        return null;
+        return audioPath;
     }
 }
     @Override
