@@ -1,5 +1,3 @@
-**Replace the items in square brackets `[...]` with your teams information** 
-
 # [Thursday-4]
 |Name|GitHub Username|Email|
 |:---|:--------------|:----|
@@ -16,3 +14,7 @@ Our Trello Board is located at <[https://trello.com/b/scpmaEQO]>.
 # Design Notes
 
 This section is used during the Phase 3 Design Brainstorming Session
+
+# Website
+
+Our GitHub Pages website is located at <[https://old-dominion-univ-cs-dept.github.io/semester-project-website-analysis-thursday-4/home.html]>

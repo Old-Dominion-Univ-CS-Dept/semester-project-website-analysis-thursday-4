@@ -44,7 +44,7 @@ import java.util.regex.*;
         }
 
          // Set the type of resource to ANCHOR
-         typeOfResource = ResourceKind.ANCHOR;
+         setTypeOfResource(ResourceKind.ANCHOR);
         
             /**
              * TODO: Update this section once siteUrl is defined
@@ -91,8 +91,10 @@ import java.util.regex.*;
      *
      * @return The type of resource.
      */
+    @Override
+
     public ResourceKind getTypeOfResource() {
-        return typeOfResource;
+        return super.getTypeOfResource();
     }
 }
 

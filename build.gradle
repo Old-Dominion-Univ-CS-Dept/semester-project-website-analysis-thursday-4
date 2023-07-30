@@ -127,7 +127,7 @@ checkstyleTest {
 //------------------------------------------------------------------------------
 // Deploy Steps (Convenience Tasks)
 //------------------------------------------------------------------------------
-task reportsAndStuff(dependsOn: [
+task reports(dependsOn: [
     "test",
     "jacocoTestReport",
     "checkstyleMain",
@@ -141,7 +141,7 @@ task reportsAndStuff(dependsOn: [
 
 task copyReports(type: Copy)
 {
-    dependsOn "reportsAndStuff"
+    dependsOn "reports"
 
     from "build/reports"
     into "build/tmp/website/assets"
@@ -151,7 +151,7 @@ task copyReports(type: Copy)
 
 task copyDocumentation(type: Copy)
 {
-    dependsOn "reportsAndStuff"
+    dependsOn "reports"
 
     from "build/docs"
     into "build/tmp/website/assets"
@@ -208,60 +208,65 @@ bake {
 //------------------------------------------------------------------------------
 // Deploy/Update Project Website on GitHub Pages
 //------------------------------------------------------------------------------
-def websiteRepo = "git@github.com:Old-Dominion-Univ-CS-Dept/thursday-4-website.git"
+////////  Website publication on GitHub pages ///////////////////
 
-task clearPages(type: Delete)
-{
-    delete "build/gh-pages"
+def pagesDir = file("${project.rootDir}/../website-temp").absolutePath
+
+task clearPages(type: Delete) {
+    delete pagesDir
 }
 
-task clonePagesRepo(dependsOn: ["clearPages"])
-{
+task workTree(dependsOn: ['clearPages']) { 
     doLast {
         exec {
-            workingDir = "."
-            commandLine = ["git", "clone", websiteRepo, "build/gh-pages"]
+            workingDir = '.'
+            commandLine = ['git', 'worktree', 'add', '-f', pagesDir, 'gh-pages']
         }
         exec {
-            workingDir = "build/gh-pages"
-            commandLine = ["git", "config", "user.email", "\"cbonh002@odu.edu\""]
+            workingDir = pagesDir
+            commandLine = ['git', 'checkout', 'gh-pages']
         }
         exec {
-            workingDir = "build/gh-pages"
-            commandLine = ["git", "config", "user.name", "\"Cody Bonham\""]
+            workingDir = pagesDir
+            commandLine = ['git', 'pull']
         }
     }
 }
 
-task copyJBakePagesForUse(dependsOn: ["bake", "clonePagesRepo"])
-{
-    group "GitHub Pages"
+task copyReportsForWebsite (type: Copy, dependsOn: ['reports', 'workTree']) {
+    from 'build/jbake'
+    into pagesDir
+}
 
+
+task copyWebsite (dependsOn: ['copyReportsForWebsite']) {
+}
+
+task commitWebsite (dependsOn: 'copyWebsite') {
     doLast {
-        ant.copy (todir: "build/gh-pages") {
-            fileset(dir: "build/jbake")
+        Date now = new Date()
+
+        exec {
+            workingDir = pagesDir
+            commandLine = ['git', 'add', pagesDir]
+            ignoreExitValue = true
+        }
+        exec {
+            workingDir = pagesDir
+            commandLine = ['git', 'commit', '-m', 'Updating webpages at ' + now.toString()]
+            ignoreExitValue = true
         }
     }
 }
 
-task updateGitHubPages(dependsOn: ["copyJBakePagesForUse"])
-{
-    group "GitHub Pages"
-    description "Copy everything into \"gh-pages\" directory and push to Report Website."
+task pushWebsite (type: Exec, dependsOn: 'commitWebsite') {
+    workingDir = pagesDir
+    commandLine = ['git', 'push']
+    ignoreExitValue = true
+}
 
-    doLast {
-        def pagesDir = "$buildDir/gh-pages"
-        exec {
-            workingDir = "$buildDir/gh-pages"
-            commandLine = ["git", "add", "."]
-        }
-        exec {
-            workingDir = "$buildDir/gh-pages"
-            commandLine = ["git", "commit", "-m", "Update report site"]
-        }
-        exec {
-            workingDir = "$buildDir/gh-pages"
-            commandLine = ["git", "push"]
-        }
-    }
+task deployReports (type: Delete, dependsOn: 'pushWebsite') {
+    group = "Reporting"
+    description  'Commit and push website changes to GitHub'
+    delete pagesDir
 }

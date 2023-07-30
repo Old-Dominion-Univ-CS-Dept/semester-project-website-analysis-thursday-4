@@ -52,6 +52,11 @@ public class HTMLDocumentBuilder
         this.scripts = new ArrayList<>(); 
         this.stylesheets = new ArrayList<>(); 
         this.anchors = new ArrayList<>(); 
+
+        this.baseUrls = new ArrayList<>(); 
+        this.baseDirectory = null; 
+
+        this.readBuffer = null; 
     }
     
     
@@ -126,8 +131,35 @@ public class HTMLDocumentBuilder
         //TODO: finish implementation. 
         SimpleHTMLParser parser = new SimpleHTMLParser("img", "src"); 
         List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
-        
-        
+
+        for (String uriAsString : extractedStrings)
+        {
+            ResourceKind type = ResourceKind.IMAGE; 
+
+            Locality location = this.determineLocality(uriAsString, this.baseUrls); 
+
+            Resource image = new Image(); 
+
+            image.setLocation(location); 
+
+            if (location == Locality.EXTERNAL)
+            {
+                //image.setURL(); 
+                image.setPath(null);
+            }
+            else
+            {
+                image.setUrl(null);
+
+                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls); 
+                //image.setPath();
+
+                long fileSizeInKiB = this.determineFileSize(uriAsString); 
+                image.setSizeOfFile(fileSizeInKiB); 
+            }
+            this.images.add(image); 
+        }
+
         return this.images; 
     }
     
@@ -160,6 +192,18 @@ public class HTMLDocumentBuilder
         
         return this.stylesheets; 
     }
+
+    /**
+     * This function calls all four extraction functions one after the other. 
+     */
+    public void extractContent() 
+        throws IOException, FileNotFoundException
+    {
+        this.extractAnchors(); 
+        this.extractImages(); 
+        this.extractScripts(); 
+        this.extractStylesheets(); 
+    }
     
     /**
      * Builds an HTMLDocument object that contains the scripts, stylesheets, 
@@ -170,8 +214,52 @@ public class HTMLDocumentBuilder
      */
     public HTMLDocument build()
     {
-        return null; 
+        HTMLDocument htmlDocument = new HTMLDocument(); 
+        
+        htmlDocument.setAnchors(anchors);
+        htmlDocument.setImages(images);
+        htmlDocument.setScrips(scripts);
+        htmlDocument.setStylesheets(stylesheets);
+
+        return htmlDocument; 
+    }
+
+    /**
+     * Determines the location of the resource that is being extracted. 
+     * 
+     * @param uriAsString: URI that is being looped through, currently a string. 
+     * 
+     * @param baseUrls: URL that was passed in to HTMLDocumentBuilder. 
+     * 
+     * @return: location of this extracted content. 
+     */
+    public Locality determineLocality(String uriAsString, List<URL> baseUrls) {
+        return null;
     }
     
+    /**
+     * Converts the URL to a path. 
+     * 
+     * @param uriAsString: URI converted to a string. 
+     * 
+     * @param baseUrls: URL that was passed in to HTMLDocumentBuilder. 
+     * 
+     * @return: path from URL. 
+     */
+    public String convertURLToPath(String uriAsString, List<URL> baseUrls) {
+        return null;
+    }
+
+    /**
+     * Determines the file size of the URI.
+     * 
+     * @param uriAsString: URI converted to a string. 
+     * 
+     * @return: file size of the URI. 
+     */
+    private long determineFileSize(String uriAsString) {
+        return 0;
+    }
+
     
 }

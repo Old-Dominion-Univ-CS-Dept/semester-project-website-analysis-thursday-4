@@ -3,14 +3,24 @@ package edu.odu.cs.cs350;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.junit.Assert.fail;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
 import java.util.List;
+import java.util.Collection;
+import java.util.ArrayList;
 
-import static org.hamcrest.Matchers.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 
 import org.junit.jupiter.api.Test;
@@ -21,6 +31,12 @@ import org.junit.jupiter.api.Test;
  * Tests for the WebsiteBuilder class.
  */
 public class TestWebsiteBuilder {
+    private WebsiteBuilder builder;
+
+    @BeforeEach
+    public void setup() {
+        builder = new WebsiteBuilder();
+    }
 
     /**
      * Tests the WebsiteBuilder constructor.
@@ -28,7 +44,7 @@ public class TestWebsiteBuilder {
      */
     @Test
     public void testDefaultConstructor() {
-        WebsiteBuilder builder = new WebsiteBuilder();
+       
 
         // Check that the builder's initial state is as expected
         assertThat(builder.getBasePath(), is(nullValue()));
@@ -41,7 +57,6 @@ public class TestWebsiteBuilder {
      */
     @Test
     public void testGetBasePath() {
-        WebsiteBuilder builder = new WebsiteBuilder();
         assertThat(builder.getBasePath(), is(nullValue()));
         
 
@@ -53,7 +68,6 @@ public class TestWebsiteBuilder {
      */
     @Test
     public void testGetUrl() {
-        WebsiteBuilder builder = new WebsiteBuilder();
         assertThat(builder.getUrls(), is(empty()));
     }   
 
@@ -62,27 +76,49 @@ public class TestWebsiteBuilder {
      */
     @Test
     public void testWalkDirectory() {
-        WebsiteBuilder builder = new WebsiteBuilder();
-        //dummy directory for initial test
-        List<Path> files = builder.walkDirectory("some/dummy/path");
-
-        assertThat(files, is(empty()));
+        try {
+            List<Path> files = builder.walkDirectory("src/test/resources/cs-landing-page");
+           
+             // There should be three files which are in 2 directories: index.html, robots.txt, and test-layout.css.
+             assertThat(files.size(), is(3));
+            
+        } catch (IOException e) {
+            
+            fail("Exception walking directory: " + e.getMessage());
+        }
 }
 
     /**
      * Tests the mapUrlToLocalPath() method.
      * @throws MalformedURLException if the URL is malformed
      */
-    @Test
-    public void testMapUrlToLocalPath() throws MalformedURLException {
-        WebsiteBuilder builder = new WebsiteBuilder();
-        URL url = new URL("https://www.example.com/dummy/path");
-        String localPath = builder.mapUrlToLocalPath(url);
+ 
+     @Test
+     public void testMapUrlsToLocalPath() throws IOException, URISyntaxException {
+         Path basePath = Paths.get("Directory");
+ 
+         Collection<URL> urls = new ArrayList<>();
+         Collection<Path> expectedPaths = new ArrayList<>();
+ 
+         // Read the test data from the file
+         URL testFileUrl = this.getClass().getResource("/testURLS.txt");
+         Path testFilePath = Paths.get(testFileUrl.toURI());
+ 
+         List<String> lines = Files.readAllLines(testFilePath);
+         for (String line : lines) {
+             String[] parts = line.split(" -> ");  // split the line into URL and local path
+             urls.add(new URL(parts[0]));
+             expectedPaths.add(Paths.get(parts[1]));
+         }
+ 
+         Collection<Path> actualPaths = builder.mapUrlsToLocalPath(urls, basePath);
 
-        //checking for dummy path for now for compilation
-        assertThat(localPath, is("dummy/path"));
-    }
-    
+ 
+         assertThat(actualPaths, containsInAnyOrder(expectedPaths.toArray()));
+     }
+     
 }
+
+
 
 

@@ -15,7 +15,7 @@ public class Image extends Resource
     
     public Image()
     {
-        typeOfResource = ResourceKind.IMAGE; 
+        this.setTypeOfResource(ResourceKind.IMAGE); 
         
     }
 }
