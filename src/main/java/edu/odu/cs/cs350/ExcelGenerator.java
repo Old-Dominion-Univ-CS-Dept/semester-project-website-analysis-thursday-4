@@ -55,12 +55,16 @@ public class ExcelGenerator {
         // Write the workbook to a file
         try (FileOutputStream outputStream = new FileOutputStream("summary.xlsx")) {
             workbook.write(outputStream);
+
+            //added this to output filename to console.
+            System.out.println(outputStream + "/n");
+
             System.out.println("Excel file generated successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
     
     workbook.close();
+
     }
-    
 }

@@ -32,6 +32,9 @@ public class JSONReportWriter extends ReportWriter {
      */
     public JSONReportWriter() {
         this.outputFile = new File(OUTPUT_FILE_NAME);
+
+        ///Added to simplfy CLI output
+        System.out.println(OUTPUT_FILE_NAME + "/n");
     }
 
     /**

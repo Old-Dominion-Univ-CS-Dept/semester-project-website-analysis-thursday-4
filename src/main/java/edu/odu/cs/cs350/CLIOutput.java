@@ -1,17 +1,13 @@
-/* 
- * This CLIOutput class will print the names of created files
- * to the command line interface 1 per line.
- */
-
-
 package edu.odu.cs.cs350;
 
-/*
- * @author Zelle001
- */
 
  import java.io.File;
  import java.io.FilenameFilter;
+
+ /* 
+ * This CLIOutput class will print the names of created files
+ * to the command line interface 1 per line.
+ */
 
 
 public class CLIOutput {
@@ -25,7 +21,7 @@ public class CLIOutput {
     }
     
 
-    public static void out(String[] args) throws Exception {
+    public static void out(String[] args){
 
     /*
      * String to hold the directory.
@@ -137,6 +133,11 @@ public class CLIOutput {
     public static String currentDirectory(){
         String directory = System.getProperty("user.dir");
         return directory;
+    }
+
+    public static void CLIOutFromFileMaker(String fileName) throws Exception {
+
+        System.out.println(fileName + "/n");
     }
 
 }
