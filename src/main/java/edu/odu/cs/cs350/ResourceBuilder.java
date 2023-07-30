@@ -1,5 +1,10 @@
 package edu.odu.cs.cs350;
 
+import java.util.Deque;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.nio.file.Paths;
+import java.nio.file.Path;
 
 /**
  * Manage the creation of Resource objects with the builder pattern.
@@ -9,14 +14,14 @@ package edu.odu.cs.cs350;
 
 
 public class ResourceBuilder {
-    private String sourceDocumentPath;
+    private Path sourceDocumentPath;
 
     /**
      * Constructs a new ResourceBuilder with path.
      *
      * @param sourceDocumentPath the path to the source document
      */
-    public ResourceBuilder(String sourceDocumentPath) {
+    public ResourceBuilder(Path sourceDocumentPath) {
         this.sourceDocumentPath = sourceDocumentPath;
     }
 
@@ -26,8 +31,8 @@ public class ResourceBuilder {
      * @param relativePath the relative path to be resolved
      * @return resolved absolute path
      */
-    public String resolveRelativePath(String relativePath) {
-        
-        return null; // will replace later in development
+    public Path resolveRelativePath(Path relativePath) {
+        return sourceDocumentPath.resolve(relativePath).normalize();
     }
+    
 }

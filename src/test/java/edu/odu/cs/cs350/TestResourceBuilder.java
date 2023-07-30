@@ -4,14 +4,15 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class TestResourceBuilder {
 
     @Test
     public void testResolveRelativePath() {
-        ResourceBuilder resourceBuilder = new ResourceBuilder("../../Public/sshLab/");
-        String result = resourceBuilder.resolveRelativePath("./index.html");
-        assertThat(result, is("Public/sshLab/index.html"));
+        ResourceBuilder resourceBuilder = new ResourceBuilder(Paths.get("/Public/sshLab/subdir/"));
+        Path result = resourceBuilder.resolveRelativePath(Paths.get("./index.html"));
+        assertThat(result.toString(), is("/Public/sshLab/subdir/index.html"));
     }
 }
