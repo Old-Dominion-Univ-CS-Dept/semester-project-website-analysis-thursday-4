@@ -45,6 +45,7 @@ void testExcelGeneration() throws IOException {
         assertEquals("5", sheet.getRow(1).getCell(3).getStringCellValue());
         assertEquals("10", sheet.getRow(1).getCell(4).getStringCellValue());
         assertEquals("3", sheet.getRow(1).getCell(5).getStringCellValue());
+        assertEquals("11", sheet.getRow(1).getCell(6).getStringCellValue());
 
         assertEquals("Page 2", sheet.getRow(2).getCell(0).getStringCellValue());
         assertEquals("5", sheet.getRow(2).getCell(1).getStringCellValue());
@@ -52,6 +53,7 @@ void testExcelGeneration() throws IOException {
         assertEquals("3", sheet.getRow(2).getCell(3).getStringCellValue());
         assertEquals("7", sheet.getRow(2).getCell(4).getStringCellValue());
         assertEquals("2", sheet.getRow(2).getCell(5).getStringCellValue());
+          assertEquals("11", sheet.getRow(2).getCell(6).getStringCellValue());
 
         // Auto-sized columns
         for (int i = 0; i < 6; i++) {
