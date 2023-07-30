@@ -26,7 +26,7 @@ public class ExcelGenerator {
         Row headingsRow = sheet.createRow(0);
         headingsRow.createCell(0).setCellValue("Page");
         headingsRow.createCell(1).setCellValue("No. of Images");
-        headingsRow.createCell(2).setCellValue("No. of  CSS");
+        headingsRow.createCell(2).setCellValue("No. of CSS");
         headingsRow.createCell(3).setCellValue("Scripts");
         headingsRow.createCell(4).setCellValue("No. of Links (Intra-Page)");
         headingsRow.createCell(5).setCellValue("No. of Links (Internal)");

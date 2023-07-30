@@ -10,7 +10,7 @@ public class TestAudioAnalysis {
 
     @Test
     public void testAnalyzeAudio_ValidFile() throws IOException {
-        String audioFilePath = "audioTest.mp3"; // Replace with the path to a valid audio file
+        String audioFilePath = "audioTests.mp3"; // Replace with the path to a valid audio file
         AudioAnalysis.AudioInfo audioInfo = AudioAnalysis.analyzeAudio(audioFilePath);
 
         assertNotNull(audioInfo);
