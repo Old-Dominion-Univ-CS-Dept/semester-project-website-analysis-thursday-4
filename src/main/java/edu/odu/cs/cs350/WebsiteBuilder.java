@@ -5,8 +5,7 @@
  *     ii. one or more URLs
  */
 package edu.odu.cs.cs350;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -16,10 +15,10 @@ import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.io.IOException;
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
 import java.util.Objects;
+import java.io.IOException;
 
 
 
@@ -133,33 +132,24 @@ public class WebsiteBuilder
      */
 
      
-     public Collection<Path> mapUrlsToLocalPath(Collection<URL> urls, Path basePath) {
+     public Collection<Path> mapUrlsToLocalPath(Collection<URL> urls, Path basePath) throws IOException  {
         List<Path> localPaths = new ArrayList<>();
-        
         String commonUrlPrefix = findCommonPrefix(urls);
     
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/data/processed_paths.txt"))) {
-            for (URL url : urls) {
-                String urlPath = url.getPath();
-    
-                // Remove the common prefix from the URL path
-                String localPath = urlPath.replaceFirst(commonUrlPrefix, "");  
-    
-                if (localPath.startsWith("/")) {
-                    localPath = localPath.substring(1);
-                }
-    
-                Path transformedPath = basePath.resolve(localPath);
-                localPaths.add(transformedPath);
-    
-                // Write the transformed local path to the text file
-                writer.write(transformedPath.toString());
-                writer.newLine();
+        for (URL url : urls) {
+            String urlPath = url.getPath();
+        
+            // Remove the common prefix from the URL path
+            String localPath = urlPath.replaceFirst(commonUrlPrefix, "");  
+        
+            if (localPath.startsWith("/")) {
+                localPath = localPath.substring(1);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        
+            Path transformedPath = basePath.resolve(localPath);
+            localPaths.add(transformedPath);
         }
-    
+        
         return localPaths;
     }
     
