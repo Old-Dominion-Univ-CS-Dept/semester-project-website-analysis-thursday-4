@@ -12,7 +12,7 @@ public class TestLinkExtraction {
 
     //
     @Test
-    public void TestIntraSite(){
+    public void TestIntraPage(){
         String link = "#one";
         String link3 = "Intra";
 
@@ -28,5 +28,24 @@ public class TestLinkExtraction {
          assertEquals(link,link3);
 
         
+    }
+
+    @Test
+    public void TestIntraSite(){
+        String link = "/twice";
+        String link2 = "Intra-site";
+
+         /// Establish a pattern to check if a link start with /
+        Pattern patternIntraSite = Pattern.compile("^/.*$");
+        Matcher matcherIntraSite = patternIntraSite.matcher(link);
+
+         if(matcherIntraSite.matches()){
+       
+        
+            link = "Intra-site";
+         }
+
+         assertEquals(link,link2);
+
     }
 }
