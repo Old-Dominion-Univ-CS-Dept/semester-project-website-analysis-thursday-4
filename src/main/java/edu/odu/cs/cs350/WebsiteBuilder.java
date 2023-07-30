@@ -75,9 +75,18 @@ public class WebsiteBuilder
         Path pathToExamine = Paths.get(directoryPath);
         List<Path> directories = examineDirectory(pathToExamine);
         
+        
         List<Path> allFiles = new ArrayList<>();
         for(Path directory : directories) {
             allFiles.addAll(directoryWalker(directory));
+          
+        }
+
+        if (allFiles.size()<1){
+            errorMessages.underSize();
+        }
+        if (allFiles.size()>1000){
+            errorMessages.overSize();
         }
         
         return allFiles;
