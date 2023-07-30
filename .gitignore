@@ -43,3 +43,5 @@ gradle-app.setting
 
 # VScode specific file
 *.vscode
+.mp3
+.mp4
