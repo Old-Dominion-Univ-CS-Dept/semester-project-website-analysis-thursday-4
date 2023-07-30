@@ -6,6 +6,8 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.hasItems;
+
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
@@ -118,14 +120,23 @@ public class TestWebsiteBuilder {
          assertThat(actualPaths, containsInAnyOrder(expectedPaths.toArray()));
      }
 
+
+     @Test
+     public void testSetBasePath() {
+         Path expectedPath = Paths.get("/example/path");
+         builder.setBasePath(expectedPath);  
+     
+         assertThat(builder.getBasePath(), is(expectedPath));  
+     }
+
+
         @Test
-        public void pruneNonHTMLFilesReturnsCorrectNumberOfFiles() throws IOException {
-            WebsiteBuilder builder = new WebsiteBuilder();
+        public void pruneNonHTMLFiles() throws IOException {
             //creating a list of 3 html files and 2 non-html files
             List<Path> files = Arrays.asList(
                 Paths.get("test1.html"),
                 Paths.get("test2.html"),
-                Paths.get("test3.html"),
+                Paths.get("test3.htm"),
                 Paths.get("test4.txt"),
                 Paths.get("test5.pdf")
             );
@@ -136,6 +147,8 @@ public class TestWebsiteBuilder {
 
             // The prunedFiles list should only contain the HTML files
             assertThat(prunedFiles.size(), is(3));
+            //testing to see that the list has the correct files
+            assertThat(prunedFiles, hasItems(Paths.get("test1.html"), Paths.get("test2.html"), Paths.get("test3.htm")));
         }
      
 }

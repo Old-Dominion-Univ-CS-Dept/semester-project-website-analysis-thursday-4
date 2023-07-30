@@ -190,7 +190,11 @@ public class WebsiteBuilder
     
 
 
-
+    /**
+     * Sets the base path of the files.
+     *
+     * @param basePath the base directory as a Path object.
+     */
     public void setBasePath(Path basePath) {
         this.basePath = basePath;
     }
@@ -206,7 +210,17 @@ public class WebsiteBuilder
      * @return List of HTML file paths.
      */
     public List<Path> pruneNonHTMLFiles(List<Path> files) {
-        // Stub implementation. 
-        return new ArrayList<>();
+        List<Path> htmlFiles = new ArrayList<>();
+        
+        for (Path file : files) {
+            if (file.toString().endsWith(".html") || file.toString().endsWith(".htm")) {
+                htmlFiles.add(file);
+            }
+        }
+    
+        return htmlFiles;
+    }
+    
+
 }
-}
+
