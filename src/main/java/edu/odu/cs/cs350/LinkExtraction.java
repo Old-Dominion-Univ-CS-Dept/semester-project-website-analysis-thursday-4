@@ -6,14 +6,6 @@
  public class LinkExtraction extends Anchor{
     
 
-//     /*Constructior for the LinkExtraction Class
-//      * 
-//      */
-
-//      public LinkExtraction()
-//      {
-//         location = Locality.EXTERNAL;
-
 //         /*I want to extract links(anchor tags) from a page 
 //          * Classify them as
 //          * Intra-Page (link to another location on the page)
@@ -21,9 +13,9 @@
 //          * External (usually a url)
 //          */
 
-//         String urlchecker = 
-//         Pattern urlPattern = Pattern.com
-
+/*
+ * Constructor for LinkExtraction Class
+ */
 public LinkExtraction(String htmlRepresentation) {
         super(htmlRepresentation);
         //TODO Auto-generated constructor stub
@@ -37,6 +29,7 @@ public static String LinkTypeExtraction(String link){
 
     /// Establish a pattern to check if a link start with /
     Pattern patternIntraSite = Pattern.compile("^/.*$");
+    /// match string with patter
     Matcher matcherIntraSite = patternIntraSite.matcher(link);
 
     ///Logic to set locality
@@ -53,8 +46,6 @@ public static String LinkTypeExtraction(String link){
     else{
         return "External";
     }
-
-
 
 }
 
