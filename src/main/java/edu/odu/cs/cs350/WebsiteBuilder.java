@@ -195,4 +195,18 @@ public class WebsiteBuilder
         this.basePath = basePath;
     }
     
+
+
+    /**
+     * Removes any non-HTML files from the list of files. 
+     * Checks the extension of each file and removes it 
+     * from the list if it is not html or htm.
+     *
+     * @param files List of file paths that need to be pruned.
+     * @return List of HTML file paths.
+     */
+    public List<Path> pruneNonHTMLFiles(List<Path> files) {
+        // Stub implementation. 
+        return new ArrayList<>();
+}
 }

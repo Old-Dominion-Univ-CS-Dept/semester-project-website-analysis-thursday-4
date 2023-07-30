@@ -18,6 +18,7 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.Collection;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -116,6 +117,26 @@ public class TestWebsiteBuilder {
  
          assertThat(actualPaths, containsInAnyOrder(expectedPaths.toArray()));
      }
+
+        @Test
+        public void pruneNonHTMLFilesReturnsCorrectNumberOfFiles() throws IOException {
+            WebsiteBuilder builder = new WebsiteBuilder();
+            //creating a list of 3 html files and 2 non-html files
+            List<Path> files = Arrays.asList(
+                Paths.get("test1.html"),
+                Paths.get("test2.html"),
+                Paths.get("test3.html"),
+                Paths.get("test4.txt"),
+                Paths.get("test5.pdf")
+            );
+
+            
+
+            List<Path> prunedFiles = builder.pruneNonHTMLFiles(files);
+
+            // The prunedFiles list should only contain the HTML files
+            assertThat(prunedFiles.size(), is(3));
+        }
      
 }
 
