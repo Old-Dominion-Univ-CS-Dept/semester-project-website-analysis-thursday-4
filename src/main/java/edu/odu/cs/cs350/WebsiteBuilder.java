@@ -43,6 +43,33 @@ public class WebsiteBuilder
         return this;
     }
 
+    /**
+     * Sets a single url to the website's url list
+     *
+     * @param url The URL to be stored.
+     * @return This WebsiteBuilder instance.
+     */
+    public WebsiteBuilder withURL(URL url) {
+        if (this.urls == null) {
+            this.urls = new ArrayList<>();
+        }
+        this.urls.add(url);
+        return this;
+    }
+
+    /**
+     * accepts a collectioin URLs 
+     * @param urls collection of URLs
+     * @return This WebsiteBuilder instance.
+     */
+    public WebsiteBuilder withURLs(Collection<URL> urls) {
+        this.urls = urls;
+        return this;
+    }
+
+    
+
+
 
 
 
@@ -211,6 +238,7 @@ public class WebsiteBuilder
     public void setBasePath(Path basePath) {
         this.basePath = basePath;
     }
+    
     
 
 

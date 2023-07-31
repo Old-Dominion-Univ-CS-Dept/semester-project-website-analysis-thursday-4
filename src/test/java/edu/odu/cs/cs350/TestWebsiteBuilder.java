@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -46,6 +47,35 @@ public class TestWebsiteBuilder {
         Path testPath = Paths.get("src/test/resources");
         builder.withPath(testPath);
         assertThat(builder.getBasePath(), is(testPath));
+    }
+
+    /**
+    * Tests the withURL method of WebsiteBuilder. 
+    */
+    @Test
+    public void testWithUrl() throws Exception {
+        URL url = new URL("http://example.com");
+        builder.withURL(url);
+        assertThat(builder.getUrls(), containsInAnyOrder(url));
+    }
+
+
+    /**
+    * Tests the withUrls method of WebsiteBuilder. 
+    */
+    @Test
+    public void testWithUrls() throws Exception {
+        List<URL> urls = new ArrayList<>(
+                Arrays.asList(
+                        new URL("http://example1.com"),
+                        new URL("http://example2.com"),
+                        new URL("http://example3.com")
+                )
+        );
+
+        builder.withURLs(urls);
+
+        assertThat(builder.getUrls(), containsInAnyOrder(urls.toArray()));
     }
 
     /**
