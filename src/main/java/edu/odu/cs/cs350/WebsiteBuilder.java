@@ -6,19 +6,14 @@
  */
 package edu.odu.cs.cs350;
 
+import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.stream.Stream;
-import java.util.stream.Collectors;
-import java.util.Objects;
-import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 
 
@@ -32,6 +27,24 @@ public class WebsiteBuilder
     private Path basePath;
     private Collection<URL> urls;
    
+
+    /**
+     * Sets the local directory path for the website.
+     *
+     * @param Path the local directory.
+     * @return this WebsiteBuilder instance.
+     * @throws IllegalArgumentException if the path is not a directory.
+     */
+    public WebsiteBuilder withPath(Path basePath) {
+        if (basePath == null || !Files.isDirectory(basePath)) {
+            throw new IllegalArgumentException("Path must be a directory: " + basePath);
+        }
+        this.basePath = basePath;
+        return this;
+    }
+
+
+
 
     /**
      * Constructs a new WebsiteBuilder.

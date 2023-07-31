@@ -2,30 +2,26 @@ package edu.odu.cs.cs350;
 
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasItems;
-
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.Files;
-import java.util.List;
-import java.util.Collection;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-
 import org.junit.jupiter.api.Test;
 
 
@@ -39,6 +35,17 @@ public class TestWebsiteBuilder {
     @BeforeEach
     public void setup() {
         builder = new WebsiteBuilder();
+    }
+
+
+    /**
+    * Tests the withPath method of WebsiteBuilder. 
+    */
+    @Test
+    public void testWithPath() {
+        Path testPath = Paths.get("src/test/resources");
+        builder.withPath(testPath);
+        assertThat(builder.getBasePath(), is(testPath));
     }
 
     /**
