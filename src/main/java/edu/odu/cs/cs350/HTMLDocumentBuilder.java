@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,7 +43,6 @@ public class HTMLDocumentBuilder
     
     private BufferedReader readBuffer; 
     
-    
     /**
      * Default constructor for HTMLBuilder, initializes all data members. 
      */    
@@ -59,7 +59,6 @@ public class HTMLDocumentBuilder
         this.readBuffer = null; 
     }
     
-    
     /**
      * This functions takes in and sets members based on 
      * what type of content is being passed in. 
@@ -69,6 +68,7 @@ public class HTMLDocumentBuilder
     public void withContentFrom(BufferedReader reader)
     {
         //TODO: to be implemented later. 
+        this.readBuffer = reader; 
     }
     
     /**
@@ -91,6 +91,7 @@ public class HTMLDocumentBuilder
     public void withBaseDirectory(Path siteRoot)
     {
         //TODO: to be implemented later. 
+        this.baseDirectory = siteRoot; 
     }
     
     /**
@@ -102,6 +103,7 @@ public class HTMLDocumentBuilder
     public void withBaseURLs(Collection<URL> urls)
     {
         //TODO: to be implemented later. 
+        this.baseUrls = (List<URL>) urls; 
     }
     
     /**
@@ -119,7 +121,6 @@ public class HTMLDocumentBuilder
         return this.anchors; 
     }
     
-    
     /**
      * Extract all HTML image tags.
      * 
@@ -134,8 +135,6 @@ public class HTMLDocumentBuilder
 
         for (String uriAsString : extractedStrings)
         {
-            ResourceKind type = ResourceKind.IMAGE; 
-
             Locality location = this.determineLocality(uriAsString, this.baseUrls); 
 
             Resource image = new Image(); 
@@ -233,7 +232,9 @@ public class HTMLDocumentBuilder
      * 
      * @return: location of this extracted content. 
      */
-    public Locality determineLocality(String uriAsString, List<URL> baseUrls) {
+    public Locality determineLocality(String uriAsString, List<URL> baseUrls) 
+    {
+        //TODO: needs to be implemented. 
         return null;
     }
     
@@ -246,7 +247,9 @@ public class HTMLDocumentBuilder
      * 
      * @return: path from URL. 
      */
-    public String convertURLToPath(String uriAsString, List<URL> baseUrls) {
+    public String convertURLToPath(String uriAsString, List<URL> baseUrls) 
+    {
+        //TODO: needs to be implemented. 
         return null;
     }
 
@@ -257,8 +260,61 @@ public class HTMLDocumentBuilder
      * 
      * @return: file size of the URI. 
      */
-    private long determineFileSize(String uriAsString) {
+    public long determineFileSize(String uriAsString) 
+    {
+        //TODO: needs to be implemented. 
         return 0;
+    }
+
+    /**
+     * Function to determine if URI that is passed in is a URL. 
+     * 
+     * @param possibleURL: URI as a string that is being passed in. 
+     * 
+     * @return: True if URL, false if not a URL. 
+     */
+    public boolean isURL(String possibleURL)
+    {
+        return possibleURL.startsWith("http://") 
+            || possibleURL.startsWith("https://")
+            || possibleURL.contains(":"); 
+    }
+
+    /**
+     * This function determines and returns the locality of a path that
+     * is passed in. 
+     * 
+     * @param rawPath: path as a string that is being examined. 
+     * 
+     * @param baseSiteDirectory: base site directory of path. 
+     * 
+     * @param pathOfSourceDoc: path of the source document on disk. 
+     * 
+     * @return: the locality of the passed in path. 
+     */
+    public Locality determineLocalityOfPath(
+        String rawPath,
+        String baseSiteDirectory, 
+        String pathOfSourceDoc
+    )
+    {
+        //TODO: finish implementation. 
+        Path path = Paths.get(rawPath, null); 
+        path.normalize(); 
+
+        String absolutePath = path.toString(); 
+
+        if (absolutePath.startsWith(baseSiteDirectory))
+        {
+            if (rawPath.startsWith(pathOfSourceDoc))
+            {
+                return Locality.INTRAPAGE; 
+            }
+            return Locality.INTERNAL; 
+        }
+
+        return Locality.EXTERNAL; 
+
     }
 
     

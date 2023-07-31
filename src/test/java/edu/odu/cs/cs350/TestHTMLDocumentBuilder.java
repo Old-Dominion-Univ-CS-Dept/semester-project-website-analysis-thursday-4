@@ -22,6 +22,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -40,6 +42,14 @@ public class TestHTMLDocumentBuilder
     public void setUp()
     {
         // Set up later. 
+    }
+    
+    @Test
+    public void testDefaultConstructor()
+    {
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+
+        assertThat(testBuilder, is(notNullValue())); 
     }
     
     @Test
@@ -70,7 +80,11 @@ public class TestHTMLDocumentBuilder
         assertThat(testDoc.getImages(), equalTo(testImages)); 
         assertThat(testDoc.getScrips(), equalTo(testScripts)); 
         assertThat(testDoc.getStylesheets(), equalTo(testStylesheets)); 
+    }
 
-
+    @Test
+    public void testDetermineLocality()
+    {
+        fail("test needs to be implemented."); 
     }
 }
