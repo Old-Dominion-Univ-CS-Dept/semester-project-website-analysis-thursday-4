@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ResourceBuilder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">semester-project-website-analysis-thursday-4</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">ResourceBuilder.java</span></div><h1>ResourceBuilder.java</h1><pre class="source lang-java linenums">package edu.odu.cs.cs350;
+
+import java.util.Deque;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.nio.file.Paths;
+import java.nio.file.Path;
+
+/**
+ * Manage the creation of Resource objects with the builder pattern.
+ * It encapsulates all resource setup logic including type determination, URL-path conversion, file size calculation
+ * for local resources, and path and URL normalization. Deferring object creation until all necessary data is acquired.
+ */
+
+
+public class ResourceBuilder {
+    private Path sourceDocumentPath;
+
+    /**
+     * Constructs a new ResourceBuilder with path.
+     *
+     * @param sourceDocumentPath the path to the source document
+     */
+<span class="fc" id="L24">    public ResourceBuilder(Path sourceDocumentPath) {</span>
+<span class="fc" id="L25">        this.sourceDocumentPath = sourceDocumentPath;</span>
+<span class="fc" id="L26">    }</span>
+
+    /**
+     * Resolves a relative path to an absolute path.
+     *
+     * @param relativePath the relative path to be resolved
+     * @return resolved absolute path
+     */
+    public Path resolveRelativePath(Path relativePath) {
+<span class="fc" id="L35">        Path documentDirectory = sourceDocumentPath.getParent();</span>
+<span class="fc" id="L36">        return documentDirectory.resolve(relativePath).normalize();</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,18 +43,21 @@ public class HTMLDocumentBuilder
     
     private BufferedReader readBuffer; 
     
-    
     /**
      * Default constructor for HTMLBuilder, initializes all data members. 
      */    
     public HTMLDocumentBuilder()
-<span class="nc" id="L50">    {</span>
-<span class="nc" id="L51">        this.images = new ArrayList&lt;&gt;(); </span>
-<span class="nc" id="L52">        this.scripts = new ArrayList&lt;&gt;(); </span>
-<span class="nc" id="L53">        this.stylesheets = new ArrayList&lt;&gt;(); </span>
-<span class="nc" id="L54">        this.anchors = new ArrayList&lt;&gt;(); </span>
-<span class="nc" id="L55">    }</span>
-    
+<span class="fc" id="L50">    {</span>
+<span class="fc" id="L51">        this.images = new ArrayList&lt;&gt;(); </span>
+<span class="fc" id="L52">        this.scripts = new ArrayList&lt;&gt;(); </span>
+<span class="fc" id="L53">        this.stylesheets = new ArrayList&lt;&gt;(); </span>
+<span class="fc" id="L54">        this.anchors = new ArrayList&lt;&gt;(); </span>
+
+<span class="fc" id="L56">        this.baseUrls = new ArrayList&lt;&gt;(); </span>
+<span class="fc" id="L57">        this.baseDirectory = null; </span>
+
+<span class="fc" id="L59">        this.readBuffer = null; </span>
+<span class="fc" id="L60">    }</span>
     
     /**
      * This functions takes in and sets members based on 
@@ -64,7 +68,8 @@ public class HTMLDocumentBuilder
     public void withContentFrom(BufferedReader reader)
     {
         //TODO: to be implemented later. 
-<span class="nc" id="L67">    }</span>
+<span class="nc" id="L71">        this.readBuffer = reader; </span>
+<span class="nc" id="L72">    }</span>
     
     /**
      * This functions takes in and sets members based on 
@@ -75,7 +80,7 @@ public class HTMLDocumentBuilder
     public void withContentFrom(File file)
     {
         //TODO: to be implemented later. 
-<span class="nc" id="L78">    }</span>
+<span class="nc" id="L83">    }</span>
     
     /**
      * A function that passes in a piece of data needed for path 
@@ -86,7 +91,8 @@ public class HTMLDocumentBuilder
     public void withBaseDirectory(Path siteRoot)
     {
         //TODO: to be implemented later. 
-<span class="nc" id="L89">    }</span>
+<span class="nc" id="L94">        this.baseDirectory = siteRoot; </span>
+<span class="nc" id="L95">    }</span>
     
     /**
      * A function that passes in a piece of data needed for path 
@@ -97,7 +103,8 @@ public class HTMLDocumentBuilder
     public void withBaseURLs(Collection&lt;URL&gt; urls)
     {
         //TODO: to be implemented later. 
-<span class="nc" id="L100">    }</span>
+<span class="nc" id="L106">        this.baseUrls = (List&lt;URL&gt;) urls; </span>
+<span class="nc" id="L107">    }</span>
     
     /**
      * Extract all HTML anchor tags. 
@@ -108,12 +115,11 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
         //TODO: finish implementation. 
-<span class="nc" id="L111">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;a&quot;, &quot;href&quot;); </span>
-<span class="nc" id="L112">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="nc" id="L118">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;a&quot;, &quot;href&quot;); </span>
+<span class="nc" id="L119">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc" id="L114">        return this.anchors; </span>
+<span class="nc" id="L121">        return this.anchors; </span>
     }
-    
     
     /**
      * Extract all HTML image tags.
@@ -124,11 +130,36 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
         //TODO: finish implementation. 
-<span class="nc" id="L127">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;img&quot;, &quot;src&quot;); </span>
-<span class="nc" id="L128">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
-        
-        
-<span class="nc" id="L131">        return this.images; </span>
+<span class="nc" id="L133">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;img&quot;, &quot;src&quot;); </span>
+<span class="nc" id="L134">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+
+<span class="nc bnc" id="L136" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+        {
+<span class="nc" id="L138">            Locality location = this.determineLocality(uriAsString, this.baseUrls); </span>
+
+<span class="nc" id="L140">            Resource image = new Image(); </span>
+
+<span class="nc" id="L142">            image.setLocation(location); </span>
+
+<span class="nc bnc" id="L144" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+            {
+                //image.setURL(); 
+<span class="nc" id="L147">                image.setPath(null);</span>
+            }
+            else
+            {
+<span class="nc" id="L151">                image.setUrl(null);</span>
+
+<span class="nc" id="L153">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls); </span>
+                //image.setPath();
+
+<span class="nc" id="L156">                long fileSizeInKiB = this.determineFileSize(uriAsString); </span>
+<span class="nc" id="L157">                image.setSizeOfFile(fileSizeInKiB); </span>
+            }
+<span class="nc" id="L159">            this.images.add(image); </span>
+<span class="nc" id="L160">        }</span>
+
+<span class="nc" id="L162">        return this.images; </span>
     }
     
     /**
@@ -140,10 +171,10 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
       //TODO: finish implementation. 
-<span class="nc" id="L143">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;script&quot;, &quot;src&quot;); </span>
-<span class="nc" id="L144">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="nc" id="L174">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;script&quot;, &quot;src&quot;); </span>
+<span class="nc" id="L175">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc" id="L146">        return this.scripts; </span>
+<span class="nc" id="L177">        return this.scripts; </span>
     }
     
     /**
@@ -155,11 +186,23 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
       //TODO: finish implementation. 
-<span class="nc" id="L158">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;link&quot;, &quot;href&quot;); </span>
-<span class="nc" id="L159">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="nc" id="L189">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;link&quot;, &quot;href&quot;); </span>
+<span class="nc" id="L190">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc" id="L161">        return this.stylesheets; </span>
+<span class="nc" id="L192">        return this.stylesheets; </span>
     }
+
+    /**
+     * This function calls all four extraction functions one after the other. 
+     */
+    public void extractContent() 
+        throws IOException, FileNotFoundException
+    {
+<span class="nc" id="L201">        this.extractAnchors(); </span>
+<span class="nc" id="L202">        this.extractImages(); </span>
+<span class="nc" id="L203">        this.extractScripts(); </span>
+<span class="nc" id="L204">        this.extractStylesheets(); </span>
+<span class="nc" id="L205">    }</span>
     
     /**
      * Builds an HTMLDocument object that contains the scripts, stylesheets, 
@@ -170,9 +213,110 @@ public class HTMLDocumentBuilder
      */
     public HTMLDocument build()
     {
-<span class="nc" id="L173">        return null; </span>
+<span class="fc" id="L216">        HTMLDocument htmlDocument = new HTMLDocument(); </span>
+        
+<span class="fc" id="L218">        htmlDocument.setAnchors(anchors);</span>
+<span class="fc" id="L219">        htmlDocument.setImages(images);</span>
+<span class="fc" id="L220">        htmlDocument.setScrips(scripts);</span>
+<span class="fc" id="L221">        htmlDocument.setStylesheets(stylesheets);</span>
+
+<span class="fc" id="L223">        return htmlDocument; </span>
+    }
+
+    /**
+     * Determines the location of the resource that is being extracted. 
+     * 
+     * @param uriAsString: URI that is being looped through, currently a string. 
+     * 
+     * @param baseUrls: URL that was passed in to HTMLDocumentBuilder. 
+     * 
+     * @return: location of this extracted content. 
+     */
+    public Locality determineLocality(String uriAsString, List&lt;URL&gt; baseUrls) 
+    {
+        //TODO: needs to be implemented. 
+<span class="nc" id="L238">        return null;</span>
     }
     
+    /**
+     * Converts the URL to a path. 
+     * 
+     * @param uriAsString: URI converted to a string. 
+     * 
+     * @param baseUrls: URL that was passed in to HTMLDocumentBuilder. 
+     * 
+     * @return: path from URL. 
+     */
+    public String convertURLToPath(String uriAsString, List&lt;URL&gt; baseUrls) 
+    {
+        //TODO: needs to be implemented. 
+<span class="nc" id="L253">        return null;</span>
+    }
+
+    /**
+     * Determines the file size of the URI.
+     * 
+     * @param uriAsString: URI converted to a string. 
+     * 
+     * @return: file size of the URI. 
+     */
+    public long determineFileSize(String uriAsString) 
+    {
+        //TODO: needs to be implemented. 
+<span class="nc" id="L266">        return 0;</span>
+    }
+
+    /**
+     * Function to determine if URI that is passed in is a URL. 
+     * 
+     * @param possibleURL: URI as a string that is being passed in. 
+     * 
+     * @return: True if URL, false if not a URL. 
+     */
+    public boolean isURL(String possibleURL)
+    {
+<span class="nc bnc" id="L278" title="All 2 branches missed.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
+<span class="nc bnc" id="L279" title="All 2 branches missed.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
+<span class="nc bnc" id="L280" title="All 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
+    }
+
+    /**
+     * This function determines and returns the locality of a path that
+     * is passed in. 
+     * 
+     * @param rawPath: path as a string that is being examined. 
+     * 
+     * @param baseSiteDirectory: base site directory of path. 
+     * 
+     * @param pathOfSourceDoc: path of the source document on disk. 
+     * 
+     * @return: the locality of the passed in path. 
+     */
+    public Locality determineLocalityOfPath(
+        String rawPath,
+        String baseSiteDirectory, 
+        String pathOfSourceDoc
+    )
+    {
+        //TODO: finish implementation. 
+<span class="nc" id="L302">        Path path = Paths.get(rawPath); </span>
+<span class="nc" id="L303">        path.normalize(); </span>
+
+<span class="nc" id="L305">        String absolutePath = path.toString(); </span>
+
+<span class="nc bnc" id="L307" title="All 2 branches missed.">        if (absolutePath.startsWith(baseSiteDirectory))</span>
+        {
+<span class="nc bnc" id="L309" title="All 2 branches missed.">            if (rawPath.startsWith(pathOfSourceDoc))</span>
+            {
+<span class="nc" id="L311">                return Locality.INTRAPAGE; </span>
+            }
+<span class="nc" id="L313">            return Locality.INTERNAL; </span>
+        }
+
+<span class="nc" id="L316">        return Locality.EXTERNAL; </span>
+
+    }
+
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

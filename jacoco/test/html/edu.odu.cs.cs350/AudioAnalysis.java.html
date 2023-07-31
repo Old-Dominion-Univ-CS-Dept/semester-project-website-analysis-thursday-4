@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AudioAnalysis.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">semester-project-website-analysis-thursday-4</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">AudioAnalysis.java</span></div><h1>AudioAnalysis.java</h1><pre class="source lang-java linenums">package edu.odu.cs.cs350;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.tika.exception.TikaException;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
+import org.apache.tika.parser.mp3.Mp3Parser;
+import org.apache.tika.parser.mp4.MP4Parser;
+import org.apache.tika.sax.BodyContentHandler;
+import org.json.simple.JSONObject;
+import org.xml.sax.SAXException;
+
+<span class="nc" id="L16">public class AudioAnalysis {</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L19">        String audioFilePath = &quot;audioFile.mp3&quot;; // the path to audio file</span>
+
+        try {
+<span class="nc" id="L22">            AudioInfo audioInfo = analyzeAudio(audioFilePath);</span>
+<span class="nc" id="L23">            System.out.println(audioInfo.toJSON());</span>
+<span class="nc" id="L24">        } catch (IOException e) {</span>
+<span class="nc" id="L25">            e.printStackTrace();</span>
+<span class="nc" id="L26">        }</span>
+<span class="nc" id="L27">    }</span>
+
+    public static AudioInfo analyzeAudio(String filePath) throws IOException {
+<span class="nc" id="L30">        File file = new File(filePath);</span>
+<span class="nc" id="L31">        String fileType = getFileType(file.getName());</span>
+
+        Parser parser;
+<span class="nc bnc" id="L34" title="All 3 branches missed.">        switch (fileType) {</span>
+            case &quot;mp3&quot;:
+<span class="nc" id="L36">                parser = new Mp3Parser();</span>
+<span class="nc" id="L37">                break;</span>
+            case &quot;mp4&quot;:
+<span class="nc" id="L39">                parser = new MP4Parser();</span>
+<span class="nc" id="L40">                break;</span>
+            // case &quot;ogg&quot;:
+            //     parser = new OggParser();
+            //     break;
+            // case &quot;wav&quot;:
+            //     parser = new WavParser();
+            //     break;
+            default:
+<span class="nc" id="L48">                throw new IllegalArgumentException(&quot;Unsupported audio file format&quot;);</span>
+        }
+
+<span class="nc" id="L51">        BodyContentHandler handler = new BodyContentHandler();</span>
+<span class="nc" id="L52">        Metadata metadata = new Metadata();</span>
+<span class="nc" id="L53">        ParseContext parseContext = new ParseContext();</span>
+<span class="nc" id="L54">        try (FileInputStream inputStream = new FileInputStream(file)) {</span>
+<span class="nc" id="L55">            parser.parse(inputStream, handler, metadata, parseContext);</span>
+<span class="nc" id="L56">        } catch (SAXException | TikaException e) {</span>
+<span class="nc" id="L57">                throw new IOException(&quot;Error parsing the audio file: &quot; + e.getMessage());</span>
+<span class="nc" id="L58">            }</span>
+
+<span class="nc" id="L60">        String fileSize = Long.toString(file.length());</span>
+<span class="nc" id="L61">        String audioPath = file.getAbsolutePath();</span>
+
+<span class="nc" id="L63">        return new AudioInfo(fileType, fileSize, audioPath);</span>
+    }
+
+    private static String getFileType(String fileName) {
+<span class="nc" id="L67">        int lastDotIndex = fileName.lastIndexOf('.');</span>
+<span class="nc bnc" id="L68" title="All 4 branches missed.">        if (lastDotIndex != -1 &amp;&amp; lastDotIndex &lt; fileName.length() - 1) {</span>
+<span class="nc" id="L69">            return fileName.substring(lastDotIndex + 1).toLowerCase();</span>
+        }
+<span class="nc" id="L71">        return &quot;&quot;;</span>
+    }
+    public static class AudioInfo {
+    private final String fileType;
+    private final String fileSize;
+    private final String audioPath;
+
+<span class="nc" id="L78">    public AudioInfo(String fileType, String fileSize, String audioPath) {</span>
+<span class="nc" id="L79">        this.fileType = fileType;</span>
+<span class="nc" id="L80">        this.fileSize = fileSize;</span>
+<span class="nc" id="L81">        this.audioPath = audioPath;</span>
+<span class="nc" id="L82">    }</span>
+
+    public String toJSON() {
+<span class="nc" id="L85">        JSONObject jsonObject = new JSONObject();</span>
+<span class="nc" id="L86">        jsonObject.put(&quot;fileType&quot;, fileType);</span>
+<span class="nc" id="L87">        jsonObject.put(&quot;fileSize&quot;, fileSize);</span>
+<span class="nc" id="L88">        jsonObject.put(&quot;audioPath&quot;, audioPath);</span>
+<span class="nc" id="L89">        return jsonObject.toString(audioPath, 4); // Use indentation of 4 spaces for pretty printing</span>
+    }
+
+	public Object getFileType() {
+<span class="nc" id="L93">		return fileType;</span>
+	}
+
+    public Object getFileSize() {
+<span class="nc" id="L97">        return fileSize;</span>
+    }
+
+    public Object getAudioPath() {
+<span class="nc" id="L101">        return audioPath;</span>
+    }
+}
+    @Override
+    public String toString() {
+<span class="nc" id="L106">        return &quot;AudioAnalysis []&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

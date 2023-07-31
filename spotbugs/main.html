@@ -92,17 +92,21 @@
          <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</li>
          <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</li>
          <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocumentBuilder.class</li>
+         <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/LinkExtraction.class</li>
+         <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</li>
          <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</li>
          <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</li>
+         <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis.class</li>
          <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</li>
+         <li>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceBuilder.class</li>
       </ul>
       <p>
          <br/>
          <br/>
       </p>
       <h2>Metrics</h2>
-      <p>387 lines of code analyzed,
-	in 21 classes, 
+      <p>623 lines of code analyzed,
+	in 25 classes, 
 	in 1 packages.</p>
       <table width="500" cellpadding="5" cellspacing="2">
          <tr class="tableheader">
@@ -112,23 +116,23 @@
          </tr>
          <tr class="tablerow0">
             <td>High Priority Warnings</td>
-            <td align="right">2</td>
-            <td align="right">5.17</td>
+            <td align="right">3</td>
+            <td align="right">4.82</td>
          </tr>
          <tr class="tablerow1">
             <td>Medium Priority Warnings</td>
-            <td align="right">35</td>
-            <td align="right">90.44</td>
+            <td align="right">31</td>
+            <td align="right">49.76</td>
          </tr>
          <tr class="$totalClass">
             <td>
                <b>Total Warnings</b>
             </td>
             <td align="right">
-               <b>37</b>
+               <b>34</b>
             </td>
             <td align="right">
-               <b>95.61</b>
+               <b>54.57</b>
             </td>
          </tr>
       </table>
@@ -173,13 +177,13 @@
             <td>
                <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
             </td>
-            <td align="right">3</td>
+            <td align="right">4</td>
          </tr>
          <tr class="tablerow1">
             <td>
                <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
             </td>
-            <td align="right">3</td>
+            <td align="right">1</td>
          </tr>
          <tr class="tablerow0">
             <td>
@@ -191,26 +195,26 @@
             <td>
                <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
             </td>
-            <td align="right">19</td>
+            <td align="right">21</td>
          </tr>
          <tr class="tablerow0">
             <td>
                <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
             </td>
-            <td align="right">6</td>
+            <td align="right">1</td>
          </tr>
          <tr class="tablerow1">
             <td>
                <a href="#Warnings_STYLE">Dodgy code Warnings</a>
             </td>
-            <td align="right">4</td>
+            <td align="right">5</td>
          </tr>
          <tr class="tablerow0">
             <td>
                <b>Total</b>
             </td>
             <td align="right">
-               <b>37</b>
+               <b>34</b>
             </td>
          </tr>
       </table>
@@ -224,44 +228,58 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e651');">
+         <tr class="tablerow1" onclick="toggleRow('d2e686');">
+            <td>
+               <span class="priority-2">Nm</span>
+            </td>
+            <td>The method name edu.odu.cs.cs350.LinkExtraction.LinkTypeExtraction(String) doesn't start with a lower case letter</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e686" style="display: none;">
+                  <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.LinkExtraction<br/>In method edu.odu.cs.cs350.LinkExtraction.LinkTypeExtraction(String)<br/>At LinkExtraction.java:[lines 27-47]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e749');">
             <td>
                <span class="priority-2">Nm</span>
             </td>
             <td>The class name edu.odu.cs.cs350.errorMessages doesn't start with an upper case letter</td>
          </tr>
-         <tr class="detailrow1">
+         <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e651" style="display: none;">
+               <p id="d2e749" style="display: none;">
                   <a href="#NM_CLASS_NAMING_CONVENTION">Bug type NM_CLASS_NAMING_CONVENTION (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.errorMessages<br/>At errorMessages.java:[lines 8-39]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e539');">
+         <tr class="tablerow1" onclick="toggleRow('d2e656');">
             <td>
                <span class="priority-2">RV</span>
             </td>
             <td>Exceptional return value of java.io.File.createNewFile() ignored in edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</td>
          </tr>
-         <tr class="detailrow0">
+         <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e539" style="display: none;">
+               <p id="d2e656" style="display: none;">
                   <a href="#RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">Bug type RV_RETURN_VALUE_IGNORED_BAD_PRACTICE (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.JSONReportWriter<br/>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)<br/>Called method java.io.File.createNewFile()<br/>At JSONReportWriter.java:[line 100]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e554');">
+         <tr class="tablerow0" onclick="toggleRow('d2e671');">
             <td>
                <span class="priority-2">RV</span>
             </td>
             <td>Exceptional return value of java.io.File.mkdirs() ignored in edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</td>
          </tr>
-         <tr class="detailrow1">
+         <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e554" style="display: none;">
+               <p id="d2e671" style="display: none;">
                   <a href="#RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">Bug type RV_RETURN_VALUE_IGNORED_BAD_PRACTICE (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.JSONReportWriter<br/>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)<br/>Called method java.io.File.mkdirs()<br/>At JSONReportWriter.java:[line 99]</p>
             </td>
@@ -275,7 +293,7 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e81');">
+         <tr class="tablerow1" onclick="toggleRow('d2e201');">
             <td>
                <span class="priority-2">UwF</span>
             </td>
@@ -284,37 +302,9 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e81" style="display: none;">
+               <p id="d2e201" style="display: none;">
                   <a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.Anchor<br/>Field edu.odu.cs.cs350.Anchor.linkType<br/>At Anchor.java:[line 87]</p>
-            </td>
-         </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e477');">
-            <td>
-               <span class="priority-2">UwF</span>
-            </td>
-            <td>Unwritten field: edu.odu.cs.cs350.HTMLDocumentBuilder.readBuffer</td>
-         </tr>
-         <tr class="detailrow0">
-            <td/>
-            <td>
-               <p id="d2e477" style="display: none;">
-                  <a href="#UWF_UNWRITTEN_FIELD">Bug type UWF_UNWRITTEN_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.readBuffer<br/>At HTMLDocumentBuilder.java:[line 112]</p>
-            </td>
-         </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e638');">
-            <td>
-               <span class="priority-2">UwF</span>
-            </td>
-            <td>Field only ever set to null: edu.odu.cs.cs350.WebsiteBuilder.basePath</td>
-         </tr>
-         <tr class="detailrow1">
-            <td/>
-            <td>
-               <p id="d2e638" style="display: none;">
-                  <a href="#UWF_NULL_FIELD">Bug type UWF_NULL_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.WebsiteBuilder<br/>Field edu.odu.cs.cs350.WebsiteBuilder.basePath<br/>At WebsiteBuilder.java:[line 32]</p>
             </td>
          </tr>
       </table>
@@ -326,7 +316,7 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e94');">
+         <tr class="tablerow1" onclick="toggleRow('d2e214');">
             <td>
                <span class="priority-1">Dm</span>
             </td>
@@ -335,12 +325,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e94" style="display: none;">
+               <p id="d2e214" style="display: none;">
                   <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.CreateTextFile<br/>In method edu.odu.cs.cs350.CreateTextFile.createtxtfile()<br/>Called method new java.io.FileWriter(File)<br/>At CreateTextFile.java:[line 43]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e490');">
+         <tr class="tablerow0" onclick="toggleRow('d2e607');">
             <td>
                <span class="priority-1">Dm</span>
             </td>
@@ -349,7 +339,7 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e490" style="display: none;">
+               <p id="d2e607" style="display: none;">
                   <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.JSONReportWriter<br/>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)<br/>Called method new java.io.FileWriter(File)<br/>At JSONReportWriter.java:[line 103]</p>
             </td>
@@ -363,7 +353,7 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e109');">
+         <tr class="tablerow1" onclick="toggleRow('d2e229');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -372,12 +362,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e109" style="display: none;">
+               <p id="d2e229" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.getAnchors()<br/>Field edu.odu.cs.cs350.HTMLDocument.anchors<br/>At HTMLDocument.java:[line 109]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e125');">
+         <tr class="tablerow0" onclick="toggleRow('d2e245');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -386,12 +376,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e125" style="display: none;">
+               <p id="d2e245" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.getImages()<br/>Field edu.odu.cs.cs350.HTMLDocument.images<br/>At HTMLDocument.java:[line 95]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e141');">
+         <tr class="tablerow1" onclick="toggleRow('d2e261');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -400,12 +390,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e141" style="display: none;">
+               <p id="d2e261" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.getScrips()<br/>Field edu.odu.cs.cs350.HTMLDocument.scripts<br/>At HTMLDocument.java:[line 67]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e157');">
+         <tr class="tablerow0" onclick="toggleRow('d2e277');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -414,12 +404,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e157" style="display: none;">
+               <p id="d2e277" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.getStylesheets()<br/>Field edu.odu.cs.cs350.HTMLDocument.stylesheets<br/>At HTMLDocument.java:[line 81]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e386');">
+         <tr class="tablerow1" onclick="toggleRow('d2e511');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -428,12 +418,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e386" style="display: none;">
+               <p id="d2e511" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.anchors<br/>At HTMLDocumentBuilder.java:[line 114]</p>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.anchors<br/>At HTMLDocumentBuilder.java:[line 121]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e402');">
+         <tr class="tablerow0" onclick="toggleRow('d2e527');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -442,12 +432,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e402" style="display: none;">
+               <p id="d2e527" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractImages()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.images<br/>At HTMLDocumentBuilder.java:[line 131]</p>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractImages()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.images<br/>At HTMLDocumentBuilder.java:[line 162]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e418');">
+         <tr class="tablerow1" onclick="toggleRow('d2e543');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -456,12 +446,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e418" style="display: none;">
+               <p id="d2e543" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.scripts<br/>At HTMLDocumentBuilder.java:[line 146]</p>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.scripts<br/>At HTMLDocumentBuilder.java:[line 177]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e435');">
+         <tr class="tablerow0" onclick="toggleRow('d2e560');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -470,12 +460,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e435" style="display: none;">
+               <p id="d2e560" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.stylesheets<br/>At HTMLDocumentBuilder.java:[line 161]</p>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets()<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.stylesheets<br/>At HTMLDocumentBuilder.java:[line 192]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e505');">
+         <tr class="tablerow1" onclick="toggleRow('d2e622');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -484,12 +474,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e505" style="display: none;">
+               <p id="d2e622" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.JSONReportWriter<br/>In method edu.odu.cs.cs350.JSONReportWriter.getSourceData()<br/>Field edu.odu.cs.cs350.JSONReportWriter.sourceData<br/>At JSONReportWriter.java:[line 73]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e622');">
+         <tr class="tablerow0" onclick="toggleRow('d2e714');">
             <td>
                <span class="priority-2">EI</span>
             </td>
@@ -498,12 +488,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e622" style="display: none;">
+               <p id="d2e714" style="display: none;">
                   <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.WebsiteBuilder<br/>In method edu.odu.cs.cs350.WebsiteBuilder.getUrls()<br/>Field edu.odu.cs.cs350.WebsiteBuilder.urls<br/>At WebsiteBuilder.java:[line 51]</p>
+                  <br/>In class edu.odu.cs.cs350.WebsiteBuilder<br/>In method edu.odu.cs.cs350.WebsiteBuilder.getUrls()<br/>Field edu.odu.cs.cs350.WebsiteBuilder.urls<br/>At WebsiteBuilder.java:[line 102]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e173');">
+         <tr class="tablerow1" onclick="toggleRow('d2e293');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -512,12 +502,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e173" style="display: none;">
+               <p id="d2e293" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method new edu.odu.cs.cs350.HTMLDocument(List, List, List, List)<br/>Field edu.odu.cs.cs350.HTMLDocument.anchors<br/>Local variable named anchor<br/>At HTMLDocument.java:[line 59]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e191');">
+         <tr class="tablerow0" onclick="toggleRow('d2e311');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -526,12 +516,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e191" style="display: none;">
+               <p id="d2e311" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method new edu.odu.cs.cs350.HTMLDocument(List, List, List, List)<br/>Field edu.odu.cs.cs350.HTMLDocument.images<br/>Local variable named image<br/>At HTMLDocument.java:[line 58]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e209');">
+         <tr class="tablerow1" onclick="toggleRow('d2e329');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -540,12 +530,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e209" style="display: none;">
+               <p id="d2e329" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method new edu.odu.cs.cs350.HTMLDocument(List, List, List, List)<br/>Field edu.odu.cs.cs350.HTMLDocument.scripts<br/>Local variable named script<br/>At HTMLDocument.java:[line 56]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e227');">
+         <tr class="tablerow0" onclick="toggleRow('d2e347');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -554,12 +544,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e227" style="display: none;">
+               <p id="d2e347" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method new edu.odu.cs.cs350.HTMLDocument(List, List, List, List)<br/>Field edu.odu.cs.cs350.HTMLDocument.stylesheets<br/>Local variable named stylesheet<br/>At HTMLDocument.java:[line 57]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e246');">
+         <tr class="tablerow1" onclick="toggleRow('d2e366');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -568,12 +558,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e246" style="display: none;">
+               <p id="d2e366" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.setAnchors(List)<br/>Field edu.odu.cs.cs350.HTMLDocument.anchors<br/>Local variable named anchors<br/>At HTMLDocument.java:[line 116]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e264');">
+         <tr class="tablerow0" onclick="toggleRow('d2e384');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -582,12 +572,12 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e264" style="display: none;">
+               <p id="d2e384" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.setImages(List)<br/>Field edu.odu.cs.cs350.HTMLDocument.images<br/>Local variable named images<br/>At HTMLDocument.java:[line 102]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e282');">
+         <tr class="tablerow1" onclick="toggleRow('d2e402');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -596,12 +586,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e282" style="display: none;">
+               <p id="d2e402" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.setScrips(List)<br/>Field edu.odu.cs.cs350.HTMLDocument.scripts<br/>Local variable named scrips<br/>At HTMLDocument.java:[line 74]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e300');">
+         <tr class="tablerow0" onclick="toggleRow('d2e420');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
@@ -610,23 +600,51 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e300" style="display: none;">
+               <p id="d2e420" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
                   <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.setStylesheets(List)<br/>Field edu.odu.cs.cs350.HTMLDocument.stylesheets<br/>Local variable named stylesheets<br/>At HTMLDocument.java:[line 88]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e521');">
+         <tr class="tablerow1" onclick="toggleRow('d2e576');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>edu.odu.cs.cs350.HTMLDocumentBuilder.withBaseURLs(Collection) may expose internal representation by storing an externally mutable object into HTMLDocumentBuilder.baseUrls</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e576" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.withBaseURLs(Collection)<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.baseUrls<br/>Local variable named urls<br/>At HTMLDocumentBuilder.java:[line 106]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e638');">
             <td>
                <span class="priority-2">EI2</span>
             </td>
             <td>edu.odu.cs.cs350.JSONReportWriter.writeReport(Map) may expose internal representation by storing an externally mutable object into JSONReportWriter.sourceData</td>
          </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e638" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.JSONReportWriter<br/>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)<br/>Field edu.odu.cs.cs350.JSONReportWriter.sourceData<br/>Local variable named reportData<br/>At JSONReportWriter.java:[line 106]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e731');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>edu.odu.cs.cs350.WebsiteBuilder.withURLs(Collection) may expose internal representation by storing an externally mutable object into WebsiteBuilder.urls</td>
+         </tr>
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e521" style="display: none;">
+               <p id="d2e731" style="display: none;">
                   <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.JSONReportWriter<br/>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)<br/>Field edu.odu.cs.cs350.JSONReportWriter.sourceData<br/>Local variable named reportData<br/>At JSONReportWriter.java:[line 106]</p>
+                  <br/>In class edu.odu.cs.cs350.WebsiteBuilder<br/>In method edu.odu.cs.cs350.WebsiteBuilder.withURLs(Collection)<br/>Field edu.odu.cs.cs350.WebsiteBuilder.urls<br/>Local variable named urls<br/>At WebsiteBuilder.java:[line 66]</p>
             </td>
          </tr>
       </table>
@@ -638,88 +656,18 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e451');">
+         <tr class="tablerow1" onclick="toggleRow('d2e594');">
             <td>
-               <span class="priority-2">UuF</span>
+               <span class="priority-2">UrF</span>
             </td>
-            <td>Unused field: edu.odu.cs.cs350.HTMLDocumentBuilder.baseDirectory</td>
+            <td>Unread field: edu.odu.cs.cs350.HTMLDocumentBuilder.baseDirectory</td>
          </tr>
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e451" style="display: none;">
-                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.baseDirectory<br/>In HTMLDocumentBuilder.java</p>
-            </td>
-         </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e464');">
-            <td>
-               <span class="priority-2">UuF</span>
-            </td>
-            <td>Unused field: edu.odu.cs.cs350.HTMLDocumentBuilder.baseUrls</td>
-         </tr>
-         <tr class="detailrow0">
-            <td/>
-            <td>
-               <p id="d2e464" style="display: none;">
-                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.baseUrls<br/>In HTMLDocumentBuilder.java</p>
-            </td>
-         </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e569');">
-            <td>
-               <span class="priority-2">UuF</span>
-            </td>
-            <td>Unused field: edu.odu.cs.cs350.Resource.location</td>
-         </tr>
-         <tr class="detailrow1">
-            <td/>
-            <td>
-               <p id="d2e569" style="display: none;">
-                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.Resource<br/>Field edu.odu.cs.cs350.Resource.location<br/>In Resource.java</p>
-            </td>
-         </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e582');">
-            <td>
-               <span class="priority-2">UuF</span>
-            </td>
-            <td>Unused field: edu.odu.cs.cs350.Resource.path</td>
-         </tr>
-         <tr class="detailrow0">
-            <td/>
-            <td>
-               <p id="d2e582" style="display: none;">
-                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.Resource<br/>Field edu.odu.cs.cs350.Resource.path<br/>In Resource.java</p>
-            </td>
-         </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e596');">
-            <td>
-               <span class="priority-2">UuF</span>
-            </td>
-            <td>Unused field: edu.odu.cs.cs350.Resource.sizeOfFile</td>
-         </tr>
-         <tr class="detailrow1">
-            <td/>
-            <td>
-               <p id="d2e596" style="display: none;">
-                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.Resource<br/>Field edu.odu.cs.cs350.Resource.sizeOfFile<br/>In Resource.java</p>
-            </td>
-         </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e609');">
-            <td>
-               <span class="priority-2">UuF</span>
-            </td>
-            <td>Unused field: edu.odu.cs.cs350.Resource.url</td>
-         </tr>
-         <tr class="detailrow0">
-            <td/>
-            <td>
-               <p id="d2e609" style="display: none;">
-                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.Resource<br/>Field edu.odu.cs.cs350.Resource.url<br/>In Resource.java</p>
+               <p id="d2e594" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>Field edu.odu.cs.cs350.HTMLDocumentBuilder.baseDirectory<br/>At HTMLDocumentBuilder.java:[line 57]</p>
             </td>
          </tr>
       </table>
@@ -731,35 +679,35 @@
             <th align="left">Code</th>
             <th align="left">Warning</th>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e318');">
+         <tr class="tablerow1" onclick="toggleRow('d2e438');">
+            <td>
+               <span class="priority-1">BC</span>
+            </td>
+            <td>Questionable cast from Collection to abstract class java.util.List in edu.odu.cs.cs350.HTMLDocumentBuilder.withBaseURLs(Collection)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e438" style="display: none;">
+                  <a href="#BC_BAD_CAST_TO_ABSTRACT_COLLECTION">Bug type BC_BAD_CAST_TO_ABSTRACT_COLLECTION (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.withBaseURLs(Collection)<br/>Actual type java.util.Collection&lt;java.net.URL&gt;<br/>Expected java.util.List<br/>Value loaded from urls<br/>At HTMLDocumentBuilder.java:[line 106]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e460');">
             <td>
                <span class="priority-2">DLS</span>
             </td>
             <td>Dead store to extractedStrings in edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()</td>
          </tr>
-         <tr class="detailrow1">
-            <td/>
-            <td>
-               <p id="d2e318" style="display: none;">
-                  <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()<br/>Local variable named extractedStrings<br/>At HTMLDocumentBuilder.java:[line 112]</p>
-            </td>
-         </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e335');">
-            <td>
-               <span class="priority-2">DLS</span>
-            </td>
-            <td>Dead store to extractedStrings in edu.odu.cs.cs350.HTMLDocumentBuilder.extractImages()</td>
-         </tr>
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e335" style="display: none;">
+               <p id="d2e460" style="display: none;">
                   <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractImages()<br/>Local variable named extractedStrings<br/>At HTMLDocumentBuilder.java:[line 128]</p>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()<br/>Local variable named extractedStrings<br/>At HTMLDocumentBuilder.java:[line 119]</p>
             </td>
          </tr>
-         <tr class="tablerow1" onclick="toggleRow('d2e352');">
+         <tr class="tablerow1" onclick="toggleRow('d2e477');">
             <td>
                <span class="priority-2">DLS</span>
             </td>
@@ -768,12 +716,12 @@
          <tr class="detailrow1">
             <td/>
             <td>
-               <p id="d2e352" style="display: none;">
+               <p id="d2e477" style="display: none;">
                   <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts()<br/>Local variable named extractedStrings<br/>At HTMLDocumentBuilder.java:[line 144]</p>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts()<br/>Local variable named extractedStrings<br/>At HTMLDocumentBuilder.java:[line 175]</p>
             </td>
          </tr>
-         <tr class="tablerow0" onclick="toggleRow('d2e369');">
+         <tr class="tablerow0" onclick="toggleRow('d2e494');">
             <td>
                <span class="priority-2">DLS</span>
             </td>
@@ -782,9 +730,23 @@
          <tr class="detailrow0">
             <td/>
             <td>
-               <p id="d2e369" style="display: none;">
+               <p id="d2e494" style="display: none;">
                   <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
-                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets()<br/>Local variable named extractedStrings<br/>At HTMLDocumentBuilder.java:[line 159]</p>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocumentBuilder<br/>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets()<br/>Local variable named extractedStrings<br/>At HTMLDocumentBuilder.java:[line 190]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e698');">
+            <td>
+               <span class="priority-2">NP</span>
+            </td>
+            <td>Possible null pointer dereference in edu.odu.cs.cs350.ResourceBuilder.resolveRelativePath(Path) due to return value of called method</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e698" style="display: none;">
+                  <a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.ResourceBuilder<br/>In method edu.odu.cs.cs350.ResourceBuilder.resolveRelativePath(Path)<br/>Value loaded from documentDirectory<br/>Dereferenced at ResourceBuilder.java:[line 36]<br/>Known null at ResourceBuilder.java:[line 35]</p>
             </td>
          </tr>
       </table>
@@ -792,6 +754,18 @@
          <a name="Details">Details</a>
       </h1>
       <h2>
+         <a name="BC_BAD_CAST_TO_ABSTRACT_COLLECTION">BC_BAD_CAST_TO_ABSTRACT_COLLECTION: Questionable cast to abstract collection</a>
+      </h2>
+
+<p>
+This code casts a Collection to an abstract collection
+(such as <code>List</code>, <code>Set</code>, or <code>Map</code>).
+Ensure that you are guaranteed that the object is of the type
+you are casting to. If all you need is to be able
+to iterate through a collection, you don't need to cast it to a Set or List.
+</p>
+
+    <h2>
          <a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
       </h2>
 
@@ -841,10 +815,27 @@ object explicitly.</p>
   Storing a copy of the object is better approach in many situations.</p>
 
     <h2>
+         <a name="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE: Possible null pointer dereference due to return value of called method</a>
+      </h2>
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   <h2>
          <a name="NM_CLASS_NAMING_CONVENTION">NM_CLASS_NAMING_CONVENTION: Class names should start with an upper case letter</a>
       </h2>
 
   <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    <h2>
+         <a name="NM_METHOD_NAMING_CONVENTION">NM_METHOD_NAMING_CONVENTION: Method names should start with a lower case letter</a>
+      </h2>
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
 </p>
 
     <h2>
@@ -861,18 +852,10 @@ signals unexpected behavior by returning an atypical return value.
 </p>
 
     <h2>
-         <a name="UUF_UNUSED_FIELD">UUF_UNUSED_FIELD: Unused field</a>
+         <a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
       </h2>
 
-  <p> This field is never used.&nbsp; Consider removing it from the class.</p>
-
-    <h2>
-         <a name="UWF_NULL_FIELD">UWF_NULL_FIELD: Field only ever set to null</a>
-      </h2>
-
-  <p> All writes to this field are of the constant value null, and thus
-all reads of the field will return null.
-Check for errors, or remove it if it is useless.</p>
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
 
     <h2>
          <a name="UWF_UNWRITTEN_FIELD">UWF_UNWRITTEN_FIELD: Unwritten field</a>

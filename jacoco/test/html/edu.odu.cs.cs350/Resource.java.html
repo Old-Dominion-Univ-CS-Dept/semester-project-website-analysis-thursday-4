@@ -6,12 +6,117 @@ import java.nio.file.Path;
 // Resource class from outline that will be needed for what is extracted from 
 // by the HTMLDocumentBuilder class. 
 
-<span class="fc" id="L9">public class Resource</span>
+public class Resource
 {
-    ResourceKind typeOfResource; 
-    Locality location; 
-    long sizeOfFile; 
-    Path path; 
-    URL url; 
+    private ResourceKind typeOfResource; 
+    private Locality location; 
+    private long sizeOfFile; 
+    private Path path; 
+    private URL url; 
+
+    /**
+     * Default constructor: initializes all members to either null or 0. 
+     */
+    public Resource()
+<span class="fc" id="L21">    {</span>
+<span class="fc" id="L22">        this.typeOfResource = null; </span>
+<span class="fc" id="L23">        this.location = null; </span>
+<span class="fc" id="L24">        this.sizeOfFile = 0; </span>
+<span class="fc" id="L25">        this.path = null; </span>
+<span class="fc" id="L26">        this.url = null; </span>
+<span class="fc" id="L27">    }</span>
+    
+    /**
+     * Retrieves the type of the resource object. 
+     * 
+     * @return: type of this resource object. 
+     */
+    public ResourceKind getTypeOfResource() {
+<span class="fc" id="L35">        return typeOfResource;</span>
+    }
+
+    /**
+     * Sets the type of the resource object. 
+     * 
+     * @param typeOfResource: type of resource to set. 
+     */
+    public void setTypeOfResource(ResourceKind typeOfResource) {
+<span class="fc" id="L44">        this.typeOfResource = typeOfResource;</span>
+<span class="fc" id="L45">    }</span>
+
+    /**
+     * Retrieves the locality of the resource:
+     * INTERNAL, EXTERNAL, INTRAPAGE. 
+     * 
+     * @return: locality of this resource object. 
+     */
+    public Locality getLocation() {
+<span class="nc" id="L54">        return location;</span>
+    }
+
+    /**
+     * Sets the location/locality of the resource. 
+     * 
+     * @param location: location of resource to set. 
+     */
+    public void setLocation(Locality location) {
+<span class="nc" id="L63">        this.location = location;</span>
+<span class="nc" id="L64">    }</span>
+
+    /**
+     * Retrieves the size of the resource object. 
+     * 
+     * @return: size of this resource object. 
+     */
+    public long getSizeOfFile() {
+<span class="nc" id="L72">        return sizeOfFile;</span>
+    }
+
+    /**
+     * Sets the size of the resource object. 
+     * 
+     * @param sizeOfFile: size of resource to set. 
+     */
+    public void setSizeOfFile(long sizeOfFile) {
+<span class="nc" id="L81">        this.sizeOfFile = sizeOfFile;</span>
+<span class="nc" id="L82">    }</span>
+
+    /**
+     * Retrieves the path of the resource object. 
+     * 
+     * @return: path of this resource object. 
+     */
+    public Path getPath() {
+<span class="nc" id="L90">        return path;</span>
+    }
+
+    /**
+     * Sets the path of the resource object. 
+     * 
+     * @param path: path of resource to set. 
+     */
+    public void setPath(Path path) {
+<span class="nc" id="L99">        this.path = path;</span>
+<span class="nc" id="L100">    }</span>
+
+    /**
+     * Retrieves the URL of the resource object. 
+     * 
+     * @return: URL of this resource object. 
+     */
+    public URL getUrl() {
+<span class="nc" id="L108">        return url;</span>
+    }
+
+    /**
+     * Sets the URL of the resource object. 
+     * 
+     * @param url: URL of resource to set. 
+     */
+    public void setUrl(URL url) {
+<span class="nc" id="L117">        this.url = url;</span>
+<span class="nc" id="L118">    }</span>
+    
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

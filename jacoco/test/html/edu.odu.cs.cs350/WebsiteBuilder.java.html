@@ -6,12 +6,15 @@
  */
 package edu.odu.cs.cs350;
 
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
+
 
 
 /**
@@ -23,15 +26,63 @@ public class WebsiteBuilder
     
     private Path basePath;
     private Collection&lt;URL&gt; urls;
+   
+
+    /**
+     * Sets the local directory path for the website.
+     *
+     * @param Path the local directory.
+     * @return this WebsiteBuilder instance.
+     * @throws IllegalArgumentException if the path is not a directory.
+     */
+    public WebsiteBuilder withPath(Path basePath) {
+<span class="pc bpc" id="L39" title="2 of 4 branches missed.">        if (basePath == null || !Files.isDirectory(basePath)) {</span>
+<span class="nc" id="L40">            throw new IllegalArgumentException(&quot;Path must be a directory: &quot; + basePath);</span>
+        }
+<span class="fc" id="L42">        this.basePath = basePath;</span>
+<span class="fc" id="L43">        return this;</span>
+    }
+
+    /**
+     * Sets a single url to the website's url list
+     *
+     * @param url The URL to be stored.
+     * @return This WebsiteBuilder instance.
+     */
+    public WebsiteBuilder withURL(URL url) {
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">        if (this.urls == null) {</span>
+<span class="nc" id="L54">            this.urls = new ArrayList&lt;&gt;();</span>
+        }
+<span class="fc" id="L56">        this.urls.add(url);</span>
+<span class="fc" id="L57">        return this;</span>
+    }
+
+    /**
+     * accepts a collectioin URLs 
+     * @param urls collection of URLs
+     * @return This WebsiteBuilder instance.
+     */
+    public WebsiteBuilder withURLs(Collection&lt;URL&gt; urls) {
+<span class="fc" id="L66">        this.urls = urls;</span>
+<span class="fc" id="L67">        return this;</span>
+    }
+
+    
+
+
+
+
 
     /**
      * Constructs a new WebsiteBuilder.
     * Initializes the 'basePath' and 'url' fields to null.
      */
-<span class="fc" id="L31">    public WebsiteBuilder() {</span>
-<span class="fc" id="L32">        this.basePath = null;</span>
-<span class="fc" id="L33">        this.urls = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L34">    }</span>
+<span class="fc" id="L80">    public WebsiteBuilder() {</span>
+<span class="fc" id="L81">        this.basePath = null;</span>
+<span class="fc" id="L82">        this.urls = new ArrayList&lt;&gt;();</span>
+ 
+        
+<span class="fc" id="L85">    }</span>
 
       /**
      * Returns the base path of the website.
@@ -39,7 +90,7 @@ public class WebsiteBuilder
      * @return the base path of the website
      */
     public Path getBasePath() {
-<span class="fc" id="L42">        return this.basePath;</span>
+<span class="fc" id="L93">        return this.basePath;</span>
     }
 
     /**
@@ -48,31 +99,181 @@ public class WebsiteBuilder
      * @return the URLs of the website
      */
     public Collection&lt;URL&gt; getUrls() {
-<span class="fc" id="L51">        return this.urls;</span>
+<span class="fc" id="L102">        return this.urls;</span>
+    }
+
+  /**
+ * Walks through the directory structure starting from the specified path. 
+ * Extracts all subdirectories and files from the directory and its subdirectories.
+ *
+ * @param directoryPath the path to the directory to begin the walk from.
+ * @return a list of all  files in the directory.
+ * @throws IOException if an I/O error occurs when opening the directory.
+ */
+        
+    public List&lt;Path&gt; walkDirectory(String directoryPath) throws IOException {
+<span class="fc" id="L115">        Path pathToExamine = Paths.get(directoryPath);</span>
+<span class="fc" id="L116">        List&lt;Path&gt; directories = examineDirectory(pathToExamine);</span>
+        
+        
+<span class="fc" id="L119">        List&lt;Path&gt; allFiles = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        for(Path directory : directories) {</span>
+<span class="fc" id="L121">            allFiles.addAll(directoryWalker(directory));</span>
+          
+<span class="fc" id="L123">        }</span>
+
+<span class="pc bpc" id="L125" title="1 of 2 branches missed.">        if (allFiles.size()&lt;1){</span>
+<span class="nc" id="L126">            errorMessages.underSize();</span>
+        }
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        if (allFiles.size()&gt;1000){</span>
+<span class="nc" id="L129">            errorMessages.overSize();</span>
+        }
+        
+<span class="fc" id="L132">        return allFiles;</span>
     }
 
     /**
-     * Walks through the directory  and returns a list of Path objects
-     * 
-     * @param directoryPath the path to the directory to walk through
-     * @return a list of Path objects for all the files in the directory 
-     */
-    public List&lt;Path&gt; walkDirectory(String directoryPath) {
-        // Initial implementation to compile
-<span class="fc" id="L62">        return Collections.emptyList();</span>
-    }
-
-    /**
-     * Maps a given URL to its corresponding local path.
+     * Examines the directory structure og the specified path and extracts all
+     * subdirectories.
      *
-     * @param url the URL to map
-     * @return the local path corresponding to the URL
+     * @param pathToExamine the path to the directory to examine.
+     * @return a list of Path objects for the subdirectories in the directory.
+     * @throws IOException if an I/O error occurs when opening the directory.
      */
-    public String mapUrlToLocalPath(URL url) {
-        //  returning dummy path so it will compile 
-<span class="fc" id="L73">        return &quot;dummy/path&quot;;</span>
+    private List&lt;Path&gt; examineDirectory(Path pathToExamine) throws IOException {
+<span class="fc" id="L144">        List&lt;Path&gt; directoryList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L145">        Files.walk(pathToExamine)</span>
+<span class="fc" id="L146">            .forEach((Path path) -&gt; {</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">                if (Files.isDirectory(path)) {</span>
+<span class="fc" id="L148">                    directoryList.add(path);</span>
+                }
+<span class="fc" id="L150">            });</span>
+<span class="fc" id="L151">        return directoryList;</span>
     }
-  
+
+    /**
+     * Walks through the  directory and extracts all files.
+     *
+     * @param directory the path to the directory to walk.
+     * @return a list of paths for  all files in the directory.
+     * @throws IOException if an I/O error occurs when opening the directory.
+     */
+    private List&lt;Path&gt; directoryWalker(Path directory) throws IOException {
+<span class="fc" id="L162">        List&lt;Path&gt; fileList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L163">        Files.walk(directory, 1)</span>
+<span class="fc" id="L164">            .forEach((Path path) -&gt; {</span>
+<span class="fc bfc" id="L165" title="All 2 branches covered.">                if (Files.isRegularFile(path)) {</span>
+<span class="fc" id="L166">                    fileList.add(path);</span>
+                }
+<span class="fc" id="L168">            });</span>
+<span class="fc" id="L169">        return fileList;</span>
+    }
+
+    /**
+     * Takes a URLs and a base path, maps each URL to a local path. 
+     * Removes the common URL prefix from each URL and uses the remaining  
+     * URL with  prepended basePath. Initially writing the  transformed paths 
+     * are written to a text file named &quot;processed_paths.txt&quot; for testing.
+     * 
+     * @param urls A collection of URLs to be mapped.
+     * @param basePath The base path for the local files.
+     * @return A collection of local file paths.
+     */
+
+     
+     public Collection&lt;Path&gt; mapUrlsToLocalPath(Collection&lt;URL&gt; urls, Path basePath) throws IOException  {
+<span class="fc" id="L185">        List&lt;Path&gt; localPaths = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L186">        String commonUrlPrefix = findCommonPrefix(urls);</span>
     
+<span class="fc bfc" id="L188" title="All 2 branches covered.">        for (URL url : urls) {</span>
+<span class="fc" id="L189">            String urlPath = url.getPath();</span>
+        
+            // Remove the common prefix from the URL path
+<span class="fc" id="L192">            String localPath = urlPath.replaceFirst(commonUrlPrefix, &quot;&quot;);  </span>
+        
+<span class="pc bpc" id="L194" title="1 of 2 branches missed.">            if (localPath.startsWith(&quot;/&quot;)) {</span>
+<span class="nc" id="L195">                localPath = localPath.substring(1);</span>
+            }
+        
+<span class="fc" id="L198">            Path transformedPath = basePath.resolve(localPath);</span>
+<span class="fc" id="L199">            localPaths.add(transformedPath);</span>
+<span class="fc" id="L200">        }</span>
+        
+<span class="fc" id="L202">        return localPaths;</span>
+    }
+    
+    
+
+    
+    
+    /**
+     * Helper method to find the common prefix in a collection of URLs. Compares
+     * the path of each URL to find the longest common prefix.
+     * 
+     * @param urls A collection of URLs 
+     * @return The common prefix of the URL paths.
+     */
+    
+    public String findCommonPrefix(Collection&lt;URL&gt; urls) {
+<span class="fc" id="L218">        String commonPrefix = urls.stream()</span>
+<span class="fc" id="L219">                .map(URL::getPath)</span>
+<span class="fc" id="L220">                .reduce((s1, s2) -&gt; {</span>
+<span class="fc" id="L221">                    int i = 0;</span>
+<span class="pc bpc" id="L222" title="1 of 6 branches missed.">                    while (i &lt; s1.length() &amp;&amp; i &lt; s2.length() &amp;&amp; s1.charAt(i) == s2.charAt(i)) {</span>
+<span class="fc" id="L223">                        i++;</span>
+                    }
+<span class="fc" id="L225">                    return s1.substring(0, i);</span>
+<span class="fc" id="L226">                }).orElse(&quot;&quot;);</span>
+<span class="fc" id="L227">        return commonPrefix;</span>
+    }
+    
+    
+
+
+    /**
+     * Sets the base path of the files.
+     *
+     * @param basePath the base directory as a Path object.
+     */
+    public void setBasePath(Path basePath) {
+<span class="fc" id="L239">        this.basePath = basePath;</span>
+<span class="fc" id="L240">    }</span>
+    
+    
+
+
+    /**
+     * Removes any non-HTML files from the list of files. 
+     * Checks the extension of each file and removes it 
+     * from the list if it is not html or htm.
+     *
+     * @param files List of file paths that need to be pruned.
+     * @return List of HTML file paths.
+     */
+    public List&lt;Path&gt; pruneNonHTMLFiles(List&lt;Path&gt; files) {
+<span class="fc" id="L254">        List&lt;Path&gt; htmlFiles = new ArrayList&lt;&gt;();</span>
+        
+<span class="fc bfc" id="L256" title="All 2 branches covered.">        for (Path file : files) {</span>
+<span class="fc bfc" id="L257" title="All 4 branches covered.">            if (file.toString().endsWith(&quot;.html&quot;) || file.toString().endsWith(&quot;.htm&quot;)) {</span>
+<span class="fc" id="L258">                htmlFiles.add(file);</span>
+            }
+<span class="fc" id="L260">        }</span>
+    
+<span class="fc" id="L262">        return htmlFiles;</span>
+    }
+    
+
+    /**
+     * Builds a Website object with paths and list of urls.
+     *
+     * @return a new Website object
+     * @throws IllegalStateException if the base path or URLs have not been set
+     */
+    public Website build() {
+        // Initial Stub function
+<span class="fc" id="L274">        return null;</span>
+    }
+
 }
+
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

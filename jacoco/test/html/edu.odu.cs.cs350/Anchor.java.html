@@ -44,7 +44,7 @@ import java.util.regex.*;
         }
 
          // Set the type of resource to ANCHOR
-<span class="fc" id="L47">         typeOfResource = ResourceKind.ANCHOR;</span>
+<span class="fc" id="L47">         setTypeOfResource(ResourceKind.ANCHOR);</span>
         
             /**
              * TODO: Update this section once siteUrl is defined
@@ -91,8 +91,10 @@ import java.util.regex.*;
      *
      * @return The type of resource.
      */
+    @Override
+
     public ResourceKind getTypeOfResource() {
-<span class="fc" id="L95">        return typeOfResource;</span>
+<span class="fc" id="L97">        return super.getTypeOfResource();</span>
     }
 }
 

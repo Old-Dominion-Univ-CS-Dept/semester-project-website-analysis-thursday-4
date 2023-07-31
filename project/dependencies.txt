@@ -105,17 +105,215 @@ compileClasspath - Compile classpath for source set 'main'.
 |    +--- commons-io:commons-io:2.11.0
 |    +--- com.zaxxer:SparseBitSet:1.2
 |    \--- org.apache.logging.log4j:log4j-api:2.18.0
-\--- org.apache.poi:poi-ooxml:5.2.3
-     +--- org.apache.poi:poi:5.2.3 (*)
-     +--- org.apache.poi:poi-ooxml-lite:5.2.3
-     |    \--- org.apache.xmlbeans:xmlbeans:5.1.1
-     |         \--- org.apache.logging.log4j:log4j-api:2.18.0
-     +--- org.apache.xmlbeans:xmlbeans:5.1.1 (*)
-     +--- org.apache.commons:commons-compress:1.21
-     +--- commons-io:commons-io:2.11.0
-     +--- com.github.virtuald:curvesapi:1.07
-     +--- org.apache.logging.log4j:log4j-api:2.18.0
-     \--- org.apache.commons:commons-collections4:4.4
++--- org.apache.poi:poi-ooxml:5.2.3
+|    +--- org.apache.poi:poi:5.2.3 (*)
+|    +--- org.apache.poi:poi-ooxml-lite:5.2.3
+|    |    \--- org.apache.xmlbeans:xmlbeans:5.1.1
+|    |         \--- org.apache.logging.log4j:log4j-api:2.18.0
+|    +--- org.apache.xmlbeans:xmlbeans:5.1.1 (*)
+|    +--- org.apache.commons:commons-compress:1.21
+|    +--- commons-io:commons-io:2.11.0
+|    +--- com.github.virtuald:curvesapi:1.07
+|    +--- org.apache.logging.log4j:log4j-api:2.18.0
+|    \--- org.apache.commons:commons-collections4:4.4
++--- org.json:json:20210307
++--- org.apache.tika:tika-core:1.27
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    \--- commons-io:commons-io:2.10.0 -> 2.11.0
+\--- org.apache.tika:tika-parsers:1.27
+     +--- org.apache.tika:tika-core:1.27 (*)
+     +--- xerces:xercesImpl:2.12.1
+     |    \--- xml-apis:xml-apis:1.4.01
+     +--- com.fasterxml.woodstox:woodstox-core:6.2.6
+     |    \--- org.codehaus.woodstox:stax2-api:4.2.1
+     +--- org.apache.commons:commons-lang3:3.12.0
+     +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+     +--- org.gagravarr:vorbis-java-tika:0.8
+     +--- org.tallison:jmatio:1.5
+     |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.30
+     +--- org.apache.james:apache-mime4j-core:0.8.4
+     +--- org.apache.james:apache-mime4j-dom:0.8.4
+     |    \--- org.apache.james:apache-mime4j-core:0.8.4
+     +--- com.googlecode.plist:dd-plist:1.23
+     +--- org.apache.commons:commons-compress:1.20 -> 1.21
+     +--- org.tukaani:xz:1.9
+     +--- com.epam:parso:2.0.14
+     |    \--- org.slf4j:slf4j-api:1.7.5 -> 1.7.30
+     +--- org.brotli:dec:0.1.2
+     +--- commons-codec:commons-codec:1.15
+     +--- org.apache.pdfbox:pdfbox:2.0.24
+     |    +--- org.apache.pdfbox:fontbox:2.0.24
+     |    \--- commons-logging:commons-logging:1.2
+     +--- org.apache.pdfbox:pdfbox-tools:2.0.24
+     +--- org.apache.pdfbox:preflight:2.0.24
+     |    +--- org.apache.pdfbox:pdfbox:2.0.24 (*)
+     |    \--- org.apache.pdfbox:xmpbox:2.0.24
+     |         \--- commons-logging:commons-logging:1.2
+     +--- org.apache.pdfbox:jempbox:1.8.16
+     +--- org.apache.pdfbox:xmpbox:2.0.24 (*)
+     +--- org.bouncycastle:bcmail-jdk15on:1.69
+     |    +--- org.bouncycastle:bcprov-jdk15on:1.69
+     |    +--- org.bouncycastle:bcutil-jdk15on:1.69
+     |    |    \--- org.bouncycastle:bcprov-jdk15on:1.69
+     |    \--- org.bouncycastle:bcpkix-jdk15on:1.69
+     |         +--- org.bouncycastle:bcprov-jdk15on:1.69
+     |         \--- org.bouncycastle:bcutil-jdk15on:1.69 (*)
+     +--- org.bouncycastle:bcprov-jdk15on:1.69
+     +--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+     +--- org.apache.poi:poi-scratchpad:4.1.2
+     |    \--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+     +--- org.apache.poi:poi-ooxml:4.1.2 -> 5.2.3 (*)
+     +--- com.healthmarketscience.jackcess:jackcess:4.0.1
+     +--- com.healthmarketscience.jackcess:jackcess-encrypt:4.0.1
+     +--- org.ccil.cowan.tagsoup:tagsoup:1.2.1
+     +--- org.ow2.asm:asm:9.2
+     +--- org.tallison:isoparser:1.9.41.7
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- org.tallison:metadata-extractor:2.15.0.1
+     |    \--- org.tallison.xmp:xmpcore-shaded:6.1.11
+     +--- de.l3s.boilerpipe:boilerpipe:1.1.0
+     +--- com.rometools:rome:1.15.0
+     |    +--- com.rometools:rome-utils:1.15.0
+     |    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+     |    +--- org.jdom:jdom2:2.0.6
+     |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+     +--- org.gagravarr:vorbis-java-core:0.8
+     +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+     +--- org.codelibs:jhighlight:1.0.3
+     +--- com.pff:java-libpst:0.9.3
+     +--- com.github.junrar:junrar:7.4.0
+     +--- org.apache.cxf:cxf-rt-rs-client:3.4.4
+     |    +--- org.apache.cxf:cxf-rt-transports-http:3.4.4
+     |    |    \--- org.apache.cxf:cxf-core:3.4.4
+     |    |         +--- org.glassfish.jaxb:jaxb-runtime:2.3.4
+     |    |         |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3
+     |    |         |    |    \--- jakarta.activation:jakarta.activation-api:1.2.2
+     |    |         |    +--- org.glassfish.jaxb:txw2:2.3.4
+     |    |         |    \--- com.sun.istack:istack-commons-runtime:3.0.12
+     |    |         +--- com.fasterxml.woodstox:woodstox-core:6.2.6 (*)
+     |    |         +--- org.apache.ws.xmlschema:xmlschema-core:2.2.5
+     |    |         \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3 (*)
+     |    +--- org.apache.cxf:cxf-core:3.4.4 (*)
+     |    \--- org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4
+     |         +--- org.apache.cxf:cxf-core:3.4.4 (*)
+     |         +--- jakarta.ws.rs:jakarta.ws.rs-api:2.1.6
+     |         +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+     |         +--- org.apache.cxf:cxf-rt-transports-http:3.4.4 (*)
+     |         \--- org.apache.cxf:cxf-rt-security:3.4.4
+     |              \--- org.apache.cxf:cxf-core:3.4.4 (*)
+     +--- org.glassfish.jaxb:jaxb-runtime:2.3.4 (*)
+     +--- org.apache.commons:commons-exec:1.3
+     +--- org.apache.opennlp:opennlp-tools:1.9.3
+     +--- commons-io:commons-io:2.10.0 -> 2.11.0
+     +--- com.googlecode.json-simple:json-simple:1.1.1
+     +--- com.github.openjson:openjson:1.0.12
+     +--- com.google.code.gson:gson:2.8.7
+     +--- org.slf4j:slf4j-api:1.7.30
+     +--- org.slf4j:jul-to-slf4j:1.7.30
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- org.slf4j:jcl-over-slf4j:1.7.30
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- edu.ucar:netcdf4:4.5.5
+     |    +--- edu.ucar:cdm:4.5.5
+     |    |    +--- edu.ucar:udunits:4.5.5
+     |    |    |    +--- joda-time:joda-time:2.2
+     |    |    |    \--- net.jcip:jcip-annotations:1.0
+     |    |    +--- edu.ucar:httpservices:4.5.5
+     |    |    |    +--- net.jcip:jcip-annotations:1.0
+     |    |    |    +--- org.apache.httpcomponents:httpclient:4.2.6 -> 4.5.13
+     |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.13
+     |    |    |    |    +--- commons-logging:commons-logging:1.2
+     |    |    |    |    \--- commons-codec:commons-codec:1.11 -> 1.15
+     |    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+     |    |    |    +--- org.apache.httpcomponents:httpmime:4.2.6 -> 4.5.13
+     |    |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+     |    |    +--- joda-time:joda-time:2.2
+     |    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- net.jcip:jcip-annotations:1.0
+     |    |    +--- org.quartz-scheduler:quartz:2.2.0 -> 2.3.2
+     |    |    |    +--- com.mchange:c3p0:0.9.5.4 -> 0.9.5.5
+     |    |    |    |    \--- com.mchange:mchange-commons-java:0.2.19
+     |    |    |    +--- com.mchange:mchange-commons-java:0.2.15 -> 0.2.19
+     |    |    |    +--- com.zaxxer:HikariCP-java7:2.4.13
+     |    |    |    |    \--- org.slf4j:slf4j-api:1.7.21 -> 1.7.30
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- com.google.protobuf:protobuf-java:2.5.0 -> 3.15.6
+     |    |    +--- net.sf.ehcache:ehcache-core:2.6.2
+     |    |    |    \--- org.slf4j:slf4j-api:1.6.1 -> 1.7.30
+     |    |    +--- com.google.guava:guava:17.0 -> 30.1.1-jre
+     |    |    |    +--- com.google.guava:failureaccess:1.0.1
+     |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+     |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+     |    |    |    +--- org.checkerframework:checker-qual:3.8.0
+     |    |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1
+     |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+     |    |    +--- org.itadaki:bzip2:0.9.1
+     |    |    \--- com.beust:jcommander:1.35 -> 1.81
+     |    +--- net.jcip:jcip-annotations:1.0
+     |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     +--- org.jdom:jdom2:2.0.6
+     +--- com.google.guava:guava:30.1.1-jre (*)
+     +--- edu.ucar:grib:4.5.5
+     |    +--- edu.ucar:cdm:4.5.5 (*)
+     |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    +--- net.jcip:jcip-annotations:1.0
+     |    \--- org.itadaki:bzip2:0.9.1
+     +--- net.jcip:jcip-annotations:1.0
+     +--- com.beust:jcommander:1.81
+     +--- net.java.dev.jna:jna:5.8.0
+     +--- org.jsoup:jsoup:1.13.1 -> 1.16.1
+     +--- com.google.protobuf:protobuf-java:3.15.6
+     +--- edu.ucar:cdm:4.5.5 (*)
+     +--- org.quartz-scheduler:quartz:2.3.2 (*)
+     +--- com.mchange:c3p0:0.9.5.5 (*)
+     +--- edu.ucar:httpservices:4.5.5 (*)
+     +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+     +--- org.apache.httpcomponents:httpmime:4.5.13 (*)
+     +--- org.apache.commons:commons-csv:1.8
+     +--- org.apache.sis.core:sis-utility:1.0
+     |    +--- javax.measure:unit-api:1.0
+     |    \--- org.opengis:geoapi:3.0.1
+     |         \--- javax.measure:unit-api:1.0
+     +--- org.apache.sis.storage:sis-netcdf:1.0
+     |    +--- org.apache.sis.storage:sis-storage:1.0
+     |    |    +--- org.apache.sis.core:sis-feature:1.0
+     |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    +--- org.apache.sis.core:sis-metadata:1.0
+     |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    |    +--- org.apache.sis.core:sis-referencing:1.0
+     |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+     |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+     |    \--- org.opengis:geoapi:3.0.1 (*)
+     +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     +--- org.opengis:geoapi:3.0.1 (*)
+     +--- edu.usc.ir:sentiment-analysis-parser:0.1
+     +--- com.fasterxml.jackson.core:jackson-core:2.12.3
+     |    \--- com.fasterxml.jackson:jackson-bom:2.12.3
+     |         +--- junit:junit:4.13.1 (c)
+     |         +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 (c)
+     |         +--- com.fasterxml.jackson.core:jackson-core:2.12.3 (c)
+     |         \--- com.fasterxml.jackson.core:jackson-databind:2.12.3 (c)
+     +--- com.fasterxml.jackson.core:jackson-databind:2.12.3
+     |    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3
+     |    |    \--- com.fasterxml.jackson:jackson-bom:2.12.3 (*)
+     |    +--- com.fasterxml.jackson.core:jackson-core:2.12.3 (*)
+     |    \--- com.fasterxml.jackson:jackson-bom:2.12.3 (*)
+     +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 (*)
+     +--- org.apache.pdfbox:jbig2-imageio:3.0.3
+     \--- com.github.jai-imageio:jai-imageio-core:1.4.0
 
 compileOnly - Compile-only dependencies for the 'main' feature. (n)
 No dependencies
@@ -131,7 +329,10 @@ implementation - Implementation dependencies for the 'main' feature. (n)
 +--- com.cedarsoftware:json-io:4.14.0 (n)
 +--- org.codehaus.groovy:groovy-all:2.5.15 (n)
 +--- org.apache.poi:poi:5.2.3 (n)
-\--- org.apache.poi:poi-ooxml:5.2.3 (n)
++--- org.apache.poi:poi-ooxml:5.2.3 (n)
++--- org.json:json:20210307 (n)
++--- org.apache.tika:tika-core:1.27 (n)
+\--- org.apache.tika:tika-parsers:1.27 (n)
 
 jacocoAgent - The Jacoco agent to use to get coverage data.
 \--- org.jacoco:org.jacoco.agent:0.8.9
@@ -479,7 +680,7 @@ mainPmdAuxClasspath
 |    +--- org.codehaus.groovy:groovy-testng:2.5.15
 |    |    +--- org.codehaus.groovy:groovy:2.5.15
 |    |    \--- org.testng:testng:6.13.1
-|    |         \--- com.beust:jcommander:1.72
+|    |         \--- com.beust:jcommander:1.72 -> 1.81
 |    \--- org.codehaus.groovy:groovy-xml:2.5.15 (*)
 +--- org.apache.poi:poi:5.2.3
 |    +--- commons-codec:commons-codec:1.15
@@ -488,17 +689,218 @@ mainPmdAuxClasspath
 |    +--- commons-io:commons-io:2.11.0
 |    +--- com.zaxxer:SparseBitSet:1.2
 |    \--- org.apache.logging.log4j:log4j-api:2.18.0
-\--- org.apache.poi:poi-ooxml:5.2.3
-     +--- org.apache.poi:poi:5.2.3 (*)
-     +--- org.apache.poi:poi-ooxml-lite:5.2.3
-     |    \--- org.apache.xmlbeans:xmlbeans:5.1.1
-     |         \--- org.apache.logging.log4j:log4j-api:2.18.0
-     +--- org.apache.xmlbeans:xmlbeans:5.1.1 (*)
-     +--- org.apache.commons:commons-compress:1.21
-     +--- commons-io:commons-io:2.11.0
-     +--- com.github.virtuald:curvesapi:1.07
-     +--- org.apache.logging.log4j:log4j-api:2.18.0
-     \--- org.apache.commons:commons-collections4:4.4
++--- org.apache.poi:poi-ooxml:5.2.3
+|    +--- org.apache.poi:poi:5.2.3 (*)
+|    +--- org.apache.poi:poi-ooxml-lite:5.2.3
+|    |    \--- org.apache.xmlbeans:xmlbeans:5.1.1
+|    |         \--- org.apache.logging.log4j:log4j-api:2.18.0
+|    +--- org.apache.xmlbeans:xmlbeans:5.1.1 (*)
+|    +--- org.apache.commons:commons-compress:1.21
+|    +--- commons-io:commons-io:2.11.0
+|    +--- com.github.virtuald:curvesapi:1.07
+|    +--- org.apache.logging.log4j:log4j-api:2.18.0
+|    \--- org.apache.commons:commons-collections4:4.4
++--- org.json:json:20210307
++--- org.apache.tika:tika-core:1.27
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    \--- commons-io:commons-io:2.10.0 -> 2.11.0
+\--- org.apache.tika:tika-parsers:1.27
+     +--- org.apache.tika:tika-core:1.27 (*)
+     +--- xerces:xercesImpl:2.12.1
+     |    \--- xml-apis:xml-apis:1.4.01
+     +--- com.fasterxml.woodstox:woodstox-core:6.2.6
+     |    \--- org.codehaus.woodstox:stax2-api:4.2.1
+     +--- org.apache.commons:commons-lang3:3.12.0
+     +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+     +--- org.gagravarr:vorbis-java-tika:0.8
+     +--- org.tallison:jmatio:1.5
+     |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.30
+     +--- org.apache.james:apache-mime4j-core:0.8.4
+     +--- org.apache.james:apache-mime4j-dom:0.8.4
+     |    \--- org.apache.james:apache-mime4j-core:0.8.4
+     +--- com.googlecode.plist:dd-plist:1.23
+     +--- org.apache.commons:commons-compress:1.20 -> 1.21
+     +--- org.tukaani:xz:1.9
+     +--- com.epam:parso:2.0.14
+     |    \--- org.slf4j:slf4j-api:1.7.5 -> 1.7.30
+     +--- org.brotli:dec:0.1.2
+     +--- commons-codec:commons-codec:1.15
+     +--- org.apache.pdfbox:pdfbox:2.0.24
+     |    +--- org.apache.pdfbox:fontbox:2.0.24
+     |    \--- commons-logging:commons-logging:1.2
+     +--- org.apache.pdfbox:pdfbox-tools:2.0.24
+     +--- org.apache.pdfbox:preflight:2.0.24
+     |    +--- org.apache.pdfbox:pdfbox:2.0.24 (*)
+     |    \--- org.apache.pdfbox:xmpbox:2.0.24
+     |         \--- commons-logging:commons-logging:1.2
+     +--- org.apache.pdfbox:jempbox:1.8.16
+     +--- org.apache.pdfbox:xmpbox:2.0.24 (*)
+     +--- org.bouncycastle:bcmail-jdk15on:1.69
+     |    +--- org.bouncycastle:bcprov-jdk15on:1.69
+     |    +--- org.bouncycastle:bcutil-jdk15on:1.69
+     |    |    \--- org.bouncycastle:bcprov-jdk15on:1.69
+     |    \--- org.bouncycastle:bcpkix-jdk15on:1.69
+     |         +--- org.bouncycastle:bcprov-jdk15on:1.69
+     |         \--- org.bouncycastle:bcutil-jdk15on:1.69 (*)
+     +--- org.bouncycastle:bcprov-jdk15on:1.69
+     +--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+     +--- org.apache.poi:poi-scratchpad:4.1.2
+     |    \--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+     +--- org.apache.poi:poi-ooxml:4.1.2 -> 5.2.3 (*)
+     +--- com.healthmarketscience.jackcess:jackcess:4.0.1
+     +--- com.healthmarketscience.jackcess:jackcess-encrypt:4.0.1
+     +--- org.ccil.cowan.tagsoup:tagsoup:1.2.1
+     +--- org.ow2.asm:asm:9.2
+     +--- org.tallison:isoparser:1.9.41.7
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- org.tallison:metadata-extractor:2.15.0.1
+     |    \--- org.tallison.xmp:xmpcore-shaded:6.1.11
+     +--- de.l3s.boilerpipe:boilerpipe:1.1.0
+     +--- com.rometools:rome:1.15.0
+     |    +--- com.rometools:rome-utils:1.15.0
+     |    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+     |    +--- org.jdom:jdom2:2.0.6
+     |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+     +--- org.gagravarr:vorbis-java-core:0.8
+     +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+     +--- org.codelibs:jhighlight:1.0.3
+     +--- com.pff:java-libpst:0.9.3
+     +--- com.github.junrar:junrar:7.4.0
+     |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.30
+     +--- org.apache.cxf:cxf-rt-rs-client:3.4.4
+     |    +--- org.apache.cxf:cxf-rt-transports-http:3.4.4
+     |    |    \--- org.apache.cxf:cxf-core:3.4.4
+     |    |         +--- org.glassfish.jaxb:jaxb-runtime:2.3.4
+     |    |         |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3
+     |    |         |    |    \--- jakarta.activation:jakarta.activation-api:1.2.2
+     |    |         |    +--- org.glassfish.jaxb:txw2:2.3.4
+     |    |         |    +--- com.sun.istack:istack-commons-runtime:3.0.12
+     |    |         |    \--- com.sun.activation:jakarta.activation:1.2.2
+     |    |         +--- com.fasterxml.woodstox:woodstox-core:6.2.6 (*)
+     |    |         +--- org.apache.ws.xmlschema:xmlschema-core:2.2.5
+     |    |         \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3 (*)
+     |    +--- org.apache.cxf:cxf-core:3.4.4 (*)
+     |    \--- org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4
+     |         +--- org.apache.cxf:cxf-core:3.4.4 (*)
+     |         +--- jakarta.ws.rs:jakarta.ws.rs-api:2.1.6
+     |         +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+     |         +--- org.apache.cxf:cxf-rt-transports-http:3.4.4 (*)
+     |         \--- org.apache.cxf:cxf-rt-security:3.4.4
+     |              \--- org.apache.cxf:cxf-core:3.4.4 (*)
+     +--- org.glassfish.jaxb:jaxb-runtime:2.3.4 (*)
+     +--- org.apache.commons:commons-exec:1.3
+     +--- org.apache.opennlp:opennlp-tools:1.9.3
+     +--- commons-io:commons-io:2.10.0 -> 2.11.0
+     +--- com.googlecode.json-simple:json-simple:1.1.1
+     +--- com.github.openjson:openjson:1.0.12
+     +--- com.google.code.gson:gson:2.8.7
+     +--- org.slf4j:slf4j-api:1.7.30
+     +--- org.slf4j:jul-to-slf4j:1.7.30
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- org.slf4j:jcl-over-slf4j:1.7.30
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- edu.ucar:netcdf4:4.5.5
+     |    +--- edu.ucar:cdm:4.5.5
+     |    |    +--- edu.ucar:udunits:4.5.5
+     |    |    |    +--- joda-time:joda-time:2.2
+     |    |    |    \--- net.jcip:jcip-annotations:1.0
+     |    |    +--- edu.ucar:httpservices:4.5.5
+     |    |    |    +--- net.jcip:jcip-annotations:1.0
+     |    |    |    +--- org.apache.httpcomponents:httpclient:4.2.6 -> 4.5.13
+     |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.13
+     |    |    |    |    +--- commons-logging:commons-logging:1.2
+     |    |    |    |    \--- commons-codec:commons-codec:1.11 -> 1.15
+     |    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+     |    |    |    +--- org.apache.httpcomponents:httpmime:4.2.6 -> 4.5.13
+     |    |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+     |    |    +--- org.slf4j:jcl-over-slf4j:1.7.7 -> 1.7.30 (*)
+     |    |    +--- joda-time:joda-time:2.2
+     |    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- net.jcip:jcip-annotations:1.0
+     |    |    +--- org.quartz-scheduler:quartz:2.2.0 -> 2.3.2
+     |    |    |    +--- com.mchange:c3p0:0.9.5.4 -> 0.9.5.5
+     |    |    |    |    \--- com.mchange:mchange-commons-java:0.2.19
+     |    |    |    +--- com.mchange:mchange-commons-java:0.2.15 -> 0.2.19
+     |    |    |    +--- com.zaxxer:HikariCP-java7:2.4.13
+     |    |    |    |    \--- org.slf4j:slf4j-api:1.7.21 -> 1.7.30
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- com.google.protobuf:protobuf-java:2.5.0 -> 3.15.6
+     |    |    +--- net.sf.ehcache:ehcache-core:2.6.2
+     |    |    |    \--- org.slf4j:slf4j-api:1.6.1 -> 1.7.30
+     |    |    +--- com.google.guava:guava:17.0 -> 30.1.1-jre
+     |    |    |    +--- com.google.guava:failureaccess:1.0.1
+     |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+     |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+     |    |    |    +--- org.checkerframework:checker-qual:3.8.0
+     |    |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1
+     |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+     |    |    +--- org.itadaki:bzip2:0.9.1
+     |    |    \--- com.beust:jcommander:1.35 -> 1.81
+     |    +--- net.jcip:jcip-annotations:1.0
+     |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     +--- org.jdom:jdom2:2.0.6
+     +--- com.google.guava:guava:30.1.1-jre (*)
+     +--- edu.ucar:grib:4.5.5
+     |    +--- edu.ucar:cdm:4.5.5 (*)
+     |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    +--- net.jcip:jcip-annotations:1.0
+     |    \--- org.itadaki:bzip2:0.9.1
+     +--- net.jcip:jcip-annotations:1.0
+     +--- com.beust:jcommander:1.81
+     +--- net.java.dev.jna:jna:5.8.0
+     +--- org.jsoup:jsoup:1.13.1 -> 1.16.1
+     +--- com.google.protobuf:protobuf-java:3.15.6
+     +--- edu.ucar:cdm:4.5.5 (*)
+     +--- org.quartz-scheduler:quartz:2.3.2 (*)
+     +--- com.mchange:c3p0:0.9.5.5 (*)
+     +--- edu.ucar:httpservices:4.5.5 (*)
+     +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+     +--- org.apache.httpcomponents:httpmime:4.5.13 (*)
+     +--- org.apache.commons:commons-csv:1.8
+     +--- org.apache.sis.core:sis-utility:1.0
+     |    +--- javax.measure:unit-api:1.0
+     |    \--- org.opengis:geoapi:3.0.1
+     |         \--- javax.measure:unit-api:1.0
+     +--- org.apache.sis.storage:sis-netcdf:1.0
+     |    +--- org.apache.sis.storage:sis-storage:1.0
+     |    |    +--- org.apache.sis.core:sis-feature:1.0
+     |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    +--- org.apache.sis.core:sis-metadata:1.0
+     |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    |    +--- org.apache.sis.core:sis-referencing:1.0
+     |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+     |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+     |    \--- org.opengis:geoapi:3.0.1 (*)
+     +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     +--- org.opengis:geoapi:3.0.1 (*)
+     +--- edu.usc.ir:sentiment-analysis-parser:0.1
+     +--- com.fasterxml.jackson.core:jackson-core:2.12.3
+     |    \--- com.fasterxml.jackson:jackson-bom:2.12.3
+     |         +--- junit:junit:4.13.1 (c)
+     |         +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 (c)
+     |         +--- com.fasterxml.jackson.core:jackson-core:2.12.3 (c)
+     |         \--- com.fasterxml.jackson.core:jackson-databind:2.12.3 (c)
+     +--- com.fasterxml.jackson.core:jackson-databind:2.12.3
+     |    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3
+     |    |    \--- com.fasterxml.jackson:jackson-bom:2.12.3 (*)
+     |    +--- com.fasterxml.jackson.core:jackson-core:2.12.3 (*)
+     |    \--- com.fasterxml.jackson:jackson-bom:2.12.3 (*)
+     +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 (*)
+     +--- org.apache.pdfbox:jbig2-imageio:3.0.3
+     \--- com.github.jai-imageio:jai-imageio-core:1.4.0
 
 mainSourceElements - List of source directories contained in the Main SourceSet. (n)
 No dependencies
@@ -606,7 +1008,7 @@ runtimeClasspath - Runtime classpath of source set 'main'.
 |    +--- org.codehaus.groovy:groovy-testng:2.5.15
 |    |    +--- org.codehaus.groovy:groovy:2.5.15
 |    |    \--- org.testng:testng:6.13.1
-|    |         \--- com.beust:jcommander:1.72
+|    |         \--- com.beust:jcommander:1.72 -> 1.81
 |    \--- org.codehaus.groovy:groovy-xml:2.5.15 (*)
 +--- org.apache.poi:poi:5.2.3
 |    +--- commons-codec:commons-codec:1.15
@@ -615,17 +1017,218 @@ runtimeClasspath - Runtime classpath of source set 'main'.
 |    +--- commons-io:commons-io:2.11.0
 |    +--- com.zaxxer:SparseBitSet:1.2
 |    \--- org.apache.logging.log4j:log4j-api:2.18.0
-\--- org.apache.poi:poi-ooxml:5.2.3
-     +--- org.apache.poi:poi:5.2.3 (*)
-     +--- org.apache.poi:poi-ooxml-lite:5.2.3
-     |    \--- org.apache.xmlbeans:xmlbeans:5.1.1
-     |         \--- org.apache.logging.log4j:log4j-api:2.18.0
-     +--- org.apache.xmlbeans:xmlbeans:5.1.1 (*)
-     +--- org.apache.commons:commons-compress:1.21
-     +--- commons-io:commons-io:2.11.0
-     +--- com.github.virtuald:curvesapi:1.07
-     +--- org.apache.logging.log4j:log4j-api:2.18.0
-     \--- org.apache.commons:commons-collections4:4.4
++--- org.apache.poi:poi-ooxml:5.2.3
+|    +--- org.apache.poi:poi:5.2.3 (*)
+|    +--- org.apache.poi:poi-ooxml-lite:5.2.3
+|    |    \--- org.apache.xmlbeans:xmlbeans:5.1.1
+|    |         \--- org.apache.logging.log4j:log4j-api:2.18.0
+|    +--- org.apache.xmlbeans:xmlbeans:5.1.1 (*)
+|    +--- org.apache.commons:commons-compress:1.21
+|    +--- commons-io:commons-io:2.11.0
+|    +--- com.github.virtuald:curvesapi:1.07
+|    +--- org.apache.logging.log4j:log4j-api:2.18.0
+|    \--- org.apache.commons:commons-collections4:4.4
++--- org.json:json:20210307
++--- org.apache.tika:tika-core:1.27
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    \--- commons-io:commons-io:2.10.0 -> 2.11.0
+\--- org.apache.tika:tika-parsers:1.27
+     +--- org.apache.tika:tika-core:1.27 (*)
+     +--- xerces:xercesImpl:2.12.1
+     |    \--- xml-apis:xml-apis:1.4.01
+     +--- com.fasterxml.woodstox:woodstox-core:6.2.6
+     |    \--- org.codehaus.woodstox:stax2-api:4.2.1
+     +--- org.apache.commons:commons-lang3:3.12.0
+     +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+     +--- org.gagravarr:vorbis-java-tika:0.8
+     +--- org.tallison:jmatio:1.5
+     |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.30
+     +--- org.apache.james:apache-mime4j-core:0.8.4
+     +--- org.apache.james:apache-mime4j-dom:0.8.4
+     |    \--- org.apache.james:apache-mime4j-core:0.8.4
+     +--- com.googlecode.plist:dd-plist:1.23
+     +--- org.apache.commons:commons-compress:1.20 -> 1.21
+     +--- org.tukaani:xz:1.9
+     +--- com.epam:parso:2.0.14
+     |    \--- org.slf4j:slf4j-api:1.7.5 -> 1.7.30
+     +--- org.brotli:dec:0.1.2
+     +--- commons-codec:commons-codec:1.15
+     +--- org.apache.pdfbox:pdfbox:2.0.24
+     |    +--- org.apache.pdfbox:fontbox:2.0.24
+     |    \--- commons-logging:commons-logging:1.2
+     +--- org.apache.pdfbox:pdfbox-tools:2.0.24
+     +--- org.apache.pdfbox:preflight:2.0.24
+     |    +--- org.apache.pdfbox:pdfbox:2.0.24 (*)
+     |    \--- org.apache.pdfbox:xmpbox:2.0.24
+     |         \--- commons-logging:commons-logging:1.2
+     +--- org.apache.pdfbox:jempbox:1.8.16
+     +--- org.apache.pdfbox:xmpbox:2.0.24 (*)
+     +--- org.bouncycastle:bcmail-jdk15on:1.69
+     |    +--- org.bouncycastle:bcprov-jdk15on:1.69
+     |    +--- org.bouncycastle:bcutil-jdk15on:1.69
+     |    |    \--- org.bouncycastle:bcprov-jdk15on:1.69
+     |    \--- org.bouncycastle:bcpkix-jdk15on:1.69
+     |         +--- org.bouncycastle:bcprov-jdk15on:1.69
+     |         \--- org.bouncycastle:bcutil-jdk15on:1.69 (*)
+     +--- org.bouncycastle:bcprov-jdk15on:1.69
+     +--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+     +--- org.apache.poi:poi-scratchpad:4.1.2
+     |    \--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+     +--- org.apache.poi:poi-ooxml:4.1.2 -> 5.2.3 (*)
+     +--- com.healthmarketscience.jackcess:jackcess:4.0.1
+     +--- com.healthmarketscience.jackcess:jackcess-encrypt:4.0.1
+     +--- org.ccil.cowan.tagsoup:tagsoup:1.2.1
+     +--- org.ow2.asm:asm:9.2
+     +--- org.tallison:isoparser:1.9.41.7
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- org.tallison:metadata-extractor:2.15.0.1
+     |    \--- org.tallison.xmp:xmpcore-shaded:6.1.11
+     +--- de.l3s.boilerpipe:boilerpipe:1.1.0
+     +--- com.rometools:rome:1.15.0
+     |    +--- com.rometools:rome-utils:1.15.0
+     |    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+     |    +--- org.jdom:jdom2:2.0.6
+     |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+     +--- org.gagravarr:vorbis-java-core:0.8
+     +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+     +--- org.codelibs:jhighlight:1.0.3
+     +--- com.pff:java-libpst:0.9.3
+     +--- com.github.junrar:junrar:7.4.0
+     |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.30
+     +--- org.apache.cxf:cxf-rt-rs-client:3.4.4
+     |    +--- org.apache.cxf:cxf-rt-transports-http:3.4.4
+     |    |    \--- org.apache.cxf:cxf-core:3.4.4
+     |    |         +--- org.glassfish.jaxb:jaxb-runtime:2.3.4
+     |    |         |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3
+     |    |         |    |    \--- jakarta.activation:jakarta.activation-api:1.2.2
+     |    |         |    +--- org.glassfish.jaxb:txw2:2.3.4
+     |    |         |    +--- com.sun.istack:istack-commons-runtime:3.0.12
+     |    |         |    \--- com.sun.activation:jakarta.activation:1.2.2
+     |    |         +--- com.fasterxml.woodstox:woodstox-core:6.2.6 (*)
+     |    |         +--- org.apache.ws.xmlschema:xmlschema-core:2.2.5
+     |    |         \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3 (*)
+     |    +--- org.apache.cxf:cxf-core:3.4.4 (*)
+     |    \--- org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4
+     |         +--- org.apache.cxf:cxf-core:3.4.4 (*)
+     |         +--- jakarta.ws.rs:jakarta.ws.rs-api:2.1.6
+     |         +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+     |         +--- org.apache.cxf:cxf-rt-transports-http:3.4.4 (*)
+     |         \--- org.apache.cxf:cxf-rt-security:3.4.4
+     |              \--- org.apache.cxf:cxf-core:3.4.4 (*)
+     +--- org.glassfish.jaxb:jaxb-runtime:2.3.4 (*)
+     +--- org.apache.commons:commons-exec:1.3
+     +--- org.apache.opennlp:opennlp-tools:1.9.3
+     +--- commons-io:commons-io:2.10.0 -> 2.11.0
+     +--- com.googlecode.json-simple:json-simple:1.1.1
+     +--- com.github.openjson:openjson:1.0.12
+     +--- com.google.code.gson:gson:2.8.7
+     +--- org.slf4j:slf4j-api:1.7.30
+     +--- org.slf4j:jul-to-slf4j:1.7.30
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- org.slf4j:jcl-over-slf4j:1.7.30
+     |    \--- org.slf4j:slf4j-api:1.7.30
+     +--- edu.ucar:netcdf4:4.5.5
+     |    +--- edu.ucar:cdm:4.5.5
+     |    |    +--- edu.ucar:udunits:4.5.5
+     |    |    |    +--- joda-time:joda-time:2.2
+     |    |    |    \--- net.jcip:jcip-annotations:1.0
+     |    |    +--- edu.ucar:httpservices:4.5.5
+     |    |    |    +--- net.jcip:jcip-annotations:1.0
+     |    |    |    +--- org.apache.httpcomponents:httpclient:4.2.6 -> 4.5.13
+     |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.13
+     |    |    |    |    +--- commons-logging:commons-logging:1.2
+     |    |    |    |    \--- commons-codec:commons-codec:1.11 -> 1.15
+     |    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+     |    |    |    +--- org.apache.httpcomponents:httpmime:4.2.6 -> 4.5.13
+     |    |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+     |    |    +--- org.slf4j:jcl-over-slf4j:1.7.7 -> 1.7.30 (*)
+     |    |    +--- joda-time:joda-time:2.2
+     |    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- net.jcip:jcip-annotations:1.0
+     |    |    +--- org.quartz-scheduler:quartz:2.2.0 -> 2.3.2
+     |    |    |    +--- com.mchange:c3p0:0.9.5.4 -> 0.9.5.5
+     |    |    |    |    \--- com.mchange:mchange-commons-java:0.2.19
+     |    |    |    +--- com.mchange:mchange-commons-java:0.2.15 -> 0.2.19
+     |    |    |    +--- com.zaxxer:HikariCP-java7:2.4.13
+     |    |    |    |    \--- org.slf4j:slf4j-api:1.7.21 -> 1.7.30
+     |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    |    +--- com.google.protobuf:protobuf-java:2.5.0 -> 3.15.6
+     |    |    +--- net.sf.ehcache:ehcache-core:2.6.2
+     |    |    |    \--- org.slf4j:slf4j-api:1.6.1 -> 1.7.30
+     |    |    +--- com.google.guava:guava:17.0 -> 30.1.1-jre
+     |    |    |    +--- com.google.guava:failureaccess:1.0.1
+     |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+     |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+     |    |    |    +--- org.checkerframework:checker-qual:3.8.0
+     |    |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1
+     |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+     |    |    +--- org.itadaki:bzip2:0.9.1
+     |    |    \--- com.beust:jcommander:1.35 -> 1.81
+     |    +--- net.jcip:jcip-annotations:1.0
+     |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     +--- org.jdom:jdom2:2.0.6
+     +--- com.google.guava:guava:30.1.1-jre (*)
+     +--- edu.ucar:grib:4.5.5
+     |    +--- edu.ucar:cdm:4.5.5 (*)
+     |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+     |    +--- net.jcip:jcip-annotations:1.0
+     |    \--- org.itadaki:bzip2:0.9.1
+     +--- net.jcip:jcip-annotations:1.0
+     +--- com.beust:jcommander:1.81
+     +--- net.java.dev.jna:jna:5.8.0
+     +--- org.jsoup:jsoup:1.13.1 -> 1.16.1
+     +--- com.google.protobuf:protobuf-java:3.15.6
+     +--- edu.ucar:cdm:4.5.5 (*)
+     +--- org.quartz-scheduler:quartz:2.3.2 (*)
+     +--- com.mchange:c3p0:0.9.5.5 (*)
+     +--- edu.ucar:httpservices:4.5.5 (*)
+     +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+     +--- org.apache.httpcomponents:httpmime:4.5.13 (*)
+     +--- org.apache.commons:commons-csv:1.8
+     +--- org.apache.sis.core:sis-utility:1.0
+     |    +--- javax.measure:unit-api:1.0
+     |    \--- org.opengis:geoapi:3.0.1
+     |         \--- javax.measure:unit-api:1.0
+     +--- org.apache.sis.storage:sis-netcdf:1.0
+     |    +--- org.apache.sis.storage:sis-storage:1.0
+     |    |    +--- org.apache.sis.core:sis-feature:1.0
+     |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    +--- org.apache.sis.core:sis-metadata:1.0
+     |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    |    +--- org.apache.sis.core:sis-referencing:1.0
+     |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+     |    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    |    +--- javax.measure:unit-api:1.0
+     |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+     |    |    \--- org.opengis:geoapi:3.0.1 (*)
+     |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+     |    \--- org.opengis:geoapi:3.0.1 (*)
+     +--- org.apache.sis.core:sis-metadata:1.0 (*)
+     +--- org.opengis:geoapi:3.0.1 (*)
+     +--- edu.usc.ir:sentiment-analysis-parser:0.1
+     +--- com.fasterxml.jackson.core:jackson-core:2.12.3
+     |    \--- com.fasterxml.jackson:jackson-bom:2.12.3
+     |         +--- junit:junit:4.13.1 (c)
+     |         +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 (c)
+     |         +--- com.fasterxml.jackson.core:jackson-core:2.12.3 (c)
+     |         \--- com.fasterxml.jackson.core:jackson-databind:2.12.3 (c)
+     +--- com.fasterxml.jackson.core:jackson-databind:2.12.3
+     |    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3
+     |    |    \--- com.fasterxml.jackson:jackson-bom:2.12.3 (*)
+     |    +--- com.fasterxml.jackson.core:jackson-core:2.12.3 (*)
+     |    \--- com.fasterxml.jackson:jackson-bom:2.12.3 (*)
+     +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 (*)
+     +--- org.apache.pdfbox:jbig2-imageio:3.0.3
+     \--- com.github.jai-imageio:jai-imageio-core:1.4.0
 
 runtimeElements - Runtime elements for the 'main' feature. (n)
 No dependencies
@@ -791,6 +1394,203 @@ testCompileClasspath - Compile classpath for source set 'test'.
 |    +--- com.github.virtuald:curvesapi:1.07
 |    +--- org.apache.logging.log4j:log4j-api:2.18.0
 |    \--- org.apache.commons:commons-collections4:4.4
++--- org.json:json:20210307
++--- org.apache.tika:tika-core:1.27
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    \--- commons-io:commons-io:2.10.0 -> 2.11.0
++--- org.apache.tika:tika-parsers:1.27
+|    +--- org.apache.tika:tika-core:1.27 (*)
+|    +--- xerces:xercesImpl:2.12.1
+|    |    \--- xml-apis:xml-apis:1.4.01
+|    +--- com.fasterxml.woodstox:woodstox-core:6.2.6
+|    |    \--- org.codehaus.woodstox:stax2-api:4.2.1
+|    +--- org.apache.commons:commons-lang3:3.12.0
+|    +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+|    +--- org.gagravarr:vorbis-java-tika:0.8
+|    +--- org.tallison:jmatio:1.5
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.30
+|    +--- org.apache.james:apache-mime4j-core:0.8.4
+|    +--- org.apache.james:apache-mime4j-dom:0.8.4
+|    |    \--- org.apache.james:apache-mime4j-core:0.8.4
+|    +--- com.googlecode.plist:dd-plist:1.23
+|    +--- org.apache.commons:commons-compress:1.20 -> 1.21
+|    +--- org.tukaani:xz:1.9
+|    +--- com.epam:parso:2.0.14
+|    |    \--- org.slf4j:slf4j-api:1.7.5 -> 1.7.30
+|    +--- org.brotli:dec:0.1.2
+|    +--- commons-codec:commons-codec:1.15
+|    +--- org.apache.pdfbox:pdfbox:2.0.24
+|    |    +--- org.apache.pdfbox:fontbox:2.0.24
+|    |    \--- commons-logging:commons-logging:1.2
+|    +--- org.apache.pdfbox:pdfbox-tools:2.0.24
+|    +--- org.apache.pdfbox:preflight:2.0.24
+|    |    +--- org.apache.pdfbox:pdfbox:2.0.24 (*)
+|    |    \--- org.apache.pdfbox:xmpbox:2.0.24
+|    |         \--- commons-logging:commons-logging:1.2
+|    +--- org.apache.pdfbox:jempbox:1.8.16
+|    +--- org.apache.pdfbox:xmpbox:2.0.24 (*)
+|    +--- org.bouncycastle:bcmail-jdk15on:1.69
+|    |    +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |    +--- org.bouncycastle:bcutil-jdk15on:1.69
+|    |    |    \--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |    \--- org.bouncycastle:bcpkix-jdk15on:1.69
+|    |         +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |         \--- org.bouncycastle:bcutil-jdk15on:1.69 (*)
+|    +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    +--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+|    +--- org.apache.poi:poi-scratchpad:4.1.2
+|    |    \--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+|    +--- org.apache.poi:poi-ooxml:4.1.2 -> 5.2.3 (*)
+|    +--- com.healthmarketscience.jackcess:jackcess:4.0.1
+|    +--- com.healthmarketscience.jackcess:jackcess-encrypt:4.0.1
+|    +--- org.ccil.cowan.tagsoup:tagsoup:1.2.1
+|    +--- org.ow2.asm:asm:9.2
+|    +--- org.tallison:isoparser:1.9.41.7
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.tallison:metadata-extractor:2.15.0.1
+|    |    \--- org.tallison.xmp:xmpcore-shaded:6.1.11
+|    +--- de.l3s.boilerpipe:boilerpipe:1.1.0
+|    +--- com.rometools:rome:1.15.0
+|    |    +--- com.rometools:rome-utils:1.15.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+|    |    +--- org.jdom:jdom2:2.0.6
+|    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+|    +--- org.gagravarr:vorbis-java-core:0.8
+|    +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+|    +--- org.codelibs:jhighlight:1.0.3
+|    +--- com.pff:java-libpst:0.9.3
+|    +--- com.github.junrar:junrar:7.4.0
+|    +--- org.apache.cxf:cxf-rt-rs-client:3.4.4
+|    |    +--- org.apache.cxf:cxf-rt-transports-http:3.4.4
+|    |    |    \--- org.apache.cxf:cxf-core:3.4.4
+|    |    |         +--- org.glassfish.jaxb:jaxb-runtime:2.3.4
+|    |    |         |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3
+|    |    |         |    |    \--- jakarta.activation:jakarta.activation-api:1.2.2
+|    |    |         |    +--- org.glassfish.jaxb:txw2:2.3.4
+|    |    |         |    \--- com.sun.istack:istack-commons-runtime:3.0.12
+|    |    |         +--- com.fasterxml.woodstox:woodstox-core:6.2.6 (*)
+|    |    |         +--- org.apache.ws.xmlschema:xmlschema-core:2.2.5
+|    |    |         \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3 (*)
+|    |    +--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    |    \--- org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4
+|    |         +--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    |         +--- jakarta.ws.rs:jakarta.ws.rs-api:2.1.6
+|    |         +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+|    |         +--- org.apache.cxf:cxf-rt-transports-http:3.4.4 (*)
+|    |         \--- org.apache.cxf:cxf-rt-security:3.4.4
+|    |              \--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    +--- org.glassfish.jaxb:jaxb-runtime:2.3.4 (*)
+|    +--- org.apache.commons:commons-exec:1.3
+|    +--- org.apache.opennlp:opennlp-tools:1.9.3
+|    +--- commons-io:commons-io:2.10.0 -> 2.11.0
+|    +--- com.googlecode.json-simple:json-simple:1.1.1
+|    +--- com.github.openjson:openjson:1.0.12
+|    +--- com.google.code.gson:gson:2.8.7
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.slf4j:jul-to-slf4j:1.7.30
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.slf4j:jcl-over-slf4j:1.7.30
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- edu.ucar:netcdf4:4.5.5
+|    |    +--- edu.ucar:cdm:4.5.5
+|    |    |    +--- edu.ucar:udunits:4.5.5
+|    |    |    |    +--- joda-time:joda-time:2.2
+|    |    |    |    \--- net.jcip:jcip-annotations:1.0
+|    |    |    +--- edu.ucar:httpservices:4.5.5
+|    |    |    |    +--- net.jcip:jcip-annotations:1.0
+|    |    |    |    +--- org.apache.httpcomponents:httpclient:4.2.6 -> 4.5.13
+|    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.13
+|    |    |    |    |    +--- commons-logging:commons-logging:1.2
+|    |    |    |    |    \--- commons-codec:commons-codec:1.11 -> 1.15
+|    |    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+|    |    |    |    +--- org.apache.httpcomponents:httpmime:4.2.6 -> 4.5.13
+|    |    |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+|    |    |    +--- joda-time:joda-time:2.2
+|    |    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- net.jcip:jcip-annotations:1.0
+|    |    |    +--- org.quartz-scheduler:quartz:2.2.0 -> 2.3.2
+|    |    |    |    +--- com.mchange:c3p0:0.9.5.4 -> 0.9.5.5
+|    |    |    |    |    \--- com.mchange:mchange-commons-java:0.2.19
+|    |    |    |    +--- com.mchange:mchange-commons-java:0.2.15 -> 0.2.19
+|    |    |    |    +--- com.zaxxer:HikariCP-java7:2.4.13
+|    |    |    |    |    \--- org.slf4j:slf4j-api:1.7.21 -> 1.7.30
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- com.google.protobuf:protobuf-java:2.5.0 -> 3.15.6
+|    |    |    +--- net.sf.ehcache:ehcache-core:2.6.2
+|    |    |    |    \--- org.slf4j:slf4j-api:1.6.1 -> 1.7.30
+|    |    |    +--- com.google.guava:guava:17.0 -> 30.1.1-jre
+|    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    |    |    +--- org.checkerframework:checker-qual:3.8.0
+|    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1
+|    |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|    |    |    +--- org.itadaki:bzip2:0.9.1
+|    |    |    \--- com.beust:jcommander:1.35 -> 1.81
+|    |    +--- net.jcip:jcip-annotations:1.0
+|    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    +--- org.jdom:jdom2:2.0.6
+|    +--- com.google.guava:guava:30.1.1-jre (*)
+|    +--- edu.ucar:grib:4.5.5
+|    |    +--- edu.ucar:cdm:4.5.5 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    +--- net.jcip:jcip-annotations:1.0
+|    |    \--- org.itadaki:bzip2:0.9.1
+|    +--- net.jcip:jcip-annotations:1.0
+|    +--- com.beust:jcommander:1.81
+|    +--- net.java.dev.jna:jna:5.8.0
+|    +--- org.jsoup:jsoup:1.13.1 -> 1.16.1
+|    +--- com.google.protobuf:protobuf-java:3.15.6
+|    +--- edu.ucar:cdm:4.5.5 (*)
+|    +--- org.quartz-scheduler:quartz:2.3.2 (*)
+|    +--- com.mchange:c3p0:0.9.5.5 (*)
+|    +--- edu.ucar:httpservices:4.5.5 (*)
+|    +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|    +--- org.apache.httpcomponents:httpmime:4.5.13 (*)
+|    +--- org.apache.commons:commons-csv:1.8
+|    +--- org.apache.sis.core:sis-utility:1.0
+|    |    +--- javax.measure:unit-api:1.0
+|    |    \--- org.opengis:geoapi:3.0.1
+|    |         \--- javax.measure:unit-api:1.0
+|    +--- org.apache.sis.storage:sis-netcdf:1.0
+|    |    +--- org.apache.sis.storage:sis-storage:1.0
+|    |    |    +--- org.apache.sis.core:sis-feature:1.0
+|    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0
+|    |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    |    +--- org.apache.sis.core:sis-referencing:1.0
+|    |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+|    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+|    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    +--- org.opengis:geoapi:3.0.1 (*)
+|    +--- edu.usc.ir:sentiment-analysis-parser:0.1
+|    +--- com.fasterxml.jackson.core:jackson-core:2.12.3 -> 2.15.2
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2
+|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (c)
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (c)
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (c)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.12.3 -> 2.15.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 -> 2.15.2 (*)
+|    +--- org.apache.pdfbox:jbig2-imageio:3.0.3
+|    \--- com.github.jai-imageio:jai-imageio-core:1.4.0
 +--- org.junit.jupiter:junit-jupiter:5.8.2
 |    +--- org.junit:junit-bom:5.8.2 (*)
 |    +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
@@ -800,17 +1600,9 @@ testCompileClasspath - Compile classpath for source set 'test'.
 |         \--- org.apiguardian:apiguardian-api:1.1.2
 +--- org.hamcrest:hamcrest-library:2.2
 |    \--- org.hamcrest:hamcrest-core:2.2 (*)
-+--- com.fasterxml.jackson.core:jackson-databind:2.15.2
-|    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2
-|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2
-|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (c)
-|    |         +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (c)
-|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (c)
-|    +--- com.fasterxml.jackson.core:jackson-core:2.15.2
-|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
-|    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
++--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (*)
 \--- org.testng:testng:7.4.0
-     +--- com.beust:jcommander:1.78
+     +--- com.beust:jcommander:1.78 -> 1.81
      \--- org.webjars:jquery:3.5.1
 
 testCompileOnly - Compile only dependencies for source set 'test'. (n)
@@ -918,7 +1710,7 @@ testPmdAuxClasspath
 |    +--- org.codehaus.groovy:groovy-testng:2.5.15
 |    |    +--- org.codehaus.groovy:groovy:2.5.15
 |    |    \--- org.testng:testng:6.13.1 -> 7.4.0
-|    |         +--- com.beust:jcommander:1.78
+|    |         +--- com.beust:jcommander:1.78 -> 1.81
 |    |         \--- org.webjars:jquery:3.5.1
 |    \--- org.codehaus.groovy:groovy-xml:2.5.15 (*)
 +--- org.apache.poi:poi:5.2.3
@@ -939,6 +1731,206 @@ testPmdAuxClasspath
 |    +--- com.github.virtuald:curvesapi:1.07
 |    +--- org.apache.logging.log4j:log4j-api:2.18.0
 |    \--- org.apache.commons:commons-collections4:4.4
++--- org.json:json:20210307
++--- org.apache.tika:tika-core:1.27
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    \--- commons-io:commons-io:2.10.0 -> 2.11.0
++--- org.apache.tika:tika-parsers:1.27
+|    +--- org.apache.tika:tika-core:1.27 (*)
+|    +--- xerces:xercesImpl:2.12.1
+|    |    \--- xml-apis:xml-apis:1.4.01
+|    +--- com.fasterxml.woodstox:woodstox-core:6.2.6
+|    |    \--- org.codehaus.woodstox:stax2-api:4.2.1
+|    +--- org.apache.commons:commons-lang3:3.12.0
+|    +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+|    +--- org.gagravarr:vorbis-java-tika:0.8
+|    +--- org.tallison:jmatio:1.5
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.30
+|    +--- org.apache.james:apache-mime4j-core:0.8.4
+|    +--- org.apache.james:apache-mime4j-dom:0.8.4
+|    |    \--- org.apache.james:apache-mime4j-core:0.8.4
+|    +--- com.googlecode.plist:dd-plist:1.23
+|    +--- org.apache.commons:commons-compress:1.20 -> 1.21
+|    +--- org.tukaani:xz:1.9
+|    +--- com.epam:parso:2.0.14
+|    |    \--- org.slf4j:slf4j-api:1.7.5 -> 1.7.30
+|    +--- org.brotli:dec:0.1.2
+|    +--- commons-codec:commons-codec:1.15
+|    +--- org.apache.pdfbox:pdfbox:2.0.24
+|    |    +--- org.apache.pdfbox:fontbox:2.0.24
+|    |    \--- commons-logging:commons-logging:1.2
+|    +--- org.apache.pdfbox:pdfbox-tools:2.0.24
+|    +--- org.apache.pdfbox:preflight:2.0.24
+|    |    +--- org.apache.pdfbox:pdfbox:2.0.24 (*)
+|    |    \--- org.apache.pdfbox:xmpbox:2.0.24
+|    |         \--- commons-logging:commons-logging:1.2
+|    +--- org.apache.pdfbox:jempbox:1.8.16
+|    +--- org.apache.pdfbox:xmpbox:2.0.24 (*)
+|    +--- org.bouncycastle:bcmail-jdk15on:1.69
+|    |    +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |    +--- org.bouncycastle:bcutil-jdk15on:1.69
+|    |    |    \--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |    \--- org.bouncycastle:bcpkix-jdk15on:1.69
+|    |         +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |         \--- org.bouncycastle:bcutil-jdk15on:1.69 (*)
+|    +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    +--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+|    +--- org.apache.poi:poi-scratchpad:4.1.2
+|    |    \--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+|    +--- org.apache.poi:poi-ooxml:4.1.2 -> 5.2.3 (*)
+|    +--- com.healthmarketscience.jackcess:jackcess:4.0.1
+|    +--- com.healthmarketscience.jackcess:jackcess-encrypt:4.0.1
+|    +--- org.ccil.cowan.tagsoup:tagsoup:1.2.1
+|    +--- org.ow2.asm:asm:9.2
+|    +--- org.tallison:isoparser:1.9.41.7
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.tallison:metadata-extractor:2.15.0.1
+|    |    \--- org.tallison.xmp:xmpcore-shaded:6.1.11
+|    +--- de.l3s.boilerpipe:boilerpipe:1.1.0
+|    +--- com.rometools:rome:1.15.0
+|    |    +--- com.rometools:rome-utils:1.15.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+|    |    +--- org.jdom:jdom2:2.0.6
+|    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+|    +--- org.gagravarr:vorbis-java-core:0.8
+|    +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+|    +--- org.codelibs:jhighlight:1.0.3
+|    +--- com.pff:java-libpst:0.9.3
+|    +--- com.github.junrar:junrar:7.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.30
+|    +--- org.apache.cxf:cxf-rt-rs-client:3.4.4
+|    |    +--- org.apache.cxf:cxf-rt-transports-http:3.4.4
+|    |    |    \--- org.apache.cxf:cxf-core:3.4.4
+|    |    |         +--- org.glassfish.jaxb:jaxb-runtime:2.3.4
+|    |    |         |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3
+|    |    |         |    |    \--- jakarta.activation:jakarta.activation-api:1.2.2
+|    |    |         |    +--- org.glassfish.jaxb:txw2:2.3.4
+|    |    |         |    +--- com.sun.istack:istack-commons-runtime:3.0.12
+|    |    |         |    \--- com.sun.activation:jakarta.activation:1.2.2
+|    |    |         +--- com.fasterxml.woodstox:woodstox-core:6.2.6 (*)
+|    |    |         +--- org.apache.ws.xmlschema:xmlschema-core:2.2.5
+|    |    |         \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3 (*)
+|    |    +--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    |    \--- org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4
+|    |         +--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    |         +--- jakarta.ws.rs:jakarta.ws.rs-api:2.1.6
+|    |         +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+|    |         +--- org.apache.cxf:cxf-rt-transports-http:3.4.4 (*)
+|    |         \--- org.apache.cxf:cxf-rt-security:3.4.4
+|    |              \--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    +--- org.glassfish.jaxb:jaxb-runtime:2.3.4 (*)
+|    +--- org.apache.commons:commons-exec:1.3
+|    +--- org.apache.opennlp:opennlp-tools:1.9.3
+|    +--- commons-io:commons-io:2.10.0 -> 2.11.0
+|    +--- com.googlecode.json-simple:json-simple:1.1.1
+|    +--- com.github.openjson:openjson:1.0.12
+|    +--- com.google.code.gson:gson:2.8.7
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.slf4j:jul-to-slf4j:1.7.30
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.slf4j:jcl-over-slf4j:1.7.30
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- edu.ucar:netcdf4:4.5.5
+|    |    +--- edu.ucar:cdm:4.5.5
+|    |    |    +--- edu.ucar:udunits:4.5.5
+|    |    |    |    +--- joda-time:joda-time:2.2
+|    |    |    |    \--- net.jcip:jcip-annotations:1.0
+|    |    |    +--- edu.ucar:httpservices:4.5.5
+|    |    |    |    +--- net.jcip:jcip-annotations:1.0
+|    |    |    |    +--- org.apache.httpcomponents:httpclient:4.2.6 -> 4.5.13
+|    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.13
+|    |    |    |    |    +--- commons-logging:commons-logging:1.2
+|    |    |    |    |    \--- commons-codec:commons-codec:1.11 -> 1.15
+|    |    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+|    |    |    |    +--- org.apache.httpcomponents:httpmime:4.2.6 -> 4.5.13
+|    |    |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.7 -> 1.7.30 (*)
+|    |    |    +--- joda-time:joda-time:2.2
+|    |    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- net.jcip:jcip-annotations:1.0
+|    |    |    +--- org.quartz-scheduler:quartz:2.2.0 -> 2.3.2
+|    |    |    |    +--- com.mchange:c3p0:0.9.5.4 -> 0.9.5.5
+|    |    |    |    |    \--- com.mchange:mchange-commons-java:0.2.19
+|    |    |    |    +--- com.mchange:mchange-commons-java:0.2.15 -> 0.2.19
+|    |    |    |    +--- com.zaxxer:HikariCP-java7:2.4.13
+|    |    |    |    |    \--- org.slf4j:slf4j-api:1.7.21 -> 1.7.30
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- com.google.protobuf:protobuf-java:2.5.0 -> 3.15.6
+|    |    |    +--- net.sf.ehcache:ehcache-core:2.6.2
+|    |    |    |    \--- org.slf4j:slf4j-api:1.6.1 -> 1.7.30
+|    |    |    +--- com.google.guava:guava:17.0 -> 30.1.1-jre
+|    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    |    |    +--- org.checkerframework:checker-qual:3.8.0
+|    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1
+|    |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|    |    |    +--- org.itadaki:bzip2:0.9.1
+|    |    |    \--- com.beust:jcommander:1.35 -> 1.81
+|    |    +--- net.jcip:jcip-annotations:1.0
+|    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    +--- org.jdom:jdom2:2.0.6
+|    +--- com.google.guava:guava:30.1.1-jre (*)
+|    +--- edu.ucar:grib:4.5.5
+|    |    +--- edu.ucar:cdm:4.5.5 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    +--- net.jcip:jcip-annotations:1.0
+|    |    \--- org.itadaki:bzip2:0.9.1
+|    +--- net.jcip:jcip-annotations:1.0
+|    +--- com.beust:jcommander:1.81
+|    +--- net.java.dev.jna:jna:5.8.0
+|    +--- org.jsoup:jsoup:1.13.1 -> 1.16.1
+|    +--- com.google.protobuf:protobuf-java:3.15.6
+|    +--- edu.ucar:cdm:4.5.5 (*)
+|    +--- org.quartz-scheduler:quartz:2.3.2 (*)
+|    +--- com.mchange:c3p0:0.9.5.5 (*)
+|    +--- edu.ucar:httpservices:4.5.5 (*)
+|    +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|    +--- org.apache.httpcomponents:httpmime:4.5.13 (*)
+|    +--- org.apache.commons:commons-csv:1.8
+|    +--- org.apache.sis.core:sis-utility:1.0
+|    |    +--- javax.measure:unit-api:1.0
+|    |    \--- org.opengis:geoapi:3.0.1
+|    |         \--- javax.measure:unit-api:1.0
+|    +--- org.apache.sis.storage:sis-netcdf:1.0
+|    |    +--- org.apache.sis.storage:sis-storage:1.0
+|    |    |    +--- org.apache.sis.core:sis-feature:1.0
+|    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0
+|    |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    |    +--- org.apache.sis.core:sis-referencing:1.0
+|    |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+|    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+|    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    +--- org.opengis:geoapi:3.0.1 (*)
+|    +--- edu.usc.ir:sentiment-analysis-parser:0.1
+|    +--- com.fasterxml.jackson.core:jackson-core:2.12.3 -> 2.15.2
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2
+|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (c)
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (c)
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (c)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.12.3 -> 2.15.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 -> 2.15.2 (*)
+|    +--- org.apache.pdfbox:jbig2-imageio:3.0.3
+|    \--- com.github.jai-imageio:jai-imageio-core:1.4.0
 +--- org.junit.jupiter:junit-jupiter:5.8.2
 |    +--- org.junit:junit-bom:5.8.2 (*)
 |    +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
@@ -948,15 +1940,7 @@ testPmdAuxClasspath
 |    \--- org.junit.jupiter:junit-jupiter-engine:5.8.2 (*)
 +--- org.hamcrest:hamcrest-library:2.2
 |    \--- org.hamcrest:hamcrest-core:2.2 (*)
-+--- com.fasterxml.jackson.core:jackson-databind:2.15.2
-|    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2
-|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2
-|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (c)
-|    |         +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (c)
-|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (c)
-|    +--- com.fasterxml.jackson.core:jackson-core:2.15.2
-|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
-|    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
++--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (*)
 \--- org.testng:testng:7.4.0 (*)
 
 testRuntimeClasspath - Runtime classpath of source set 'test'.
@@ -1055,7 +2039,7 @@ testRuntimeClasspath - Runtime classpath of source set 'test'.
 |    +--- org.codehaus.groovy:groovy-testng:2.5.15
 |    |    +--- org.codehaus.groovy:groovy:2.5.15
 |    |    \--- org.testng:testng:6.13.1 -> 7.4.0
-|    |         +--- com.beust:jcommander:1.78
+|    |         +--- com.beust:jcommander:1.78 -> 1.81
 |    |         \--- org.webjars:jquery:3.5.1
 |    \--- org.codehaus.groovy:groovy-xml:2.5.15 (*)
 +--- org.apache.poi:poi:5.2.3
@@ -1076,6 +2060,206 @@ testRuntimeClasspath - Runtime classpath of source set 'test'.
 |    +--- com.github.virtuald:curvesapi:1.07
 |    +--- org.apache.logging.log4j:log4j-api:2.18.0
 |    \--- org.apache.commons:commons-collections4:4.4
++--- org.json:json:20210307
++--- org.apache.tika:tika-core:1.27
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    \--- commons-io:commons-io:2.10.0 -> 2.11.0
++--- org.apache.tika:tika-parsers:1.27
+|    +--- org.apache.tika:tika-core:1.27 (*)
+|    +--- xerces:xercesImpl:2.12.1
+|    |    \--- xml-apis:xml-apis:1.4.01
+|    +--- com.fasterxml.woodstox:woodstox-core:6.2.6
+|    |    \--- org.codehaus.woodstox:stax2-api:4.2.1
+|    +--- org.apache.commons:commons-lang3:3.12.0
+|    +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+|    +--- org.gagravarr:vorbis-java-tika:0.8
+|    +--- org.tallison:jmatio:1.5
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.30
+|    +--- org.apache.james:apache-mime4j-core:0.8.4
+|    +--- org.apache.james:apache-mime4j-dom:0.8.4
+|    |    \--- org.apache.james:apache-mime4j-core:0.8.4
+|    +--- com.googlecode.plist:dd-plist:1.23
+|    +--- org.apache.commons:commons-compress:1.20 -> 1.21
+|    +--- org.tukaani:xz:1.9
+|    +--- com.epam:parso:2.0.14
+|    |    \--- org.slf4j:slf4j-api:1.7.5 -> 1.7.30
+|    +--- org.brotli:dec:0.1.2
+|    +--- commons-codec:commons-codec:1.15
+|    +--- org.apache.pdfbox:pdfbox:2.0.24
+|    |    +--- org.apache.pdfbox:fontbox:2.0.24
+|    |    \--- commons-logging:commons-logging:1.2
+|    +--- org.apache.pdfbox:pdfbox-tools:2.0.24
+|    +--- org.apache.pdfbox:preflight:2.0.24
+|    |    +--- org.apache.pdfbox:pdfbox:2.0.24 (*)
+|    |    \--- org.apache.pdfbox:xmpbox:2.0.24
+|    |         \--- commons-logging:commons-logging:1.2
+|    +--- org.apache.pdfbox:jempbox:1.8.16
+|    +--- org.apache.pdfbox:xmpbox:2.0.24 (*)
+|    +--- org.bouncycastle:bcmail-jdk15on:1.69
+|    |    +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |    +--- org.bouncycastle:bcutil-jdk15on:1.69
+|    |    |    \--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |    \--- org.bouncycastle:bcpkix-jdk15on:1.69
+|    |         +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    |         \--- org.bouncycastle:bcutil-jdk15on:1.69 (*)
+|    +--- org.bouncycastle:bcprov-jdk15on:1.69
+|    +--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+|    +--- org.apache.poi:poi-scratchpad:4.1.2
+|    |    \--- org.apache.poi:poi:4.1.2 -> 5.2.3 (*)
+|    +--- org.apache.poi:poi-ooxml:4.1.2 -> 5.2.3 (*)
+|    +--- com.healthmarketscience.jackcess:jackcess:4.0.1
+|    +--- com.healthmarketscience.jackcess:jackcess-encrypt:4.0.1
+|    +--- org.ccil.cowan.tagsoup:tagsoup:1.2.1
+|    +--- org.ow2.asm:asm:9.2
+|    +--- org.tallison:isoparser:1.9.41.7
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.tallison:metadata-extractor:2.15.0.1
+|    |    \--- org.tallison.xmp:xmpcore-shaded:6.1.11
+|    +--- de.l3s.boilerpipe:boilerpipe:1.1.0
+|    +--- com.rometools:rome:1.15.0
+|    |    +--- com.rometools:rome-utils:1.15.0
+|    |    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+|    |    +--- org.jdom:jdom2:2.0.6
+|    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.30
+|    +--- org.gagravarr:vorbis-java-core:0.8
+|    +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+|    +--- org.codelibs:jhighlight:1.0.3
+|    +--- com.pff:java-libpst:0.9.3
+|    +--- com.github.junrar:junrar:7.4.0
+|    |    \--- org.slf4j:slf4j-api:1.7.9 -> 1.7.30
+|    +--- org.apache.cxf:cxf-rt-rs-client:3.4.4
+|    |    +--- org.apache.cxf:cxf-rt-transports-http:3.4.4
+|    |    |    \--- org.apache.cxf:cxf-core:3.4.4
+|    |    |         +--- org.glassfish.jaxb:jaxb-runtime:2.3.4
+|    |    |         |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3
+|    |    |         |    |    \--- jakarta.activation:jakarta.activation-api:1.2.2
+|    |    |         |    +--- org.glassfish.jaxb:txw2:2.3.4
+|    |    |         |    +--- com.sun.istack:istack-commons-runtime:3.0.12
+|    |    |         |    \--- com.sun.activation:jakarta.activation:1.2.2
+|    |    |         +--- com.fasterxml.woodstox:woodstox-core:6.2.6 (*)
+|    |    |         +--- org.apache.ws.xmlschema:xmlschema-core:2.2.5
+|    |    |         \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.3 (*)
+|    |    +--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    |    \--- org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4
+|    |         +--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    |         +--- jakarta.ws.rs:jakarta.ws.rs-api:2.1.6
+|    |         +--- jakarta.annotation:jakarta.annotation-api:1.3.5
+|    |         +--- org.apache.cxf:cxf-rt-transports-http:3.4.4 (*)
+|    |         \--- org.apache.cxf:cxf-rt-security:3.4.4
+|    |              \--- org.apache.cxf:cxf-core:3.4.4 (*)
+|    +--- org.glassfish.jaxb:jaxb-runtime:2.3.4 (*)
+|    +--- org.apache.commons:commons-exec:1.3
+|    +--- org.apache.opennlp:opennlp-tools:1.9.3
+|    +--- commons-io:commons-io:2.10.0 -> 2.11.0
+|    +--- com.googlecode.json-simple:json-simple:1.1.1
+|    +--- com.github.openjson:openjson:1.0.12
+|    +--- com.google.code.gson:gson:2.8.7
+|    +--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.slf4j:jul-to-slf4j:1.7.30
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- org.slf4j:jcl-over-slf4j:1.7.30
+|    |    \--- org.slf4j:slf4j-api:1.7.30
+|    +--- edu.ucar:netcdf4:4.5.5
+|    |    +--- edu.ucar:cdm:4.5.5
+|    |    |    +--- edu.ucar:udunits:4.5.5
+|    |    |    |    +--- joda-time:joda-time:2.2
+|    |    |    |    \--- net.jcip:jcip-annotations:1.0
+|    |    |    +--- edu.ucar:httpservices:4.5.5
+|    |    |    |    +--- net.jcip:jcip-annotations:1.0
+|    |    |    |    +--- org.apache.httpcomponents:httpclient:4.2.6 -> 4.5.13
+|    |    |    |    |    +--- org.apache.httpcomponents:httpcore:4.4.13
+|    |    |    |    |    +--- commons-logging:commons-logging:1.2
+|    |    |    |    |    \--- commons-codec:commons-codec:1.11 -> 1.15
+|    |    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+|    |    |    |    +--- org.apache.httpcomponents:httpmime:4.2.6 -> 4.5.13
+|    |    |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- org.apache.httpcomponents:httpcore:4.2.5 -> 4.4.13
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.7 -> 1.7.30 (*)
+|    |    |    +--- joda-time:joda-time:2.2
+|    |    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- net.jcip:jcip-annotations:1.0
+|    |    |    +--- org.quartz-scheduler:quartz:2.2.0 -> 2.3.2
+|    |    |    |    +--- com.mchange:c3p0:0.9.5.4 -> 0.9.5.5
+|    |    |    |    |    \--- com.mchange:mchange-commons-java:0.2.19
+|    |    |    |    +--- com.mchange:mchange-commons-java:0.2.15 -> 0.2.19
+|    |    |    |    +--- com.zaxxer:HikariCP-java7:2.4.13
+|    |    |    |    |    \--- org.slf4j:slf4j-api:1.7.21 -> 1.7.30
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    |    +--- com.google.protobuf:protobuf-java:2.5.0 -> 3.15.6
+|    |    |    +--- net.sf.ehcache:ehcache-core:2.6.2
+|    |    |    |    \--- org.slf4j:slf4j-api:1.6.1 -> 1.7.30
+|    |    |    +--- com.google.guava:guava:17.0 -> 30.1.1-jre
+|    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|    |    |    |    +--- org.checkerframework:checker-qual:3.8.0
+|    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1
+|    |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|    |    |    +--- org.itadaki:bzip2:0.9.1
+|    |    |    \--- com.beust:jcommander:1.35 -> 1.81
+|    |    +--- net.jcip:jcip-annotations:1.0
+|    |    \--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    +--- org.jdom:jdom2:2.0.6
+|    +--- com.google.guava:guava:30.1.1-jre (*)
+|    +--- edu.ucar:grib:4.5.5
+|    |    +--- edu.ucar:cdm:4.5.5 (*)
+|    |    +--- org.slf4j:slf4j-api:1.7.7 -> 1.7.30
+|    |    +--- net.jcip:jcip-annotations:1.0
+|    |    \--- org.itadaki:bzip2:0.9.1
+|    +--- net.jcip:jcip-annotations:1.0
+|    +--- com.beust:jcommander:1.81
+|    +--- net.java.dev.jna:jna:5.8.0
+|    +--- org.jsoup:jsoup:1.13.1 -> 1.16.1
+|    +--- com.google.protobuf:protobuf-java:3.15.6
+|    +--- edu.ucar:cdm:4.5.5 (*)
+|    +--- org.quartz-scheduler:quartz:2.3.2 (*)
+|    +--- com.mchange:c3p0:0.9.5.5 (*)
+|    +--- edu.ucar:httpservices:4.5.5 (*)
+|    +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|    +--- org.apache.httpcomponents:httpmime:4.5.13 (*)
+|    +--- org.apache.commons:commons-csv:1.8
+|    +--- org.apache.sis.core:sis-utility:1.0
+|    |    +--- javax.measure:unit-api:1.0
+|    |    \--- org.opengis:geoapi:3.0.1
+|    |         \--- javax.measure:unit-api:1.0
+|    +--- org.apache.sis.storage:sis-netcdf:1.0
+|    |    +--- org.apache.sis.storage:sis-storage:1.0
+|    |    |    +--- org.apache.sis.core:sis-feature:1.0
+|    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0
+|    |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    |    +--- org.apache.sis.core:sis-referencing:1.0
+|    |    |    |    |    +--- org.apache.sis.core:sis-utility:1.0 (*)
+|    |    |    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    |    +--- javax.measure:unit-api:1.0
+|    |    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+|    |    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    |    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    |    +--- org.apache.sis.core:sis-referencing:1.0 (*)
+|    |    \--- org.opengis:geoapi:3.0.1 (*)
+|    +--- org.apache.sis.core:sis-metadata:1.0 (*)
+|    +--- org.opengis:geoapi:3.0.1 (*)
+|    +--- edu.usc.ir:sentiment-analysis-parser:0.1
+|    +--- com.fasterxml.jackson.core:jackson-core:2.12.3 -> 2.15.2
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2
+|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (c)
+|    |         +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (c)
+|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (c)
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.12.3 -> 2.15.2
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2
+|    |    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
+|    |    +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (*)
+|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
+|    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.3 -> 2.15.2 (*)
+|    +--- org.apache.pdfbox:jbig2-imageio:3.0.3
+|    \--- com.github.jai-imageio:jai-imageio-core:1.4.0
 +--- org.junit.jupiter:junit-jupiter:5.8.2
 |    +--- org.junit:junit-bom:5.8.2 (*)
 |    +--- org.junit.jupiter:junit-jupiter-api:5.8.2 (*)
@@ -1085,15 +2269,7 @@ testRuntimeClasspath - Runtime classpath of source set 'test'.
 |    \--- org.junit.jupiter:junit-jupiter-engine:5.8.2 (*)
 +--- org.hamcrest:hamcrest-library:2.2
 |    \--- org.hamcrest:hamcrest-core:2.2 (*)
-+--- com.fasterxml.jackson.core:jackson-databind:2.15.2
-|    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2
-|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2
-|    |         +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (c)
-|    |         +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (c)
-|    |         \--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (c)
-|    +--- com.fasterxml.jackson.core:jackson-core:2.15.2
-|    |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
-|    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
++--- com.fasterxml.jackson.core:jackson-databind:2.15.2 (*)
 \--- org.testng:testng:7.4.0 (*)
 
 testRuntimeOnly - Runtime only dependencies for source set 'test'. (n)
