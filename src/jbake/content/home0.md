@@ -4,6 +4,3 @@ type=page
 status=published
 ~~~~~~
 
-This is an example home page.
-
----

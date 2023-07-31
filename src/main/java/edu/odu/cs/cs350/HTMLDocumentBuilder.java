@@ -299,7 +299,7 @@ public class HTMLDocumentBuilder
     )
     {
         //TODO: finish implementation. 
-        Path path = Paths.get(rawPath, null); 
+        Path path = Paths.get(rawPath); 
         path.normalize(); 
 
         String absolutePath = path.toString(); 
