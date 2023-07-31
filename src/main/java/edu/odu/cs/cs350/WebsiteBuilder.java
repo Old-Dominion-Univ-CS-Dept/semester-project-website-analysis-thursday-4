@@ -263,5 +263,16 @@ public class WebsiteBuilder
     }
     
 
+    /**
+     * Builds a Website object with paths and list of urls.
+     *
+     * @return a new Website object
+     * @throws IllegalStateException if the base path or URLs have not been set
+     */
+    public Website build() {
+        // Initial Stub function
+        return null;
+    }
+
 }
 

@@ -7,6 +7,7 @@ import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.Matchers.notNullValue;;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
@@ -21,7 +22,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -187,6 +187,16 @@ public class TestWebsiteBuilder {
             //testing to see that the list has the correct files
             assertThat(prunedFiles, hasItems(Paths.get("test1.html"), Paths.get("test2.html"), Paths.get("test3.htm")));
         }
+
+
+        /**
+         * Tests the build  method of WebsiteBuilder
+         */
+        @Test
+        public void testBuild() {
+            Website website = builder.build();
+            assertThat(website, is(notNullValue()));
+    }
      
 }
 
