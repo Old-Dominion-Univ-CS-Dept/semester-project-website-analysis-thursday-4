@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.21.0" timestamp="2023-08-01T23:48:47.850">
+    version="6.21.0" timestamp="2023-08-01T23:50:18.493">
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/CreateTextFile.java">
 <violation beginline="27" endline="27" begincolumn="33" endcolumn="72" rule="SimpleDateFormatNeedsLocale" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#simpledateformatneedslocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
@@ -47,23 +47,23 @@ Found non-transient, non-static member. Please mark as transient or provide acce
 </violation>
 </file>
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/CLIOutput.java">
-<violation beginline="85" endline="91" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '85'-'91').
+<violation beginline="86" endline="92" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '86'-'92').
 </violation>
-<violation beginline="85" endline="91" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '85'-'91').
+<violation beginline="86" endline="92" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '86'-'92').
 </violation>
-<violation beginline="103" endline="109" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '103'-'109').
+<violation beginline="104" endline="110" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '104'-'110').
 </violation>
-<violation beginline="103" endline="109" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '103'-'109').
+<violation beginline="104" endline="110" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '104'-'110').
 </violation>
-<violation beginline="122" endline="128" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '122'-'128').
+<violation beginline="123" endline="129" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '123'-'129').
 </violation>
-<violation beginline="122" endline="128" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '122'-'128').
+<violation beginline="123" endline="129" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '123'-'129').
 </violation>
 </file>
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/WebsiteBuilder.java">

@@ -12,7 +12,7 @@
 
 <span class="nc" id="L13">public class CLIOutput {</span>
 
-    /*
+    /**
      * Mainly created to for test purposes.
      */
     public static void basicOut(){
@@ -21,124 +21,130 @@
 <span class="fc" id="L21">    }</span>
     
 
+    
     public static void out(String[] args){
 
-    /*
+    /**
      * String to hold the directory.
      */
         String directory;
 
-     /*
+     /**
      * Assigning directory the return for the  currentDirectory
      */
-<span class="nc" id="L34">        directory = currentDirectory();</span>
+<span class="nc" id="L35">        directory = currentDirectory();</span>
 
-     /*
+     /**
      * Assigning the value of getJson to a file[].
      */
-<span class="nc" id="L39">        File[] fJSON = getJSON(directory);</span>
+<span class="nc" id="L40">        File[] fJSON = getJSON(directory);</span>
 
-     /*
+     /**
      * Using FJSON to output the name to CLI and linebreak.
      */
-<span class="nc bnc" id="L44" title="All 2 branches missed.">        for(File file : fJSON) {</span>
-<span class="nc" id="L45">            System.out.println(file.getName() + System.lineSeparator());</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">        for(File file : fJSON) {</span>
+<span class="nc" id="L46">            System.out.println(file.getName() + System.lineSeparator());</span>
 
         }
 
-     /*
+     /**
      *  Assigning the value of getTXT to a file[].
      */
-<span class="nc" id="L52">        File[] fTXT = getTXT(directory);</span>
+<span class="nc" id="L53">        File[] fTXT = getTXT(directory);</span>
 
-    /*
+    /**
      * Using FTXT to output the name to CLI and linebreak.
      */    
-<span class="nc bnc" id="L57" title="All 2 branches missed.">        for(File file : fTXT) {</span>
-<span class="nc" id="L58">            System.out.println(file.getName() + System.lineSeparator());</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">        for(File file : fTXT) {</span>
+<span class="nc" id="L59">            System.out.println(file.getName() + System.lineSeparator());</span>
         }
 
-     /*
+     /**
      * Assigning the value of getXLSX to a file[] variable.
      */
-<span class="nc" id="L64">        File[] fXLSX = getXLSX(directory);</span>
+<span class="nc" id="L65">        File[] fXLSX = getXLSX(directory);</span>
 
-     /*
+     /**
      * Using FTXT to output the name to CLI and linebreak.
      */ 
-<span class="nc bnc" id="L69" title="All 2 branches missed.">        for(File file : fXLSX) {</span>
-<span class="nc" id="L70">            System.out.println(file.getName() + System.lineSeparator());</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">        for(File file : fXLSX) {</span>
+<span class="nc" id="L71">            System.out.println(file.getName() + System.lineSeparator());</span>
         }
 
-<span class="nc" id="L73">    }</span>
+<span class="nc" id="L74">    }</span>
 
-    /*
+    /**
      * This is passed the directory variable and is used to search for 
      * any .json files and return them.
      */
     public static File[] getJSON(String Directory) {
-<span class="nc" id="L80">        File dir = new File(Directory);</span>
+<span class="nc" id="L81">        File dir = new File(Directory);</span>
 
-     /*
+     /**
      * This is used to filter through directory for a specific file ending with.json
      */     
-<span class="nc" id="L85">        File[] fList = dir.listFiles(new FilenameFilter() {</span>
+<span class="nc" id="L86">        File[] fList = dir.listFiles(new FilenameFilter() {</span>
             public boolean accept (File dir, String name) {
-<span class="nc" id="L87">                return name.endsWith(&quot;.json&quot;);</span>
+<span class="nc" id="L88">                return name.endsWith(&quot;.json&quot;);</span>
             }
         });
-<span class="nc" id="L90">        return fList;</span>
+<span class="nc" id="L91">        return fList;</span>
     }
 
-      /*
+      /**
      * This is passed the directory variable and is used to search for 
      * any .txt files and return them.
      */
     public static File[] getTXT(String Directory) {
-<span class="nc" id="L98">        File dir = new File(Directory);</span>
+<span class="nc" id="L99">        File dir = new File(Directory);</span>
 
-    /*
+    /**
      * This is used to filter through directory for a specific file ending with .txt
      */ 
-<span class="nc" id="L103">        File[] fList = dir.listFiles(new FilenameFilter() {</span>
+<span class="nc" id="L104">        File[] fList = dir.listFiles(new FilenameFilter() {</span>
             public boolean accept (File dir, String name) {
-<span class="nc" id="L105">                return name.endsWith(&quot;.txt&quot;);</span>
+<span class="nc" id="L106">                return name.endsWith(&quot;.txt&quot;);</span>
             }
         });
-<span class="nc" id="L108">        return fList;</span>
+<span class="nc" id="L109">        return fList;</span>
     }
 
-      /*
+      /**
      * This is passed the directory variable and is used to search for 
      * any .xlsx files and return them.
      */
     public static File[] getXLSX(String Directory) {
-<span class="nc" id="L116">        File dir = new File(Directory);</span>
+<span class="nc" id="L117">        File dir = new File(Directory);</span>
 
-     /*
+     /**
      * This is used to filter through directory for a specific file ending with .xlsx
      * and will return the file name as a string.
      */
-<span class="nc" id="L122">        File[] fList = dir.listFiles(new FilenameFilter() {</span>
+<span class="nc" id="L123">        File[] fList = dir.listFiles(new FilenameFilter() {</span>
             public boolean accept (File dir, String name) {
-<span class="nc" id="L124">                return name.endsWith(&quot;.xlsx&quot;);</span>
+<span class="nc" id="L125">                return name.endsWith(&quot;.xlsx&quot;);</span>
             }
         });
-<span class="nc" id="L127">        return fList;</span>
+<span class="nc" id="L128">        return fList;</span>
     }
 
-    /*
+   
+    /**
      * This is used to get the current directory and return it.
      */
     public static String currentDirectory(){
-<span class="fc" id="L134">        String directory = System.getProperty(&quot;user.dir&quot;);</span>
-<span class="fc" id="L135">        return directory;</span>
+<span class="fc" id="L136">        String directory = System.getProperty(&quot;user.dir&quot;);</span>
+<span class="fc" id="L137">        return directory;</span>
     }
 
+    /**
+     * @param fileName
+     * @throws Exception
+     */
     public static void CLIOutFromFileMaker(String fileName) throws Exception {
 
-<span class="fc" id="L140">        System.out.println(fileName + &quot;/n&quot;);</span>
-<span class="fc" id="L141">    }</span>
+<span class="fc" id="L146">        System.out.println(fileName + &quot;/n&quot;);</span>
+<span class="fc" id="L147">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
