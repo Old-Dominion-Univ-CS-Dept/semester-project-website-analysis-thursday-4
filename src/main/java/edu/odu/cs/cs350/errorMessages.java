@@ -13,7 +13,7 @@ public class errorMessages {
 */
     public static void overSize() {
 
-        System.out.println("The website is over 1000 pages.");
+        System.out.println("The website is over 1000 pages. Analysis is not recommended for large sites.");
     }
 
 /*
