@@ -239,7 +239,20 @@ public class WebsiteBuilder
         this.basePath = basePath;
     }
     
+    /**
+     * Sets a collection of URLs for the website.
+     *
+     * @param urls Collection of URLs to be stored.
+     * @return This WebsiteBuilder instance.
+     */
+    public WebsiteBuilder setUrls(Collection<URL> urls) {
+        this.urls = urls;
+        return this;
+    }
     
+    
+    
+  
 
 
     /**
@@ -264,14 +277,17 @@ public class WebsiteBuilder
     
 
     /**
-     * Builds a Website object with paths and list of urls.
+     * Builds a Website object with paths.
      *
      * @return a new Website object
      * @throws IllegalStateException if the base path or URLs have not been set
      */
     public Website build() {
-        // Initial Stub function
-        return null;
+        if (basePath == null || urls == null) {
+            throw new IllegalStateException("Base path or URLs are not set");
+        }
+        
+        return new Website(basePath, urls);
     }
 
 }

@@ -191,11 +191,17 @@ public class TestWebsiteBuilder {
 
         /**
          * Tests the build  method of WebsiteBuilder
+         * @throws MalformedURLException
          */
         @Test
-        public void testBuild() {
+        public void testBuild() throws MalformedURLException {
+            Collection<URL> urls = Arrays.asList(new URL("http://example1.com"), new URL("http://example2.com"));
+            builder.setBasePath(Paths.get("/src/test/resources"));
+            builder.withURLs(urls);
+
             Website website = builder.build();
-            assertThat(website, is(notNullValue()));
+            assertThat(website.getBasePath(), is(Paths.get("/src/test/resources")));
+            assertThat(website.getUrls(), containsInAnyOrder(urls.toArray(new URL[0])));
     }
      
 }
