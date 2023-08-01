@@ -11,6 +11,27 @@ import java.io.IOException;
  * 
  */
 <span class="fc" id="L13">public abstract class ReportWriter {</span>
+    protected Website website;
+    protected String baseFilename;
+
+    /**
+     * Sets the source data for this ReportWriter.
+     *
+     * @param site The Website object to set as the source data.
+     */
+        public void setSourceData(Website site) {
+<span class="nc" id="L23">            this.website = null;</span>
+<span class="nc" id="L24">        }</span>
+
+
+    /**
+     * Sets the base file name for this ReportWriter.
+     *
+     * @param baseFilename The base file name to set.
+     */
+    public void setBaseName(String baseFilename) {
+<span class="nc" id="L33">        this.baseFilename = null;</span>
+<span class="nc" id="L34">    }</span>
 
     /**
      * Abstract method to write a report to various format depending on the subclass. 
