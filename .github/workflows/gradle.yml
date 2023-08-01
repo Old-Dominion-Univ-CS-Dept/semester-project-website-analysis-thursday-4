@@ -23,10 +23,3 @@ jobs:
         - name: Build and test
           timeout-minutes: 20
           run: ./gradlew build
-        - name: Deploy reports using an SSH agent
-          run: |
-            eval $(ssh-agent -s -t 600)
-            ssh-add <(echo "${{ secrets.reports_ssh_key }}")
-            git config --global user.email "cbonh002@odu.edu"
-            git config --global user.name "Project Actions" 
-            ./gradlew deployWebsite 
