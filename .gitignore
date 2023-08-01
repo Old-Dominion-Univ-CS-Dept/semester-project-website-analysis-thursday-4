@@ -49,3 +49,4 @@ gradle.properties
 **.mp3
 **.mp4
 **.xlsx
+.DS_Store

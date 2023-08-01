@@ -22,6 +22,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.beust.jcommander.converters.PathConverter;
+
 /**
  * This class takes in different HTML tags and attributes
  * and extracts all tags of the given type. Currently, I am
@@ -135,7 +137,9 @@ public class HTMLDocumentBuilder
 
         for (String uriAsString : extractedStrings)
         {
-            Locality location = this.determineLocality(uriAsString, this.baseUrls); 
+            String baseSiteDirectory = this.baseDirectory.toString(); 
+            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,
+                                                        baseSiteDirectory,  uriAsString); 
 
             Resource image = new Image(); 
 
@@ -143,15 +147,16 @@ public class HTMLDocumentBuilder
 
             if (location == Locality.EXTERNAL)
             {
-                //image.setURL(); 
+                image.setUrl(new URL(uriAsString)); 
                 image.setPath(null);
             }
             else
             {
                 image.setUrl(null);
 
-                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls); 
-                //image.setPath();
+                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);
+                Path convertedPathAsString = Paths.get(pathAsString);  
+                image.setPath(convertedPathAsString); 
 
                 long fileSizeInKiB = this.determineFileSize(uriAsString); 
                 image.setSizeOfFile(fileSizeInKiB); 
@@ -224,18 +229,30 @@ public class HTMLDocumentBuilder
     }
 
     /**
-     * Determines the location of the resource that is being extracted. 
-     * 
-     * @param uriAsString: URI that is being looped through, currently a string. 
-     * 
-     * @param baseUrls: URL that was passed in to HTMLDocumentBuilder. 
-     * 
-     * @return: location of this extracted content. 
+     * This function determines locality with the help of three other functions. 
+     * @param extractedURI
+     * @param baseSiteDirectory
+     * @param baseSiteURLs
+     * @param pathOfSourceDoc
+     * @param urlOfSourceDoc
+     * @return
      */
-    public Locality determineLocality(String uriAsString, List<URL> baseUrls) 
+    public Locality determineLocality(
+        String extractedURI,
+        String baseSiteDirectory,
+        List<String> baseSiteURLs,
+        String pathOfSourceDoc,
+        String urlOfSourceDoc
+    ) 
     {
-        //TODO: needs to be implemented. 
-        return null;
+        if (isURL(extractedURI))
+        {
+            return determineLocalityOfURL(extractedURI, baseSiteURLs, urlOfSourceDoc); 
+        }
+        else
+        {
+            return determineLocalityOfPath(extractedURI, baseSiteDirectory, pathOfSourceDoc); 
+        }
     }
     
     /**
@@ -315,6 +332,39 @@ public class HTMLDocumentBuilder
 
         return Locality.EXTERNAL; 
 
+    }
+
+    /**
+     * This function determines and returns the locality of a URL that 
+     * is passed in. 
+     * 
+     * @param rawURL: URL as a string that is being passed in. 
+     * 
+     * @param baseSiteURLs: list of base sites of the URL. 
+     * 
+     * @param urlOfSourceDoc: URL of the source document on disk. 
+     * 
+     * @return: the locality of the passed in URL. 
+     */
+    public Locality determineLocalityOfURL(
+        String rawURL,
+        List<String> baseSiteURLs,
+        String urlOfSourceDoc
+    )
+    {
+        for (String baseSiteURL : baseSiteURLs)
+        {
+            if (rawURL.startsWith(baseSiteURL))
+            {
+                if (rawURL.startsWith(urlOfSourceDoc))
+                {
+                    return Locality.INTRAPAGE; 
+                }
+                return Locality.INTERNAL; 
+            }
+        }
+
+        return Locality.EXTERNAL; 
     }
 
     
