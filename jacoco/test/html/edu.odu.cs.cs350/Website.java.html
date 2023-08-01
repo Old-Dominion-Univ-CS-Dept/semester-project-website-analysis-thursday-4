@@ -25,19 +25,18 @@ public class Website {
      * @param string the base path.
      * @param urls the collection of URLs .
      */
-<span class="fc" id="L28">    public Website(Path string, Collection&lt;URL&gt; urls) {</span>
-<span class="fc" id="L29">        this.basePath = string;</span>
+<span class="fc" id="L28">    public Website(Path basePath, Collection&lt;URL&gt; urls, Collection&lt;HTMLDocument&gt; documents) {</span>
+<span class="fc" id="L29">        this.basePath = basePath;</span>
 <span class="fc" id="L30">        this.urls = new ArrayList&lt;&gt;(urls);</span>
-<span class="fc" id="L31">        this.documents = new ArrayList&lt;&gt;();  // Initializing the documents collection.</span>
-       
-<span class="fc" id="L33">    }</span>
+<span class="fc" id="L31">        this.documents = new ArrayList&lt;&gt;(documents);</span>
+<span class="fc" id="L32">    }</span>
 
     /**
      * Returns the base path of the website.
      * @return the base path of the website.
      */
     public Path getBasePath() {
-<span class="fc" id="L40">        return this.basePath;</span>
+<span class="fc" id="L39">        return this.basePath;</span>
     }
 
     /**
@@ -45,9 +44,23 @@ public class Website {
      * @return the collection of URLs 
      */
     public Collection&lt;URL&gt; getUrls() {
-<span class="fc" id="L48">        return this.urls;</span>
+<span class="fc" id="L47">        return this.urls;</span>
     }
 
+    public Collection&lt;HTMLDocument&gt; getHtmlDocuments() {
+<span class="fc" id="L51">        return this.documents;</span>
+    }
+
+    /**
+     * Adds an HTML document to the website.
+     *
+     * @param document The HTML document to add.
+     */
+    public void addPage(HTMLDocument document) {
+<span class="nc" id="L60">        this.documents.add(document);</span>
+<span class="nc" id="L61">    }</span>
+
+   
     
 
     

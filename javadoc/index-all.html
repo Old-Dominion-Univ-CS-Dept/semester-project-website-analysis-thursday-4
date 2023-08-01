@@ -96,6 +96,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">A</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/Website.html#addPage(edu.odu.cs.cs350.HTMLDocument)">addPage(HTMLDocument)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
+<dd>
+<div class="block">Adds an HTML document to the website.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/AudioAnalysis.html#analyzeAudio(java.lang.String)">analyzeAudio(String)</a></span> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/AudioAnalysis.html" title="class in edu.odu.cs.cs350">AudioAnalysis</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/odu/cs/cs350/Anchor.html" title="class in edu.odu.cs.cs350"><span class="typeNameLink">Anchor</span></a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
@@ -285,6 +289,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns the href attribute of the anchor tag.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/Website.html#getHtmlDocuments()">getHtmlDocuments()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/Anchor.html#getHtmlRepresentation()">getHtmlRepresentation()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Anchor.html" title="class in edu.odu.cs.cs350">Anchor</a></dt>
 <dd>
 <div class="block">Returns the HTML representation of the anchor tag.</div>
@@ -628,13 +634,13 @@ the order they are declared.</div>
 </a>
 <h2 class="title">W</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#walkDirectory(java.lang.String)">walkDirectory(String)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
+<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#walkDirectory()">walkDirectory()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
 <dd>
 <div class="block">Walks through the directory structure starting from the specified path.</div>
 </dd>
 <dt><a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350"><span class="typeNameLink">Website</span></a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/Website.html#%3Cinit%3E(java.nio.file.Path,java.util.Collection)">Website(Path, Collection&lt;URL&gt;)</a></span> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
+<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/Website.html#%3Cinit%3E(java.nio.file.Path,java.util.Collection,java.util.Collection)">Website(Path, Collection&lt;URL&gt;, Collection&lt;HTMLDocument&gt;)</a></span> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
 <dd>
 <div class="block">Constructs a Website with a base path and URL collection.</div>
 </dd>
@@ -648,10 +654,9 @@ the order they are declared.</div>
 <dd>
 <div class="block">Constructs a new WebsiteBuilder.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html#withBaseDirectory(java.nio.file.Path)">withBaseDirectory(Path)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></dt>
+<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#%3Cinit%3E(java.nio.file.Path,java.util.Collection)">WebsiteBuilder(Path, Collection&lt;URL&gt;)</a></span> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
 <dd>
-<div class="block">A function that passes in a piece of data needed for path 
- normalization and resource classification.</div>
+<div class="block">Constructs a new WebsiteBuilder.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html#withBaseURLs(java.util.Collection)">withBaseURLs(Collection&lt;URL&gt;)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></dt>
 <dd>
@@ -679,6 +684,11 @@ the order they are declared.</div>
 <dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#withURLs(java.util.Collection)">withURLs(Collection&lt;URL&gt;)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
 <dd>
 <div class="block">accepts a collectioin URLs</div>
+</dd>
+<dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html#withWebsiteBaseDir(java.nio.file.Path)">withWebsiteBaseDir(Path)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></dt>
+<dd>
+<div class="block">A function that passes in a piece of data needed for path 
+ normalization and resource classification.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="edu/odu/cs/cs350/JSONReportWriter.html#writeReport(java.util.Map)">writeReport(Map&lt;String, Object&gt;)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/JSONReportWriter.html" title="class in edu.odu.cs.cs350">JSONReportWriter</a></dt>
 <dd>

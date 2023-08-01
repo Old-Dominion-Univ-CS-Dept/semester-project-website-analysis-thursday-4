@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -152,8 +152,9 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.file.Path,java.util.Collection)">Website</a></span>&#8203;(java.nio.file.Path&nbsp;string,
-       java.util.Collection&lt;java.net.URL&gt;&nbsp;urls)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.file.Path,java.util.Collection,java.util.Collection)">Website</a></span>&#8203;(java.nio.file.Path&nbsp;basePath,
+       java.util.Collection&lt;java.net.URL&gt;&nbsp;urls,
+       java.util.Collection&lt;<a href="HTMLDocument.html" title="class in edu.odu.cs.cs350">HTMLDocument</a>&gt;&nbsp;documents)</code></th>
 <td class="colLast">
 <div class="block">Constructs a Website with a base path and URL collection.</div>
 </td>
@@ -177,13 +178,25 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addPage(edu.odu.cs.cs350.HTMLDocument)">addPage</a></span>&#8203;(<a href="HTMLDocument.html" title="class in edu.odu.cs.cs350">HTMLDocument</a>&nbsp;document)</code></th>
+<td class="colLast">
+<div class="block">Adds an HTML document to the website.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.nio.file.Path</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBasePath()">getBasePath</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the base path of the website.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>java.util.Collection&lt;<a href="HTMLDocument.html" title="class in edu.odu.cs.cs350">HTMLDocument</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHtmlDocuments()">getHtmlDocuments</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.Collection&lt;java.net.URL&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUrls()">getUrls</a></span>()</code></th>
 <td class="colLast">
@@ -214,14 +227,15 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(java.nio.file.Path,java.util.Collection)">
+<a id="&lt;init&gt;(java.nio.file.Path,java.util.Collection,java.util.Collection)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Website</h4>
-<pre>public&nbsp;Website&#8203;(java.nio.file.Path&nbsp;string,
-               java.util.Collection&lt;java.net.URL&gt;&nbsp;urls)</pre>
+<pre>public&nbsp;Website&#8203;(java.nio.file.Path&nbsp;basePath,
+               java.util.Collection&lt;java.net.URL&gt;&nbsp;urls,
+               java.util.Collection&lt;<a href="HTMLDocument.html" title="class in edu.odu.cs.cs350">HTMLDocument</a>&gt;&nbsp;documents)</pre>
 <div class="block">Constructs a Website with a base path and URL collection.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -257,7 +271,7 @@ extends java.lang.Object</pre>
 <a id="getUrls()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getUrls</h4>
 <pre class="methodSignature">public&nbsp;java.util.Collection&lt;java.net.URL&gt;&nbsp;getUrls()</pre>
@@ -265,6 +279,29 @@ extends java.lang.Object</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the collection of URLs</dd>
+</dl>
+</li>
+</ul>
+<a id="getHtmlDocuments()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHtmlDocuments</h4>
+<pre class="methodSignature">public&nbsp;java.util.Collection&lt;<a href="HTMLDocument.html" title="class in edu.odu.cs.cs350">HTMLDocument</a>&gt;&nbsp;getHtmlDocuments()</pre>
+</li>
+</ul>
+<a id="addPage(edu.odu.cs.cs350.HTMLDocument)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>addPage</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addPage&#8203;(<a href="HTMLDocument.html" title="class in edu.odu.cs.cs350">HTMLDocument</a>&nbsp;document)</pre>
+<div class="block">Adds an HTML document to the website.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>document</code> - The HTML document to add.</dd>
 </dl>
 </li>
 </ul>

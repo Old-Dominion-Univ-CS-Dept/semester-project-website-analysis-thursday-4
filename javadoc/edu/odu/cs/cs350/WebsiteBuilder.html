@@ -157,6 +157,13 @@ extends java.lang.Object</pre>
 <div class="block">Constructs a new WebsiteBuilder.</div>
 </td>
 </tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.nio.file.Path,java.util.Collection)">WebsiteBuilder</a></span>&#8203;(java.nio.file.Path&nbsp;basePath,
+              java.util.Collection&lt;java.net.URL&gt;&nbsp;urls)</code></th>
+<td class="colLast">
+<div class="block">Constructs a new WebsiteBuilder.</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -234,7 +241,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.nio.file.Path&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#walkDirectory(java.lang.String)">walkDirectory</a></span>&#8203;(java.lang.String&nbsp;directoryPath)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#walkDirectory()">walkDirectory</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Walks through the directory structure starting from the specified path.</div>
 </td>
@@ -287,12 +294,24 @@ extends java.lang.Object</pre>
 <a id="&lt;init&gt;()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>WebsiteBuilder</h4>
 <pre>public&nbsp;WebsiteBuilder()</pre>
 <div class="block">Constructs a new WebsiteBuilder.
  Initializes the 'basePath' and 'url' fields to null.</div>
+</li>
+</ul>
+<a id="&lt;init&gt;(java.nio.file.Path,java.util.Collection)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>WebsiteBuilder</h4>
+<pre>public&nbsp;WebsiteBuilder&#8203;(java.nio.file.Path&nbsp;basePath,
+                      java.util.Collection&lt;java.net.URL&gt;&nbsp;urls)</pre>
+<div class="block">Constructs a new WebsiteBuilder.
+ takes arguments for   'basePath', 'url', and 'documents' fields to null.</div>
 </li>
 </ul>
 </li>
@@ -383,19 +402,17 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a id="walkDirectory(java.lang.String)">
+<a id="walkDirectory()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>walkDirectory</h4>
-<pre class="methodSignature">public&nbsp;java.util.List&lt;java.nio.file.Path&gt;&nbsp;walkDirectory&#8203;(java.lang.String&nbsp;directoryPath)
+<pre class="methodSignature">public&nbsp;java.util.List&lt;java.nio.file.Path&gt;&nbsp;walkDirectory()
                                                  throws java.io.IOException</pre>
 <div class="block">Walks through the directory structure starting from the specified path. 
  Extracts all subdirectories and files from the directory and its subdirectories.</div>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>directoryPath</code> - the path to the directory to begin the walk from.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a list of all  files in the directory.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -498,13 +515,14 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>build</h4>
-<pre class="methodSignature">public&nbsp;<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;build()</pre>
+<pre class="methodSignature">public&nbsp;<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;build()
+              throws java.io.IOException</pre>
 <div class="block">Builds a Website object with paths.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new Website object</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.lang.IllegalStateException</code> - if the base path or URLs have not been set</dd>
+<dd><code>java.io.IOException</code> - if there's an error reading files</dd>
 </dl>
 </li>
 </ul>
