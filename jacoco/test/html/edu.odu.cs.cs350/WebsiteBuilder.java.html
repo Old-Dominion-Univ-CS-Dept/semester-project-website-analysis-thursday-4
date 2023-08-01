@@ -239,7 +239,20 @@ public class WebsiteBuilder
 <span class="fc" id="L239">        this.basePath = basePath;</span>
 <span class="fc" id="L240">    }</span>
     
+    /**
+     * Sets a collection of URLs for the website.
+     *
+     * @param urls Collection of URLs to be stored.
+     * @return This WebsiteBuilder instance.
+     */
+    public WebsiteBuilder setUrls(Collection&lt;URL&gt; urls) {
+<span class="nc" id="L249">        this.urls = urls;</span>
+<span class="nc" id="L250">        return this;</span>
+    }
     
+    
+    
+  
 
 
     /**
@@ -251,27 +264,30 @@ public class WebsiteBuilder
      * @return List of HTML file paths.
      */
     public List&lt;Path&gt; pruneNonHTMLFiles(List&lt;Path&gt; files) {
-<span class="fc" id="L254">        List&lt;Path&gt; htmlFiles = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L267">        List&lt;Path&gt; htmlFiles = new ArrayList&lt;&gt;();</span>
         
-<span class="fc bfc" id="L256" title="All 2 branches covered.">        for (Path file : files) {</span>
-<span class="fc bfc" id="L257" title="All 4 branches covered.">            if (file.toString().endsWith(&quot;.html&quot;) || file.toString().endsWith(&quot;.htm&quot;)) {</span>
-<span class="fc" id="L258">                htmlFiles.add(file);</span>
+<span class="fc bfc" id="L269" title="All 2 branches covered.">        for (Path file : files) {</span>
+<span class="fc bfc" id="L270" title="All 4 branches covered.">            if (file.toString().endsWith(&quot;.html&quot;) || file.toString().endsWith(&quot;.htm&quot;)) {</span>
+<span class="fc" id="L271">                htmlFiles.add(file);</span>
             }
-<span class="fc" id="L260">        }</span>
+<span class="fc" id="L273">        }</span>
     
-<span class="fc" id="L262">        return htmlFiles;</span>
+<span class="fc" id="L275">        return htmlFiles;</span>
     }
     
 
     /**
-     * Builds a Website object with paths and list of urls.
+     * Builds a Website object with paths.
      *
      * @return a new Website object
      * @throws IllegalStateException if the base path or URLs have not been set
      */
     public Website build() {
-        // Initial Stub function
-<span class="fc" id="L274">        return null;</span>
+<span class="pc bpc" id="L286" title="2 of 4 branches missed.">        if (basePath == null || urls == null) {</span>
+<span class="nc" id="L287">            throw new IllegalStateException(&quot;Base path or URLs are not set&quot;);</span>
+        }
+        
+<span class="fc" id="L290">        return new Website(basePath, urls);</span>
     }
 
 }

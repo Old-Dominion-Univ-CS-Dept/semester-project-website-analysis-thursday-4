@@ -96,7 +96,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#build()">build()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
 <dd>
-<div class="block">Builds a Website object with paths and list of urls.</div>
+<div class="block">Builds a Website object with paths.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:C">C</h2>
@@ -126,13 +126,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Determines the file size of the URI.</div>
 </dd>
-<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html#determineLocality(java.lang.String,java.util.List)">determineLocality(String, List&lt;URL&gt;)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></dt>
+<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html#determineLocality(java.lang.String,java.lang.String,java.util.List,java.lang.String,java.lang.String)">determineLocality(String, String, List&lt;String&gt;, String, String)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></dt>
 <dd>
-<div class="block">Determines the location of the resource that is being extracted.</div>
+<div class="block">This function determines locality with the help of three other functions.</div>
 </dd>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html#determineLocalityOfPath(java.lang.String,java.lang.String,java.lang.String)">determineLocalityOfPath(String, String, String)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></dt>
 <dd>
 <div class="block">This function determines and returns the locality of a path that
+ is passed in.</div>
+</dd>
+<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html#determineLocalityOfURL(java.lang.String,java.util.List,java.lang.String)">determineLocalityOfURL(String, List&lt;String&gt;, String)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></dt>
+<dd>
+<div class="block">This function determines and returns the locality of a URL that 
  is passed in.</div>
 </dd>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/errorMessages.html#directoryUnreadable()">directoryUnreadable()</a></span> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/errorMessages.html" title="class in edu.odu.cs.cs350">errorMessages</a></dt>
@@ -204,6 +209,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/AudioAnalysis.AudioInfo.html#getAudioPath()">getAudioPath()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/AudioAnalysis.AudioInfo.html" title="class in edu.odu.cs.cs350">AudioAnalysis.AudioInfo</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/Website.html#getBasePath()">getBasePath()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
+<dd>
+<div class="block">Returns the base path of the website.</div>
+</dd>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#getBasePath()">getBasePath()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
 <dd>
 <div class="block">Returns the base path of the website.</div>
@@ -275,6 +284,10 @@ loadScripts(document, 'script');</script>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/Resource.html#getUrl()">getUrl()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Resource.html" title="class in edu.odu.cs.cs350">Resource</a></dt>
 <dd>
 <div class="block">Retrieves the URL of the resource object.</div>
+</dd>
+<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/Website.html#getUrls()">getUrls()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
+<dd>
+<div class="block">Returns the collection of URLs</div>
 </dd>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#getUrls()">getUrls()</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
 <dd>
@@ -453,6 +466,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Sets the URL of the resource object.</div>
 </dd>
+<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/WebsiteBuilder.html#setUrls(java.util.Collection)">setUrls(Collection&lt;URL&gt;)</a></span> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteBuilder.html" title="class in edu.odu.cs.cs350">WebsiteBuilder</a></dt>
+<dd>
+<div class="block">Sets a collection of URLs for the website.</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/SimpleHTMLParser.html" title="class in edu.odu.cs.cs350"><span class="type-name-link">SimpleHTMLParser</span></a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
 <dd>
 <div class="block">This class is responsible for parsing the HTML to extract tag
@@ -518,8 +535,10 @@ the order they are declared.</div>
 </dd>
 <dt><a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350"><span class="type-name-link">Website</span></a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/Website.html#%3Cinit%3E()">Website()</a></span> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
-<dd>&nbsp;</dd>
+<dt><span class="member-name-link"><a href="edu/odu/cs/cs350/Website.html#%3Cinit%3E(java.nio.file.Path,java.util.Collection)">Website(Path, Collection&lt;URL&gt;)</a></span> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
+<dd>
+<div class="block">Constructs a Website with a base path and URL collection.</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/WebsiteAnalysisDriver.html" title="class in edu.odu.cs.cs350"><span class="type-name-link">WebsiteAnalysisDriver</span></a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="member-name-link"><a href="edu/odu/cs/cs350/WebsiteAnalysisDriver.html#%3Cinit%3E()">WebsiteAnalysisDriver()</a></span> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/WebsiteAnalysisDriver.html" title="class in edu.odu.cs.cs350">WebsiteAnalysisDriver</a></dt>

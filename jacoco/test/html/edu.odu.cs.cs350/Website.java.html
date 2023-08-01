@@ -1,13 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Website.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">semester-project-website-analysis-thursday-4</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">Website.java</span></div><h1>Website.java</h1><pre class="source lang-java linenums">/**
- * 
+ * This class represents a Website.  It contains  a base path, a collection of URLs, and a collection of HTML document objects.
  */
 package edu.odu.cs.cs350;
 
+import java.net.URL;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collection;
 /**
  * @author bonham36
  *
  */
-<span class="nc" id="L10">public class Website {</span>
+
+
+public class Website {
+    
+    private Path basePath;
+    private Collection&lt;URL&gt; urls;
+    private Collection&lt;HTMLDocument&gt; documents;
+
+
+    /**
+     * Constructs a Website with a base path and URL collection.
+     * @param string the base path.
+     * @param urls the collection of URLs .
+     */
+<span class="fc" id="L28">    public Website(Path string, Collection&lt;URL&gt; urls) {</span>
+<span class="fc" id="L29">        this.basePath = string;</span>
+<span class="fc" id="L30">        this.urls = new ArrayList&lt;&gt;(urls);</span>
+<span class="fc" id="L31">        this.documents = new ArrayList&lt;&gt;();  // Initializing the documents collection.</span>
+       
+<span class="fc" id="L33">    }</span>
+
+    /**
+     * Returns the base path of the website.
+     * @return the base path of the website.
+     */
+    public Path getBasePath() {
+<span class="fc" id="L40">        return this.basePath;</span>
+    }
+
+    /**
+     * Returns the collection of URLs 
+     * @return the collection of URLs 
+     */
+    public Collection&lt;URL&gt; getUrls() {
+<span class="fc" id="L48">        return this.urls;</span>
+    }
+
+    
+
+    
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
