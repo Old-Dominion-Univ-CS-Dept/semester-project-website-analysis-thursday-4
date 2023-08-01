@@ -2,7 +2,7 @@ name: CI - build and test
 
 on:                                
   push:
-    branches: [ main]
+    branches: [ main ]
 
 jobs:
   build:                           
@@ -21,7 +21,7 @@ jobs:
         - name: Build and test
           run: ../gradlew build
         - name: Deploy
-          uses: gh pages deploymen
+          uses: gh pages deployment
           with:
             branch: gh-pages
             folder: build/reports
