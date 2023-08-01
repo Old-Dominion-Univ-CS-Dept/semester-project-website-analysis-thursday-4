@@ -90,11 +90,12 @@ public class HTMLDocumentBuilder
      * 
      * @param: a path. 
      */
-    public void withBaseDirectory(Path siteRoot)
-    {
-        //TODO: to be implemented later. 
-        this.baseDirectory = siteRoot; 
+    public HTMLDocumentBuilder withWebsiteBaseDir(Path siteRoot) {
+        this.baseDirectory = siteRoot;
+        return this;
     }
+
+    
     
     /**
      * A function that passes in a piece of data needed for path 

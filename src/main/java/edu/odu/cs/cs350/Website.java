@@ -25,11 +25,10 @@ public class Website {
      * @param string the base path.
      * @param urls the collection of URLs .
      */
-    public Website(Path string, Collection<URL> urls) {
-        this.basePath = string;
+    public Website(Path basePath, Collection<URL> urls, Collection<HTMLDocument> documents) {
+        this.basePath = basePath;
         this.urls = new ArrayList<>(urls);
-        this.documents = new ArrayList<>();  // Initializing the documents collection.
-       
+        this.documents = new ArrayList<>(documents);
     }
 
     /**
@@ -48,6 +47,20 @@ public class Website {
         return this.urls;
     }
 
+    public Collection<HTMLDocument> getHtmlDocuments() {
+        return this.documents;
+    }
+
+    /**
+     * Adds an HTML document to the website.
+     *
+     * @param document The HTML document to add.
+     */
+    public void addPage(HTMLDocument document) {
+        this.documents.add(document);
+    }
+
+   
     
 
     

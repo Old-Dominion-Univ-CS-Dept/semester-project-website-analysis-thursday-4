@@ -6,6 +6,7 @@
  */
 package edu.odu.cs.cs350;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -26,6 +27,7 @@ public class WebsiteBuilder
     
     private Path basePath;
     private Collection<URL> urls;
+    private Collection<HTMLDocument> documents;
    
 
     /**
@@ -84,6 +86,17 @@ public class WebsiteBuilder
         
     }
 
+    /**
+     * Constructs a new WebsiteBuilder.
+    * takes arguments for   'basePath', 'url', and 'documents' fields to null.
+     */
+    public WebsiteBuilder(Path basePath, Collection<URL> urls) {
+        this.basePath = basePath;
+        this.urls = urls;
+    
+    }
+
+
       /**
      * Returns the base path of the website.
      *
@@ -106,13 +119,12 @@ public class WebsiteBuilder
  * Walks through the directory structure starting from the specified path. 
  * Extracts all subdirectories and files from the directory and its subdirectories.
  *
- * @param directoryPath the path to the directory to begin the walk from.
  * @return a list of all  files in the directory.
  * @throws IOException if an I/O error occurs when opening the directory.
  */
         
-    public List<Path> walkDirectory(String directoryPath) throws IOException {
-        Path pathToExamine = Paths.get(directoryPath);
+    public List<Path> walkDirectory() throws IOException {
+        Path pathToExamine = basePath;
         List<Path> directories = examineDirectory(pathToExamine);
         
         
@@ -280,14 +292,35 @@ public class WebsiteBuilder
      * Builds a Website object with paths.
      *
      * @return a new Website object
-     * @throws IllegalStateException if the base path or URLs have not been set
-     */
-    public Website build() {
-        if (basePath == null || urls == null) {
-            throw new IllegalStateException("Base path or URLs are not set");
+     * @throws IOException if there's an error reading files 
+     *  
+    */
+    public Website build() throws IOException {
+        // Walk the directory and prune non-html files
+        List<Path> files = walkDirectory();
+        List<Path> prunedFiles = pruneNonHTMLFiles(files);
+
+        Collection<HTMLDocument> parsedDocuments = new ArrayList<>();
+
+        for (Path htmlFile : prunedFiles) {
+            // Open the file for reading
+            BufferedReader buffer = Files.newBufferedReader(htmlFile);
+
+            // Parse the HTML document
+            HTMLDocumentBuilder docBuilder = new HTMLDocumentBuilder();
+            docBuilder.withContentFrom(buffer);
+            docBuilder.withWebsiteBaseDir(this.basePath);  // needed for path normalization
+            docBuilder.withBaseURLs(this.urls);  // needed for internal/external classification
+            docBuilder.extractContent();  // exceptions can be thrown by this function
+
+            HTMLDocument doc = docBuilder.build();
+            parsedDocuments.add(doc);
         }
-        
-        return new Website(basePath, urls);
+
+   
+        Website site = new Website(this.basePath, this.urls, parsedDocuments);
+
+        return site;
     }
 
 }

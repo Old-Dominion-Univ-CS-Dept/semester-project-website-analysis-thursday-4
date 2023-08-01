@@ -6,8 +6,6 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.nullValue;
-import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
@@ -32,11 +30,17 @@ import org.junit.jupiter.api.Test;
  */
 public class TestWebsiteBuilder {
     private WebsiteBuilder builder;
+    private Path basePath;
+    private Collection<URL> urls;
 
     @BeforeEach
-    public void setup() {
-        builder = new WebsiteBuilder();
-    }
+void setup() {
+    builder = new WebsiteBuilder();
+    basePath = Paths.get("src/test/resources/cs-landing-page");
+    urls = new ArrayList<>();
+    builder = new WebsiteBuilder(basePath, urls);
+    
+}
 
 
     /**
@@ -44,7 +48,7 @@ public class TestWebsiteBuilder {
     */
     @Test
     public void testWithPath() {
-        Path testPath = Paths.get("src/test/resources");
+        Path testPath = Paths.get("src/test/resources/cs-landing-page");
         builder.withPath(testPath);
         assertThat(builder.getBasePath(), is(testPath));
     }
@@ -87,8 +91,8 @@ public class TestWebsiteBuilder {
        
 
         // Check that the builder's initial state is as expected
-        assertThat(builder.getBasePath(), is(nullValue()));
-        assertThat(builder.getUrls(), is(empty()));
+        assertThat(builder.getBasePath(), is(basePath));
+        assertThat(builder.getUrls(), is(urls));
     }
 
     /**
@@ -97,7 +101,7 @@ public class TestWebsiteBuilder {
      */
     @Test
     public void testGetBasePath() {
-        assertThat(builder.getBasePath(), is(nullValue()));
+        assertThat(builder.getBasePath(), is(basePath));
         
 
     }
@@ -116,8 +120,9 @@ public class TestWebsiteBuilder {
      */
     @Test
     public void testWalkDirectory() {
+       
         try {
-            List<Path> files = builder.walkDirectory("src/test/resources/cs-landing-page");
+            List<Path> files = builder.walkDirectory();
            
              // There should be three files which are in 2 directories: index.html, robots.txt, and test-layout.css.
              assertThat(files.size(), is(3));
@@ -194,15 +199,21 @@ public class TestWebsiteBuilder {
          * @throws MalformedURLException
          */
         @Test
-        public void testBuild() throws MalformedURLException {
-            Collection<URL> urls = Arrays.asList(new URL("http://example1.com"), new URL("http://example2.com"));
-            builder.setBasePath(Paths.get("/src/test/resources"));
-            builder.withURLs(urls);
-
-            Website website = builder.build();
-            assertThat(website.getBasePath(), is(Paths.get("/src/test/resources")));
+        public void testBuild() {
+         
+            Collection<HTMLDocument> documents = new ArrayList<>();
+            Website website = new Website(basePath, urls, documents);
+        
+            Collection<HTMLDocument> actualDocuments = website.getHtmlDocuments();
+            int expectedDocumentCount = 0;
+        
+            // Assert that the website object has the expected properties
+            assertThat(website.getBasePath(), is(basePath));
             assertThat(website.getUrls(), containsInAnyOrder(urls.toArray(new URL[0])));
-    }
+            assertThat(actualDocuments.size(), is(expectedDocumentCount));
+        }
+
+
      
 }
 

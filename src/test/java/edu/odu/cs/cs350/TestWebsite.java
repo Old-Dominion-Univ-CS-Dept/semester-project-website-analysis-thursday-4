@@ -4,10 +4,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
-import java.util.Arrays;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -19,9 +19,11 @@ public class TestWebsite {
     private Path basePath;
 
     @BeforeEach
-    public void setUp() throws MalformedURLException {
-        urls = Arrays.asList(new URL("http://example1.com"), new URL("http://example2.com"));
-        website = new Website(basePath, urls);
+    void setup() {
+        basePath = Paths.get("src/test/resources/cs-landing-page");
+        urls = new ArrayList<>();
+        Collection<HTMLDocument> documents = new ArrayList<>();
+        website = new Website(basePath, urls, documents);
     }
 
     @Test
