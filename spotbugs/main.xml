@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1690928410300" analysisTimestamp="1690928410300" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1690929708674" analysisTimestamp="1690929708674" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceBuilder.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Resource.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$2.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/LinkExtraction.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$1.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/errorMessages.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Image.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocumentBuilder.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceKind.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$3.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteAnalysisDriver.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportWriter.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportManager.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteAnalysisDriver.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Locality.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocument.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/LinkExtraction.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/errorMessages.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$2.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor$LinkType.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Resource.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocument.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Image.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceKind.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocumentBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$1.class</Jar>
     <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.tika/tika-parsers/1.27/269e021ed326239fd8f62e3ff85f4b4e8dbd6ec9/tika-parsers-1.27.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.16.1/ae551410a16433984cd4a8603622fafa9d8299f0/jsoup-1.16.1.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.cedarsoftware/json-io/4.14.0/a30d7145c4ffc3ac1a6356c47bb645f7850fc577/json-io-4.14.0.jar</AuxClasspathEntry>
@@ -873,6 +874,55 @@
       <Message>At LinkExtraction.java:[lines 27-47]</Message>
     </SourceLine>
   </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="98a9bf746f455846e0a26ce71720e8c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>edu.odu.cs.cs350.ReportManager.getSourceData() may expose internal representation by returning ReportManager.site</LongMessage>
+    <Class classname="edu.odu.cs.cs350.ReportManager" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.ReportManager" start="16" end="55" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java">
+        <Message>At ReportManager.java:[lines 16-55]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.ReportManager</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.ReportManager" name="getSourceData" signature="()Ledu/odu/cs/cs350/Website;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.ReportManager" start="55" end="55" startBytecode="0" endBytecode="46" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java"/>
+      <Message>In method edu.odu.cs.cs350.ReportManager.getSourceData()</Message>
+    </Method>
+    <Field classname="edu.odu.cs.cs350.ReportManager" name="site" signature="Ledu/odu/cs/cs350/Website;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.ReportManager" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java">
+        <Message>In ReportManager.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.ReportManager.site</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.ReportManager" primary="true" start="55" end="55" startBytecode="4" endBytecode="4" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java">
+      <Message>At ReportManager.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="69fdd9fa0871d0aa07036df0adee1381" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>edu.odu.cs.cs350.ReportManager.setSourceData(Website) may expose internal representation by storing an externally mutable object into ReportManager.site</LongMessage>
+    <Class classname="edu.odu.cs.cs350.ReportManager" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.ReportManager" start="16" end="55" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java">
+        <Message>At ReportManager.java:[lines 16-55]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.ReportManager</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.ReportManager" name="setSourceData" signature="(Ledu/odu/cs/cs350/Website;)V" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.ReportManager" start="28" end="29" startBytecode="0" endBytecode="61" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java"/>
+      <Message>In method edu.odu.cs.cs350.ReportManager.setSourceData(Website)</Message>
+    </Method>
+    <Field classname="edu.odu.cs.cs350.ReportManager" name="site" signature="Ledu/odu/cs/cs350/Website;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.ReportManager" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java">
+        <Message>In ReportManager.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.ReportManager.site</Message>
+    </Field>
+    <LocalVariable name="sourceData" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named sourceData</Message>
+    </LocalVariable>
+    <SourceLine classname="edu.odu.cs.cs350.ReportManager" primary="true" start="28" end="28" startBytecode="2" endBytecode="2" sourcefile="ReportManager.java" sourcepath="edu/odu/cs/cs350/ReportManager.java" relSourcepath="java/edu/odu/cs/cs350/ReportManager.java">
+      <Message>At ReportManager.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
   <BugInstance type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" priority="2" rank="13" abbrev="NP" category="STYLE" instanceHash="d0d49d492815fc7cdc7f7c188fac04c1" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
     <ShortMessage>Possible null pointer dereference due to return value of called method</ShortMessage>
     <LongMessage>Possible null pointer dereference in edu.odu.cs.cs350.ResourceBuilder.resolveRelativePath(Path) due to return value of called method</LongMessage>
@@ -1257,13 +1307,14 @@ signals unexpected behavior by returning an atypical return value.
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Tue, 1 Aug 2023 22:20:10 +0000" total_classes="0" referenced_classes="0" total_bugs="38" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="8.58" clock_seconds="8.01" peak_mbytes="210.22" alloc_mbytes="1734.00" gc_seconds="0.23" priority_2="35" priority_1="3">
+  <FindBugsSummary timestamp="Tue, 1 Aug 2023 22:41:48 +0000" total_classes="0" referenced_classes="0" total_bugs="40" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="9.63" clock_seconds="9.36" peak_mbytes="212.11" alloc_mbytes="1734.00" gc_seconds="0.27" priority_2="37" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="7bb6a050e368016a87a8b5ee644496ee"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="1bde7cd05569888885c515f81749d16b"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocumentBuilder.java" bugCount="9" size="0" bugHash="5a2dd37a6faf21de1717bb854ff86476"/>
     <FileStats path="edu/odu/cs/cs350/JSONReportWriter.java" bugCount="5" size="0" bugHash="3a7b1a209a13735fc3ba219a57387d27"/>
     <FileStats path="edu/odu/cs/cs350/LinkExtraction.java" bugCount="1" size="0" bugHash="806f166cbb1ce275c66ebd70be6eb20a"/>
+    <FileStats path="edu/odu/cs/cs350/ReportManager.java" bugCount="2" size="0" bugHash="5a3934edf405e0d70d3c5a216b24c1e6"/>
     <FileStats path="edu/odu/cs/cs350/ResourceBuilder.java" bugCount="1" size="0" bugHash="166dc22fc69f327f880c9a35a504fc38"/>
     <FileStats path="edu/odu/cs/cs350/Website.java" bugCount="2" size="0" bugHash="11b30ecdb22520ded4373abbf165e856"/>
     <FileStats path="edu/odu/cs/cs350/WebsiteBuilder.java" bugCount="5" size="0" bugHash="1514462b03f7af06d913566c7cdb73bb"/>
