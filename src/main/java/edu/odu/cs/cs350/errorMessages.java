@@ -1,8 +1,8 @@
 package edu.odu.cs.cs350;
 
-/*
- * This Class will be used to output error messages
- *  that you may see using this program
+/**
+ * This Class will be used to output error messages that you may see using this program
+ *  
  */
 
 public class errorMessages {
