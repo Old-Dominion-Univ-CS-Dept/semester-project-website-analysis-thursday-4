@@ -2,8 +2,146 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.21.0" timestamp="2023-08-01T10:01:52.562">
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+    version="6.21.0" timestamp="2023-08-01T15:36:49.416">
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/CreateTextFile.java">
+<violation beginline="27" endline="27" begincolumn="33" endcolumn="72" rule="SimpleDateFormatNeedsLocale" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#simpledateformatneedslocale" priority="3">
+When instantiating a SimpleDateFormat object, specify a Locale
+</violation>
+<violation beginline="43" endline="43" begincolumn="16" endcolumn="17" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="fw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this FileWriter object are closed after use
+</violation>
+<violation beginline="46" endline="46" begincolumn="17" endcolumn="18" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="pw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this FileWriter object are closed after use
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/SimpleHTMLParser.java">
+<violation beginline="23" endline="23" begincolumn="20" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="SimpleHTMLParser" variable="theTag" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="24" endline="24" begincolumn="20" endcolumn="31" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="SimpleHTMLParser" variable="theAttribute" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Anchor.java">
+<violation beginline="13" endline="13" begincolumn="20" endcolumn="37" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="htmlRepresentation" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="20" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="href" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="15" endline="15" begincolumn="20" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="text" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="16" endline="16" begincolumn="22" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="linkType" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/LinkExtraction.java">
+<violation beginline="33" endline="50" begincolumn="13" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="LinkExtraction" method="LinkTypeExtraction" variable="matcherIntraSite" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'matcherIntraSite' (lines '33'-'50').
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/HTMLDocument.java">
+<violation beginline="22" endline="22" begincolumn="28" endcolumn="34" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="HTMLDocument" variable="scripts" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/CLIOutput.java">
+<violation beginline="85" endline="91" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '85'-'91').
+</violation>
+<violation beginline="85" endline="91" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '85'-'91').
+</violation>
+<violation beginline="103" endline="109" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '103'-'109').
+</violation>
+<violation beginline="103" endline="109" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '103'-'109').
+</violation>
+<violation beginline="122" endline="128" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '122'-'128').
+</violation>
+<violation beginline="122" endline="128" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fList' (lines '122'-'128').
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/WebsiteBuilder.java">
+<violation beginline="81" endline="81" begincolumn="25" endcolumn="28" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="WebsiteBuilder" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="125" endline="125" begincolumn="29" endcolumn="29" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="walkDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="128" endline="128" begincolumn="29" endcolumn="32" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="walkDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="186" endline="203" begincolumn="16" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="mapUrlsToLocalPath" variable="commonUrlPrefix" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'commonUrlPrefix' (lines '186'-'203').
+</violation>
+<violation beginline="218" endline="228" begincolumn="16" endcolumn="29" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="findCommonPrefix" variable="commonPrefix" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'commonPrefix' (lines '218'-'228').
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/JSONReportWriter.java">
+<violation beginline="26" endline="26" begincolumn="33" endcolumn="42" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="JSONReportWriter" variable="sourceData" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="27" endline="27" begincolumn="18" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="JSONReportWriter" variable="outputFile" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/ExcelGenerator.java">
+<violation beginline="21" endline="21" begincolumn="18" endcolumn="25" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="workbook" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this XSSFWorkbook object are closed after use
+</violation>
+<violation beginline="41" endline="69" begincolumn="13" endcolumn="24" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="rowCount" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'rowCount' (lines '41'-'69').
+</violation>
+<violation beginline="43" endline="43" begincolumn="17" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="row" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'row' (lines '43'-'43').
+</violation>
+<violation beginline="43" endline="69" begincolumn="17" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="row" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'row' (lines '43'-'69').
+</violation>
+<violation beginline="44" endline="44" begincolumn="17" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="columnCount" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'columnCount' (lines '44'-'44').
+</violation>
+<violation beginline="44" endline="69" begincolumn="17" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="columnCount" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'columnCount' (lines '44'-'69').
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Resource.java">
+<violation beginline="22" endline="22" begincolumn="31" endcolumn="34" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="23" endline="23" begincolumn="25" endcolumn="28" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="25" endline="25" begincolumn="21" endcolumn="24" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="26" endline="26" begincolumn="20" endcolumn="23" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Website.java">
+<violation beginline="18" endline="18" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="19" endline="19" begincolumn="29" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="20" endline="20" begincolumn="38" endcolumn="46" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/AudioAnalysis.java">
+<violation beginline="69" endline="69" begincolumn="20" endcolumn="69" rule="UseLocaleWithCaseConversions" ruleset="Error Prone" package="edu.odu.cs.cs350" class="AudioAnalysis" method="getFileType" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#uselocalewithcaseconversions" priority="3">
+When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+</violation>
+</file>
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
 <violation beginline="38" endline="38" begincolumn="28" endcolumn="33" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="HTMLDocumentBuilder" variable="images" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
 </violation>
@@ -41,146 +179,8 @@ Found 'DU'-anomaly for variable 'extractedStrings' (lines '180'-'183').
 Found 'DU'-anomaly for variable 'extractedStrings' (lines '195'-'198').
 </violation>
 </file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/WebsiteBuilder.java">
-<violation beginline="81" endline="81" begincolumn="25" endcolumn="28" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="WebsiteBuilder" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
-Assigning an Object to null is a code smell.  Consider refactoring.
-</violation>
-<violation beginline="125" endline="125" begincolumn="29" endcolumn="29" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="walkDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
-Avoid using Literals in Conditional Statements
-</violation>
-<violation beginline="128" endline="128" begincolumn="29" endcolumn="32" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="walkDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
-Avoid using Literals in Conditional Statements
-</violation>
-<violation beginline="186" endline="203" begincolumn="16" endcolumn="55" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="mapUrlsToLocalPath" variable="commonUrlPrefix" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'commonUrlPrefix' (lines '186'-'203').
-</violation>
-<violation beginline="218" endline="228" begincolumn="16" endcolumn="29" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="WebsiteBuilder" method="findCommonPrefix" variable="commonPrefix" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'commonPrefix' (lines '218'-'228').
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/CreateTextFile.java">
-<violation beginline="27" endline="27" begincolumn="33" endcolumn="72" rule="SimpleDateFormatNeedsLocale" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#simpledateformatneedslocale" priority="3">
-When instantiating a SimpleDateFormat object, specify a Locale
-</violation>
-<violation beginline="43" endline="43" begincolumn="16" endcolumn="17" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="fw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
-Ensure that resources like this FileWriter object are closed after use
-</violation>
-<violation beginline="46" endline="46" begincolumn="17" endcolumn="18" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="pw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
-Ensure that resources like this FileWriter object are closed after use
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/CLIOutput.java">
-<violation beginline="85" endline="91" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '85'-'91').
-</violation>
-<violation beginline="85" endline="91" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getJSON" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '85'-'91').
-</violation>
-<violation beginline="103" endline="109" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '103'-'109').
-</violation>
-<violation beginline="103" endline="109" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getTXT" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '103'-'109').
-</violation>
-<violation beginline="122" endline="128" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '122'-'128').
-</violation>
-<violation beginline="122" endline="128" begincolumn="16" endcolumn="10" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CLIOutput" method="getXLSX" variable="fList" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'fList' (lines '122'-'128').
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Resource.java">
-<violation beginline="22" endline="22" begincolumn="31" endcolumn="34" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
-Assigning an Object to null is a code smell.  Consider refactoring.
-</violation>
-<violation beginline="23" endline="23" begincolumn="25" endcolumn="28" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
-Assigning an Object to null is a code smell.  Consider refactoring.
-</violation>
-<violation beginline="25" endline="25" begincolumn="21" endcolumn="24" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
-Assigning an Object to null is a code smell.  Consider refactoring.
-</violation>
-<violation beginline="26" endline="26" begincolumn="20" endcolumn="23" rule="NullAssignment" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Resource" method="Resource" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
-Assigning an Object to null is a code smell.  Consider refactoring.
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/SimpleHTMLParser.java">
-<violation beginline="23" endline="23" begincolumn="20" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="SimpleHTMLParser" variable="theTag" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-<violation beginline="24" endline="24" begincolumn="20" endcolumn="31" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="SimpleHTMLParser" variable="theAttribute" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/LinkExtraction.java">
-<violation beginline="33" endline="50" begincolumn="13" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="LinkExtraction" method="LinkTypeExtraction" variable="matcherIntraSite" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'matcherIntraSite' (lines '33'-'50').
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/AudioAnalysis.java">
-<violation beginline="69" endline="69" begincolumn="20" endcolumn="69" rule="UseLocaleWithCaseConversions" ruleset="Error Prone" package="edu.odu.cs.cs350" class="AudioAnalysis" method="getFileType" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#uselocalewithcaseconversions" priority="3">
-When doing a String.toLowerCase()/toUpperCase() call, use a Locale
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/JSONReportWriter.java">
-<violation beginline="26" endline="26" begincolumn="33" endcolumn="42" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="JSONReportWriter" variable="sourceData" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-<violation beginline="27" endline="27" begincolumn="18" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="JSONReportWriter" variable="outputFile" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/ResourceBuilder.java">
+<file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/ResourceBuilder.java">
 <violation beginline="17" endline="17" begincolumn="18" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ResourceBuilder" variable="sourceDocumentPath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Website.java">
-<violation beginline="18" endline="18" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-<violation beginline="19" endline="19" begincolumn="29" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-<violation beginline="20" endline="20" begincolumn="38" endcolumn="46" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/HTMLDocument.java">
-<violation beginline="22" endline="22" begincolumn="28" endcolumn="34" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="HTMLDocument" variable="scripts" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/ExcelGenerator.java">
-<violation beginline="21" endline="21" begincolumn="18" endcolumn="25" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="workbook" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
-Ensure that resources like this XSSFWorkbook object are closed after use
-</violation>
-<violation beginline="41" endline="69" begincolumn="13" endcolumn="24" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="rowCount" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'rowCount' (lines '41'-'69').
-</violation>
-<violation beginline="43" endline="43" begincolumn="17" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="row" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'row' (lines '43'-'43').
-</violation>
-<violation beginline="43" endline="69" begincolumn="17" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="row" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'row' (lines '43'-'69').
-</violation>
-<violation beginline="44" endline="44" begincolumn="17" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="columnCount" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'columnCount' (lines '44'-'44').
-</violation>
-<violation beginline="44" endline="69" begincolumn="17" endcolumn="31" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="ExcelGenerator" method="main" variable="columnCount" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'columnCount' (lines '44'-'69').
-</violation>
-</file>
-<file name="/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Anchor.java">
-<violation beginline="13" endline="13" begincolumn="20" endcolumn="37" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="htmlRepresentation" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-<violation beginline="14" endline="14" begincolumn="20" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="href" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-<violation beginline="15" endline="15" begincolumn="20" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="text" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
-Found non-transient, non-static member. Please mark as transient or provide accessors.
-</violation>
-<violation beginline="16" endline="16" begincolumn="22" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Anchor" variable="linkType" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
 </violation>
 </file>

@@ -1,189 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1690898508950" analysisTimestamp="1690898508950" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1690904210295" analysisTimestamp="1690904210295" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Locality.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$2.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/errorMessages.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteBuilder.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceKind.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportWriter.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteAnalysisDriver.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$1.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Resource.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$3.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor$LinkType.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Image.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocument.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocumentBuilder.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/LinkExtraction.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</Jar>
-    <Jar>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceBuilder.class</Jar>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.tika/tika-parsers/1.27/269e021ed326239fd8f62e3ff85f4b4e8dbd6ec9/tika-parsers-1.27.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.16.1/ae551410a16433984cd4a8603622fafa9d8299f0/jsoup-1.16.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.cedarsoftware/json-io/4.14.0/a30d7145c4ffc3ac1a6356c47bb645f7850fc577/json-io-4.14.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/5.2.3/2efd11c940adb18c03eb9ce7ad88fc40ee6a196/poi-ooxml-5.2.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-scratchpad/4.1.2/1be379e91d3d3fb0cd11425451acdbfb0d2264e7/poi-scratchpad-4.1.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/5.2.3/2fb22ae74ad5aea6af1a9c64b9542f2ccf348604/poi-5.2.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.json/json/20210307/528c8df3757e8bcf151817b1d7b9b434f6aa08d5/json-20210307.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.tika/tika-core/1.27/79ad0f72558b8fbce947147959e2faff8b7b70a/tika-core-1.27.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-ant/2.5.15/f764b03a1df8a1219f0b20a3534d32dcc1cb943d/groovy-ant-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-cli-commons/2.5.15/edeece58606057f5d21bffb661406d40fddd33e9/groovy-cli-commons-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-groovysh/2.5.15/7dee45976e93d81083d80627c0ec1469639f6064/groovy-groovysh-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-console/2.5.15/1c4283b38235e968981a8aee1d7701ba1fdaf226/groovy-console-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-docgenerator/2.5.15/ad171ccbbc03843fd762bcdc16962cf5a1bd083f/groovy-docgenerator-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-groovydoc/2.5.15/c9bb0309bc530362fc44d6b7ea21af6b50c455b1/groovy-groovydoc-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-cli-picocli/2.5.15/80845f6b88530e2fb5c134ba09fefc40929f7db9/groovy-cli-picocli-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-datetime/2.5.15/6545cfdc948723fee93199e029e22fd3ee16a978/groovy-datetime-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-jmx/2.5.15/53b412c77d77cd574ccfa084bdd4edafc6c0a334/groovy-jmx-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-json/2.5.15/c8c0a74e4bc2ea905fd205ddbc8749dc27354023/groovy-json-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-jsr223/2.5.15/334c80e5e46c0b996e4702fffb1993f1f2f3685/groovy-jsr223-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-macro/2.5.15/58026ee80467293a16e17914ed1213a8a92c753c/groovy-macro-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-nio/2.5.15/1c7fbf1357a7096317edb82cef18448dc2ad3011/groovy-nio-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-servlet/2.5.15/8c4e2be4db42b3dced4ee15478cc20a83d92eb52/groovy-servlet-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-sql/2.5.15/e6a31240e32531a817117fa2707d7bcc489c97a2/groovy-sql-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-swing/2.5.15/d51244ffda83e9f99bdc6c04fa4a1f4ee2769960/groovy-swing-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-templates/2.5.15/90ee5725fb83df9d7285fc0afb91044198b6d5d2/groovy-templates-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-test/2.5.15/cc8794a3050b75d0855f3cfd33463ea755ed69ed/groovy-test-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-test-junit5/2.5.15/845d5bd5736547b0a47851a994416965e98ab156/groovy-test-junit5-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-testng/2.5.15/4345d9f1e138e544cd7ca73fb7aa8829ec0c113e/groovy-testng-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-xml/2.5.15/22ca743c5f536f3e6e4cb88d4fe81ae5048ced8f/groovy-xml-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.5.15/85c14d7031ae2bfd1d0bbed513ebddcc3a530633/groovy-2.5.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/edu.ucar/netcdf4/4.5.5/675d63ecc857c50dd50858011b670160aa30b62/netcdf4-4.5.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/edu.ucar/grib/4.5.5/cfe552910e9a8d57ce71134796abb281a74ead16/grib-4.5.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/edu.ucar/cdm/4.5.5/af1748a3d024069cb7fd3fc2591efe806c914589/cdm-4.5.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/edu.ucar/httpservices/4.5.5/ee5f217be599e5e03f7f0e55e03f9e721a154f62/httpservices-4.5.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.13/efc110bad4a0d45cda7858e6beee1d8a8313da5a/httpmime-4.5.13.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.6.1/e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf/commons-math3-3.6.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.zaxxer/SparseBitSet/1.2/8467c813d442837fcaeddbc42cf5c5359fab4933/SparseBitSet-1.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-lite/5.2.3/db113c8e9051b0ff967f4911fa20336c8325a7c5/poi-ooxml-lite-5.2.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/5.1.1/48a369df0eccb509d46203104e4df9cb00f0f68b/xmlbeans-5.1.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.18.0/c72ad9b1d8d42e4ea7befd8248bf05877af4c63d/log4j-api-2.18.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.07/863654849995f9d4f0ed2ed1a3870da3a108473c/curvesapi-1.07.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.tallison/jmatio/1.5/517d932cc87a3b564f3f7a07ac347b725b619ab4/jmatio-1.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.epam/parso/2.0.14/a02ea1b198c410a105d261efd2d7043739aecd8e/parso-2.0.14.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.tallison/isoparser/1.9.41.7/97c87c0ab2c435e16380e6377bbe0c819f7eb9a1/isoparser-1.9.41.7.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.rometools/rome/1.15.0/d3614542b857eccc0555d1ee8dfc36d2043d9c1f/rome-1.15.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.30/d58bebff8cbf70ff52b59208586095f467656c30/jul-to-slf4j-1.7.30.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.30/cd92524ea19d27e5b94ecd251e1af729cffdfe15/jcl-over-slf4j-1.7.30.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.quartz-scheduler/quartz/2.3.2/18a6d6b5a40b77bd060b34cb9f2acadc4bae7c8a/quartz-2.3.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.rometools/rome-utils/1.15.0/ab1cb95382bf9a8dec81165d328bcbbf1acfb3ae/rome-utils-1.15.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.6.2/3baecd92015a9f8fe4cf51c8b5d3a5bddcdd3e86/ehcache-core-2.6.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP-java7/2.4.13/3e441eddedb374d4de8e3abbb0c90997f51cc97b/HikariCP-java7-2.4.13.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.12.1/3a206b25679f598a03374afd4e0410d8849b088b/xercesImpl-2.12.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-rs-client/3.4.4/191bd58a8b9b2114b5b46450539a46e166293bd2/cxf-rt-rs-client-3.4.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-frontend-jaxrs/3.4.4/bd3d388e7d6ef45892b7b2854cc7394f70e0d036/cxf-rt-frontend-jaxrs-3.4.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-transports-http/3.4.4/36ef2095972eaa38c42d37b29d56ab5c33b11016/cxf-rt-transports-http-3.4.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-security/3.4.4/f00c33579f8a46e556d2e12f4da20f0cbe81648e/cxf-rt-security-3.4.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-core/3.4.4/9f0ffe973fea0125afb1308ef1a09034ef46b3f3/cxf-core-3.4.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.fasterxml.woodstox/woodstox-core/6.2.6/d4a055af5dcadea8d1bded5b64bc7be5bb7fea95/woodstox-core-6.2.6.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/59eb84ee0d616332ff44aba065f3888cf002cd2d/jakarta.annotation-api-1.3.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.gagravarr/vorbis-java-tika/0.8/4ddbb27ac5884a0f0398a63d46a89d3bc87dc457/vorbis-java-tika-0.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.james/apache-mime4j-dom/0.8.4/dfdfdbc095017ffbaef308e80ff7ca53b1a6ff08/apache-mime4j-dom-0.8.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.james/apache-mime4j-core/0.8.4/a7e552628c6587bdd1e2036045f1e06c4d513e32/apache-mime4j-core-0.8.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.googlecode.plist/dd-plist/1.23/f522894abd90d6f5a15e9586e625407a7d50e80d/dd-plist-1.23.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.tukaani/xz/1.9/1ea4bec1a921180164852c65006d928617bd2caf/xz-1.9.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.brotli/dec/0.1.2/c26a897ae0d524809eef1c786cc6183b4ddcc3b/dec-0.1.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/preflight/2.0.24/6febe7d08b98f199b1f2f81fd3e94e23b08d36dc/preflight-2.0.24.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/pdfbox/2.0.24/cb562ee5f43e29415af4477e62fbe668ef88d18b/pdfbox-2.0.24.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/pdfbox-tools/2.0.24/3c6e9b46d496fed56423db517fccc4e60d4ea105/pdfbox-tools-2.0.24.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/jempbox/1.8.16/1f41de81768ef84ca2d8cda4cb79e9272c8ee966/jempbox-1.8.16.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/xmpbox/2.0.24/df8b7a6a363281f9f1365ed4b37580aa5d3f38f1/xmpbox-2.0.24.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcmail-jdk15on/1.69/759f9233ac99a576e4963bd09b0f830a2716d2ec/bcmail-jdk15on-1.69.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.69/45c36fb72fafb0b688c6af795e6cc803f6f79ee5/bcpkix-jdk15on-1.69.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcutil-jdk15on/1.69/c3edf93d346e97f64f041e448e7455c39c7eff64/bcutil-jdk15on-1.69.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.69/91e1628251cf3ca90093ce9d0fe67e5b7dab3850/bcprov-jdk15on-1.69.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.healthmarketscience.jackcess/jackcess/4.0.1/e9953ac607c1d85647d6bc364579a871ef069441/jackcess-4.0.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.healthmarketscience.jackcess/jackcess-encrypt/4.0.1/2fbb076c291767197b5b8202bfebdcd4b4a7199e/jackcess-encrypt-4.0.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.ccil.cowan.tagsoup/tagsoup/1.2.1/5584627487e984c03456266d3f8802eb85a9ce97/tagsoup-1.2.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.2/81a03f76019c67362299c40e0ba13405f5467bff/asm-9.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.tallison/metadata-extractor/2.15.0.1/a50bdbe87196f314917c2dc94f70622b8cf93e56/metadata-extractor-2.15.0.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/de.l3s.boilerpipe/boilerpipe/1.1.0/f62cb75ed52455a9e68d1d05b84c500673340eb2/boilerpipe-1.1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.gagravarr/vorbis-java-core/0.8/7e9937c2575cda2e3fc116415117c74f23e43fa6/vorbis-java-core-0.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codelibs/jhighlight/1.0.3/88831dce3d56aa53a1bfcba78518e8939b8d4779/jhighlight-1.0.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.pff/java-libpst/0.9.3/928a6698850cd89577d28201ff1ac443bb339d2b/java-libpst-0.9.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.github.junrar/junrar/7.4.0/32b270b684cc6c7028574edd5fce0f491b06854b/junrar-7.4.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.4/5f3828d3a345ff3d8acb83f07ba04eccf59e15bb/jaxb-runtime-2.3.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/8dfb9facd0830a27b1b5f29f84593f0aeee7773b/commons-exec-1.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.opennlp/opennlp-tools/1.9.3/7c54b10c830af892c1d6bbbd6f1bcf1bec07bff7/opennlp-tools-1.9.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1.1/c9ad4a0850ab676c5c64461a05ca524cdfff59f1/json-simple-1.1.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.github.openjson/openjson/1.0.12/9c0663c10b48a889709a2d125580a3f22b975769/openjson-1.0.12.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.7/69d9503ea0a40ee16f0bcdac7e3eaf83d0fa914a/gson-2.8.7.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/30.1.1-jre/87e0fd1df874ea3cbe577702fe6f17068b790fd8/guava-30.1.1-jre.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/edu.ucar/udunits/4.5.5/d8c8d65ade13666eedcf764889c69321c247f153/udunits-4.5.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/net.jcip/jcip-annotations/1.0/afba4942caaeaf46aab0b976afd57cc7c181467e/jcip-annotations-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.81/9ca9dd27bb28e5990ad01aec5bb2989f50b6ff3e/jcommander-1.81.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.8.0/3551d8d827e54858214107541d3aff9c615cb615/jna-5.8.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.15.6/4df376ae24f58c1c0e44911d2bf2d3a3f41cf1e8/protobuf-java-3.15.6.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.mchange/c3p0/0.9.5.5/37dfc3021e5589d65ff2ae0becf811510b87ab01/c3p0-0.9.5.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-csv/1.8/37ca9a9aa2d4be2599e55506a6d3170dd7a3df4/commons-csv-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.sis.storage/sis-netcdf/1.0/aa181ec5975feaebb38bfaeef295550bdec48bde/sis-netcdf-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.sis.storage/sis-storage/1.0/7604108ad33b9c0d70b90518a265b9bacc37c4c6/sis-storage-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-feature/1.0/4178a349ce0c14bc442d97ed43c13a9f6b6b53e8/sis-feature-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-referencing/1.0/cc09bc1cc25222a47660e3a217762fa8b4c66f36/sis-referencing-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-metadata/1.0/8a31d969f98a539cc35ef86b1b7f28d364792393/sis-metadata-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-utility/1.0/37f59318fa1e5093f5131abf6e5ee8be0ebdb214/sis-utility-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.opengis/geoapi/3.0.1/a69b261841b0794b82b8d42fcd6e9a370eb62809/geoapi-3.0.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/edu.usc.ir/sentiment-analysis-parser/0.1/20d1524a1270c1d26e3314d2ee71a12e6a29a27d/sentiment-analysis-parser-0.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.12.3/7275513412694a1aafd08c0287f48469fa0e6e17/jackson-annotations-2.12.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.12.3/d6153f8fc60c479ab0f9efb35c034526436a4953/jackson-databind-2.12.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.12.3/deb23fe2a7f2b773e18ced2b50d4acc1df8fa366/jackson-core-2.12.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/jbig2-imageio/3.0.3/1719861ff0b86162c5b391fb4d1084c05ff72b35/jbig2-imageio-3.0.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.github.jai-imageio/jai-imageio-core/1.4.0/fb6d79b929556362a241b2f65a04e538062f0077/jai-imageio-core-1.4.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.15/da94dd78a0bdddcbc68107464632ecc7a61039a1/ant-1.9.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.4/c51c00206bb913cd8612b24abd9fa98ae89719b1/commons-cli-1.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/info.picocli/picocli/4.3.2/37a9ed41f7a028611775b6e8ad831e3e5fcd6280/picocli-4.3.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.thoughtworks.qdox/qdox/1.12.1/f7122f6ab1f64bdf9f5970b0e89bfb355e036897/qdox-1.12.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/jline/jline/2.14.6/c3aeac59c022bdc497c8c48ed86fa50450e4896a/jline-2.14.6.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.1/cdd00374f1fee76b11e2a9d127405aa3f6be5b6a/junit-4.13.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.4.2/665d1c0daecb26c6210c872768000b417e7e52b6/junit-jupiter-api-5.4.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.4.2/7e6121cc7a1330182a81f8e7d3c6f0d227c43999/junit-platform-launcher-1.4.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.codehaus.woodstox/stax2-api/4.2.1/a3f7325c52240418c2ba257b103c3c550e140c83/stax2-api-4.2.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/fontbox/2.0.24/df8ecb3006dfcd52355a5902096e5ec34f06112e/fontbox-2.0.24.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.tallison.xmp/xmpcore-shaded/6.1.11/90693147097d4c73fc983c327da478c141047d5a/xmpcore-shaded-6.1.11.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/48e3b9cfc10752fba3521d6511f4165bea951801/jakarta.xml.bind-api-2.3.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.4/257fa649d3137a1060d222aefb96b7d1dd5f1286/txw2-2.3.4.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.12/cbbe1a62b0cc6c85972e99d52aaee350153dc530/istack-commons-runtime-3.0.12.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.8.0/6b83e4a33220272c3a08991498ba9dc09519f190/checker-qual-3.8.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.5.1/562d366678b89ce5d6b6b82c1a073880341e3fba/error_prone_annotations-2.5.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.itadaki/bzip2/0.9.1/47ca95f71e3ccae756c4a24354d48069c58f475c/bzip2-0.9.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.13/853b96d3afbb7bf8cc303fe27ee96836a10c1834/httpcore-4.4.13.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.2/a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d/joda-time-2.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/com.mchange/mchange-commons-java/0.2.19/7a4bee38ea02bd7dee776869b19fb3f6861d6acf/mchange-commons-java-0.2.19.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/javax.measure/unit-api/1.0/6b960260278588d7ff02fe376e5aad39a9c7440b/unit-api-1.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.15/8d145ef52e7a105dd527160a6381aeabca3c7eb3/ant-launcher-1.9.15.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.4.2/52b70561f65bb397b054876f2d8c6f30b06c3581/junit-platform-engine-1.4.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.1/efd9f971e91074491ea55b19f67b13470cf4fcdd/opentest4j-1.1.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.apache.ws.xmlschema/xmlschema-core/2.2.5/789b4ad32ad7ff021c7731fa43d324c0ce8105f2/xmlschema-core-2.2.5.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/1dcb770bce80a490dff49729b99c7a60e9ecb122/jakarta.ws.rs-api-2.1.6.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/99f53adba383cb1bf7c3862844488574b559621f/jakarta.activation-api-1.2.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/bonham36/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.4.2/37993dc807ca253aa347be8968a0ae7b70642dbc/junit-platform-commons-1.4.2.jar</AuxClasspathEntry>
-    <SrcDir>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/resources</SrcDir>
-    <SrcDir>/Users/bonham36/School/CS 350/Group Project/Thursday 4 Group Project/semester-project-website-analysis-thursday-4/src/main/java</SrcDir>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Resource.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$2.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/LinkExtraction.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$1.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/errorMessages.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Image.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocumentBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceKind.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$3.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteAnalysisDriver.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportWriter.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Locality.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocument.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor$LinkType.class</Jar>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.tika/tika-parsers/1.27/269e021ed326239fd8f62e3ff85f4b4e8dbd6ec9/tika-parsers-1.27.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.16.1/ae551410a16433984cd4a8603622fafa9d8299f0/jsoup-1.16.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.cedarsoftware/json-io/4.14.0/a30d7145c4ffc3ac1a6356c47bb645f7850fc577/json-io-4.14.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml/5.2.3/2efd11c940adb18c03eb9ce7ad88fc40ee6a196/poi-ooxml-5.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-scratchpad/4.1.2/1be379e91d3d3fb0cd11425451acdbfb0d2264e7/poi-scratchpad-4.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/5.2.3/2fb22ae74ad5aea6af1a9c64b9542f2ccf348604/poi-5.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.json/json/20210307/528c8df3757e8bcf151817b1d7b9b434f6aa08d5/json-20210307.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.tika/tika-core/1.27/79ad0f72558b8fbce947147959e2faff8b7b70a/tika-core-1.27.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-ant/2.5.15/f764b03a1df8a1219f0b20a3534d32dcc1cb943d/groovy-ant-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-cli-commons/2.5.15/edeece58606057f5d21bffb661406d40fddd33e9/groovy-cli-commons-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-groovysh/2.5.15/7dee45976e93d81083d80627c0ec1469639f6064/groovy-groovysh-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-console/2.5.15/1c4283b38235e968981a8aee1d7701ba1fdaf226/groovy-console-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-docgenerator/2.5.15/ad171ccbbc03843fd762bcdc16962cf5a1bd083f/groovy-docgenerator-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-groovydoc/2.5.15/c9bb0309bc530362fc44d6b7ea21af6b50c455b1/groovy-groovydoc-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-cli-picocli/2.5.15/80845f6b88530e2fb5c134ba09fefc40929f7db9/groovy-cli-picocli-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-datetime/2.5.15/6545cfdc948723fee93199e029e22fd3ee16a978/groovy-datetime-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-jmx/2.5.15/53b412c77d77cd574ccfa084bdd4edafc6c0a334/groovy-jmx-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-json/2.5.15/c8c0a74e4bc2ea905fd205ddbc8749dc27354023/groovy-json-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-jsr223/2.5.15/334c80e5e46c0b996e4702fffb1993f1f2f3685/groovy-jsr223-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-macro/2.5.15/58026ee80467293a16e17914ed1213a8a92c753c/groovy-macro-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-nio/2.5.15/1c7fbf1357a7096317edb82cef18448dc2ad3011/groovy-nio-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-servlet/2.5.15/8c4e2be4db42b3dced4ee15478cc20a83d92eb52/groovy-servlet-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-sql/2.5.15/e6a31240e32531a817117fa2707d7bcc489c97a2/groovy-sql-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-swing/2.5.15/d51244ffda83e9f99bdc6c04fa4a1f4ee2769960/groovy-swing-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-templates/2.5.15/90ee5725fb83df9d7285fc0afb91044198b6d5d2/groovy-templates-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-test/2.5.15/cc8794a3050b75d0855f3cfd33463ea755ed69ed/groovy-test-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-test-junit5/2.5.15/845d5bd5736547b0a47851a994416965e98ab156/groovy-test-junit5-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-testng/2.5.15/4345d9f1e138e544cd7ca73fb7aa8829ec0c113e/groovy-testng-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-xml/2.5.15/22ca743c5f536f3e6e4cb88d4fe81ae5048ced8f/groovy-xml-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.5.15/85c14d7031ae2bfd1d0bbed513ebddcc3a530633/groovy-2.5.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/edu.ucar/netcdf4/4.5.5/675d63ecc857c50dd50858011b670160aa30b62/netcdf4-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/edu.ucar/grib/4.5.5/cfe552910e9a8d57ce71134796abb281a74ead16/grib-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/edu.ucar/cdm/4.5.5/af1748a3d024069cb7fd3fc2591efe806c914589/cdm-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/edu.ucar/httpservices/4.5.5/ee5f217be599e5e03f7f0e55e03f9e721a154f62/httpservices-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.13/efc110bad4a0d45cda7858e6beee1d8a8313da5a/httpmime-4.5.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.6.1/e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf/commons-math3-3.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.zaxxer/SparseBitSet/1.2/8467c813d442837fcaeddbc42cf5c5359fab4933/SparseBitSet-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-lite/5.2.3/db113c8e9051b0ff967f4911fa20336c8325a7c5/poi-ooxml-lite-5.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/5.1.1/48a369df0eccb509d46203104e4df9cb00f0f68b/xmlbeans-5.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.18.0/c72ad9b1d8d42e4ea7befd8248bf05877af4c63d/log4j-api-2.18.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.07/863654849995f9d4f0ed2ed1a3870da3a108473c/curvesapi-1.07.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.tallison/jmatio/1.5/517d932cc87a3b564f3f7a07ac347b725b619ab4/jmatio-1.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.epam/parso/2.0.14/a02ea1b198c410a105d261efd2d7043739aecd8e/parso-2.0.14.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.tallison/isoparser/1.9.41.7/97c87c0ab2c435e16380e6377bbe0c819f7eb9a1/isoparser-1.9.41.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.rometools/rome/1.15.0/d3614542b857eccc0555d1ee8dfc36d2043d9c1f/rome-1.15.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.30/d58bebff8cbf70ff52b59208586095f467656c30/jul-to-slf4j-1.7.30.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.30/cd92524ea19d27e5b94ecd251e1af729cffdfe15/jcl-over-slf4j-1.7.30.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.quartz-scheduler/quartz/2.3.2/18a6d6b5a40b77bd060b34cb9f2acadc4bae7c8a/quartz-2.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.rometools/rome-utils/1.15.0/ab1cb95382bf9a8dec81165d328bcbbf1acfb3ae/rome-utils-1.15.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/net.sf.ehcache/ehcache-core/2.6.2/3baecd92015a9f8fe4cf51c8b5d3a5bddcdd3e86/ehcache-core-2.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP-java7/2.4.13/3e441eddedb374d4de8e3abbb0c90997f51cc97b/HikariCP-java7-2.4.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.12.1/3a206b25679f598a03374afd4e0410d8849b088b/xercesImpl-2.12.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-rs-client/3.4.4/191bd58a8b9b2114b5b46450539a46e166293bd2/cxf-rt-rs-client-3.4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-frontend-jaxrs/3.4.4/bd3d388e7d6ef45892b7b2854cc7394f70e0d036/cxf-rt-frontend-jaxrs-3.4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-transports-http/3.4.4/36ef2095972eaa38c42d37b29d56ab5c33b11016/cxf-rt-transports-http-3.4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-security/3.4.4/f00c33579f8a46e556d2e12f4da20f0cbe81648e/cxf-rt-security-3.4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.cxf/cxf-core/3.4.4/9f0ffe973fea0125afb1308ef1a09034ef46b3f3/cxf-core-3.4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.fasterxml.woodstox/woodstox-core/6.2.6/d4a055af5dcadea8d1bded5b64bc7be5bb7fea95/woodstox-core-6.2.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/59eb84ee0d616332ff44aba065f3888cf002cd2d/jakarta.annotation-api-1.3.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.gagravarr/vorbis-java-tika/0.8/4ddbb27ac5884a0f0398a63d46a89d3bc87dc457/vorbis-java-tika-0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.james/apache-mime4j-dom/0.8.4/dfdfdbc095017ffbaef308e80ff7ca53b1a6ff08/apache-mime4j-dom-0.8.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.james/apache-mime4j-core/0.8.4/a7e552628c6587bdd1e2036045f1e06c4d513e32/apache-mime4j-core-0.8.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.googlecode.plist/dd-plist/1.23/f522894abd90d6f5a15e9586e625407a7d50e80d/dd-plist-1.23.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.tukaani/xz/1.9/1ea4bec1a921180164852c65006d928617bd2caf/xz-1.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.brotli/dec/0.1.2/c26a897ae0d524809eef1c786cc6183b4ddcc3b/dec-0.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/preflight/2.0.24/6febe7d08b98f199b1f2f81fd3e94e23b08d36dc/preflight-2.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/pdfbox/2.0.24/cb562ee5f43e29415af4477e62fbe668ef88d18b/pdfbox-2.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/pdfbox-tools/2.0.24/3c6e9b46d496fed56423db517fccc4e60d4ea105/pdfbox-tools-2.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/jempbox/1.8.16/1f41de81768ef84ca2d8cda4cb79e9272c8ee966/jempbox-1.8.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/xmpbox/2.0.24/df8b7a6a363281f9f1365ed4b37580aa5d3f38f1/xmpbox-2.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcmail-jdk15on/1.69/759f9233ac99a576e4963bd09b0f830a2716d2ec/bcmail-jdk15on-1.69.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.69/45c36fb72fafb0b688c6af795e6cc803f6f79ee5/bcpkix-jdk15on-1.69.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcutil-jdk15on/1.69/c3edf93d346e97f64f041e448e7455c39c7eff64/bcutil-jdk15on-1.69.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.69/91e1628251cf3ca90093ce9d0fe67e5b7dab3850/bcprov-jdk15on-1.69.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.healthmarketscience.jackcess/jackcess/4.0.1/e9953ac607c1d85647d6bc364579a871ef069441/jackcess-4.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.healthmarketscience.jackcess/jackcess-encrypt/4.0.1/2fbb076c291767197b5b8202bfebdcd4b4a7199e/jackcess-encrypt-4.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.ccil.cowan.tagsoup/tagsoup/1.2.1/5584627487e984c03456266d3f8802eb85a9ce97/tagsoup-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.2/81a03f76019c67362299c40e0ba13405f5467bff/asm-9.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.tallison/metadata-extractor/2.15.0.1/a50bdbe87196f314917c2dc94f70622b8cf93e56/metadata-extractor-2.15.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/de.l3s.boilerpipe/boilerpipe/1.1.0/f62cb75ed52455a9e68d1d05b84c500673340eb2/boilerpipe-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.gagravarr/vorbis-java-core/0.8/7e9937c2575cda2e3fc116415117c74f23e43fa6/vorbis-java-core-0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codelibs/jhighlight/1.0.3/88831dce3d56aa53a1bfcba78518e8939b8d4779/jhighlight-1.0.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.pff/java-libpst/0.9.3/928a6698850cd89577d28201ff1ac443bb339d2b/java-libpst-0.9.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.github.junrar/junrar/7.4.0/32b270b684cc6c7028574edd5fce0f491b06854b/junrar-7.4.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.4/5f3828d3a345ff3d8acb83f07ba04eccf59e15bb/jaxb-runtime-2.3.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/8dfb9facd0830a27b1b5f29f84593f0aeee7773b/commons-exec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.opennlp/opennlp-tools/1.9.3/7c54b10c830af892c1d6bbbd6f1bcf1bec07bff7/opennlp-tools-1.9.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.googlecode.json-simple/json-simple/1.1.1/c9ad4a0850ab676c5c64461a05ca524cdfff59f1/json-simple-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.github.openjson/openjson/1.0.12/9c0663c10b48a889709a2d125580a3f22b975769/openjson-1.0.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.7/69d9503ea0a40ee16f0bcdac7e3eaf83d0fa914a/gson-2.8.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/30.1.1-jre/87e0fd1df874ea3cbe577702fe6f17068b790fd8/guava-30.1.1-jre.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/edu.ucar/udunits/4.5.5/d8c8d65ade13666eedcf764889c69321c247f153/udunits-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/net.jcip/jcip-annotations/1.0/afba4942caaeaf46aab0b976afd57cc7c181467e/jcip-annotations-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.81/9ca9dd27bb28e5990ad01aec5bb2989f50b6ff3e/jcommander-1.81.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.8.0/3551d8d827e54858214107541d3aff9c615cb615/jna-5.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.15.6/4df376ae24f58c1c0e44911d2bf2d3a3f41cf1e8/protobuf-java-3.15.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.mchange/c3p0/0.9.5.5/37dfc3021e5589d65ff2ae0becf811510b87ab01/c3p0-0.9.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-csv/1.8/37ca9a9aa2d4be2599e55506a6d3170dd7a3df4/commons-csv-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.sis.storage/sis-netcdf/1.0/aa181ec5975feaebb38bfaeef295550bdec48bde/sis-netcdf-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.sis.storage/sis-storage/1.0/7604108ad33b9c0d70b90518a265b9bacc37c4c6/sis-storage-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-feature/1.0/4178a349ce0c14bc442d97ed43c13a9f6b6b53e8/sis-feature-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-referencing/1.0/cc09bc1cc25222a47660e3a217762fa8b4c66f36/sis-referencing-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-metadata/1.0/8a31d969f98a539cc35ef86b1b7f28d364792393/sis-metadata-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.sis.core/sis-utility/1.0/37f59318fa1e5093f5131abf6e5ee8be0ebdb214/sis-utility-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.opengis/geoapi/3.0.1/a69b261841b0794b82b8d42fcd6e9a370eb62809/geoapi-3.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/edu.usc.ir/sentiment-analysis-parser/0.1/20d1524a1270c1d26e3314d2ee71a12e6a29a27d/sentiment-analysis-parser-0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.12.3/7275513412694a1aafd08c0287f48469fa0e6e17/jackson-annotations-2.12.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.12.3/d6153f8fc60c479ab0f9efb35c034526436a4953/jackson-databind-2.12.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.12.3/deb23fe2a7f2b773e18ced2b50d4acc1df8fa366/jackson-core-2.12.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/jbig2-imageio/3.0.3/1719861ff0b86162c5b391fb4d1084c05ff72b35/jbig2-imageio-3.0.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.github.jai-imageio/jai-imageio-core/1.4.0/fb6d79b929556362a241b2f65a04e538062f0077/jai-imageio-core-1.4.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.15/da94dd78a0bdddcbc68107464632ecc7a61039a1/ant-1.9.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.4/c51c00206bb913cd8612b24abd9fa98ae89719b1/commons-cli-1.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/info.picocli/picocli/4.3.2/37a9ed41f7a028611775b6e8ad831e3e5fcd6280/picocli-4.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.thoughtworks.qdox/qdox/1.12.1/f7122f6ab1f64bdf9f5970b0e89bfb355e036897/qdox-1.12.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/jline/jline/2.14.6/c3aeac59c022bdc497c8c48ed86fa50450e4896a/jline-2.14.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.1/cdd00374f1fee76b11e2a9d127405aa3f6be5b6a/junit-4.13.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.4.2/665d1c0daecb26c6210c872768000b417e7e52b6/junit-jupiter-api-5.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.4.2/7e6121cc7a1330182a81f8e7d3c6f0d227c43999/junit-platform-launcher-1.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.woodstox/stax2-api/4.2.1/a3f7325c52240418c2ba257b103c3c550e140c83/stax2-api-4.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.pdfbox/fontbox/2.0.24/df8ecb3006dfcd52355a5902096e5ec34f06112e/fontbox-2.0.24.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.tallison.xmp/xmpcore-shaded/6.1.11/90693147097d4c73fc983c327da478c141047d5a/xmpcore-shaded-6.1.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/48e3b9cfc10752fba3521d6511f4165bea951801/jakarta.xml.bind-api-2.3.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.4/257fa649d3137a1060d222aefb96b7d1dd5f1286/txw2-2.3.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.12/cbbe1a62b0cc6c85972e99d52aaee350153dc530/istack-commons-runtime-3.0.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.8.0/6b83e4a33220272c3a08991498ba9dc09519f190/checker-qual-3.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.5.1/562d366678b89ce5d6b6b82c1a073880341e3fba/error_prone_annotations-2.5.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.itadaki/bzip2/0.9.1/47ca95f71e3ccae756c4a24354d48069c58f475c/bzip2-0.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.13/853b96d3afbb7bf8cc303fe27ee96836a10c1834/httpcore-4.4.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.2/a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d/joda-time-2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.mchange/mchange-commons-java/0.2.19/7a4bee38ea02bd7dee776869b19fb3f6861d6acf/mchange-commons-java-0.2.19.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/javax.measure/unit-api/1.0/6b960260278588d7ff02fe376e5aad39a9c7440b/unit-api-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.15/8d145ef52e7a105dd527160a6381aeabca3c7eb3/ant-launcher-1.9.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.4.2/52b70561f65bb397b054876f2d8c6f30b06c3581/junit-platform-engine-1.4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.1/efd9f971e91074491ea55b19f67b13470cf4fcdd/opentest4j-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.ws.xmlschema/xmlschema-core/2.2.5/789b4ad32ad7ff021c7731fa43d324c0ce8105f2/xmlschema-core-2.2.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/1dcb770bce80a490dff49729b99c7a60e9ecb122/jakarta.ws.rs-api-2.1.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/99f53adba383cb1bf7c3862844488574b559621f/jakarta.activation-api-1.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.4.2/37993dc807ca253aa347be8968a0ae7b70642dbc/junit-platform-commons-1.4.2.jar</AuxClasspathEntry>
+    <SrcDir>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/resources</SrcDir>
+    <SrcDir>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java</SrcDir>
   </Project>
   <BugInstance type="UWF_UNWRITTEN_FIELD" priority="2" rank="12" abbrev="UwF" category="CORRECTNESS" instanceHash="ca505fb9469b2b91d7c4b895f998ff07" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
     <ShortMessage>Unwritten field</ShortMessage>
@@ -539,14 +539,14 @@
       <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.withBaseURLs(Collection)</Message>
     </Method>
     <Type descriptor="Ljava/util/Collection;" role="TYPE_FOUND" typeParameters="&lt;java.net.URL&gt;">
-      <SourceLine classname="java.util.Collection" start="413" end="764" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
-        <Message>At Collection.java:[lines 413-764]</Message>
+      <SourceLine classname="java.util.Collection" start="381" end="732" sourcefile="Collection.java" sourcepath="java/util/Collection.java">
+        <Message>At Collection.java:[lines 381-732]</Message>
       </SourceLine>
       <Message>Actual type java.util.Collection&lt;java.net.URL&gt;</Message>
     </Type>
     <Type descriptor="Ljava/util/List;" role="TYPE_EXPECTED">
-      <SourceLine classname="java.util.List" start="441" end="1068" sourcefile="List.java" sourcepath="java/util/List.java">
-        <Message>At List.java:[lines 441-1068]</Message>
+      <SourceLine classname="java.util.List" start="437" end="1061" sourcefile="List.java" sourcepath="java/util/List.java">
+        <Message>At List.java:[lines 437-1061]</Message>
       </SourceLine>
       <Message>Expected java.util.List</Message>
     </Type>
@@ -828,7 +828,7 @@
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</Message>
     </Method>
     <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
-      <SourceLine classname="java.io.File" start="1029" end="1034" startBytecode="0" endBytecode="126" sourcefile="File.java" sourcepath="java/io/File.java"/>
+      <SourceLine classname="java.io.File" start="1030" end="1035" startBytecode="0" endBytecode="126" sourcefile="File.java" sourcepath="java/io/File.java"/>
       <Message>Called method java.io.File.createNewFile()</Message>
     </Method>
     <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="100" end="100" startBytecode="25" endBytecode="25" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
@@ -849,7 +849,7 @@
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Map)</Message>
     </Method>
     <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
-      <SourceLine classname="java.io.File" start="1390" end="1404" startBytecode="0" endBytecode="230" sourcefile="File.java" sourcepath="java/io/File.java"/>
+      <SourceLine classname="java.io.File" start="1391" end="1405" startBytecode="0" endBytecode="230" sourcefile="File.java" sourcepath="java/io/File.java"/>
       <Message>Called method java.io.File.mkdirs()</Message>
     </Method>
     <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="99" end="99" startBytecode="17" endBytecode="17" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
@@ -1208,7 +1208,7 @@ signals unexpected behavior by returning an atypical return value.
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Tue, 1 Aug 2023 10:01:48 -0400" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="16.0.2" vm_version="16.0.2+7" cpu_seconds="28.33" clock_seconds="10.30" peak_mbytes="479.07" alloc_mbytes="16384.00" gc_seconds="0.03" priority_2="33" priority_1="3">
+  <FindBugsSummary timestamp="Tue, 1 Aug 2023 15:36:50 +0000" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="13.04" clock_seconds="12.07" peak_mbytes="195.50" alloc_mbytes="1734.00" gc_seconds="0.26" priority_2="33" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="7bb6a050e368016a87a8b5ee644496ee"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="1bde7cd05569888885c515f81749d16b"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
