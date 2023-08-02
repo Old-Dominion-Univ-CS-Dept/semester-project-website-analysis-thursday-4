@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1690978058392" analysisTimestamp="1690978058392" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1690983619090" analysisTimestamp="1690983619090" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportManager.class</Jar>
@@ -11,6 +11,7 @@
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$1.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/errorMessages.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Script.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Image.class</Jar>
@@ -21,6 +22,7 @@
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteAnalysisDriver.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Stylesheet.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportWriter.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Locality.class</Jar>
@@ -530,8 +532,8 @@
     <ShortMessage>Questionable cast to abstract collection</ShortMessage>
     <LongMessage>Questionable cast from Collection to abstract class java.util.List in edu.odu.cs.cs350.HTMLDocumentBuilder.withBaseURLs(Collection)</LongMessage>
     <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="466" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+        <Message>At HTMLDocumentBuilder.java:[lines 52-466]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
     </Class>
@@ -558,86 +560,17 @@
       <Message>At HTMLDocumentBuilder.java:[line 109]</Message>
     </SourceLine>
   </BugInstance>
-  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="22f81bd6677836c9a471c787d23c7ac4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
-    <ShortMessage>Dead store to local variable</ShortMessage>
-    <LongMessage>Dead store to extractedStrings in edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()</LongMessage>
-    <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
-      </SourceLine>
-      <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
-    </Class>
-    <Method classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="extractAnchors" signature="()Ljava/util/List;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="121" end="124" startBytecode="0" endBytecode="13" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
-      <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()</Message>
-    </Method>
-    <LocalVariable name="extractedStrings" register="2" pc="21" role="LOCAL_VARIABLE_NAMED">
-      <Message>Local variable named extractedStrings</Message>
-    </LocalVariable>
-    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="122" end="122" startBytecode="20" endBytecode="20" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-      <Message>At HTMLDocumentBuilder.java:[line 122]</Message>
-    </SourceLine>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="extractedStrings"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
-  </BugInstance>
-  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="f8153c55206eafe267701a0a092ce5ef" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
-    <ShortMessage>Dead store to local variable</ShortMessage>
-    <LongMessage>Dead store to extractedStrings in edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts()</LongMessage>
-    <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
-      </SourceLine>
-      <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
-    </Class>
-    <Method classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="extractScripts" signature="()Ljava/util/List;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="180" end="183" startBytecode="0" endBytecode="13" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
-      <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts()</Message>
-    </Method>
-    <LocalVariable name="extractedStrings" register="2" pc="21" role="LOCAL_VARIABLE_NAMED">
-      <Message>Local variable named extractedStrings</Message>
-    </LocalVariable>
-    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="181" end="181" startBytecode="20" endBytecode="20" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-      <Message>At HTMLDocumentBuilder.java:[line 181]</Message>
-    </SourceLine>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="extractedStrings"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
-  </BugInstance>
-  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" instanceHash="443abef759c59fd368d8c4ddc5c2c614" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
-    <ShortMessage>Dead store to local variable</ShortMessage>
-    <LongMessage>Dead store to extractedStrings in edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets()</LongMessage>
-    <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
-      </SourceLine>
-      <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
-    </Class>
-    <Method classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="extractStylesheets" signature="()Ljava/util/List;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="195" end="198" startBytecode="0" endBytecode="13" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
-      <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets()</Message>
-    </Method>
-    <LocalVariable name="extractedStrings" register="2" pc="21" role="LOCAL_VARIABLE_NAMED">
-      <Message>Local variable named extractedStrings</Message>
-    </LocalVariable>
-    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="196" end="196" startBytecode="20" endBytecode="20" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-      <Message>At HTMLDocumentBuilder.java:[line 196]</Message>
-    </SourceLine>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="extractedStrings"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
-    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
-  </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="279fa406d65d8d2ff2d194087eb4f6bb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors() may expose internal representation by returning HTMLDocumentBuilder.anchors</LongMessage>
     <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="466" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+        <Message>At HTMLDocumentBuilder.java:[lines 52-466]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="extractAnchors" signature="()Ljava/util/List;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="121" end="124" startBytecode="0" endBytecode="113" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="121" end="153" startBytecode="0" endBytecode="481" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
       <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractAnchors()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="anchors" signature="Ljava/util/List;" isStatic="false" primary="true">
@@ -646,21 +579,21 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.HTMLDocumentBuilder.anchors</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="124" end="124" startBytecode="25" endBytecode="25" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-      <Message>At HTMLDocumentBuilder.java:[line 124]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="153" end="153" startBytecode="191" endBytecode="191" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+      <Message>At HTMLDocumentBuilder.java:[line 153]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4c1c3da6fefbecfba04053b3304e8966" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.HTMLDocumentBuilder.extractImages() may expose internal representation by returning HTMLDocumentBuilder.images</LongMessage>
     <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="466" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+        <Message>At HTMLDocumentBuilder.java:[lines 52-466]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="extractImages" signature="()Ljava/util/List;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="136" end="168" startBytecode="0" endBytecode="481" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="165" end="197" startBytecode="0" endBytecode="481" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
       <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractImages()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="images" signature="Ljava/util/List;" isStatic="false" primary="true">
@@ -669,21 +602,21 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.HTMLDocumentBuilder.images</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="168" end="168" startBytecode="191" endBytecode="191" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-      <Message>At HTMLDocumentBuilder.java:[line 168]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="197" end="197" startBytecode="191" endBytecode="191" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+      <Message>At HTMLDocumentBuilder.java:[line 197]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="4099d8e16182f5e2d83a87645b962da5" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts() may expose internal representation by returning HTMLDocumentBuilder.scripts</LongMessage>
     <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="466" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+        <Message>At HTMLDocumentBuilder.java:[lines 52-466]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="extractScripts" signature="()Ljava/util/List;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="180" end="183" startBytecode="0" endBytecode="113" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="209" end="241" startBytecode="0" endBytecode="481" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
       <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractScripts()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="scripts" signature="Ljava/util/List;" isStatic="false" primary="true">
@@ -692,21 +625,21 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.HTMLDocumentBuilder.scripts</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="183" end="183" startBytecode="25" endBytecode="25" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-      <Message>At HTMLDocumentBuilder.java:[line 183]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="241" end="241" startBytecode="191" endBytecode="191" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+      <Message>At HTMLDocumentBuilder.java:[line 241]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="7e4148aaf43ac988e78c81e4410ed42" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets() may expose internal representation by returning HTMLDocumentBuilder.stylesheets</LongMessage>
     <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="466" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+        <Message>At HTMLDocumentBuilder.java:[lines 52-466]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="extractStylesheets" signature="()Ljava/util/List;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="195" end="198" startBytecode="0" endBytecode="113" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="253" end="285" startBytecode="0" endBytecode="481" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java"/>
       <Message>In method edu.odu.cs.cs350.HTMLDocumentBuilder.extractStylesheets()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.HTMLDocumentBuilder" name="stylesheets" signature="Ljava/util/List;" isStatic="false" primary="true">
@@ -715,16 +648,16 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.HTMLDocumentBuilder.stylesheets</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="198" end="198" startBytecode="25" endBytecode="25" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-      <Message>At HTMLDocumentBuilder.java:[line 198]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true" start="285" end="285" startBytecode="191" endBytecode="191" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+      <Message>At HTMLDocumentBuilder.java:[line 285]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="6dbe3f85df02287ca41e708763a2976a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.HTMLDocumentBuilder.withBaseURLs(Collection) may expose internal representation by storing an externally mutable object into HTMLDocumentBuilder.baseUrls</LongMessage>
     <Class classname="edu.odu.cs.cs350.HTMLDocumentBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="374" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
-        <Message>At HTMLDocumentBuilder.java:[lines 52-374]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.HTMLDocumentBuilder" start="52" end="466" sourcefile="HTMLDocumentBuilder.java" sourcepath="edu/odu/cs/cs350/HTMLDocumentBuilder.java" relSourcepath="java/edu/odu/cs/cs350/HTMLDocumentBuilder.java">
+        <Message>At HTMLDocumentBuilder.java:[lines 52-466]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.HTMLDocumentBuilder</Message>
     </Class>
@@ -1181,24 +1114,6 @@
   <BugCategory category="I18N">
     <Description>Internationalization</Description>
   </BugCategory>
-  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
-    <ShortDescription>Dead store to local variable</ShortDescription>
-    <Details><![CDATA[
-
-<p>
-This instruction assigns a value to a local variable,
-but the value is not read or used in any subsequent instruction.
-Often, this indicates an error, because the value computed is never
-used.
-</p>
-<p>
-Note that Sun's javac compiler often generates dead stores for
-final local variables. Because SpotBugs is a bytecode-based tool,
-there is no easy way to eliminate these false positives.
-</p>
-
-    ]]></Details>
-  </BugPattern>
   <BugPattern type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" abbrev="UrF" category="STYLE">
     <ShortDescription>Unread public/protected field</ShortDescription>
     <Details><![CDATA[
@@ -1349,9 +1264,6 @@ signals unexpected behavior by returning an atypical return value.
   <BugCode abbrev="Dm">
     <Description>Dubious method used</Description>
   </BugCode>
-  <BugCode abbrev="DLS" cweid="563">
-    <Description>Dead local store</Description>
-  </BugCode>
   <BugCode abbrev="EI2">
     <Description>Storing reference to mutable object</Description>
   </BugCode>
@@ -1359,11 +1271,11 @@ signals unexpected behavior by returning an atypical return value.
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Wed, 2 Aug 2023 12:07:38 +0000" total_classes="0" referenced_classes="0" total_bugs="42" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="9.12" clock_seconds="8.45" peak_mbytes="202.27" alloc_mbytes="1734.00" gc_seconds="0.18" priority_2="39" priority_1="3">
+  <FindBugsSummary timestamp="Wed, 2 Aug 2023 13:40:19 +0000" total_classes="0" referenced_classes="0" total_bugs="39" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="9.53" clock_seconds="8.73" peak_mbytes="204.48" alloc_mbytes="1734.00" gc_seconds="0.22" priority_2="36" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="96cdc67bb690db4cc3dd7b80afbe276f"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="e99242b9915fa85df09c40646c1ffa24"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
-    <FileStats path="edu/odu/cs/cs350/HTMLDocumentBuilder.java" bugCount="9" size="0" bugHash="5a2dd37a6faf21de1717bb854ff86476"/>
+    <FileStats path="edu/odu/cs/cs350/HTMLDocumentBuilder.java" bugCount="6" size="0" bugHash="7bce60a3bd7c66a3f01bcbf1b7c0ef03"/>
     <FileStats path="edu/odu/cs/cs350/JSONReportWriter.java" bugCount="5" size="0" bugHash="3a7b1a209a13735fc3ba219a57387d27"/>
     <FileStats path="edu/odu/cs/cs350/LinkExtraction.java" bugCount="1" size="0" bugHash="c1348eb76fd656f2bdd4a2e8e30fffde"/>
     <FileStats path="edu/odu/cs/cs350/ReportManager.java" bugCount="2" size="0" bugHash="5a3934edf405e0d70d3c5a216b24c1e6"/>

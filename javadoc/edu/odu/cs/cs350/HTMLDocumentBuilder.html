@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -276,6 +276,11 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i12" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withBaseURLs(java.util.Collection)">withBaseURLs</a></span>&#8203;(java.util.Collection&lt;java.net.URL&gt;&nbsp;urls)</code></th>
 <td class="colLast">
@@ -283,7 +288,7 @@ extends java.lang.Object</pre>
  normalization and resource classification.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withContentFrom(java.io.BufferedReader)">withContentFrom</a></span>&#8203;(java.io.BufferedReader&nbsp;reader)</code></th>
 <td class="colLast">
@@ -291,7 +296,7 @@ extends java.lang.Object</pre>
  what type of content is being passed in.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withContentFrom(java.io.File)">withContentFrom</a></span>&#8203;(java.io.File&nbsp;file)</code></th>
 <td class="colLast">
@@ -299,7 +304,7 @@ extends java.lang.Object</pre>
  what type of content is being passed in.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="HTMLDocumentBuilder.html" title="class in edu.odu.cs.cs350">HTMLDocumentBuilder</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#withWebsiteBaseDir(java.nio.file.Path)">withWebsiteBaseDir</a></span>&#8203;(java.nio.file.Path&nbsp;siteRoot)</code></th>
 <td class="colLast">
@@ -313,7 +318,7 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -581,7 +586,7 @@ extends java.lang.Object</pre>
 <a id="determineLocalityOfURL(java.lang.String,java.util.List,java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>determineLocalityOfURL</h4>
 <pre class="methodSignature">public&nbsp;<a href="Locality.html" title="enum in edu.odu.cs.cs350">Locality</a>&nbsp;determineLocalityOfURL&#8203;(java.lang.String&nbsp;rawURL,
@@ -594,6 +599,19 @@ extends java.lang.Object</pre>
 <dd><code>rawURL</code> - URL as a string that is being passed in.</dd>
 <dd><code>baseSiteURLs</code> - list of base sites of the URL.</dd>
 <dd><code>urlOfSourceDoc</code> - URL of the source document on disk.</dd>
+</dl>
+</li>
+</ul>
+<a id="toString()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;toString()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

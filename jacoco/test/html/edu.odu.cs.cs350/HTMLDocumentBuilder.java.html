@@ -69,9 +69,9 @@ public class HTMLDocumentBuilder
      */
     public void withContentFrom(BufferedReader reader)
     {
-        //TODO: to be implemented later. 
-<span class="nc" id="L73">        this.readBuffer = reader; </span>
-<span class="nc" id="L74">    }</span>
+        //TODO: finish implementation. 
+<span class="fc" id="L73">        this.readBuffer = reader; </span>
+<span class="fc" id="L74">    }</span>
     
     /**
      * This functions takes in and sets members based on 
@@ -91,8 +91,8 @@ public class HTMLDocumentBuilder
      * @param: a path. 
      */
     public HTMLDocumentBuilder withWebsiteBaseDir(Path siteRoot) {
-<span class="nc" id="L94">        this.baseDirectory = siteRoot;</span>
-<span class="nc" id="L95">        return this;</span>
+<span class="fc" id="L94">        this.baseDirectory = siteRoot;</span>
+<span class="fc" id="L95">        return this;</span>
     }
 
     
@@ -106,8 +106,8 @@ public class HTMLDocumentBuilder
     public void withBaseURLs(Collection&lt;URL&gt; urls)
     {
         //TODO: to be implemented later. 
-<span class="nc" id="L109">        this.baseUrls = (List&lt;URL&gt;) urls; </span>
-<span class="nc" id="L110">    }</span>
+<span class="fc" id="L109">        this.baseUrls = (List&lt;URL&gt;) urls; </span>
+<span class="fc" id="L110">    }</span>
     
     /**
      * Extract all HTML anchor tags. 
@@ -121,7 +121,36 @@ public class HTMLDocumentBuilder
 <span class="nc" id="L121">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;a&quot;, &quot;href&quot;); </span>
 <span class="nc" id="L122">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc" id="L124">        return this.anchors; </span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+        {
+<span class="nc" id="L126">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="nc" id="L127">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+                                                        baseSiteDirectory,  uriAsString); 
+
+<span class="nc" id="L130">            Resource anchor = new Anchor(); </span>
+
+<span class="nc" id="L132">            anchor.setLocation(location); </span>
+
+<span class="nc bnc" id="L134" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+            {
+<span class="nc" id="L136">                anchor.setUrl(new URL(uriAsString)); </span>
+<span class="nc" id="L137">                anchor.setPath(null);</span>
+            }
+            else
+            {
+<span class="nc" id="L141">                anchor.setUrl(null);</span>
+
+<span class="nc" id="L143">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
+<span class="nc" id="L144">                Path convertedPathAsString = Paths.get(pathAsString);  </span>
+<span class="nc" id="L145">                anchor.setPath(convertedPathAsString); </span>
+
+<span class="nc" id="L147">                long fileSizeInKiB = this.determineFileSize(uriAsString); </span>
+<span class="nc" id="L148">                anchor.setSizeOfFile(fileSizeInKiB); </span>
+            }
+<span class="nc" id="L150">            this.anchors.add(anchor); </span>
+<span class="nc" id="L151">        }</span>
+
+<span class="nc" id="L153">        return this.anchors; </span>
     }
     
     /**
@@ -133,39 +162,39 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
         //TODO: finish implementation. 
-<span class="nc" id="L136">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;img&quot;, &quot;src&quot;); </span>
-<span class="nc" id="L137">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="nc" id="L165">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;img&quot;, &quot;src&quot;); </span>
+<span class="nc" id="L166">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
 
-<span class="nc bnc" id="L139" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
         {
-<span class="nc" id="L141">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
-<span class="nc" id="L142">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+<span class="nc" id="L170">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="nc" id="L171">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
                                                         baseSiteDirectory,  uriAsString); 
 
-<span class="nc" id="L145">            Resource image = new Image(); </span>
+<span class="nc" id="L174">            Resource image = new Image(); </span>
 
-<span class="nc" id="L147">            image.setLocation(location); </span>
+<span class="nc" id="L176">            image.setLocation(location); </span>
 
-<span class="nc bnc" id="L149" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+<span class="nc bnc" id="L178" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
             {
-<span class="nc" id="L151">                image.setUrl(new URL(uriAsString)); </span>
-<span class="nc" id="L152">                image.setPath(null);</span>
+<span class="nc" id="L180">                image.setUrl(new URL(uriAsString)); </span>
+<span class="nc" id="L181">                image.setPath(null);</span>
             }
             else
             {
-<span class="nc" id="L156">                image.setUrl(null);</span>
+<span class="nc" id="L185">                image.setUrl(null);</span>
 
-<span class="nc" id="L158">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
-<span class="nc" id="L159">                Path convertedPathAsString = Paths.get(pathAsString);  </span>
-<span class="nc" id="L160">                image.setPath(convertedPathAsString); </span>
+<span class="nc" id="L187">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
+<span class="nc" id="L188">                Path convertedPathAsString = Paths.get(pathAsString);  </span>
+<span class="nc" id="L189">                image.setPath(convertedPathAsString); </span>
 
-<span class="nc" id="L162">                long fileSizeInKiB = this.determineFileSize(uriAsString); </span>
-<span class="nc" id="L163">                image.setSizeOfFile(fileSizeInKiB); </span>
+<span class="nc" id="L191">                long fileSizeInKiB = this.determineFileSize(uriAsString); </span>
+<span class="nc" id="L192">                image.setSizeOfFile(fileSizeInKiB); </span>
             }
-<span class="nc" id="L165">            this.images.add(image); </span>
-<span class="nc" id="L166">        }</span>
+<span class="nc" id="L194">            this.images.add(image); </span>
+<span class="nc" id="L195">        }</span>
 
-<span class="nc" id="L168">        return this.images; </span>
+<span class="nc" id="L197">        return this.images; </span>
     }
     
     /**
@@ -177,10 +206,39 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
       //TODO: finish implementation. 
-<span class="nc" id="L180">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;script&quot;, &quot;src&quot;); </span>
-<span class="nc" id="L181">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="nc" id="L209">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;script&quot;, &quot;src&quot;); </span>
+<span class="nc" id="L210">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc" id="L183">        return this.scripts; </span>
+<span class="nc bnc" id="L212" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+        {
+<span class="nc" id="L214">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="nc" id="L215">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+                                                        baseSiteDirectory,  uriAsString); 
+
+<span class="nc" id="L218">            Resource script = new Script(); </span>
+
+<span class="nc" id="L220">            script.setLocation(location); </span>
+
+<span class="nc bnc" id="L222" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+            {
+<span class="nc" id="L224">                script.setUrl(new URL(uriAsString)); </span>
+<span class="nc" id="L225">                script.setPath(null);</span>
+            }
+            else
+            {
+<span class="nc" id="L229">                script.setUrl(null);</span>
+
+<span class="nc" id="L231">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
+<span class="nc" id="L232">                Path convertedPathAsString = Paths.get(pathAsString);  </span>
+<span class="nc" id="L233">                script.setPath(convertedPathAsString); </span>
+
+<span class="nc" id="L235">                long fileSizeInKiB = this.determineFileSize(uriAsString); </span>
+<span class="nc" id="L236">                script.setSizeOfFile(fileSizeInKiB); </span>
+            }
+<span class="nc" id="L238">            this.scripts.add(script); </span>
+<span class="nc" id="L239">        }</span>
+
+<span class="nc" id="L241">        return this.scripts; </span>
     }
     
     /**
@@ -192,10 +250,39 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
       //TODO: finish implementation. 
-<span class="nc" id="L195">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;link&quot;, &quot;href&quot;); </span>
-<span class="nc" id="L196">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="nc" id="L253">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;link&quot;, &quot;href&quot;); </span>
+<span class="nc" id="L254">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc" id="L198">        return this.stylesheets; </span>
+<span class="nc bnc" id="L256" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+        {
+<span class="nc" id="L258">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="nc" id="L259">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+                                                        baseSiteDirectory,  uriAsString); 
+
+<span class="nc" id="L262">            Resource stylesheet = new Stylesheet(); </span>
+
+<span class="nc" id="L264">            stylesheet.setLocation(location); </span>
+
+<span class="nc bnc" id="L266" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+            {
+<span class="nc" id="L268">                stylesheet.setUrl(new URL(uriAsString)); </span>
+<span class="nc" id="L269">                stylesheet.setPath(null);</span>
+            }
+            else
+            {
+<span class="nc" id="L273">                stylesheet.setUrl(null);</span>
+
+<span class="nc" id="L275">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
+<span class="nc" id="L276">                Path convertedPathAsString = Paths.get(pathAsString);  </span>
+<span class="nc" id="L277">                stylesheet.setPath(convertedPathAsString); </span>
+
+<span class="nc" id="L279">                long fileSizeInKiB = this.determineFileSize(uriAsString); </span>
+<span class="nc" id="L280">                stylesheet.setSizeOfFile(fileSizeInKiB); </span>
+            }
+<span class="nc" id="L282">            this.stylesheets.add(stylesheet); </span>
+<span class="nc" id="L283">        }</span>
+
+<span class="nc" id="L285">        return this.stylesheets; </span>
     }
 
     /**
@@ -204,11 +291,11 @@ public class HTMLDocumentBuilder
     public void extractContent() 
         throws IOException, FileNotFoundException
     {
-<span class="nc" id="L207">        this.extractAnchors(); </span>
-<span class="nc" id="L208">        this.extractImages(); </span>
-<span class="nc" id="L209">        this.extractScripts(); </span>
-<span class="nc" id="L210">        this.extractStylesheets(); </span>
-<span class="nc" id="L211">    }</span>
+<span class="nc" id="L294">        this.extractAnchors(); </span>
+<span class="nc" id="L295">        this.extractImages(); </span>
+<span class="nc" id="L296">        this.extractScripts(); </span>
+<span class="nc" id="L297">        this.extractStylesheets(); </span>
+<span class="nc" id="L298">    }</span>
     
     /**
      * Builds an HTMLDocument object that contains the scripts, stylesheets, 
@@ -219,14 +306,14 @@ public class HTMLDocumentBuilder
      */
     public HTMLDocument build()
     {
-<span class="fc" id="L222">        HTMLDocument htmlDocument = new HTMLDocument(); </span>
+<span class="fc" id="L309">        HTMLDocument htmlDocument = new HTMLDocument(); </span>
         
-<span class="fc" id="L224">        htmlDocument.setAnchors(anchors);</span>
-<span class="fc" id="L225">        htmlDocument.setImages(images);</span>
-<span class="fc" id="L226">        htmlDocument.setScrips(scripts);</span>
-<span class="fc" id="L227">        htmlDocument.setStylesheets(stylesheets);</span>
+<span class="fc" id="L311">        htmlDocument.setAnchors(anchors);</span>
+<span class="fc" id="L312">        htmlDocument.setImages(images);</span>
+<span class="fc" id="L313">        htmlDocument.setScrips(scripts);</span>
+<span class="fc" id="L314">        htmlDocument.setStylesheets(stylesheets);</span>
 
-<span class="fc" id="L229">        return htmlDocument; </span>
+<span class="fc" id="L316">        return htmlDocument; </span>
     }
 
     /**
@@ -252,13 +339,13 @@ public class HTMLDocumentBuilder
         String urlOfSourceDoc
     ) 
     {
-<span class="nc bnc" id="L255" title="All 2 branches missed.">        if (isURL(extractedURI))</span>
+<span class="nc bnc" id="L342" title="All 2 branches missed.">        if (isURL(extractedURI))</span>
         {
-<span class="nc" id="L257">            return determineLocalityOfURL(extractedURI, baseSiteURLs, urlOfSourceDoc); </span>
+<span class="nc" id="L344">            return determineLocalityOfURL(extractedURI, baseSiteURLs, urlOfSourceDoc); </span>
         }
         else
         {
-<span class="nc" id="L261">            return determineLocalityOfPath(extractedURI, baseSiteDirectory, pathOfSourceDoc); </span>
+<span class="nc" id="L348">            return determineLocalityOfPath(extractedURI, baseSiteDirectory, pathOfSourceDoc); </span>
         }
     }
     
@@ -274,7 +361,7 @@ public class HTMLDocumentBuilder
     public String convertURLToPath(String uriAsString, List&lt;URL&gt; baseUrls) 
     {
         //TODO: needs to be implemented. 
-<span class="nc" id="L277">        return null;</span>
+<span class="nc" id="L364">        return null;</span>
     }
 
     /**
@@ -287,7 +374,7 @@ public class HTMLDocumentBuilder
     public long determineFileSize(String uriAsString) 
     {
         //TODO: needs to be implemented. 
-<span class="nc" id="L290">        return 0;</span>
+<span class="nc" id="L377">        return 0;</span>
     }
 
     /**
@@ -299,9 +386,9 @@ public class HTMLDocumentBuilder
      */
     public boolean isURL(String possibleURL)
     {
-<span class="nc bnc" id="L302" title="All 2 branches missed.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
-<span class="nc bnc" id="L303" title="All 2 branches missed.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
-<span class="nc bnc" id="L304" title="All 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
+<span class="nc bnc" id="L389" title="All 2 branches missed.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
+<span class="nc bnc" id="L390" title="All 2 branches missed.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
+<span class="nc bnc" id="L391" title="All 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
     }
 
     /**
@@ -323,21 +410,21 @@ public class HTMLDocumentBuilder
     )
     {
         //TODO: finish implementation. 
-<span class="nc" id="L326">        Path path = Paths.get(rawPath); </span>
-<span class="nc" id="L327">        path.normalize(); </span>
+<span class="nc" id="L413">        Path path = Paths.get(rawPath); </span>
+<span class="nc" id="L414">        path.normalize(); </span>
 
-<span class="nc" id="L329">        String absolutePath = path.toString(); </span>
+<span class="nc" id="L416">        String absolutePath = path.toString(); </span>
 
-<span class="nc bnc" id="L331" title="All 2 branches missed.">        if (absolutePath.startsWith(baseSiteDirectory))</span>
+<span class="nc bnc" id="L418" title="All 2 branches missed.">        if (absolutePath.startsWith(baseSiteDirectory))</span>
         {
-<span class="nc bnc" id="L333" title="All 2 branches missed.">            if (rawPath.startsWith(pathOfSourceDoc))</span>
+<span class="nc bnc" id="L420" title="All 2 branches missed.">            if (rawPath.startsWith(pathOfSourceDoc))</span>
             {
-<span class="nc" id="L335">                return Locality.INTRAPAGE; </span>
+<span class="nc" id="L422">                return Locality.INTRAPAGE; </span>
             }
-<span class="nc" id="L337">            return Locality.INTERNAL; </span>
+<span class="nc" id="L424">            return Locality.INTERNAL; </span>
         }
 
-<span class="nc" id="L340">        return Locality.EXTERNAL; </span>
+<span class="nc" id="L427">        return Locality.EXTERNAL; </span>
 
     }
 
@@ -359,20 +446,29 @@ public class HTMLDocumentBuilder
         String urlOfSourceDoc
     )
     {
-<span class="nc bnc" id="L362" title="All 2 branches missed.">        for (String baseSiteURL : baseSiteURLs)</span>
+<span class="nc bnc" id="L449" title="All 2 branches missed.">        for (String baseSiteURL : baseSiteURLs)</span>
         {
-<span class="nc bnc" id="L364" title="All 2 branches missed.">            if (rawURL.startsWith(baseSiteURL))</span>
+<span class="nc bnc" id="L451" title="All 2 branches missed.">            if (rawURL.startsWith(baseSiteURL))</span>
             {
-<span class="nc bnc" id="L366" title="All 2 branches missed.">                if (rawURL.startsWith(urlOfSourceDoc))</span>
+<span class="nc bnc" id="L453" title="All 2 branches missed.">                if (rawURL.startsWith(urlOfSourceDoc))</span>
                 {
-<span class="nc" id="L368">                    return Locality.INTRAPAGE; </span>
+<span class="nc" id="L455">                    return Locality.INTRAPAGE; </span>
                 }
-<span class="nc" id="L370">                return Locality.INTERNAL; </span>
+<span class="nc" id="L457">                return Locality.INTERNAL; </span>
             }
-<span class="nc" id="L372">        }</span>
+<span class="nc" id="L459">        }</span>
 
-<span class="nc" id="L374">        return Locality.EXTERNAL; </span>
+<span class="nc" id="L461">        return Locality.EXTERNAL; </span>
     }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L466">        return &quot;HTMLDocumentBuilder [images=&quot; + images + &quot;, scripts=&quot; + scripts + &quot;, stylesheets=&quot; + stylesheets</span>
+                + &quot;, anchors=&quot; + anchors + &quot;, baseUrls=&quot; + baseUrls + &quot;, baseDirectory=&quot; + baseDirectory
+                + &quot;, readBuffer=&quot; + readBuffer + &quot;]&quot;;
+    }
+
+    
 
     
 }
