@@ -231,12 +231,18 @@ public class HTMLDocumentBuilder
 
     /**
      * This function determines locality with the help of three other functions. 
-     * @param extractedURI
-     * @param baseSiteDirectory
-     * @param baseSiteURLs
-     * @param pathOfSourceDoc
-     * @param urlOfSourceDoc
-     * @return
+     * 
+     * @param extractedURI the URI that was extracted from a file during analysis.
+     * 
+     * @param baseSiteDirectory the base site directory that the user supplied the program.
+     * 
+     * @param baseSiteURLs the base website URLs that the user supplied to the program. 
+     * 
+     * @param pathOfSourceDoc the path of the document which the URI was extracted. 
+     * 
+     * @param urlOfSourceDoc the URL of the document from which the URI was extracted.
+     * 
+     * @return the locality of the URI. 
      */
     public Locality determineLocality(
         String extractedURI,
@@ -259,9 +265,9 @@ public class HTMLDocumentBuilder
     /**
      * Converts the URL to a path. 
      * 
-     * @param uriAsString: URI converted to a string. 
+     * @param uriAsString URI converted to a string. 
      * 
-     * @param baseUrls: URL that was passed in to HTMLDocumentBuilder. 
+     * @param baseUrls URL that was passed in to HTMLDocumentBuilder. 
      * 
      * @return: path from URL. 
      */
@@ -274,7 +280,7 @@ public class HTMLDocumentBuilder
     /**
      * Determines the file size of the URI.
      * 
-     * @param uriAsString: URI converted to a string. 
+     * @param uriAsString URI converted to a string. 
      * 
      * @return: file size of the URI. 
      */
@@ -287,7 +293,7 @@ public class HTMLDocumentBuilder
     /**
      * Function to determine if URI that is passed in is a URL. 
      * 
-     * @param possibleURL: URI as a string that is being passed in. 
+     * @param possibleURL URI as a string that is being passed in. 
      * 
      * @return: True if URL, false if not a URL. 
      */
@@ -302,11 +308,11 @@ public class HTMLDocumentBuilder
      * This function determines and returns the locality of a path that
      * is passed in. 
      * 
-     * @param rawPath: path as a string that is being examined. 
+     * @param rawPath path as a string that is being examined. 
      * 
-     * @param baseSiteDirectory: base site directory of path. 
+     * @param baseSiteDirectory base site directory of path. 
      * 
-     * @param pathOfSourceDoc: path of the source document on disk. 
+     * @param pathOfSourceDoc path of the source document on disk. 
      * 
      * @return: the locality of the passed in path. 
      */
@@ -339,11 +345,11 @@ public class HTMLDocumentBuilder
      * This function determines and returns the locality of a URL that 
      * is passed in. 
      * 
-     * @param rawURL: URL as a string that is being passed in. 
+     * @param rawURL URL as a string that is being passed in. 
      * 
-     * @param baseSiteURLs: list of base sites of the URL. 
+     * @param baseSiteURLs list of base sites of the URL. 
      * 
-     * @param urlOfSourceDoc: URL of the source document on disk. 
+     * @param urlOfSourceDoc URL of the source document on disk. 
      * 
      * @return: the locality of the passed in URL. 
      */

@@ -38,7 +38,7 @@ public class Resource
     /**
      * Sets the type of the resource object. 
      * 
-     * @param typeOfResource: type of resource to set. 
+     * @param typeOfResource type of resource to set. 
      */
     public void setTypeOfResource(ResourceKind typeOfResource) {
         this.typeOfResource = typeOfResource;
@@ -57,7 +57,7 @@ public class Resource
     /**
      * Sets the location/locality of the resource. 
      * 
-     * @param location: location of resource to set. 
+     * @param location location of resource to set. 
      */
     public void setLocation(Locality location) {
         this.location = location;
@@ -75,7 +75,7 @@ public class Resource
     /**
      * Sets the size of the resource object. 
      * 
-     * @param sizeOfFile: size of resource to set. 
+     * @param sizeOfFile size of resource to set. 
      */
     public void setSizeOfFile(long sizeOfFile) {
         this.sizeOfFile = sizeOfFile;
@@ -93,7 +93,7 @@ public class Resource
     /**
      * Sets the path of the resource object. 
      * 
-     * @param path: path of resource to set. 
+     * @param path path of resource to set. 
      */
     public void setPath(Path path) {
         this.path = path;
@@ -111,7 +111,7 @@ public class Resource
     /**
      * Sets the URL of the resource object. 
      * 
-     * @param url: URL of resource to set. 
+     * @param url URL of resource to set. 
      */
     public void setUrl(URL url) {
         this.url = url;

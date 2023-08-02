@@ -1,9 +1,8 @@
-/**
- * This enum show the location of the resource. 
- */
 package edu.odu.cs.cs350;
 
 /**
+ * This enum is for classifying a resource. 
+ * 
  * @author bonham36
  *
  */
