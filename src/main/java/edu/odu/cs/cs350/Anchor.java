@@ -25,6 +25,14 @@ import java.util.regex.*;
     }
 
     /**
+     * Default constructor that sets resource kind to anchor. 
+     */
+    public Anchor()
+    {
+        this.setTypeOfResource(ResourceKind.ANCHOR);
+    }
+
+    /**
      * Constructor for the Anchor class.
      * @param htmlRepresentation The HTML representation of the anchor tag.
      * @param currentUrl The URL of the current page.
