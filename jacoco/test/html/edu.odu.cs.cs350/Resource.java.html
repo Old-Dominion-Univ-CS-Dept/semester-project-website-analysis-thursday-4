@@ -3,9 +3,10 @@
 import java.net.URL;
 import java.nio.file.Path;
 
-// Resource class from outline that will be needed for what is extracted from 
-// by the HTMLDocumentBuilder class. 
-
+/**
+ * Resource class from outline that will be needed for what is extracted from 
+ * by the HTMLDocumentBuilder class. 
+ */
 public class Resource
 {
     private ResourceKind typeOfResource; 
@@ -18,13 +19,13 @@ public class Resource
      * Default constructor: initializes all members to either null or 0. 
      */
     public Resource()
-<span class="fc" id="L21">    {</span>
-<span class="fc" id="L22">        this.typeOfResource = null; </span>
-<span class="fc" id="L23">        this.location = null; </span>
-<span class="fc" id="L24">        this.sizeOfFile = 0; </span>
-<span class="fc" id="L25">        this.path = null; </span>
-<span class="fc" id="L26">        this.url = null; </span>
-<span class="fc" id="L27">    }</span>
+<span class="fc" id="L22">    {</span>
+<span class="fc" id="L23">        this.typeOfResource = null; </span>
+<span class="fc" id="L24">        this.location = null; </span>
+<span class="fc" id="L25">        this.sizeOfFile = 0; </span>
+<span class="fc" id="L26">        this.path = null; </span>
+<span class="fc" id="L27">        this.url = null; </span>
+<span class="fc" id="L28">    }</span>
     
     /**
      * Retrieves the type of the resource object. 
@@ -32,7 +33,7 @@ public class Resource
      * @return: type of this resource object. 
      */
     public ResourceKind getTypeOfResource() {
-<span class="fc" id="L35">        return typeOfResource;</span>
+<span class="fc" id="L36">        return typeOfResource;</span>
     }
 
     /**
@@ -41,8 +42,8 @@ public class Resource
      * @param typeOfResource type of resource to set. 
      */
     public void setTypeOfResource(ResourceKind typeOfResource) {
-<span class="fc" id="L44">        this.typeOfResource = typeOfResource;</span>
-<span class="fc" id="L45">    }</span>
+<span class="fc" id="L45">        this.typeOfResource = typeOfResource;</span>
+<span class="fc" id="L46">    }</span>
 
     /**
      * Retrieves the locality of the resource:
@@ -51,7 +52,7 @@ public class Resource
      * @return: locality of this resource object. 
      */
     public Locality getLocation() {
-<span class="fc" id="L54">        return location;</span>
+<span class="fc" id="L55">        return location;</span>
     }
 
     /**
@@ -60,8 +61,8 @@ public class Resource
      * @param location location of resource to set. 
      */
     public void setLocation(Locality location) {
-<span class="fc" id="L63">        this.location = location;</span>
-<span class="fc" id="L64">    }</span>
+<span class="fc" id="L64">        this.location = location;</span>
+<span class="fc" id="L65">    }</span>
 
     /**
      * Retrieves the size of the resource object. 
@@ -69,7 +70,7 @@ public class Resource
      * @return: size of this resource object. 
      */
     public long getSizeOfFile() {
-<span class="fc" id="L72">        return sizeOfFile;</span>
+<span class="fc" id="L73">        return sizeOfFile;</span>
     }
 
     /**
@@ -78,8 +79,8 @@ public class Resource
      * @param sizeOfFile size of resource to set. 
      */
     public void setSizeOfFile(long sizeOfFile) {
-<span class="fc" id="L81">        this.sizeOfFile = sizeOfFile;</span>
-<span class="fc" id="L82">    }</span>
+<span class="fc" id="L82">        this.sizeOfFile = sizeOfFile;</span>
+<span class="fc" id="L83">    }</span>
 
     /**
      * Retrieves the path of the resource object. 
@@ -87,7 +88,7 @@ public class Resource
      * @return: path of this resource object. 
      */
     public Path getPath() {
-<span class="fc" id="L90">        return path;</span>
+<span class="fc" id="L91">        return path;</span>
     }
 
     /**
@@ -96,8 +97,8 @@ public class Resource
      * @param path path of resource to set. 
      */
     public void setPath(Path path) {
-<span class="fc" id="L99">        this.path = path;</span>
-<span class="fc" id="L100">    }</span>
+<span class="fc" id="L100">        this.path = path;</span>
+<span class="fc" id="L101">    }</span>
 
     /**
      * Retrieves the URL of the resource object. 
@@ -105,7 +106,7 @@ public class Resource
      * @return: URL of this resource object. 
      */
     public URL getUrl() {
-<span class="fc" id="L108">        return url;</span>
+<span class="fc" id="L109">        return url;</span>
     }
 
     /**
@@ -114,8 +115,8 @@ public class Resource
      * @param url URL of resource to set. 
      */
     public void setUrl(URL url) {
-<span class="fc" id="L117">        this.url = url;</span>
-<span class="fc" id="L118">    }</span>
+<span class="fc" id="L118">        this.url = url;</span>
+<span class="fc" id="L119">    }</span>
     
 
 }
