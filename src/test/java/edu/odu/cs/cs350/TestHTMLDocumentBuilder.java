@@ -39,10 +39,10 @@ import org.jsoup.nodes.Element;
  */
 public class TestHTMLDocumentBuilder 
 {
-    List<Resource> testAnchors = new ArrayList<>(); 
-    List<Resource> testImages = new ArrayList<>(); 
-    List<Resource> testScripts = new ArrayList<>(); 
-    List<Resource> testStylesheets = new ArrayList<>(); 
+    List<Resource> testAnchors;
+    List<Resource> testImages;
+    List<Resource> testScripts;
+    List<Resource> testStylesheets;
 
     Path testPath; 
     List<URL> testURLList; 
@@ -50,6 +50,11 @@ public class TestHTMLDocumentBuilder
     @BeforeEach
     public void setUp()
     {
+        testAnchors = new ArrayList<>(); 
+        testImages = new ArrayList<>(); 
+        testScripts = new ArrayList<>(); 
+        testStylesheets = new ArrayList<>();
+        
         testURLList = new ArrayList<>(); 
     }
     
@@ -109,26 +114,62 @@ public class TestHTMLDocumentBuilder
 
     @Test
     public void testExtractAnchors()
+        throws IOException, FileNotFoundException
     {
-        fail("test needs to be implemented."); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+        BufferedReader testReader = new BufferedReader(new FileReader("src/test/resources/anchors.html"));
+        Path testPath = Paths.get("src/test/resources"); 
+        
+        testBuilder.withContentFrom(testReader);
+        testBuilder.withWebsiteBaseDir(testPath);
+        testAnchors = testBuilder.extractAnchors(); 
+
+        assertThat(testAnchors, is(notNullValue())); 
     }
     
     @Test
-    public void testExtractImages()
+    public void testExtractImages() 
+        throws IOException, FileNotFoundException
     {
-        fail("test needs to be implemented."); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+        BufferedReader testReader = new BufferedReader(new FileReader("src/test/resources/images.html"));
+        Path testPath = Paths.get("src/test/resources"); 
+        
+        testBuilder.withContentFrom(testReader);
+        testBuilder.withWebsiteBaseDir(testPath);
+        testImages = testBuilder.extractImages(); 
+
+        assertThat(testImages, is(notNullValue())); 
     }
 
     @Test
     public void testExtractScripts()
+        throws IOException, FileNotFoundException
     {
-        fail("test needs to be implemented."); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+        BufferedReader testReader = new BufferedReader(new FileReader("src/test/resources/cs417-one-lecture/index.html"));
+        Path testPath = Paths.get("src/test/resources/cs417-landing-page"); 
+        
+        testBuilder.withContentFrom(testReader);
+        testBuilder.withWebsiteBaseDir(testPath);
+        testScripts = testBuilder.extractScripts(); 
+
+        assertThat(testScripts, is(notNullValue())); 
     }
 
     @Test
     public void testExtractStylesheets()
+        throws IOException, FileNotFoundException
     {
-        fail("test needs to be implemented."); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+        BufferedReader testReader = new BufferedReader(new FileReader("src/test/resources/cs417-one-lecture/index.html"));
+        Path testPath = Paths.get("src/test/resources/cs417-landing-page"); 
+        
+        testBuilder.withContentFrom(testReader);
+        testBuilder.withWebsiteBaseDir(testPath);
+        testStylesheets = testBuilder.extractStylesheets(); 
+
+        assertThat(testStylesheets, is(notNullValue())); 
     }
 
     @Test
@@ -178,13 +219,16 @@ public class TestHTMLDocumentBuilder
     {
         String possibleURL = new String("http://www.testsite.com/testing/for/class"); 
         HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
-        assertThat(testBuilder.isURL(possibleURL), is(true)); 
+        assertThat(testBuilder.isURL(possibleURL), equalTo(true)); 
 
         possibleURL = "https://www.testsite.com/testing/for/class"; 
-        assertThat(testBuilder.isURL(possibleURL), is(true)); 
+        assertThat(testBuilder.isURL(possibleURL), equalTo(true)); 
 
         possibleURL = "src/test/resources/image.html"; 
-        assertThat(testBuilder.isURL(possibleURL), is(false)); 
+        assertThat(testBuilder.isURL(possibleURL), equalTo(false)); 
+
+        possibleURL = "file:///Users/src/test/resources/testsite.html"; 
+        assertThat(testBuilder.isURL(possibleURL), equalTo(true)); 
 
     }
 
