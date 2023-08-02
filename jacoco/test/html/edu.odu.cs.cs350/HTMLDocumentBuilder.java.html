@@ -386,9 +386,9 @@ public class HTMLDocumentBuilder
      */
     public boolean isURL(String possibleURL)
     {
-<span class="nc bnc" id="L389" title="All 2 branches missed.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
-<span class="nc bnc" id="L390" title="All 2 branches missed.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
-<span class="nc bnc" id="L391" title="All 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
+<span class="fc bfc" id="L389" title="All 2 branches covered.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
+<span class="fc bfc" id="L390" title="All 2 branches covered.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
+<span class="pc bpc" id="L391" title="1 of 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
     }
 
     /**
@@ -410,21 +410,21 @@ public class HTMLDocumentBuilder
     )
     {
         //TODO: finish implementation. 
-<span class="nc" id="L413">        Path path = Paths.get(rawPath); </span>
-<span class="nc" id="L414">        path.normalize(); </span>
+<span class="fc" id="L413">        Path path = Paths.get(rawPath); </span>
+<span class="fc" id="L414">        path.normalize(); </span>
 
-<span class="nc" id="L416">        String absolutePath = path.toString(); </span>
+<span class="fc" id="L416">        String absolutePath = path.toString(); </span>
 
-<span class="nc bnc" id="L418" title="All 2 branches missed.">        if (absolutePath.startsWith(baseSiteDirectory))</span>
+<span class="fc bfc" id="L418" title="All 2 branches covered.">        if (absolutePath.startsWith(baseSiteDirectory))</span>
         {
-<span class="nc bnc" id="L420" title="All 2 branches missed.">            if (rawPath.startsWith(pathOfSourceDoc))</span>
+<span class="fc bfc" id="L420" title="All 2 branches covered.">            if (rawPath.startsWith(pathOfSourceDoc))</span>
             {
-<span class="nc" id="L422">                return Locality.INTRAPAGE; </span>
+<span class="fc" id="L422">                return Locality.INTRAPAGE; </span>
             }
-<span class="nc" id="L424">            return Locality.INTERNAL; </span>
+<span class="fc" id="L424">            return Locality.INTERNAL; </span>
         }
 
-<span class="nc" id="L427">        return Locality.EXTERNAL; </span>
+<span class="fc" id="L427">        return Locality.EXTERNAL; </span>
 
     }
 
@@ -446,19 +446,19 @@ public class HTMLDocumentBuilder
         String urlOfSourceDoc
     )
     {
-<span class="nc bnc" id="L449" title="All 2 branches missed.">        for (String baseSiteURL : baseSiteURLs)</span>
+<span class="fc bfc" id="L449" title="All 2 branches covered.">        for (String baseSiteURL : baseSiteURLs)</span>
         {
-<span class="nc bnc" id="L451" title="All 2 branches missed.">            if (rawURL.startsWith(baseSiteURL))</span>
+<span class="fc bfc" id="L451" title="All 2 branches covered.">            if (rawURL.startsWith(baseSiteURL))</span>
             {
-<span class="nc bnc" id="L453" title="All 2 branches missed.">                if (rawURL.startsWith(urlOfSourceDoc))</span>
+<span class="fc bfc" id="L453" title="All 2 branches covered.">                if (rawURL.startsWith(urlOfSourceDoc))</span>
                 {
-<span class="nc" id="L455">                    return Locality.INTRAPAGE; </span>
+<span class="fc" id="L455">                    return Locality.INTRAPAGE; </span>
                 }
-<span class="nc" id="L457">                return Locality.INTERNAL; </span>
+<span class="fc" id="L457">                return Locality.INTERNAL; </span>
             }
-<span class="nc" id="L459">        }</span>
+<span class="fc" id="L459">        }</span>
 
-<span class="nc" id="L461">        return Locality.EXTERNAL; </span>
+<span class="fc" id="L461">        return Locality.EXTERNAL; </span>
     }
 
     @Override
