@@ -505,12 +505,13 @@ extends java.lang.Object</pre>
 <div class="block">This function determines locality with the help of three other functions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>extractedURI</code> - </dd>
-<dd><code>baseSiteDirectory</code> - </dd>
-<dd><code>baseSiteURLs</code> - </dd>
-<dd><code>pathOfSourceDoc</code> - </dd>
-<dd><code>urlOfSourceDoc</code> - </dd>
+<dd><code>extractedURI</code> - the URI that was extracted from a file during analysis.</dd>
+<dd><code>baseSiteDirectory</code> - the base site directory that the user supplied the program.</dd>
+<dd><code>baseSiteURLs</code> - the base website URLs that the user supplied to the program.</dd>
+<dd><code>pathOfSourceDoc</code> - the path of the document which the URI was extracted.</dd>
+<dd><code>urlOfSourceDoc</code> - the URL of the document from which the URI was extracted.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
+<dd>the locality of the URI.</dd>
 </dl>
 </li>
 </ul>
@@ -525,8 +526,8 @@ extends java.lang.Object</pre>
 <div class="block">Converts the URL to a path.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>uriAsString</code> - : URI converted to a string.</dd>
-<dd><code>baseUrls</code> - : URL that was passed in to HTMLDocumentBuilder.</dd>
+<dd><code>uriAsString</code> - URI converted to a string.</dd>
+<dd><code>baseUrls</code> - URL that was passed in to HTMLDocumentBuilder.</dd>
 </dl>
 </li>
 </ul>
@@ -540,7 +541,7 @@ extends java.lang.Object</pre>
 <div class="block">Determines the file size of the URI.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>uriAsString</code> - : URI converted to a string.</dd>
+<dd><code>uriAsString</code> - URI converted to a string.</dd>
 </dl>
 </li>
 </ul>
@@ -554,7 +555,7 @@ extends java.lang.Object</pre>
 <div class="block">Function to determine if URI that is passed in is a URL.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>possibleURL</code> - : URI as a string that is being passed in.</dd>
+<dd><code>possibleURL</code> - URI as a string that is being passed in.</dd>
 </dl>
 </li>
 </ul>
@@ -571,9 +572,9 @@ extends java.lang.Object</pre>
  is passed in.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>rawPath</code> - : path as a string that is being examined.</dd>
-<dd><code>baseSiteDirectory</code> - : base site directory of path.</dd>
-<dd><code>pathOfSourceDoc</code> - : path of the source document on disk.</dd>
+<dd><code>rawPath</code> - path as a string that is being examined.</dd>
+<dd><code>baseSiteDirectory</code> - base site directory of path.</dd>
+<dd><code>pathOfSourceDoc</code> - path of the source document on disk.</dd>
 </dl>
 </li>
 </ul>
@@ -590,9 +591,9 @@ extends java.lang.Object</pre>
  is passed in.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>rawURL</code> - : URL as a string that is being passed in.</dd>
-<dd><code>baseSiteURLs</code> - : list of base sites of the URL.</dd>
-<dd><code>urlOfSourceDoc</code> - : URL of the source document on disk.</dd>
+<dd><code>rawURL</code> - URL as a string that is being passed in.</dd>
+<dd><code>baseSiteURLs</code> - list of base sites of the URL.</dd>
+<dd><code>urlOfSourceDoc</code> - URL of the source document on disk.</dd>
 </dl>
 </li>
 </ul>

@@ -39,13 +39,13 @@ public class HTMLDocument
      * This constructor takes in a list for each type of extracted tag and creates
      * an HTMLDocument object that will be used by other functions.
      * 
-     * @param: list of extracted script tags.
+     * @param script list of extracted script tags.
      * 
-     * @param: list of extracted stylesheet tags.
+     * @param stylesheet list of extracted stylesheet tags.
      * 
-     * @param: list of extracted image tags. 
+     * @param image list of extracted image tags. 
      * 
-     * @param: list of extracted anchor tags. 
+     * @param anchor list of extracted anchor tags. 
      * 
      * @return: a new HTMLDocument object containing all lists
      * passed in as parameters. 

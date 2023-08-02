@@ -231,12 +231,18 @@ public class HTMLDocumentBuilder
 
     /**
      * This function determines locality with the help of three other functions. 
-     * @param extractedURI
-     * @param baseSiteDirectory
-     * @param baseSiteURLs
-     * @param pathOfSourceDoc
-     * @param urlOfSourceDoc
-     * @return
+     * 
+     * @param extractedURI the URI that was extracted from a file during analysis.
+     * 
+     * @param baseSiteDirectory the base site directory that the user supplied the program.
+     * 
+     * @param baseSiteURLs the base website URLs that the user supplied to the program. 
+     * 
+     * @param pathOfSourceDoc the path of the document which the URI was extracted. 
+     * 
+     * @param urlOfSourceDoc the URL of the document from which the URI was extracted.
+     * 
+     * @return the locality of the URI. 
      */
     public Locality determineLocality(
         String extractedURI,
@@ -246,67 +252,67 @@ public class HTMLDocumentBuilder
         String urlOfSourceDoc
     ) 
     {
-<span class="nc bnc" id="L249" title="All 2 branches missed.">        if (isURL(extractedURI))</span>
+<span class="nc bnc" id="L255" title="All 2 branches missed.">        if (isURL(extractedURI))</span>
         {
-<span class="nc" id="L251">            return determineLocalityOfURL(extractedURI, baseSiteURLs, urlOfSourceDoc); </span>
+<span class="nc" id="L257">            return determineLocalityOfURL(extractedURI, baseSiteURLs, urlOfSourceDoc); </span>
         }
         else
         {
-<span class="nc" id="L255">            return determineLocalityOfPath(extractedURI, baseSiteDirectory, pathOfSourceDoc); </span>
+<span class="nc" id="L261">            return determineLocalityOfPath(extractedURI, baseSiteDirectory, pathOfSourceDoc); </span>
         }
     }
     
     /**
      * Converts the URL to a path. 
      * 
-     * @param uriAsString: URI converted to a string. 
+     * @param uriAsString URI converted to a string. 
      * 
-     * @param baseUrls: URL that was passed in to HTMLDocumentBuilder. 
+     * @param baseUrls URL that was passed in to HTMLDocumentBuilder. 
      * 
      * @return: path from URL. 
      */
     public String convertURLToPath(String uriAsString, List&lt;URL&gt; baseUrls) 
     {
         //TODO: needs to be implemented. 
-<span class="nc" id="L271">        return null;</span>
+<span class="nc" id="L277">        return null;</span>
     }
 
     /**
      * Determines the file size of the URI.
      * 
-     * @param uriAsString: URI converted to a string. 
+     * @param uriAsString URI converted to a string. 
      * 
      * @return: file size of the URI. 
      */
     public long determineFileSize(String uriAsString) 
     {
         //TODO: needs to be implemented. 
-<span class="nc" id="L284">        return 0;</span>
+<span class="nc" id="L290">        return 0;</span>
     }
 
     /**
      * Function to determine if URI that is passed in is a URL. 
      * 
-     * @param possibleURL: URI as a string that is being passed in. 
+     * @param possibleURL URI as a string that is being passed in. 
      * 
      * @return: True if URL, false if not a URL. 
      */
     public boolean isURL(String possibleURL)
     {
-<span class="nc bnc" id="L296" title="All 2 branches missed.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
-<span class="nc bnc" id="L297" title="All 2 branches missed.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
-<span class="nc bnc" id="L298" title="All 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
+<span class="nc bnc" id="L302" title="All 2 branches missed.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
+<span class="nc bnc" id="L303" title="All 2 branches missed.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
+<span class="nc bnc" id="L304" title="All 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
     }
 
     /**
      * This function determines and returns the locality of a path that
      * is passed in. 
      * 
-     * @param rawPath: path as a string that is being examined. 
+     * @param rawPath path as a string that is being examined. 
      * 
-     * @param baseSiteDirectory: base site directory of path. 
+     * @param baseSiteDirectory base site directory of path. 
      * 
-     * @param pathOfSourceDoc: path of the source document on disk. 
+     * @param pathOfSourceDoc path of the source document on disk. 
      * 
      * @return: the locality of the passed in path. 
      */
@@ -317,21 +323,21 @@ public class HTMLDocumentBuilder
     )
     {
         //TODO: finish implementation. 
-<span class="nc" id="L320">        Path path = Paths.get(rawPath); </span>
-<span class="nc" id="L321">        path.normalize(); </span>
+<span class="nc" id="L326">        Path path = Paths.get(rawPath); </span>
+<span class="nc" id="L327">        path.normalize(); </span>
 
-<span class="nc" id="L323">        String absolutePath = path.toString(); </span>
+<span class="nc" id="L329">        String absolutePath = path.toString(); </span>
 
-<span class="nc bnc" id="L325" title="All 2 branches missed.">        if (absolutePath.startsWith(baseSiteDirectory))</span>
+<span class="nc bnc" id="L331" title="All 2 branches missed.">        if (absolutePath.startsWith(baseSiteDirectory))</span>
         {
-<span class="nc bnc" id="L327" title="All 2 branches missed.">            if (rawPath.startsWith(pathOfSourceDoc))</span>
+<span class="nc bnc" id="L333" title="All 2 branches missed.">            if (rawPath.startsWith(pathOfSourceDoc))</span>
             {
-<span class="nc" id="L329">                return Locality.INTRAPAGE; </span>
+<span class="nc" id="L335">                return Locality.INTRAPAGE; </span>
             }
-<span class="nc" id="L331">            return Locality.INTERNAL; </span>
+<span class="nc" id="L337">            return Locality.INTERNAL; </span>
         }
 
-<span class="nc" id="L334">        return Locality.EXTERNAL; </span>
+<span class="nc" id="L340">        return Locality.EXTERNAL; </span>
 
     }
 
@@ -339,11 +345,11 @@ public class HTMLDocumentBuilder
      * This function determines and returns the locality of a URL that 
      * is passed in. 
      * 
-     * @param rawURL: URL as a string that is being passed in. 
+     * @param rawURL URL as a string that is being passed in. 
      * 
-     * @param baseSiteURLs: list of base sites of the URL. 
+     * @param baseSiteURLs list of base sites of the URL. 
      * 
-     * @param urlOfSourceDoc: URL of the source document on disk. 
+     * @param urlOfSourceDoc URL of the source document on disk. 
      * 
      * @return: the locality of the passed in URL. 
      */
@@ -353,19 +359,19 @@ public class HTMLDocumentBuilder
         String urlOfSourceDoc
     )
     {
-<span class="nc bnc" id="L356" title="All 2 branches missed.">        for (String baseSiteURL : baseSiteURLs)</span>
+<span class="nc bnc" id="L362" title="All 2 branches missed.">        for (String baseSiteURL : baseSiteURLs)</span>
         {
-<span class="nc bnc" id="L358" title="All 2 branches missed.">            if (rawURL.startsWith(baseSiteURL))</span>
+<span class="nc bnc" id="L364" title="All 2 branches missed.">            if (rawURL.startsWith(baseSiteURL))</span>
             {
-<span class="nc bnc" id="L360" title="All 2 branches missed.">                if (rawURL.startsWith(urlOfSourceDoc))</span>
+<span class="nc bnc" id="L366" title="All 2 branches missed.">                if (rawURL.startsWith(urlOfSourceDoc))</span>
                 {
-<span class="nc" id="L362">                    return Locality.INTRAPAGE; </span>
+<span class="nc" id="L368">                    return Locality.INTRAPAGE; </span>
                 }
-<span class="nc" id="L364">                return Locality.INTERNAL; </span>
+<span class="nc" id="L370">                return Locality.INTERNAL; </span>
             }
-<span class="nc" id="L366">        }</span>
+<span class="nc" id="L372">        }</span>
 
-<span class="nc" id="L368">        return Locality.EXTERNAL; </span>
+<span class="nc" id="L374">        return Locality.EXTERNAL; </span>
     }
 
     
