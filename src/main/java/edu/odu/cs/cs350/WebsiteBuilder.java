@@ -1,9 +1,4 @@
-/**
- * The WebsiteBuilder class will be responsible for collecting all 
- * information needed to create a Website object:
- *      i. one local directory path
- *     ii. one or more URLs
- */
+
 package edu.odu.cs.cs350;
 
 import java.io.BufferedReader;
@@ -16,11 +11,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-
-
 /**
- * @author bonham36
- *
+ * The WebsiteBuilder class will be responsible for collecting all 
+ * information needed to create a Website object:
+ *      i. one local directory path
+ *     ii. one or more URLs
  */
 public class WebsiteBuilder 
 {
