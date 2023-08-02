@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-/*
+/**
  * This Class will generate a text file and format the file to "YYYYMMDD-HHMMSS- "summary"".
  * Include one entry per line with the size and namem of each page encountered.
  */
@@ -16,6 +16,9 @@ public class CreateTextFile {
     /*
      * Create a new Text File
      * Format text file to "YYYYMMDD-HHMMSS- "summary""
+     */
+    /**
+     * @throws Exception
      */
     public static void createtxtfile() throws Exception{
 

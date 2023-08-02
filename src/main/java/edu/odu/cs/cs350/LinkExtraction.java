@@ -3,6 +3,14 @@
  import java.util.regex.Matcher;
  import java.util.regex.Pattern;
 
+ /**
+  * This Class will extract links(acnhor tags) from a page
+  Classify them as
+  Intra-Page
+  Intra-site
+  External
+  */
+
  public class LinkExtraction extends Anchor{
     
 
