@@ -2,15 +2,15 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.21.0" timestamp="2023-08-01T23:51:31.865">
+    version="6.21.0" timestamp="2023-08-02T02:00:22.077">
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/CreateTextFile.java">
-<violation beginline="27" endline="27" begincolumn="33" endcolumn="72" rule="SimpleDateFormatNeedsLocale" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#simpledateformatneedslocale" priority="3">
+<violation beginline="30" endline="30" begincolumn="33" endcolumn="72" rule="SimpleDateFormatNeedsLocale" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#simpledateformatneedslocale" priority="3">
 When instantiating a SimpleDateFormat object, specify a Locale
 </violation>
-<violation beginline="43" endline="43" begincolumn="16" endcolumn="17" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="fw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+<violation beginline="46" endline="46" begincolumn="16" endcolumn="17" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="fw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
 Ensure that resources like this FileWriter object are closed after use
 </violation>
-<violation beginline="46" endline="46" begincolumn="17" endcolumn="18" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="pw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+<violation beginline="49" endline="49" begincolumn="17" endcolumn="18" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs.cs350" class="CreateTextFile" method="createtxtfile" variable="pw" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
 Ensure that resources like this FileWriter object are closed after use
 </violation>
 </file>
@@ -37,8 +37,8 @@ Found non-transient, non-static member. Please mark as transient or provide acce
 </violation>
 </file>
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/LinkExtraction.java">
-<violation beginline="33" endline="50" begincolumn="13" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="LinkExtraction" method="LinkTypeExtraction" variable="matcherIntraSite" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'matcherIntraSite' (lines '33'-'50').
+<violation beginline="41" endline="58" begincolumn="13" endcolumn="61" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="edu.odu.cs.cs350" class="LinkExtraction" method="LinkTypeExtraction" variable="matcherIntraSite" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'matcherIntraSite' (lines '41'-'58').
 </violation>
 </file>
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/HTMLDocument.java">

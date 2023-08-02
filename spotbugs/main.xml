@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1690933892450" analysisTimestamp="1690933892450" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1690941623677" analysisTimestamp="1690941623677" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportManager.class</Jar>
@@ -209,21 +209,21 @@
     <ShortMessage>Reliance on default encoding</ShortMessage>
     <LongMessage>Found reliance on default encoding in edu.odu.cs.cs350.CreateTextFile.createtxtfile(): new java.io.FileWriter(File)</LongMessage>
     <Class classname="edu.odu.cs.cs350.CreateTextFile" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="14" end="51" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
-        <Message>At CreateTextFile.java:[lines 14-51]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="14" end="54" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
+        <Message>At CreateTextFile.java:[lines 14-54]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.CreateTextFile</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.CreateTextFile" name="createtxtfile" signature="()V" isStatic="true" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="24" end="51" startBytecode="0" endBytecode="226" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" start="27" end="54" startBytecode="0" endBytecode="226" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java"/>
       <Message>In method edu.odu.cs.cs350.CreateTextFile.createtxtfile()</Message>
     </Method>
     <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.FileWriter" start="96" end="97" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
       <Message>Called method new java.io.FileWriter(File)</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" primary="true" start="43" end="43" startBytecode="66" endBytecode="66" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
-      <Message>At CreateTextFile.java:[line 43]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.CreateTextFile" primary="true" start="46" end="46" startBytecode="66" endBytecode="66" sourcefile="CreateTextFile.java" sourcepath="edu/odu/cs/cs350/CreateTextFile.java" relSourcepath="java/edu/odu/cs/cs350/CreateTextFile.java">
+      <Message>At CreateTextFile.java:[line 46]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="1d29765c28eb8a430a0efd7b09c7508a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
@@ -861,17 +861,17 @@
     <ShortMessage>Method names should start with a lower case letter</ShortMessage>
     <LongMessage>The method name edu.odu.cs.cs350.LinkExtraction.LinkTypeExtraction(String) doesn&apos;t start with a lower case letter</LongMessage>
     <Class classname="edu.odu.cs.cs350.LinkExtraction" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.LinkExtraction" start="20" end="47" sourcefile="LinkExtraction.java" sourcepath="edu/odu/cs/cs350/LinkExtraction.java" relSourcepath="java/edu/odu/cs/cs350/LinkExtraction.java">
-        <Message>At LinkExtraction.java:[lines 20-47]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.LinkExtraction" start="28" end="55" sourcefile="LinkExtraction.java" sourcepath="edu/odu/cs/cs350/LinkExtraction.java" relSourcepath="java/edu/odu/cs/cs350/LinkExtraction.java">
+        <Message>At LinkExtraction.java:[lines 28-55]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.LinkExtraction</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.LinkExtraction" name="LinkTypeExtraction" signature="(Ljava/lang/String;)Ljava/lang/String;" isStatic="true" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.LinkExtraction" start="27" end="47" startBytecode="0" endBytecode="193" sourcefile="LinkExtraction.java" sourcepath="edu/odu/cs/cs350/LinkExtraction.java" relSourcepath="java/edu/odu/cs/cs350/LinkExtraction.java" synthetic="true"/>
+      <SourceLine classname="edu.odu.cs.cs350.LinkExtraction" start="35" end="55" startBytecode="0" endBytecode="193" sourcefile="LinkExtraction.java" sourcepath="edu/odu/cs/cs350/LinkExtraction.java" relSourcepath="java/edu/odu/cs/cs350/LinkExtraction.java" synthetic="true"/>
       <Message>In method edu.odu.cs.cs350.LinkExtraction.LinkTypeExtraction(String)</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.LinkExtraction" start="27" end="47" startBytecode="0" endBytecode="193" sourcefile="LinkExtraction.java" sourcepath="edu/odu/cs/cs350/LinkExtraction.java" relSourcepath="java/edu/odu/cs/cs350/LinkExtraction.java" synthetic="true">
-      <Message>At LinkExtraction.java:[lines 27-47]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.LinkExtraction" start="35" end="55" startBytecode="0" endBytecode="193" sourcefile="LinkExtraction.java" sourcepath="edu/odu/cs/cs350/LinkExtraction.java" relSourcepath="java/edu/odu/cs/cs350/LinkExtraction.java" synthetic="true">
+      <Message>At LinkExtraction.java:[lines 35-55]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="98a9bf746f455846e0a26ce71720e8c6" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
@@ -1359,13 +1359,13 @@ signals unexpected behavior by returning an atypical return value.
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Tue, 1 Aug 2023 23:51:32 +0000" total_classes="0" referenced_classes="0" total_bugs="42" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="8.40" clock_seconds="7.91" peak_mbytes="201.71" alloc_mbytes="1734.00" gc_seconds="0.23" priority_2="39" priority_1="3">
+  <FindBugsSummary timestamp="Wed, 2 Aug 2023 02:00:23 +0000" total_classes="0" referenced_classes="0" total_bugs="42" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="12.30" clock_seconds="11.94" peak_mbytes="199.57" alloc_mbytes="1734.00" gc_seconds="0.29" priority_2="39" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="7bb6a050e368016a87a8b5ee644496ee"/>
-    <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="1bde7cd05569888885c515f81749d16b"/>
+    <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="e99242b9915fa85df09c40646c1ffa24"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocumentBuilder.java" bugCount="9" size="0" bugHash="5a2dd37a6faf21de1717bb854ff86476"/>
     <FileStats path="edu/odu/cs/cs350/JSONReportWriter.java" bugCount="5" size="0" bugHash="3a7b1a209a13735fc3ba219a57387d27"/>
-    <FileStats path="edu/odu/cs/cs350/LinkExtraction.java" bugCount="1" size="0" bugHash="806f166cbb1ce275c66ebd70be6eb20a"/>
+    <FileStats path="edu/odu/cs/cs350/LinkExtraction.java" bugCount="1" size="0" bugHash="c1348eb76fd656f2bdd4a2e8e30fffde"/>
     <FileStats path="edu/odu/cs/cs350/ReportManager.java" bugCount="2" size="0" bugHash="5a3934edf405e0d70d3c5a216b24c1e6"/>
     <FileStats path="edu/odu/cs/cs350/ReportWriter.java" bugCount="2" size="0" bugHash="60a13fe50a5b4952da1a2e666f3e17c6"/>
     <FileStats path="edu/odu/cs/cs350/ResourceBuilder.java" bugCount="1" size="0" bugHash="166dc22fc69f327f880c9a35a504fc38"/>

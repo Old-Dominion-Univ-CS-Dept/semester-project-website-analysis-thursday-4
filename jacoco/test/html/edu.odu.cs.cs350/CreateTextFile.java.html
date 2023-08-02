@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-/*
+/**
  * This Class will generate a text file and format the file to &quot;YYYYMMDD-HHMMSS- &quot;summary&quot;&quot;.
  * Include one entry per line with the size and namem of each page encountered.
  */
@@ -17,37 +17,40 @@ import java.util.Date;
      * Create a new Text File
      * Format text file to &quot;YYYYMMDD-HHMMSS- &quot;summary&quot;&quot;
      */
+    /**
+     * @throws Exception
+     */
     public static void createtxtfile() throws Exception{
 
 
     // Generate
-<span class="nc" id="L24">    Date thisDate = new Date();</span>
+<span class="nc" id="L27">    Date thisDate = new Date();</span>
 
     // Formating date to Year/Month/Day - Hours/Minutes/Seconds
-<span class="nc" id="L27">    SimpleDateFormat dateForm = new SimpleDateFormat(&quot;YYYYMMdd-hhmmss-&quot;);</span>
+<span class="nc" id="L30">    SimpleDateFormat dateForm = new SimpleDateFormat(&quot;YYYYMMdd-hhmmss-&quot;);</span>
     
     // Print to date to console with format
-<span class="nc" id="L30">    System.out.println(dateForm.format(thisDate) + &quot;summary&quot;);</span>
+<span class="nc" id="L33">    System.out.println(dateForm.format(thisDate) + &quot;summary&quot;);</span>
     
     
     /// Create a file
-<span class="nc" id="L34">    File file1 = new File(dateForm.format(thisDate) + &quot;summary&quot; + &quot;.txt&quot;);</span>
+<span class="nc" id="L37">    File file1 = new File(dateForm.format(thisDate) + &quot;summary&quot; + &quot;.txt&quot;);</span>
     
     //Creating a string to send the filename to CLIoutput
-<span class="nc" id="L37">    String fileName = file1.getName();</span>
+<span class="nc" id="L40">    String fileName = file1.getName();</span>
 
     //Send the filenamy to CLIOutput
-<span class="nc" id="L40">    CLIOutput.CLIOutFromFileMaker(fileName);</span>
+<span class="nc" id="L43">    CLIOutput.CLIOutFromFileMaker(fileName);</span>
 
     ///create file writer class
-<span class="nc" id="L43">    FileWriter fw = new FileWriter(file1);</span>
+<span class="nc" id="L46">    FileWriter fw = new FileWriter(file1);</span>
 
     /// create a print writer class
-<span class="nc" id="L46">    PrintWriter pw = new PrintWriter(fw);</span>
+<span class="nc" id="L49">    PrintWriter pw = new PrintWriter(fw);</span>
 
-<span class="nc" id="L48">    pw.write(&quot;test&quot;);</span>
-<span class="nc" id="L49">    pw.close();</span>
+<span class="nc" id="L51">    pw.write(&quot;test&quot;);</span>
+<span class="nc" id="L52">    pw.close();</span>
 
-<span class="nc" id="L51">    }</span>
+<span class="nc" id="L54">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
