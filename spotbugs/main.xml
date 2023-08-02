@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1691004850548" analysisTimestamp="1691004850548" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1691017725191" analysisTimestamp="1691017725191" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportManager.class</Jar>
@@ -967,13 +967,13 @@
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.WebsiteBuilder.getUrls() may expose internal representation by returning WebsiteBuilder.urls</LongMessage>
     <Class classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="41" end="323" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-        <Message>At WebsiteBuilder.java:[lines 41-323]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="36" end="318" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+        <Message>At WebsiteBuilder.java:[lines 36-318]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.WebsiteBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.WebsiteBuilder" name="getUrls" signature="()Ljava/util/Collection;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="115" end="115" startBytecode="0" endBytecode="46" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="110" end="110" startBytecode="0" endBytecode="46" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
       <Message>In method edu.odu.cs.cs350.WebsiteBuilder.getUrls()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.WebsiteBuilder" name="urls" signature="Ljava/util/Collection;" isStatic="false" primary="true">
@@ -982,21 +982,21 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.WebsiteBuilder.urls</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="115" end="115" startBytecode="4" endBytecode="4" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-      <Message>At WebsiteBuilder.java:[line 115]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="110" end="110" startBytecode="4" endBytecode="4" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+      <Message>At WebsiteBuilder.java:[line 110]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5c3937f305812cf49363033af03c20e0" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
     <LongMessage>new edu.odu.cs.cs350.WebsiteBuilder(Path, Collection) may expose internal representation by storing an externally mutable object into WebsiteBuilder.urls</LongMessage>
     <Class classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="41" end="323" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-        <Message>At WebsiteBuilder.java:[lines 41-323]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="36" end="318" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+        <Message>At WebsiteBuilder.java:[lines 36-318]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.WebsiteBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.WebsiteBuilder" name="&lt;init&gt;" signature="(Ljava/nio/file/Path;Ljava/util/Collection;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="93" end="97" startBytecode="0" endBytecode="106" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="88" end="92" startBytecode="0" endBytecode="106" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
       <Message>In method new edu.odu.cs.cs350.WebsiteBuilder(Path, Collection)</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.WebsiteBuilder" name="urls" signature="Ljava/util/Collection;" isStatic="false" primary="true">
@@ -1008,21 +1008,21 @@
     <LocalVariable name="urls" register="2" pc="11" role="LOCAL_VARIABLE_NAMED">
       <Message>Local variable named urls</Message>
     </LocalVariable>
-    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="95" end="95" startBytecode="11" endBytecode="11" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-      <Message>At WebsiteBuilder.java:[line 95]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="90" end="90" startBytecode="11" endBytecode="11" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+      <Message>At WebsiteBuilder.java:[line 90]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="e36fd5fdff64726aab418d9e03b02fa4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.WebsiteBuilder.setUrls(Collection) may expose internal representation by storing an externally mutable object into WebsiteBuilder.urls</LongMessage>
     <Class classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="41" end="323" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-        <Message>At WebsiteBuilder.java:[lines 41-323]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="36" end="318" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+        <Message>At WebsiteBuilder.java:[lines 36-318]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.WebsiteBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.WebsiteBuilder" name="setUrls" signature="(Ljava/util/Collection;)Ledu/odu/cs/cs350/WebsiteBuilder;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="261" end="262" startBytecode="0" endBytecode="80" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="256" end="257" startBytecode="0" endBytecode="80" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
       <Message>In method edu.odu.cs.cs350.WebsiteBuilder.setUrls(Collection)</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.WebsiteBuilder" name="urls" signature="Ljava/util/Collection;" isStatic="false" primary="true">
@@ -1034,21 +1034,21 @@
     <LocalVariable name="urls" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
       <Message>Local variable named urls</Message>
     </LocalVariable>
-    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="261" end="261" startBytecode="2" endBytecode="2" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-      <Message>At WebsiteBuilder.java:[line 261]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="256" end="256" startBytecode="2" endBytecode="2" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+      <Message>At WebsiteBuilder.java:[line 256]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="27fc86a2cd6a5566c9bd9eba82ae5c9d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.WebsiteBuilder.withURLs(Collection) may expose internal representation by storing an externally mutable object into WebsiteBuilder.urls</LongMessage>
     <Class classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="41" end="323" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-        <Message>At WebsiteBuilder.java:[lines 41-323]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="36" end="318" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+        <Message>At WebsiteBuilder.java:[lines 36-318]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.WebsiteBuilder</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.WebsiteBuilder" name="withURLs" signature="(Ljava/util/Collection;)Ledu/odu/cs/cs350/WebsiteBuilder;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="68" end="69" startBytecode="0" endBytecode="80" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="63" end="64" startBytecode="0" endBytecode="80" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java"/>
       <Message>In method edu.odu.cs.cs350.WebsiteBuilder.withURLs(Collection)</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.WebsiteBuilder" name="urls" signature="Ljava/util/Collection;" isStatic="false" primary="true">
@@ -1060,16 +1060,16 @@
     <LocalVariable name="urls" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
       <Message>Local variable named urls</Message>
     </LocalVariable>
-    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="68" end="68" startBytecode="2" endBytecode="2" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-      <Message>At WebsiteBuilder.java:[line 68]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true" start="63" end="63" startBytecode="2" endBytecode="2" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+      <Message>At WebsiteBuilder.java:[line 63]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="bf6129724d9f079d9db9476c636adc5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
     <ShortMessage>Unused field</ShortMessage>
     <LongMessage>Unused field: edu.odu.cs.cs350.WebsiteBuilder.documents</LongMessage>
     <Class classname="edu.odu.cs.cs350.WebsiteBuilder" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="41" end="323" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
-        <Message>At WebsiteBuilder.java:[lines 41-323]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.WebsiteBuilder" start="36" end="318" sourcefile="WebsiteBuilder.java" sourcepath="edu/odu/cs/cs350/WebsiteBuilder.java" relSourcepath="java/edu/odu/cs/cs350/WebsiteBuilder.java">
+        <Message>At WebsiteBuilder.java:[lines 36-318]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.WebsiteBuilder</Message>
     </Class>
@@ -1271,7 +1271,7 @@ signals unexpected behavior by returning an atypical return value.
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Wed, 2 Aug 2023 19:34:10 +0000" total_classes="0" referenced_classes="0" total_bugs="39" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="8.61" clock_seconds="8.07" peak_mbytes="204.84" alloc_mbytes="1734.00" gc_seconds="0.23" priority_2="36" priority_1="3">
+  <FindBugsSummary timestamp="Wed, 2 Aug 2023 23:08:45 +0000" total_classes="0" referenced_classes="0" total_bugs="39" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="10.40" clock_seconds="9.68" peak_mbytes="211.93" alloc_mbytes="1734.00" gc_seconds="0.28" priority_2="36" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="96cdc67bb690db4cc3dd7b80afbe276f"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="e99242b9915fa85df09c40646c1ffa24"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
@@ -1282,7 +1282,7 @@ signals unexpected behavior by returning an atypical return value.
     <FileStats path="edu/odu/cs/cs350/ReportWriter.java" bugCount="2" size="0" bugHash="60a13fe50a5b4952da1a2e666f3e17c6"/>
     <FileStats path="edu/odu/cs/cs350/ResourceBuilder.java" bugCount="1" size="0" bugHash="166dc22fc69f327f880c9a35a504fc38"/>
     <FileStats path="edu/odu/cs/cs350/Website.java" bugCount="2" size="0" bugHash="11b30ecdb22520ded4373abbf165e856"/>
-    <FileStats path="edu/odu/cs/cs350/WebsiteBuilder.java" bugCount="5" size="0" bugHash="1514462b03f7af06d913566c7cdb73bb"/>
+    <FileStats path="edu/odu/cs/cs350/WebsiteBuilder.java" bugCount="5" size="0" bugHash="ab00ce1df23c9fe3b514878d1fa6abe8"/>
     <FileStats path="edu/odu/cs/cs350/errorMessages.java" bugCount="1" size="0" bugHash="a667c910258d1b56fdcb0e98dcc5a7a0"/>
     <FindBugsProfile></FindBugsProfile>
   </FindBugsSummary>
