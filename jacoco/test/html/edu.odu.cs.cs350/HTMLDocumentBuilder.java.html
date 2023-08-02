@@ -118,29 +118,29 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
         //TODO: finish implementation. 
-<span class="nc" id="L121">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;a&quot;, &quot;href&quot;); </span>
-<span class="nc" id="L122">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="fc" id="L121">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;a&quot;, &quot;href&quot;); </span>
+<span class="fc" id="L122">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc bnc" id="L124" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="pc bpc" id="L124" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
         {
-<span class="nc" id="L126">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
-<span class="nc" id="L127">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+<span class="fc" id="L126">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="fc" id="L127">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
                                                         baseSiteDirectory,  uriAsString); 
 
-<span class="nc" id="L130">            Resource anchor = new Anchor(); </span>
+<span class="fc" id="L130">            Resource anchor = new Anchor(); </span>
 
-<span class="nc" id="L132">            anchor.setLocation(location); </span>
+<span class="fc" id="L132">            anchor.setLocation(location); </span>
 
-<span class="nc bnc" id="L134" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
             {
 <span class="nc" id="L136">                anchor.setUrl(new URL(uriAsString)); </span>
 <span class="nc" id="L137">                anchor.setPath(null);</span>
             }
             else
             {
-<span class="nc" id="L141">                anchor.setUrl(null);</span>
+<span class="fc" id="L141">                anchor.setUrl(null);</span>
 
-<span class="nc" id="L143">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
+<span class="fc" id="L143">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
 <span class="nc" id="L144">                Path convertedPathAsString = Paths.get(pathAsString);  </span>
 <span class="nc" id="L145">                anchor.setPath(convertedPathAsString); </span>
 
@@ -162,20 +162,20 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
         //TODO: finish implementation. 
-<span class="nc" id="L165">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;img&quot;, &quot;src&quot;); </span>
-<span class="nc" id="L166">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="fc" id="L165">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;img&quot;, &quot;src&quot;); </span>
+<span class="fc" id="L166">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
 
-<span class="nc bnc" id="L168" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="pc bpc" id="L168" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
         {
-<span class="nc" id="L170">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
-<span class="nc" id="L171">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+<span class="fc" id="L170">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="fc" id="L171">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
                                                         baseSiteDirectory,  uriAsString); 
 
-<span class="nc" id="L174">            Resource image = new Image(); </span>
+<span class="fc" id="L174">            Resource image = new Image(); </span>
 
-<span class="nc" id="L176">            image.setLocation(location); </span>
+<span class="fc" id="L176">            image.setLocation(location); </span>
 
-<span class="nc bnc" id="L178" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+<span class="pc bpc" id="L178" title="1 of 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
             {
 <span class="nc" id="L180">                image.setUrl(new URL(uriAsString)); </span>
 <span class="nc" id="L181">                image.setPath(null);</span>
@@ -206,29 +206,29 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
       //TODO: finish implementation. 
-<span class="nc" id="L209">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;script&quot;, &quot;src&quot;); </span>
-<span class="nc" id="L210">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="fc" id="L209">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;script&quot;, &quot;src&quot;); </span>
+<span class="fc" id="L210">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc bnc" id="L212" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="pc bpc" id="L212" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
         {
-<span class="nc" id="L214">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
-<span class="nc" id="L215">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+<span class="fc" id="L214">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="fc" id="L215">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
                                                         baseSiteDirectory,  uriAsString); 
 
-<span class="nc" id="L218">            Resource script = new Script(); </span>
+<span class="fc" id="L218">            Resource script = new Script(); </span>
 
-<span class="nc" id="L220">            script.setLocation(location); </span>
+<span class="fc" id="L220">            script.setLocation(location); </span>
 
-<span class="nc bnc" id="L222" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+<span class="pc bpc" id="L222" title="1 of 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
             {
 <span class="nc" id="L224">                script.setUrl(new URL(uriAsString)); </span>
 <span class="nc" id="L225">                script.setPath(null);</span>
             }
             else
             {
-<span class="nc" id="L229">                script.setUrl(null);</span>
+<span class="fc" id="L229">                script.setUrl(null);</span>
 
-<span class="nc" id="L231">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
+<span class="fc" id="L231">                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);</span>
 <span class="nc" id="L232">                Path convertedPathAsString = Paths.get(pathAsString);  </span>
 <span class="nc" id="L233">                script.setPath(convertedPathAsString); </span>
 
@@ -250,20 +250,20 @@ public class HTMLDocumentBuilder
             throws IOException, FileNotFoundException
     {
       //TODO: finish implementation. 
-<span class="nc" id="L253">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;link&quot;, &quot;href&quot;); </span>
-<span class="nc" id="L254">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
+<span class="fc" id="L253">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;link&quot;, &quot;href&quot;); </span>
+<span class="fc" id="L254">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="nc bnc" id="L256" title="All 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="pc bpc" id="L256" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
         {
-<span class="nc" id="L258">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
-<span class="nc" id="L259">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
+<span class="fc" id="L258">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
+<span class="fc" id="L259">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
                                                         baseSiteDirectory,  uriAsString); 
 
-<span class="nc" id="L262">            Resource stylesheet = new Stylesheet(); </span>
+<span class="fc" id="L262">            Resource stylesheet = new Stylesheet(); </span>
 
-<span class="nc" id="L264">            stylesheet.setLocation(location); </span>
+<span class="fc" id="L264">            stylesheet.setLocation(location); </span>
 
-<span class="nc bnc" id="L266" title="All 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
+<span class="pc bpc" id="L266" title="1 of 2 branches missed.">            if (location == Locality.EXTERNAL)</span>
             {
 <span class="nc" id="L268">                stylesheet.setUrl(new URL(uriAsString)); </span>
 <span class="nc" id="L269">                stylesheet.setPath(null);</span>
@@ -339,13 +339,13 @@ public class HTMLDocumentBuilder
         String urlOfSourceDoc
     ) 
     {
-<span class="nc bnc" id="L342" title="All 2 branches missed.">        if (isURL(extractedURI))</span>
+<span class="fc bfc" id="L342" title="All 2 branches covered.">        if (isURL(extractedURI))</span>
         {
-<span class="nc" id="L344">            return determineLocalityOfURL(extractedURI, baseSiteURLs, urlOfSourceDoc); </span>
+<span class="fc" id="L344">            return determineLocalityOfURL(extractedURI, baseSiteURLs, urlOfSourceDoc); </span>
         }
         else
         {
-<span class="nc" id="L348">            return determineLocalityOfPath(extractedURI, baseSiteDirectory, pathOfSourceDoc); </span>
+<span class="fc" id="L348">            return determineLocalityOfPath(extractedURI, baseSiteDirectory, pathOfSourceDoc); </span>
         }
     }
     
@@ -361,7 +361,7 @@ public class HTMLDocumentBuilder
     public String convertURLToPath(String uriAsString, List&lt;URL&gt; baseUrls) 
     {
         //TODO: needs to be implemented. 
-<span class="nc" id="L364">        return null;</span>
+<span class="fc" id="L364">        return null;</span>
     }
 
     /**
@@ -388,7 +388,7 @@ public class HTMLDocumentBuilder
     {
 <span class="fc bfc" id="L389" title="All 2 branches covered.">        return possibleURL.startsWith(&quot;http://&quot;) </span>
 <span class="fc bfc" id="L390" title="All 2 branches covered.">            || possibleURL.startsWith(&quot;https://&quot;)</span>
-<span class="pc bpc" id="L391" title="1 of 2 branches missed.">            || possibleURL.contains(&quot;:&quot;); </span>
+<span class="fc bfc" id="L391" title="All 2 branches covered.">            || possibleURL.contains(&quot;:&quot;); </span>
     }
 
     /**
