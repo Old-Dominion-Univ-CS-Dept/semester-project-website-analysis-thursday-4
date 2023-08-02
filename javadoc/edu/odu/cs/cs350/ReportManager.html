@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -205,6 +205,20 @@ extends java.lang.Object</pre>
 <div class="block">Sets the source data.</div>
 </td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeAll()">writeAll</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Writes reports in all supported formats.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeReportNames(java.io.BufferedWriter)">writeReportNames</a></span>&#8203;(java.io.BufferedWriter&nbsp;nameWriter)</code></th>
+<td class="colLast">
+<div class="block">Writes report names to the  BufferedWriter in the format "{baseFilename}.{extension}".</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -273,6 +287,25 @@ extends java.lang.Object</pre>
 <div class="block">Determines the base file name.</div>
 </li>
 </ul>
+<a id="writeReportNames(java.io.BufferedWriter)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>writeReportNames</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;writeReportNames&#8203;(java.io.BufferedWriter&nbsp;nameWriter)
+                      throws java.io.IOException</pre>
+<div class="block">Writes report names to the  BufferedWriter in the format "{baseFilename}.{extension}".
+ The extensions are "txt", "json", and "xlsx". Each report 
+ name is written on a new line.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>nameWriter</code> - The BufferedWriter object to write the report names to.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - If an I/O error occurs.</dd>
+</dl>
+</li>
+</ul>
 <a id="getBaseFilename()">
 <!--   -->
 </a>
@@ -290,7 +323,7 @@ extends java.lang.Object</pre>
 <a id="getSourceData()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getSourceData</h4>
 <pre class="methodSignature">public&nbsp;<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;getSourceData()</pre>
@@ -298,6 +331,22 @@ extends java.lang.Object</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The source data as a Website object.</dd>
+</dl>
+</li>
+</ul>
+<a id="writeAll()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>writeAll</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;writeAll()
+              throws java.io.IOException</pre>
+<div class="block">Writes reports in all supported formats.
+ Creates report writer objects, sets the source data and base name, and writes each report.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - If an I/O error occurs.</dd>
 </dl>
 </li>
 </ul>
