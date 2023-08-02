@@ -176,18 +176,80 @@ public class TestHTMLDocumentBuilder
     @Test
     public void testIsURL()
     {
-        fail("test needs to be implemented."); 
+        String possibleURL = new String("http://www.testsite.com/testing/for/class"); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+        assertThat(testBuilder.isURL(possibleURL), is(true)); 
+
+        possibleURL = "https://www.testsite.com/testing/for/class"; 
+        assertThat(testBuilder.isURL(possibleURL), is(true)); 
+
+        possibleURL = "src/test/resources/image.html"; 
+        assertThat(testBuilder.isURL(possibleURL), is(false)); 
+
     }
 
     @Test
     public void testDetermineLocalityOfPath()
     {
-        fail("test needs to be implemented."); 
+        String testRawPath = new String("src/test/resource/image.html"); 
+        String testBaseSiteDirectory = new String("src"); 
+        String testPathOfSourceDoc = new String("src/test"); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+
+        assertThat(testBuilder.determineLocalityOfPath(testRawPath, testBaseSiteDirectory, testPathOfSourceDoc),
+                    is(Locality.INTRAPAGE)); 
+
+        testRawPath = "src/test/resource/image.html"; 
+        testBaseSiteDirectory = "src"; 
+        testPathOfSourceDoc = "main/src/test/resource"; 
+
+        assertThat(testBuilder.determineLocalityOfPath(testRawPath, testBaseSiteDirectory, testPathOfSourceDoc),
+                    is(Locality.INTERNAL)); 
+
+        testRawPath = "src/test/resource/image.html"; 
+        testBaseSiteDirectory = "main"; 
+        testPathOfSourceDoc = "main/src/test/resource"; 
+
+        assertThat(testBuilder.determineLocalityOfPath(testRawPath, testBaseSiteDirectory, testPathOfSourceDoc),
+                    is(Locality.EXTERNAL)); 
+
     }
 
     @Test
     public void testDetermineLocalityOfURL()
     {
-        fail("test needs to be implemented."); 
+        String testRawURL = new String("http://www.test.com/result/internal"); 
+        List<String> testBaseSiteUrls = new ArrayList<>(Arrays.asList(
+            new String("http://www.test.com/result"),
+            new String("http://www.test.com/passed"),
+            new String("http://www.test.com/failed")));
+        
+        String testURLOfSourceDoc = new String("http://www.test.com/results/internal/test.txt"); 
+        HTMLDocumentBuilder testBuilder = new HTMLDocumentBuilder(); 
+
+        assertThat(testBuilder.determineLocalityOfURL(testRawURL, testBaseSiteUrls, testURLOfSourceDoc), 
+                    is(Locality.INTERNAL)); 
+
+        testRawURL = new String("http://www.test.com/result/intrapage"); 
+        testBaseSiteUrls = new ArrayList<>(Arrays.asList(
+            new String("http://www.test.com/result"),
+            new String("http://www.test.com/passed"),
+            new String("http://www.test.com/failed")));
+
+            testURLOfSourceDoc = new String("http://www.test.com/"); 
+
+            assertThat(testBuilder.determineLocalityOfURL(testRawURL, testBaseSiteUrls, testURLOfSourceDoc), 
+                    is(Locality.INTRAPAGE)); 
+
+        testRawURL = new String("http://www.test.com/result/external"); 
+        testBaseSiteUrls = new ArrayList<>(Arrays.asList(
+            new String("http://www.null.com/result"),
+            new String("http://www.null.com/passed"),
+            new String("http://www.null.com/failed")));
+
+            testURLOfSourceDoc = new String("http://www.null.com/"); 
+
+            assertThat(testBuilder.determineLocalityOfURL(testRawURL, testBaseSiteUrls, testURLOfSourceDoc), 
+                    is(Locality.EXTERNAL)); 
     }
 }
