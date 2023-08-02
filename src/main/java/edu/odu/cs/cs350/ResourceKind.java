@@ -1,9 +1,8 @@
-/**
- * 
- */
 package edu.odu.cs.cs350;
 
 /**
+ * This enum is used to label the kind of resource. 
+ * 
  * @author bonham36
  *
  */
