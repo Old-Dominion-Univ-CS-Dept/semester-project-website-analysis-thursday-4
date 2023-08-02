@@ -25,26 +25,34 @@ import java.util.regex.*;
     }
 
     /**
+     * Default constructor that sets resource kind to anchor. 
+     */
+    public Anchor()
+<span class="nc" id="L31">    {</span>
+<span class="nc" id="L32">        this.setTypeOfResource(ResourceKind.ANCHOR);</span>
+<span class="nc" id="L33">    }</span>
+
+    /**
      * Constructor for the Anchor class.
      * @param htmlRepresentation The HTML representation of the anchor tag.
      * @param currentUrl The URL of the current page.
      * @param siteUrl The base URL of the site.
      */
-<span class="fc" id="L33">    public Anchor(String htmlRepresentation) {</span>
-<span class="fc" id="L34">        this.htmlRepresentation = htmlRepresentation;</span>
-<span class="fc" id="L35">        Pattern hrefPattern = Pattern.compile(&quot;href=\&quot;(.*?)\&quot;&quot;);</span>
-<span class="fc" id="L36">        Matcher hrefMatcher = hrefPattern.matcher(htmlRepresentation);</span>
-<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        if (hrefMatcher.find()) {</span>
-<span class="fc" id="L38">            this.href = hrefMatcher.group(1);</span>
+<span class="fc" id="L41">    public Anchor(String htmlRepresentation) {</span>
+<span class="fc" id="L42">        this.htmlRepresentation = htmlRepresentation;</span>
+<span class="fc" id="L43">        Pattern hrefPattern = Pattern.compile(&quot;href=\&quot;(.*?)\&quot;&quot;);</span>
+<span class="fc" id="L44">        Matcher hrefMatcher = hrefPattern.matcher(htmlRepresentation);</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">        if (hrefMatcher.find()) {</span>
+<span class="fc" id="L46">            this.href = hrefMatcher.group(1);</span>
         }
-<span class="fc" id="L40">        Pattern textPattern = Pattern.compile(&quot;&gt;(.*?)&lt;&quot;);</span>
-<span class="fc" id="L41">        Matcher textMatcher = textPattern.matcher(htmlRepresentation);</span>
-<span class="pc bpc" id="L42" title="1 of 2 branches missed.">        if (textMatcher.find()) {</span>
-<span class="fc" id="L43">            this.text = textMatcher.group(1);</span>
+<span class="fc" id="L48">        Pattern textPattern = Pattern.compile(&quot;&gt;(.*?)&lt;&quot;);</span>
+<span class="fc" id="L49">        Matcher textMatcher = textPattern.matcher(htmlRepresentation);</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        if (textMatcher.find()) {</span>
+<span class="fc" id="L51">            this.text = textMatcher.group(1);</span>
         }
 
          // Set the type of resource to ANCHOR
-<span class="fc" id="L47">         setTypeOfResource(ResourceKind.ANCHOR);</span>
+<span class="fc" id="L55">         setTypeOfResource(ResourceKind.ANCHOR);</span>
         
             /**
              * TODO: Update this section once siteUrl is defined
@@ -53,14 +61,14 @@ import java.util.regex.*;
              * Otherwise, it's an external link.
              * 
              */
-<span class="fc" id="L56">    }</span>
+<span class="fc" id="L64">    }</span>
        /**
      * Returns the HTML representation of the anchor tag.
      *
      * @return The HTML representation of the anchor tag.
      */
     public String getHtmlRepresentation() {
-<span class="nc" id="L63">        return htmlRepresentation;</span>
+<span class="nc" id="L71">        return htmlRepresentation;</span>
     }
     /**
      * Returns the href attribute of the anchor tag.
@@ -68,7 +76,7 @@ import java.util.regex.*;
      * @return The href attribute of the anchor tag.
      */
     public String getHref() {
-<span class="fc" id="L71">        return href;</span>
+<span class="fc" id="L79">        return href;</span>
     }
     /**
      * Returns the text between the opening and closing tags of the anchor tag.
@@ -76,7 +84,7 @@ import java.util.regex.*;
      * @return The text between the opening and closing tags of the anchor tag.
      */
     public String getText() {
-<span class="fc" id="L79">        return text;</span>
+<span class="fc" id="L87">        return text;</span>
     }
       /**
      * Returns the type of link: intra-page, intra-site, or external.
@@ -84,7 +92,7 @@ import java.util.regex.*;
      * @return The type of link.
      */
     public LinkType getLinkType() {
-<span class="nc" id="L87">        return linkType;</span>
+<span class="nc" id="L95">        return linkType;</span>
     }
      /**
      * Returns the type of resource, which is always ANCHOR for Anchor objects.
@@ -94,7 +102,7 @@ import java.util.regex.*;
     @Override
 
     public ResourceKind getTypeOfResource() {
-<span class="fc" id="L97">        return super.getTypeOfResource();</span>
+<span class="fc" id="L105">        return super.getTypeOfResource();</span>
     }
 }
 
