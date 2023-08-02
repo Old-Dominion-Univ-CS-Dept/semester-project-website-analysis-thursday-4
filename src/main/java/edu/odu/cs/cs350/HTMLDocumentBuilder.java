@@ -69,7 +69,7 @@ public class HTMLDocumentBuilder
      */
     public void withContentFrom(BufferedReader reader)
     {
-        //TODO: to be implemented later. 
+        //TODO: finish implementation. 
         this.readBuffer = reader; 
     }
     
@@ -121,6 +121,35 @@ public class HTMLDocumentBuilder
         SimpleHTMLParser parser = new SimpleHTMLParser("a", "href"); 
         List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
         
+        for (String uriAsString : extractedStrings)
+        {
+            String baseSiteDirectory = this.baseDirectory.toString(); 
+            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,
+                                                        baseSiteDirectory,  uriAsString); 
+
+            Resource anchor = new Anchor(); 
+
+            anchor.setLocation(location); 
+
+            if (location == Locality.EXTERNAL)
+            {
+                anchor.setUrl(new URL(uriAsString)); 
+                anchor.setPath(null);
+            }
+            else
+            {
+                anchor.setUrl(null);
+
+                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);
+                Path convertedPathAsString = Paths.get(pathAsString);  
+                anchor.setPath(convertedPathAsString); 
+
+                long fileSizeInKiB = this.determineFileSize(uriAsString); 
+                anchor.setSizeOfFile(fileSizeInKiB); 
+            }
+            this.anchors.add(anchor); 
+        }
+
         return this.anchors; 
     }
     
@@ -180,6 +209,35 @@ public class HTMLDocumentBuilder
         SimpleHTMLParser parser = new SimpleHTMLParser("script", "src"); 
         List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
         
+        for (String uriAsString : extractedStrings)
+        {
+            String baseSiteDirectory = this.baseDirectory.toString(); 
+            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,
+                                                        baseSiteDirectory,  uriAsString); 
+
+            Resource script = new Script(); 
+
+            script.setLocation(location); 
+
+            if (location == Locality.EXTERNAL)
+            {
+                script.setUrl(new URL(uriAsString)); 
+                script.setPath(null);
+            }
+            else
+            {
+                script.setUrl(null);
+
+                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);
+                Path convertedPathAsString = Paths.get(pathAsString);  
+                script.setPath(convertedPathAsString); 
+
+                long fileSizeInKiB = this.determineFileSize(uriAsString); 
+                script.setSizeOfFile(fileSizeInKiB); 
+            }
+            this.scripts.add(script); 
+        }
+
         return this.scripts; 
     }
     
@@ -195,6 +253,35 @@ public class HTMLDocumentBuilder
         SimpleHTMLParser parser = new SimpleHTMLParser("link", "href"); 
         List<String> extractedStrings = parser.extractAllURIs(this.readBuffer); 
         
+        for (String uriAsString : extractedStrings)
+        {
+            String baseSiteDirectory = this.baseDirectory.toString(); 
+            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,
+                                                        baseSiteDirectory,  uriAsString); 
+
+            Resource stylesheet = new Stylesheet(); 
+
+            stylesheet.setLocation(location); 
+
+            if (location == Locality.EXTERNAL)
+            {
+                stylesheet.setUrl(new URL(uriAsString)); 
+                stylesheet.setPath(null);
+            }
+            else
+            {
+                stylesheet.setUrl(null);
+
+                String pathAsString = this.convertURLToPath(uriAsString, this.baseUrls);
+                Path convertedPathAsString = Paths.get(pathAsString);  
+                stylesheet.setPath(convertedPathAsString); 
+
+                long fileSizeInKiB = this.determineFileSize(uriAsString); 
+                stylesheet.setSizeOfFile(fileSizeInKiB); 
+            }
+            this.stylesheets.add(stylesheet); 
+        }
+
         return this.stylesheets; 
     }
 
@@ -373,6 +460,15 @@ public class HTMLDocumentBuilder
 
         return Locality.EXTERNAL; 
     }
+
+    @Override
+    public String toString() {
+        return "HTMLDocumentBuilder [images=" + images + ", scripts=" + scripts + ", stylesheets=" + stylesheets
+                + ", anchors=" + anchors + ", baseUrls=" + baseUrls + ", baseDirectory=" + baseDirectory
+                + ", readBuffer=" + readBuffer + "]";
+    }
+
+    
 
     
 }
