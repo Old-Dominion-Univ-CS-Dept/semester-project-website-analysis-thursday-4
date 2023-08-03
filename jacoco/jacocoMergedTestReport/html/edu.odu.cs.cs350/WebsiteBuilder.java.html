@@ -32,8 +32,8 @@ public class WebsiteBuilder
      * @throws IllegalArgumentException if the path is not a directory.
      */
     public WebsiteBuilder withPath(Path basePath) {
-<span class="pc bpc" id="L35" title="2 of 4 branches missed.">        if (basePath == null || !Files.isDirectory(basePath)) {</span>
-<span class="nc" id="L36">            throw new IllegalArgumentException(&quot;Path must be a directory: &quot; + basePath);</span>
+<span class="fc bfc" id="L35" title="All 4 branches covered.">        if (basePath == null || !Files.isDirectory(basePath)) {</span>
+<span class="fc" id="L36">            throw new IllegalArgumentException(&quot;Path must be a directory: &quot; + basePath);</span>
         }
 <span class="fc" id="L38">        this.basePath = basePath;</span>
 <span class="fc" id="L39">        return this;</span>
@@ -137,7 +137,7 @@ public class WebsiteBuilder
         
 <span class="fc" id="L138">        return allFiles;</span>
     }
-
+ 
     /**
      * Examines the directory structure og the specified path and extracts all
      * subdirectories.

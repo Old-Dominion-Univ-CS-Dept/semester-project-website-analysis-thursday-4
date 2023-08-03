@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1691103157445" analysisTimestamp="1691103157445" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1691104596902" analysisTimestamp="1691104596902" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Script.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
@@ -1188,7 +1188,7 @@ object explicitly.</p>
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Thu, 3 Aug 2023 22:52:37 +0000" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="11.00" clock_seconds="8.47" peak_mbytes="217.33" alloc_mbytes="1734.00" gc_seconds="0.34" priority_2="33" priority_1="3">
+  <FindBugsSummary timestamp="Thu, 3 Aug 2023 23:16:36 +0000" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="9.44" clock_seconds="6.93" peak_mbytes="200.25" alloc_mbytes="1734.00" gc_seconds="0.18" priority_2="33" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="96cdc67bb690db4cc3dd7b80afbe276f"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="e99242b9915fa85df09c40646c1ffa24"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
