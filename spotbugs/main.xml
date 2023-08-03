@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1691024154437" analysisTimestamp="1691024154437" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1691028939136" analysisTimestamp="1691028939135" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportManager.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Resource.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$2.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/LinkExtraction.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$1.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/errorMessages.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Script.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Image.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocumentBuilder.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceKind.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteBuilder.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$3.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteAnalysisDriver.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Stylesheet.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportWriter.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ReportManager.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Stylesheet.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteAnalysisDriver.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Locality.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/LinkExtraction.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/errorMessages.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$2.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor$LinkType.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/SimpleHTMLParser.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Resource.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocument.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CreateTextFile.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Image.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/JSONReportWriter.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceBuilder.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/AudioAnalysis$AudioInfo.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ExcelGenerator.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/ResourceKind.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocumentBuilder.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/WebsiteBuilder.class</Jar>
-    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/CLIOutput$1.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
+    <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Anchor$LinkType.class</Jar>
     <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.apache.tika/tika-parsers/1.27/269e021ed326239fd8f62e3ff85f4b4e8dbd6ec9/tika-parsers-1.27.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.16.1/ae551410a16433984cd4a8603622fafa9d8299f0/jsoup-1.16.1.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/home/runner/.gradle/caches/modules-2/files-2.1/com.cedarsoftware/json-io/4.14.0/a30d7145c4ffc3ac1a6356c47bb645f7850fc577/json-io-4.14.0.jar</AuxClasspathEntry>
@@ -682,63 +682,63 @@
     <ShortMessage>Reliance on default encoding</ShortMessage>
     <LongMessage>Found reliance on default encoding in edu.odu.cs.cs350.JSONReportWriter.writeReport(Website): new java.io.FileWriter(File)</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="30" end="101" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 30-101]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="32" end="190" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 32-190]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="writeReport" signature="(Ledu/odu/cs/cs350/Website;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="81" end="90" startBytecode="0" endBytecode="259" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="156" end="165" startBytecode="0" endBytecode="259" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Website)</Message>
     </Method>
     <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/io/File;)V" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.FileWriter" start="96" end="97" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
       <Message>Called method new java.io.FileWriter(File)</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="86" end="86" startBytecode="41" endBytecode="41" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 86]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="161" end="161" startBytecode="41" endBytecode="41" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 161]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="791e51c44fa1469cd85c38a97adf1279" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
     <ShortMessage>Method ignores exceptional return value</ShortMessage>
     <LongMessage>Exceptional return value of java.io.File.createNewFile() ignored in edu.odu.cs.cs350.JSONReportWriter.writeReport(Website)</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="30" end="101" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 30-101]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="32" end="190" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 32-190]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="writeReport" signature="(Ledu/odu/cs/cs350/Website;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="81" end="90" startBytecode="0" endBytecode="259" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="156" end="165" startBytecode="0" endBytecode="259" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Website)</Message>
     </Method>
     <Method classname="java.io.File" name="createNewFile" signature="()Z" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.File" start="1030" end="1035" startBytecode="0" endBytecode="126" sourcefile="File.java" sourcepath="java/io/File.java"/>
       <Message>Called method java.io.File.createNewFile()</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="83" end="83" startBytecode="25" endBytecode="25" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 83]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="158" end="158" startBytecode="25" endBytecode="25" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 158]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="RV_RETURN_VALUE_IGNORED_BAD_PRACTICE" priority="2" rank="16" abbrev="RV" category="BAD_PRACTICE" instanceHash="7889527b48ab9458d04260762e5c0eeb" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="253">
     <ShortMessage>Method ignores exceptional return value</ShortMessage>
     <LongMessage>Exceptional return value of java.io.File.mkdirs() ignored in edu.odu.cs.cs350.JSONReportWriter.writeReport(Website)</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="30" end="101" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 30-101]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="32" end="190" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 32-190]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.JSONReportWriter" name="writeReport" signature="(Ledu/odu/cs/cs350/Website;)V" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="81" end="90" startBytecode="0" endBytecode="259" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="156" end="165" startBytecode="0" endBytecode="259" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java"/>
       <Message>In method edu.odu.cs.cs350.JSONReportWriter.writeReport(Website)</Message>
     </Method>
     <Method classname="java.io.File" name="mkdirs" signature="()Z" isStatic="false" role="METHOD_CALLED">
       <SourceLine classname="java.io.File" start="1391" end="1405" startBytecode="0" endBytecode="230" sourcefile="File.java" sourcepath="java/io/File.java"/>
       <Message>Called method java.io.File.mkdirs()</Message>
     </Method>
-    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="82" end="82" startBytecode="17" endBytecode="17" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-      <Message>At JSONReportWriter.java:[line 82]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" primary="true" start="157" end="157" startBytecode="17" endBytecode="17" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+      <Message>At JSONReportWriter.java:[line 157]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="b772646e12cba742aa70848f54bee9a3" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
@@ -1222,12 +1222,12 @@ signals unexpected behavior by returning an atypical return value.
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Thu, 3 Aug 2023 00:55:54 +0000" total_classes="0" referenced_classes="0" total_bugs="37" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="8.59" clock_seconds="8.43" peak_mbytes="214.34" alloc_mbytes="1734.00" gc_seconds="0.25" priority_2="34" priority_1="3">
+  <FindBugsSummary timestamp="Thu, 3 Aug 2023 02:15:39 +0000" total_classes="0" referenced_classes="0" total_bugs="37" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="8.89" clock_seconds="8.89" peak_mbytes="212.96" alloc_mbytes="1734.00" gc_seconds="0.25" priority_2="34" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="96cdc67bb690db4cc3dd7b80afbe276f"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="e99242b9915fa85df09c40646c1ffa24"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocumentBuilder.java" bugCount="6" size="0" bugHash="7bce60a3bd7c66a3f01bcbf1b7c0ef03"/>
-    <FileStats path="edu/odu/cs/cs350/JSONReportWriter.java" bugCount="3" size="0" bugHash="bbee6aeb4b3a998f3db01d3ea9a0952f"/>
+    <FileStats path="edu/odu/cs/cs350/JSONReportWriter.java" bugCount="3" size="0" bugHash="243a26731e6a8cccd586c5ee71adb0cb"/>
     <FileStats path="edu/odu/cs/cs350/LinkExtraction.java" bugCount="1" size="0" bugHash="c1348eb76fd656f2bdd4a2e8e30fffde"/>
     <FileStats path="edu/odu/cs/cs350/ReportManager.java" bugCount="2" size="0" bugHash="c8d14003159ca53a45e82228455f0d83"/>
     <FileStats path="edu/odu/cs/cs350/ReportWriter.java" bugCount="2" size="0" bugHash="60a13fe50a5b4952da1a2e666f3e17c6"/>

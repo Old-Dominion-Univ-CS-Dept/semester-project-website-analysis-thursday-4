@@ -220,7 +220,7 @@ extends <a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWrit
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeReport(edu.odu.cs.cs350.Website)">writeReport</a></span>&#8203;(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)</code></th>
 <td class="colLast">
-<div class="block">Abstract method to write a report to various format depending on the subclass.</div>
+<div class="block">Overrides the writeReport method from the ReportWriter class.</div>
 </td>
 </tr>
 </table>
@@ -311,12 +311,14 @@ extends <a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWrit
 <h4>writeReport</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;writeReport&#8203;(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)
                  throws java.io.IOException</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="ReportWriter.html#writeReport(edu.odu.cs.cs350.Website)">ReportWriter</a></code></span></div>
-<div class="block">Abstract method to write a report to various format depending on the subclass. 
- JSON,  XML, and text.</div>
+<div class="block">Overrides the writeReport method from the ReportWriter class.
+ This method receives a Website object, converts it to a JSON string,
+ and writes it to the output file.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ReportWriter.html#writeReport(edu.odu.cs.cs350.Website)">writeReport</a></code>&nbsp;in class&nbsp;<code><a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWriter</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>website</code> - A Website object to be written into the file.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - If an I/O error occurs.</dd>
 </dl>
