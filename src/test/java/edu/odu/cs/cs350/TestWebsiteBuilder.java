@@ -165,7 +165,7 @@ public void testWithPath() {
             Collection<Path> expectedPaths = new ArrayList<>();
 
             // Read the test data from the file
-            URL testFileUrl = this.getClass().getResource("/testURLS.txt");
+            URL testFileUrl = this.getClass().getResource("/testUrls.txt");
             if (testFileUrl == null) {
                 fail("Test file not found");
             }
