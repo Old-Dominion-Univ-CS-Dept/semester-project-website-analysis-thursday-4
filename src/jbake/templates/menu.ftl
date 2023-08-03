@@ -31,7 +31,6 @@
         <li>
             <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>coverage.html">Unit Test Coverage</a>
         </li>
-        <!--
         <li>
             <a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>junitIntegration.html">
                 Integration Tests
@@ -47,7 +46,6 @@
                 Merged Test Coverage
             </a>
         </li>
-        -->
     </ul>
 
     <h5>Analysis Reports</h5>
