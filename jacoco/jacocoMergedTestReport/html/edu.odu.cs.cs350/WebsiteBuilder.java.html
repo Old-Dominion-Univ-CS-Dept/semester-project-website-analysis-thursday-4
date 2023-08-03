@@ -188,24 +188,24 @@ public class WebsiteBuilder
 
      
      public Collection&lt;Path&gt; mapUrlsToLocalPath(Collection&lt;URL&gt; urls, Path basePath) throws IOException  {
-<span class="nc" id="L191">        List&lt;Path&gt; localPaths = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L192">        String commonUrlPrefix = findCommonPrefix(urls);</span>
+<span class="fc" id="L191">        List&lt;Path&gt; localPaths = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L192">        String commonUrlPrefix = findCommonPrefix(urls);</span>
     
-<span class="nc bnc" id="L194" title="All 2 branches missed.">        for (URL url : urls) {</span>
-<span class="nc" id="L195">            String urlPath = url.getPath();</span>
+<span class="fc bfc" id="L194" title="All 2 branches covered.">        for (URL url : urls) {</span>
+<span class="fc" id="L195">            String urlPath = url.getPath();</span>
         
             // Remove the common prefix from the URL path
-<span class="nc" id="L198">            String localPath = urlPath.replaceFirst(commonUrlPrefix, &quot;&quot;);  </span>
+<span class="fc" id="L198">            String localPath = urlPath.replaceFirst(commonUrlPrefix, &quot;&quot;);  </span>
         
-<span class="nc bnc" id="L200" title="All 2 branches missed.">            if (localPath.startsWith(&quot;/&quot;)) {</span>
+<span class="pc bpc" id="L200" title="1 of 2 branches missed.">            if (localPath.startsWith(&quot;/&quot;)) {</span>
 <span class="nc" id="L201">                localPath = localPath.substring(1);</span>
             }
         
-<span class="nc" id="L204">            Path transformedPath = basePath.resolve(localPath);</span>
-<span class="nc" id="L205">            localPaths.add(transformedPath);</span>
-<span class="nc" id="L206">        }</span>
+<span class="fc" id="L204">            Path transformedPath = basePath.resolve(localPath);</span>
+<span class="fc" id="L205">            localPaths.add(transformedPath);</span>
+<span class="fc" id="L206">        }</span>
         
-<span class="nc" id="L208">        return localPaths;</span>
+<span class="fc" id="L208">        return localPaths;</span>
     }
     
     
@@ -221,16 +221,16 @@ public class WebsiteBuilder
      */
     
     public String findCommonPrefix(Collection&lt;URL&gt; urls) {
-<span class="nc" id="L224">        String commonPrefix = urls.stream()</span>
-<span class="nc" id="L225">                .map(URL::getPath)</span>
-<span class="nc" id="L226">                .reduce((s1, s2) -&gt; {</span>
-<span class="nc" id="L227">                    int i = 0;</span>
-<span class="nc bnc" id="L228" title="All 6 branches missed.">                    while (i &lt; s1.length() &amp;&amp; i &lt; s2.length() &amp;&amp; s1.charAt(i) == s2.charAt(i)) {</span>
-<span class="nc" id="L229">                        i++;</span>
+<span class="fc" id="L224">        String commonPrefix = urls.stream()</span>
+<span class="fc" id="L225">                .map(URL::getPath)</span>
+<span class="fc" id="L226">                .reduce((s1, s2) -&gt; {</span>
+<span class="fc" id="L227">                    int i = 0;</span>
+<span class="pc bpc" id="L228" title="1 of 6 branches missed.">                    while (i &lt; s1.length() &amp;&amp; i &lt; s2.length() &amp;&amp; s1.charAt(i) == s2.charAt(i)) {</span>
+<span class="fc" id="L229">                        i++;</span>
                     }
-<span class="nc" id="L231">                    return s1.substring(0, i);</span>
-<span class="nc" id="L232">                }).orElse(&quot;&quot;);</span>
-<span class="nc" id="L233">        return commonPrefix;</span>
+<span class="fc" id="L231">                    return s1.substring(0, i);</span>
+<span class="fc" id="L232">                }).orElse(&quot;&quot;);</span>
+<span class="fc" id="L233">        return commonPrefix;</span>
     }
     
     
