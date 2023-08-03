@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.21.0" timestamp="2023-08-03T22:47:42.101">
+    version="6.21.0" timestamp="2023-08-03T22:52:29.232">
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Anchor.java">
 <violation beginline="12" endline="107" begincolumn="9" endcolumn="1" rule="DataClass" ruleset="Design" package="edu.odu.cs.cs350" class="Anchor" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#dataclass" priority="3">
 The class 'Anchor' is suspected to be a Data Class (WOC=14.286%, NOPA=0, NOAM=4, WMC=8)
@@ -1238,34 +1238,34 @@ It is a good practice to call super() in a constructor
 </violation>
 </file>
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Website.java">
-<violation beginline="18" endline="18" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+<violation beginline="20" endline="20" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
 </violation>
-<violation beginline="18" endline="18" begincolumn="18" endcolumn="25" rule="ImmutableField" ruleset="Design" package="edu.odu.cs.cs350" class="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
+<violation beginline="20" endline="20" begincolumn="18" endcolumn="25" rule="ImmutableField" ruleset="Design" package="edu.odu.cs.cs350" class="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
 Private field 'basePath' could be made final; it is only initialized in the declaration or constructor.
 </violation>
-<violation beginline="19" endline="19" begincolumn="29" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+<violation beginline="21" endline="21" begincolumn="29" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
 </violation>
-<violation beginline="19" endline="19" begincolumn="29" endcolumn="32" rule="ImmutableField" ruleset="Design" package="edu.odu.cs.cs350" class="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
+<violation beginline="21" endline="21" begincolumn="29" endcolumn="32" rule="ImmutableField" ruleset="Design" package="edu.odu.cs.cs350" class="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
 Private field 'urls' could be made final; it is only initialized in the declaration or constructor.
 </violation>
-<violation beginline="20" endline="20" begincolumn="38" endcolumn="46" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+<violation beginline="22" endline="22" begincolumn="38" endcolumn="46" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs.cs350" class="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
 Found non-transient, non-static member. Please mark as transient or provide accessors.
 </violation>
-<violation beginline="20" endline="20" begincolumn="38" endcolumn="46" rule="ImmutableField" ruleset="Design" package="edu.odu.cs.cs350" class="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
+<violation beginline="22" endline="22" begincolumn="38" endcolumn="46" rule="ImmutableField" ruleset="Design" package="edu.odu.cs.cs350" class="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
 Private field 'documents' could be made final; it is only initialized in the declaration or constructor.
 </violation>
-<violation beginline="28" endline="28" begincolumn="20" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="30" endline="30" begincolumn="20" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="Website" variable="basePath" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'basePath' is not assigned and could be declared final
 </violation>
-<violation beginline="28" endline="28" begincolumn="57" endcolumn="90" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="30" endline="30" begincolumn="57" endcolumn="90" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="Website" variable="documents" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'documents' is not assigned and could be declared final
 </violation>
-<violation beginline="28" endline="28" begincolumn="35" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="30" endline="30" begincolumn="35" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="Website" variable="urls" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'urls' is not assigned and could be declared final
 </violation>
-<violation beginline="59" endline="59" begincolumn="25" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="addPage" variable="document" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="61" endline="61" begincolumn="25" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="Website" method="addPage" variable="document" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'document' is not assigned and could be declared final
 </violation>
 </file>

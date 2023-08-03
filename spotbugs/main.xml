@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1691102869156" analysisTimestamp="1691102869156" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1691103157445" analysisTimestamp="1691103157445" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Script.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
@@ -856,13 +856,13 @@
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.Website.getHtmlDocuments() may expose internal representation by returning Website.documents</LongMessage>
     <Class classname="edu.odu.cs.cs350.Website" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.Website" start="28" end="61" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
-        <Message>At Website.java:[lines 28-61]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="30" end="63" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
+        <Message>At Website.java:[lines 30-63]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.Website</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.Website" name="getHtmlDocuments" signature="()Ljava/util/Collection;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.Website" start="51" end="51" startBytecode="0" endBytecode="46" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="53" end="53" startBytecode="0" endBytecode="46" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java"/>
       <Message>In method edu.odu.cs.cs350.Website.getHtmlDocuments()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.Website" name="documents" signature="Ljava/util/Collection;" isStatic="false" primary="true">
@@ -871,21 +871,21 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.Website.documents</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.Website" primary="true" start="51" end="51" startBytecode="4" endBytecode="4" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
-      <Message>At Website.java:[line 51]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.Website" primary="true" start="53" end="53" startBytecode="4" endBytecode="4" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
+      <Message>At Website.java:[line 53]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="8189c126841a80a295160f57af8d3282" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>edu.odu.cs.cs350.Website.getUrls() may expose internal representation by returning Website.urls</LongMessage>
     <Class classname="edu.odu.cs.cs350.Website" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.Website" start="28" end="61" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
-        <Message>At Website.java:[lines 28-61]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="30" end="63" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
+        <Message>At Website.java:[lines 30-63]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.Website</Message>
     </Class>
     <Method classname="edu.odu.cs.cs350.Website" name="getUrls" signature="()Ljava/util/Collection;" isStatic="false" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.Website" start="47" end="47" startBytecode="0" endBytecode="46" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java"/>
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="49" end="49" startBytecode="0" endBytecode="46" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java"/>
       <Message>In method edu.odu.cs.cs350.Website.getUrls()</Message>
     </Method>
     <Field classname="edu.odu.cs.cs350.Website" name="urls" signature="Ljava/util/Collection;" isStatic="false" primary="true">
@@ -894,8 +894,8 @@
       </SourceLine>
       <Message>Field edu.odu.cs.cs350.Website.urls</Message>
     </Field>
-    <SourceLine classname="edu.odu.cs.cs350.Website" primary="true" start="47" end="47" startBytecode="4" endBytecode="4" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
-      <Message>At Website.java:[line 47]</Message>
+    <SourceLine classname="edu.odu.cs.cs350.Website" primary="true" start="49" end="49" startBytecode="4" endBytecode="4" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java/edu/odu/cs/cs350/Website.java">
+      <Message>At Website.java:[line 49]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="dd6392e889ef7c8881fcf10b4118f86f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
@@ -1188,7 +1188,7 @@ object explicitly.</p>
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Thu, 3 Aug 2023 22:47:49 +0000" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="9.05" clock_seconds="6.95" peak_mbytes="227.24" alloc_mbytes="1734.00" gc_seconds="0.28" priority_2="33" priority_1="3">
+  <FindBugsSummary timestamp="Thu, 3 Aug 2023 22:52:37 +0000" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="11.00" clock_seconds="8.47" peak_mbytes="217.33" alloc_mbytes="1734.00" gc_seconds="0.34" priority_2="33" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="96cdc67bb690db4cc3dd7b80afbe276f"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="e99242b9915fa85df09c40646c1ffa24"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
@@ -1198,7 +1198,7 @@ object explicitly.</p>
     <FileStats path="edu/odu/cs/cs350/ReportManager.java" bugCount="2" size="0" bugHash="de012d293e4b44ff56305d9bd6e4a7dd"/>
     <FileStats path="edu/odu/cs/cs350/ReportWriter.java" bugCount="3" size="0" bugHash="25f452e1dbb82146d8c9935aef0f81aa"/>
     <FileStats path="edu/odu/cs/cs350/ResourceBuilder.java" bugCount="1" size="0" bugHash="166dc22fc69f327f880c9a35a504fc38"/>
-    <FileStats path="edu/odu/cs/cs350/Website.java" bugCount="2" size="0" bugHash="11b30ecdb22520ded4373abbf165e856"/>
+    <FileStats path="edu/odu/cs/cs350/Website.java" bugCount="2" size="0" bugHash="47d6916b337a72aa490d441724f6ca9b"/>
     <FileStats path="edu/odu/cs/cs350/WebsiteBuilder.java" bugCount="5" size="0" bugHash="a017658eaa2404fc274c24d44125ed4c"/>
     <FileStats path="edu/odu/cs/cs350/errorMessages.java" bugCount="1" size="0" bugHash="a667c910258d1b56fdcb0e98dcc5a7a0"/>
     <FindBugsProfile></FindBugsProfile>
