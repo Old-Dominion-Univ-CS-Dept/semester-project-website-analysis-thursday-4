@@ -18,12 +18,9 @@ import com.cedarsoftware.util.io.JsonWriter;
  * It uses the JsonWriter library to convert data into a JSON string
  * and writes it to a file.
  * 
- * Currently this class takes a Map containing test report data,
- * After further development, this method will take a Website object as a parameter.
  */
 public class JSONReportWriter extends ReportWriter {
     private static final String OUTPUT_FILE_NAME = "src/main/data/report.json";
-    private Map<String, Object> sourceData;
     private File outputFile;
 
    /**
@@ -33,8 +30,6 @@ public class JSONReportWriter extends ReportWriter {
     public JSONReportWriter() {
         this.outputFile = new File(OUTPUT_FILE_NAME);
 
-        ///Added to simplfy CLI output
-        System.out.println(OUTPUT_FILE_NAME + "/n");
     }
 
     /**
@@ -56,74 +51,52 @@ public class JSONReportWriter extends ReportWriter {
         return outputFile;
     }
 
-       /**
-     * Overrides the writeReport (not yet written) method from the ReportWriter class.
-     * This method receives a Map containing the report data, converts it to a JSON string 
-     * and writes it to the output file.
-     *
-     * @param reportData A map of report data to be written into the file.
-     */
-
-    /**
-     * Getter method for the source data.
-     *
-     * @return Map The source data of the report.
-     */
-    public Map<String, Object> getSourceData() {
-        return sourceData;
-    }
-
-    /**
-     * Writes a string to a file using a FileWriter.
-     *
-     * @param fileWriter The FileWriter to be used for writing the string.
-     * @param jsonString The string to be written to the file.
-     * @throws IOException If an I/O error occurs.
-     */
-     private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
-        writer.write(jsonString);
-     }
-
     /**
      * Overrides the writeReport method from the ReportWriter class.
-     * This method receives a map containing the report data, converts it to a JSON string,
+     * This method receives a Website object, converts it to a JSON string,
      * and writes it to the output file.
      *
-     * @param reportData A map of report data to be written into the file.
+     * @param website A Website object to be written into the file.
      * @throws IOException If an I/O error occurs.
      */
-     @Override
-     public void writeReport(Map<String, Object> reportData) throws IOException {
-        // Check if file exists, and if not, create it
-        if (!outputFile.exists()) {
-            outputFile.getParentFile().mkdirs(); // Create parent directories if not exist
-            outputFile.createNewFile(); // Create the file itself
-        }
     
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
-            String jsonString = convertToJson(reportData);
-            writeToFile(bufferedWriter, jsonString);
-            this.sourceData = reportData;
-        }
-    }
 
-    /**
-     * Converts the report data into a JSON string.
+        /**
+     * Converts the Website data into a JSON string.
      *
-     * @param reportData A map of report data to be converted into a JSON string.
-     * @return  The JSON string representation of the report data.
+     * @param website A Website object to be converted into a JSON string.
+     * @return  The JSON string representation of the Website data.
      */
-    private String convertToJson(Map<String, Object> reportData) {
+    private String convertToJson(Website website) {
         Map<String, Object> args = new HashMap<>();
         args.put(JsonWriter.TYPE, false);
         args.put(JsonWriter.PRETTY_PRINT, true); // Enable pretty print for readable JSON output
-        return JsonWriter.objectToJson(reportData, args);
+        return JsonWriter.objectToJson(website, args);
     }
 
-  
-     
+
+     @Override
+     public void writeReport(Website website) throws IOException {
+         // Check if file exists, and if not, create it
+         if (!outputFile.exists()) {
+             outputFile.getParentFile().mkdirs(); // Create parent directories if not exist
+             outputFile.createNewFile(); // Create the file itself
+         }
+ 
+         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
+             String jsonString = convertToJson(website);
+             writeToFile(bufferedWriter, jsonString);
+         }
+     }
+    /**
+     * Writes a string to a file using a BufferedWriter.
+     *
+     * @param writer The BufferedWriter to be used for writing the string.
+     * @param jsonString The string to be written to the file.
+     * @throws IOException If an I/O error occurs.
+     */
+    private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
+        writer.write(jsonString);
+        writer.write("\n");  
+    }
 }
-
-
-
-

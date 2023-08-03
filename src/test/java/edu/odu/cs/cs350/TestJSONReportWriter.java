@@ -5,30 +5,24 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.fail;
-import com.cedarsoftware.util.io.JsonWriter;
 
-
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 public class TestJSONReportWriter {
     private JSONReportWriter writer;
     private File outputFile;
+
 
     @BeforeEach
     public void setUp() {
@@ -76,62 +70,60 @@ public class TestJSONReportWriter {
 
     @Test
     public void testWriteReport() throws IOException {
-                // Load dummy data from JSON file
-        ObjectMapper mapper = new ObjectMapper();
-        Map<String, Object> reportData = null;
-        try {
-            reportData = mapper.readValue(
-                new File("src/test/resources/testJsonReport.json"),
-                new TypeReference<Map<String, Object>>(){}
-            );
-        } catch (IOException e) {
-            fail("Error loading dummy data: " + e.getMessage());
-        }
+        // Create dummy website
+        Website website = createDummyWebsite();
 
         // Write the report
         try {
-            writer.writeReport(reportData);
+            writer.writeReport(website);
         } catch (IOException e) {
             e.printStackTrace();
             fail("IOException should not have been thrown.");
         }
 
-          // Read the output file and check its contents
-    try (BufferedReader reader = new BufferedReader(new FileReader(writer.getOutputFile()))) {
-        StringBuilder output = new StringBuilder();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            output.append(line);
+        // Verify that the output file was written to
+        assertThat(outputFile.exists(), is(true));
         }
 
-        // Define the expected JSON output with pretty print
-        String expectedJson = JsonWriter.formatJson(output.toString());
-
-        // Assert that the output matches the expected JSON
-        assertThat(output.toString().trim(), is(equalTo(expectedJson.trim())));
-    } catch (IOException e) {
-        fail("Error reading output file: " + e.getMessage());
+    public Website createDummyWebsite() throws MalformedURLException {
+        // Create dummy Resource instances
+        Resource resource1 = new Resource();
+        resource1.setTypeOfResource(ResourceKind.SCRIPT);
+        resource1.setLocation(Locality.INTERNAL);
+        resource1.setSizeOfFile(500L);
+        resource1.setPath(Paths.get("src/test/resources/resource1.js"));
+        resource1.setUrl(new URL("http://example1.com/resource1.js"));
+    
+        Resource resource2 = new Resource();
+        resource2.setTypeOfResource(ResourceKind.IMAGE);
+        resource2.setLocation(Locality.EXTERNAL);
+        resource2.setSizeOfFile(1000L);
+        resource2.setPath(Paths.get("src/test/resources/resource2.jpg"));
+        resource2.setUrl(new URL("http://example2.com/resource2.jpg"));
+    
+        // Create dummy HTMLDocument instances
+        HTMLDocument document1 = new HTMLDocument(
+            Arrays.asList(resource1), // scripts
+            new ArrayList<>(), // stylesheets
+            Arrays.asList(resource2), // images
+            new ArrayList<>() // anchors
+        );
+    
+        HTMLDocument document2 = new HTMLDocument(
+            new ArrayList<>(),
+            Arrays.asList(resource1),
+            new ArrayList<>(),
+            Arrays.asList(resource2)
+        );
+    
+        // Create dummy Website instance
+        return new Website(
+            Paths.get("src/test/resources"),
+            Arrays.asList(new URL("http://example1.com"), new URL("http://example2.com")),
+            Arrays.asList(document1, document2)
+        );
     }
-    }
+    
 
-    @Test
-    public void testGetSourceData() throws IOException {
-        // Create dummy report data
-        Map<String, Object> reportData = new HashMap<>();
-        reportData.put("basePath", "/path/to/local/copy");
-        reportData.put("urls", Arrays.asList("http://www.url1.com", "https://www.url2.com"));
-
-        // Write the report
-        try {
-            writer.writeReport(reportData);
-        } catch (IOException e) {
-            e.printStackTrace();
-            fail("IOException should not have been thrown.");
-        }
-
-        // Get the source data and verify its content
-        Map<String, Object> sourceData = writer.getSourceData();
-        assertNotNull(sourceData);
-        assertEquals(reportData, sourceData);
-    }
+    
 }

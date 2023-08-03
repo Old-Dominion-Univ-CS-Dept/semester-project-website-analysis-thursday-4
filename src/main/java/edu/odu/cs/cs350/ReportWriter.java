@@ -40,6 +40,6 @@ public abstract class ReportWriter {
      * @param data The data for the report.
      * @throws IOException If an I/O error occurs.
      */
-    public abstract void writeReport(Map<String, Object> data) throws IOException;
+    public abstract void writeReport(Website website) throws IOException;
 
 }
