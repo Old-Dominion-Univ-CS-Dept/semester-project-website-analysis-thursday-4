@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Resource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">semester-project-website-analysis-thursday-4</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">Resource.java</span></div><h1>Resource.java</h1><pre class="source lang-java linenums">package edu.odu.cs.cs350;
+
+import java.net.URL;
+import java.nio.file.Path;
+
+/**
+ * Resource class from outline that will be needed for what is extracted from 
+ * by the HTMLDocumentBuilder class. 
+ */
+public class Resource
+{
+    private ResourceKind typeOfResource; 
+    private Locality location; 
+    private long sizeOfFile; 
+    private Path path; 
+    private URL url; 
+
+    /**
+     * Default constructor: initializes all members to either null or 0. 
+     */
+    public Resource()
+<span class="nc" id="L22">    {</span>
+<span class="nc" id="L23">        this.typeOfResource = null; </span>
+<span class="nc" id="L24">        this.location = null; </span>
+<span class="nc" id="L25">        this.sizeOfFile = 0; </span>
+<span class="nc" id="L26">        this.path = null; </span>
+<span class="nc" id="L27">        this.url = null; </span>
+<span class="nc" id="L28">    }</span>
+    
+    /**
+     * Retrieves the type of the resource object. 
+     * 
+     * @return: type of this resource object. 
+     */
+    public ResourceKind getTypeOfResource() {
+<span class="nc" id="L36">        return typeOfResource;</span>
+    }
+
+    /**
+     * Sets the type of the resource object. 
+     * 
+     * @param typeOfResource type of resource to set. 
+     */
+    public void setTypeOfResource(ResourceKind typeOfResource) {
+<span class="nc" id="L45">        this.typeOfResource = typeOfResource;</span>
+<span class="nc" id="L46">    }</span>
+
+    /**
+     * Retrieves the locality of the resource:
+     * INTERNAL, EXTERNAL, INTRAPAGE. 
+     * 
+     * @return: locality of this resource object. 
+     */
+    public Locality getLocation() {
+<span class="nc" id="L55">        return location;</span>
+    }
+
+    /**
+     * Sets the location/locality of the resource. 
+     * 
+     * @param location location of resource to set. 
+     */
+    public void setLocation(Locality location) {
+<span class="nc" id="L64">        this.location = location;</span>
+<span class="nc" id="L65">    }</span>
+
+    /**
+     * Retrieves the size of the resource object. 
+     * 
+     * @return: size of this resource object. 
+     */
+    public long getSizeOfFile() {
+<span class="nc" id="L73">        return sizeOfFile;</span>
+    }
+
+    /**
+     * Sets the size of the resource object. 
+     * 
+     * @param sizeOfFile size of resource to set. 
+     */
+    public void setSizeOfFile(long sizeOfFile) {
+<span class="nc" id="L82">        this.sizeOfFile = sizeOfFile;</span>
+<span class="nc" id="L83">    }</span>
+
+    /**
+     * Retrieves the path of the resource object. 
+     * 
+     * @return: path of this resource object. 
+     */
+    public Path getPath() {
+<span class="nc" id="L91">        return path;</span>
+    }
+
+    /**
+     * Sets the path of the resource object. 
+     * 
+     * @param path path of resource to set. 
+     */
+    public void setPath(Path path) {
+<span class="nc" id="L100">        this.path = path;</span>
+<span class="nc" id="L101">    }</span>
+
+    /**
+     * Retrieves the URL of the resource object. 
+     * 
+     * @return: URL of this resource object. 
+     */
+    public URL getUrl() {
+<span class="nc" id="L109">        return url;</span>
+    }
+
+    /**
+     * Sets the URL of the resource object. 
+     * 
+     * @param url URL of resource to set. 
+     */
+    public void setUrl(URL url) {
+<span class="nc" id="L118">        this.url = url;</span>
+<span class="nc" id="L119">    }</span>
+    
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

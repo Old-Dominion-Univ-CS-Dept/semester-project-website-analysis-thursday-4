@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReportManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">semester-project-website-analysis-thursday-4</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">ReportManager.java</span></div><h1>ReportManager.java</h1><pre class="source lang-java linenums">package edu.odu.cs.cs350;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+/**
+ * sets source data, determines the base filename, and 
+ * handles writing reports.
+ */
+public class ReportManager
+{
+    private String baseFilename;
+    private Website site;
+
+    /**
+     * Initializes a new instance of the ReportManager class.
+     */
+    public ReportManager()
+<span class="nc" id="L21">    {</span>
+<span class="nc" id="L22">        this.baseFilename = null;</span>
+<span class="nc" id="L23">        this.site = null;</span>
+<span class="nc" id="L24">    }</span>
+
+    /**
+     * Sets the source data.
+     *
+     * @param sourceData The Website object to set as the source data.
+     */
+    public void setSourceData(Website sourceData)
+    {
+<span class="nc" id="L33">        this.site = sourceData;</span>
+<span class="nc" id="L34">    }</span>
+
+ 
+    /**
+     * Determines the base file name.
+     *
+     */
+    public void determineBaseFileName()
+    {   
+<span class="nc" id="L43">        this.baseFilename = null;</span>
+        // Datetime logic
+<span class="nc" id="L45">        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&quot;yyyyMMdd_HHmmss&quot;);  </span>
+<span class="nc" id="L46">        LocalDateTime now = LocalDateTime.now();  </span>
+<span class="nc" id="L47">        this.baseFilename = dtf.format(now) + &quot;-summary&quot;;</span>
+      
+<span class="nc" id="L49">        System.out.println(&quot;Base file name: &quot; + this.baseFilename);</span>
+        
+<span class="nc" id="L51">    }</span>
+
+    
+
+
+    /**
+     * Writes report names to the  BufferedWriter in the format &quot;{baseFilename}.{extension}&quot;.
+     * The extensions are &quot;txt&quot;, &quot;json&quot;, and &quot;xlsx&quot;. Each report 
+     * name is written on a new line.
+     *
+     * @param nameWriter The BufferedWriter object to write the report names to.
+     * @throws IOException If an I/O error occurs.
+     */
+    public void writeReportNames(BufferedWriter nameWriter)
+        throws IOException
+    {
+<span class="nc" id="L67">        String reportName = String.format(&quot;%s.txt&quot;, this.baseFilename);</span>
+<span class="nc" id="L68">        nameWriter.write(reportName + &quot;\n&quot;);</span>
+
+<span class="nc" id="L70">        reportName = String.format(&quot;%s.json&quot;, this.baseFilename);</span>
+<span class="nc" id="L71">        nameWriter.write(reportName + &quot;\n&quot;);</span>
+
+<span class="nc" id="L73">        reportName = String.format(&quot;%s.xlsx&quot;, this.baseFilename);</span>
+<span class="nc" id="L74">        nameWriter.write(reportName + &quot;\n&quot;);</span>
+
+<span class="nc" id="L76">        nameWriter.flush();</span>
+<span class="nc" id="L77">    }</span>
+
+    /**
+     * Retrieves the base file name.
+     *
+     * @return The base file name as a string.
+     */
+    public String getBaseFilename() {
+<span class="nc" id="L85">        return this.baseFilename;</span>
+    }
+
+    /**
+     * Retrieves the source data.
+     *
+     * @return The source data as a Website object.
+     */
+    public Website getSourceData() {
+<span class="nc" id="L94">        return this.site;</span>
+    }
+
+
+    /**
+     * Writes reports in all supported formats.
+     * Creates report writer objects, sets the source data and base name, and writes each report. 
+     *
+     * @throws IOException If an I/O error occurs.
+     */
+    public void writeAll() throws IOException 
+    {
+<span class="nc" id="L106">        determineBaseFileName();</span>
+
+<span class="nc" id="L108">        ReportWriter writer = null;</span>
+    
+
+        //TODO: finish text report implementation
+        // writer = new TextReportWriter();
+        // writer.setSourceData(this.site);
+        // writer.setBaseName(this.baseFilename);
+        // writer.writeReport();
+
+<span class="nc" id="L117">        writer = new JSONReportWriter();</span>
+<span class="nc" id="L118">        writer.setSourceData(this.site);</span>
+<span class="nc" id="L119">        writer.setBaseName(this.baseFilename);</span>
+<span class="nc" id="L120">        writer.writeReport(this.site);</span>
+
+        // writer.writeReport();
+
+
+
+        //TODO: finish excel report implentation
+        // writer = new ExcelGenerator();
+        // writer.setSourceData(this.site);
+        // writer.setBaseName(this.baseFilename);
+        // writer.writeReport();
+<span class="nc" id="L131">        writer.writeReport(this.site);</span>
+<span class="nc" id="L132">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

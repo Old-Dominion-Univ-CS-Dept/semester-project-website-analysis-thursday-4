@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JSONReportWriter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">semester-project-website-analysis-thursday-4</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">JSONReportWriter.java</span></div><h1>JSONReportWriter.java</h1><pre class="source lang-java linenums">package edu.odu.cs.cs350;
+
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.io.FileWriter;
+
+import com.cedarsoftware.util.io.JsonWriter;
+
+/**
+ * The JSONReportWriter class extends the ReportWriter class and 
+ * overrides its method to write reports in JSON format.
+ * 
+ * It uses the JsonWriter library to convert data into a JSON string
+ * and writes it to a file.
+ * 
+ */
+public class JSONReportWriter extends ReportWriter {
+    private static final String OUTPUT_FILE_NAME = &quot;src/main/data/report.json&quot;;
+    private File outputFile;
+
+   /**
+     * Default constructor initializing the outputFile with the 
+     * filename &quot;report.json&quot;.
+     */
+<span class="nc" id="L32">    public JSONReportWriter() {</span>
+<span class="nc" id="L33">        this.outputFile = new File(OUTPUT_FILE_NAME);</span>
+
+<span class="nc" id="L35">    }</span>
+
+    /**
+     * Constructor allows specifying the output file.
+     * 
+     * @param outputFile The output file where the report will be written.
+     */
+<span class="nc" id="L42">    public JSONReportWriter(File outputFile) {</span>
+<span class="nc" id="L43">        this.outputFile = outputFile;</span>
+<span class="nc" id="L44">    }</span>
+
+    @Override
+    public void setBaseName(String baseName) {
+<span class="nc" id="L48">        this.baseFilename = baseName;</span>
+<span class="nc" id="L49">        this.outputFile = new File(&quot;src/main/data/&quot; + baseName + &quot;.json&quot;);</span>
+<span class="nc" id="L50">    }</span>
+
+    /**
+     * Getter method for the outputFile.
+     *
+     * @return File The output file object where the report will be written.
+     */
+    public File getOutputFile() {
+<span class="nc" id="L58">        return outputFile;</span>
+    }
+
+
+    /**
+     * Converts the Website data into a JSON string.
+     *
+     * @param website A Website object to be converted into a JSON string.
+     * @return  The JSON string representation of the Website data.
+     */
+    private String convertToJson(Website website) {
+<span class="nc" id="L69">        Map&lt;String, Object&gt; websiteMap = new HashMap&lt;&gt;();</span>
+    
+<span class="nc" id="L71">        websiteMap.put(&quot;basePath&quot;, website.getBasePath().toString());</span>
+
+<span class="nc" id="L73">        List&lt;String&gt; urls = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">        for (URL url : website.getUrls()) {</span>
+<span class="nc" id="L75">            urls.add(url.toString());</span>
+<span class="nc" id="L76">        }</span>
+<span class="nc" id="L77">        websiteMap.put(&quot;urls&quot;, urls);</span>
+
+<span class="nc" id="L79">        List&lt;Map&lt;String, Object&gt;&gt; documentsData = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">        for (HTMLDocument document : website.getHtmlDocuments()) { </span>
+<span class="nc" id="L81">            documentsData.add(documentToMap(document));</span>
+<span class="nc" id="L82">        }</span>
+<span class="nc" id="L83">        websiteMap.put(&quot;documents&quot;, documentsData);</span>
+
+<span class="nc" id="L85">        Map&lt;String, Object&gt; args = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L86">        args.put(JsonWriter.PRETTY_PRINT, true);</span>
+<span class="nc" id="L87">        args.put(JsonWriter.TYPE, false);</span>
+
+<span class="nc" id="L89">        return JsonWriter.objectToJson(websiteMap, args);</span>
+    }
+
+    /**
+     * Converts a Resource object into a map.
+     * 
+     * @param resource The Resource to be converted.
+     * @return A map containing the properties of the Resource.
+     */
+    
+    private Map&lt;String, Object&gt; resourceToMap(Resource resource) {
+<span class="nc" id="L100">        Map&lt;String, Object&gt; resourceMap = new HashMap&lt;&gt;();</span>
+
+<span class="nc" id="L102">        resourceMap.put(&quot;path&quot;, resource.getPath().toString());</span>
+<span class="nc" id="L103">        resourceMap.put(&quot;type&quot;, resource.getTypeOfResource().toString());</span>
+<span class="nc" id="L104">        resourceMap.put(&quot;classification&quot;, resource.getClass().toString());</span>
+<span class="nc" id="L105">        resourceMap.put(&quot;size&quot;, Long.toString(resource.getSizeOfFile()));</span>
+
+<span class="nc" id="L107">        resourceMap.put(&quot;typeOfResource&quot;, resource.getTypeOfResource());</span>
+<span class="nc" id="L108">        resourceMap.put(&quot;location&quot;, resource.getLocation());</span>
+<span class="nc" id="L109">        resourceMap.put(&quot;sizeOfFile&quot;, resource.getSizeOfFile());</span>
+        
+<span class="nc" id="L111">        resourceMap.put(&quot;url&quot;, resource.getUrl().toString());</span>
+
+<span class="nc" id="L113">        return resourceMap;</span>
+    }
+
+     /**
+     * Converts a list of Resources into a list of maps.
+     * 
+     * @param document An HTMLDocument object.
+     * @return A document map.
+     */
+    private Map&lt;String, Object&gt; documentToMap(HTMLDocument document) {
+<span class="nc" id="L123">        Map&lt;String, Object&gt; documentMap = new HashMap&lt;&gt;();</span>
+
+<span class="nc" id="L125">        documentMap.put(&quot;scripts&quot;, resourcesToListOfMaps(document.getScrips()));</span>
+<span class="nc" id="L126">        documentMap.put(&quot;stylesheets&quot;, resourcesToListOfMaps(document.getStylesheets()));</span>
+<span class="nc" id="L127">        documentMap.put(&quot;images&quot;, resourcesToListOfMaps(document.getImages()));</span>
+<span class="nc" id="L128">        documentMap.put(&quot;anchors&quot;, resourcesToListOfMaps(document.getAnchors()));</span>
+
+<span class="nc" id="L130">        return documentMap;</span>
+    }
+
+
+    /**
+     * Converts a list of Resources into a list of maps.
+     * 
+     * @param resources The list of Resources to be converted.
+     * @return A list of maps, where each map represents a Resource.
+     */
+    private List&lt;Map&lt;String, Object&gt;&gt; resourcesToListOfMaps(List&lt;Resource&gt; resources) {
+<span class="nc" id="L141">        List&lt;Map&lt;String, Object&gt;&gt; listOfMaps = new ArrayList&lt;&gt;();</span>
+
+<span class="nc bnc" id="L143" title="All 2 branches missed.">        for (Resource resource : resources) {</span>
+<span class="nc" id="L144">            listOfMaps.add(resourceToMap(resource));</span>
+<span class="nc" id="L145">        }</span>
+
+<span class="nc" id="L147">        return listOfMaps;</span>
+    }
+
+     /**
+     * Overrides the writeReport method from the ReportWriter class.
+     * This method receives a Website object, converts it to a JSON string,
+     * and writes it to the output file.
+     *
+     * @param website A Website object to be written into the file.
+     * @throws IOException If an I/O error occurs.
+     */
+
+     @Override
+     public void writeReport(Website website) throws IOException {
+<span class="nc" id="L161">         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {</span>
+<span class="nc" id="L162">             String jsonString = convertToJson(website);</span>
+<span class="nc" id="L163">             writeToFile(bufferedWriter, jsonString);</span>
+         }
+<span class="nc" id="L165">     }</span>
+
+    
+
+    
+        /**
+         * Converts an array of ASCII values into a string.
+         *
+         * @param asciiValues The array of ASCII values to be converted.
+         * @return The resulting string after conversion.
+         */
+
+        private String asciiToString(Object[] asciiValues) {
+<span class="nc" id="L178">            StringBuilder sb = new StringBuilder();</span>
+<span class="nc bnc" id="L179" title="All 2 branches missed.">            for (Object value : asciiValues) {</span>
+<span class="nc" id="L180">                sb.append((char)((int)value));</span>
+            }
+<span class="nc" id="L182">            return sb.toString();</span>
+        }
+        /**
+         * Writes a string to a file using a BufferedWriter.
+         *
+         * @param writer The BufferedWriter to be used for writing the string.
+         * @param jsonString The string to be written to the file.
+         * @throws IOException If an I/O error occurs.
+         */
+        private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
+<span class="nc" id="L192">            writer.write(jsonString);</span>
+<span class="nc" id="L193">            writer.write(&quot;\n&quot;);  </span>
+<span class="nc" id="L194">        }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
