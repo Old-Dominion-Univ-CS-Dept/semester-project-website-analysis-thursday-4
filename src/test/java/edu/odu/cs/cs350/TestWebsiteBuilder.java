@@ -7,7 +7,9 @@ import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.fail;
+import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -49,11 +51,25 @@ void setup() {
     * Tests the withPath method of WebsiteBuilder. 
     */
     @Test
-    public void testWithPath() {
-        Path testPath = Paths.get("src/test/resources/cs-landing-page");
-        builder.withPath(testPath);
-        assertThat(builder.getBasePath(), is(testPath));
-    }
+public void testWithPath() {
+    // Test with a valid path
+    Path testPath = Paths.get("src/test/resources/cs-landing-page");
+    builder.withPath(testPath);
+    assertThat(builder.getBasePath(), is(equalTo(testPath)));
+
+    // Test with a null path
+    Exception nullPathException = assertThrows(IllegalArgumentException.class, () -> {
+        builder.withPath(null);
+    });
+    assertThat(nullPathException.getMessage(), is(equalTo("Path must be a directory: null")));
+
+    // Test with a non-directory path
+    Path nonDirectoryPath = Paths.get("src/test/resources/cs-landing-page/index.html");
+    Exception nonDirectoryPathException = assertThrows(IllegalArgumentException.class, () -> {
+        builder.withPath(nonDirectoryPath);
+    });
+    assertThat(nonDirectoryPathException.getMessage(), is(equalTo("Path must be a directory: " + nonDirectoryPath.toString())));
+}
 
     /**
     * Tests the withURL method of WebsiteBuilder. 

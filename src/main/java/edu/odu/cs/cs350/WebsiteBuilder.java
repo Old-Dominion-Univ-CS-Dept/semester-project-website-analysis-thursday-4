@@ -137,7 +137,7 @@ public class WebsiteBuilder
         
         return allFiles;
     }
-
+ 
     /**
      * Examines the directory structure og the specified path and extracts all
      * subdirectories.
