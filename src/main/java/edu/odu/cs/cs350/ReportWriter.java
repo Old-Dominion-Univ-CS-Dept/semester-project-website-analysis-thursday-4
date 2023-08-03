@@ -1,6 +1,5 @@
 package edu.odu.cs.cs350;
 
-import java.util.Map;
 import java.io.IOException;
 
 /**
@@ -14,14 +13,17 @@ public abstract class ReportWriter {
     protected Website website;
     protected String baseFilename;
 
+
+  
     /**
      * Sets the source data for this ReportWriter.
      *
      * @param site The Website object to set as the source data.
      */
         public void setSourceData(Website site) {
-            this.website = null;
+            this.website = site;
         }
+    
 
 
     /**
@@ -29,10 +31,12 @@ public abstract class ReportWriter {
      *
      * @param baseFilename The base file name to set.
      */
-    public void setBaseName(String baseFilename) {
-        this.baseFilename = null;
+    public void setBaseName(String baseName) {
+        if(baseName == null) {
+            throw new IllegalArgumentException("Base name cannot be null");
+        }
+        this.baseFilename = baseName;
     }
-
     /**
      * Abstract method to write a report to various format depending on the subclass. 
      * JSON,  XML, and text.    

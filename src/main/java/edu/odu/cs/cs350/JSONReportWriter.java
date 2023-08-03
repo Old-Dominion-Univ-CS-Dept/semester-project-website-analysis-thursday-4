@@ -43,6 +43,11 @@ public class JSONReportWriter extends ReportWriter {
         this.outputFile = outputFile;
     }
 
+    @Override
+    public void setBaseName(String baseName) {
+        this.baseFilename = baseName;
+        this.outputFile = new File("src/main/data/" + baseName + ".json");
+    }
 
     /**
      * Getter method for the outputFile.
@@ -151,18 +156,17 @@ public class JSONReportWriter extends ReportWriter {
      * @throws IOException If an I/O error occurs.
      */
 
-    @Override
-    public void writeReport(Website website) throws IOException {
-        if (!outputFile.exists()) {
-            outputFile.getParentFile().mkdirs(); // Create parent directories if not exist
-            outputFile.createNewFile(); 
-        }
+     @Override
+     public void writeReport(Website website) throws IOException {
+         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
+             String jsonString = convertToJson(website);
+             writeToFile(bufferedWriter, jsonString);
+         }
+     }
 
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {
-            String jsonString = convertToJson(website);
-            writeToFile(bufferedWriter, jsonString);
-        }
-    }
+    
+
+    
         /**
          * Converts an array of ASCII values into a string.
          *

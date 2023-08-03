@@ -23,9 +23,6 @@ import org.junit.jupiter.api.Test;
 public class TestReportManager {
 
     private ReportManager reportManager;
-    private HTMLDocument htmlDocument;
-    private String baseFilename;
-    private Website site;
 
     /**
      * Setup operations to be performed before each test.
@@ -62,7 +59,8 @@ public class TestReportManager {
     public void testDetermineBaseFileName() {
         reportManager.determineBaseFileName();
         String baseFilename = reportManager.getBaseFilename();
-        Pattern timestampPattern = Pattern.compile("^\\d{4}_\\d{2}_\\d{2}_\\d{2}_\\d{2}_\\d{2}$");
+        Pattern timestampPattern = Pattern.compile("^\\d{8}_\\d{6}-summary$");
+
         assertThat(timestampPattern.matcher(baseFilename).matches(), is(true));
     }
 

@@ -33,17 +33,25 @@ public class ReportManager
         this.site = sourceData;
     }
 
+ 
     /**
      * Determines the base file name.
      *
      */
     public void determineBaseFileName()
     {   
-        // Datetime logic...
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");  
+        this.baseFilename = null;
+        // Datetime logic
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");  
         LocalDateTime now = LocalDateTime.now();  
-        this.baseFilename = dtf.format(now);
+        this.baseFilename = dtf.format(now) + "-summary";
+      
+        System.out.println("Base file name: " + this.baseFilename);
+        
     }
+
+    
+
 
     /**
      * Writes report names to the  BufferedWriter in the format "{baseFilename}.{extension}".
@@ -93,10 +101,13 @@ public class ReportManager
      *
      * @throws IOException If an I/O error occurs.
      */
-    public void writeAll()
-        throws IOException 
+    public void writeAll() throws IOException 
     {
+        determineBaseFileName();
+
         ReportWriter writer = null;
+    
+
         //TODO: finish text report implementation
         // writer = new TextReportWriter();
         // writer.setSourceData(this.site);
@@ -106,6 +117,8 @@ public class ReportManager
         writer = new JSONReportWriter();
         writer.setSourceData(this.site);
         writer.setBaseName(this.baseFilename);
+        writer.writeReport(this.site);
+
         // writer.writeReport();
 
 
@@ -115,5 +128,6 @@ public class ReportManager
         // writer.setSourceData(this.site);
         // writer.setBaseName(this.baseFilename);
         // writer.writeReport();
+        writer.writeReport(this.site);
     }
 }
