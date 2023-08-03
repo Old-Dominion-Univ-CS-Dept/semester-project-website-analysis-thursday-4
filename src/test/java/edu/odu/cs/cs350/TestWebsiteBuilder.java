@@ -141,28 +141,41 @@ void setup() {
      */
  
      @Test
-     public void testMapUrlsToLocalPath() throws IOException, URISyntaxException {
-         Path basePath = Paths.get("Directory");
- 
-         Collection<URL> urls = new ArrayList<>();
-         Collection<Path> expectedPaths = new ArrayList<>();
- 
-         // Read the test data from the file
-         URL testFileUrl = this.getClass().getResource("/testURLS.txt");
-         Path testFilePath = Paths.get(testFileUrl.toURI());
- 
-         List<String> lines = Files.readAllLines(testFilePath);
-         for (String line : lines) {
-             String[] parts = line.split(" -> ");  // split the line into URL and local path
-             urls.add(new URL(parts[0]));
-             expectedPaths.add(Paths.get(parts[1]));
-         }
- 
-         Collection<Path> actualPaths = builder.mapUrlsToLocalPath(urls, basePath);
+    public void testMapUrlsToLocalPath() {
+        try {
+            Path basePath = Paths.get("Directory");
 
- 
-         assertThat(actualPaths, containsInAnyOrder(expectedPaths.toArray()));
-     }
+            Collection<URL> urls = new ArrayList<>();
+            Collection<Path> expectedPaths = new ArrayList<>();
+
+            // Read the test data from the file
+            URL testFileUrl = this.getClass().getResource("/testURLS.txt");
+            if (testFileUrl == null) {
+                fail("Test file not found");
+            }
+            
+            Path testFilePath;
+            try {
+                testFilePath = Paths.get(testFileUrl.toURI());
+            } catch (URISyntaxException e) {
+                fail("URL to URI conversion failed: " + e.getMessage());
+                return;
+            }
+
+            List<String> lines = Files.readAllLines(testFilePath);
+            for (String line : lines) {
+                String[] parts = line.split(" -> ");  // split the line into URL and local path
+                urls.add(new URL(parts[0]));
+                expectedPaths.add(Paths.get(parts[1]));
+            }
+
+            Collection<Path> actualPaths = builder.mapUrlsToLocalPath(urls, basePath);
+            assertThat(actualPaths, containsInAnyOrder(expectedPaths.toArray()));
+        } catch (IOException e) {
+            fail("Exception occurred during the test: " + e.getMessage());
+        }
+    }
+
 
 
      @Test
