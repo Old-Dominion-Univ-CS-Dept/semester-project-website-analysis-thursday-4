@@ -4,25 +4,25 @@ Root project 'semester-project-website-analysis-thursday-4'
 ------------------------------------------------------------
 
 allprojects: [root project 'semester-project-website-analysis-thursday-4']
-ant: org.gradle.api.internal.project.DefaultAntBuilder@644970f9
-antBuilderFactory: org.gradle.api.internal.project.DefaultAntBuilderFactory@d3417ce
+ant: org.gradle.api.internal.project.DefaultAntBuilder@5fee4aad
+antBuilderFactory: org.gradle.api.internal.project.DefaultAntBuilderFactory@bdb3c69
 application: extension 'application'
 applicationDefaultJvmArgs: []
-applicationDistribution: org.gradle.api.internal.file.copy.DefaultCopySpec_Decorated@293b2a8a
+applicationDistribution: org.gradle.api.internal.file.copy.DefaultCopySpec_Decorated@14f3cf55
 applicationName: semester-project-website-analysis-thursday-4
 archivesBaseName: semester-project-website-analysis-thursday-4
-artifacts: org.gradle.api.internal.artifacts.dsl.DefaultArtifactHandler_Decorated@912346f
+artifacts: org.gradle.api.internal.artifacts.dsl.DefaultArtifactHandler_Decorated@e852e9a
 asDynamicObject: DynamicObject for root project 'semester-project-website-analysis-thursday-4'
 autoTargetJvmDisabled: false
 bake: task ':bake'
 base: extension 'base'
-baseClassLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@26f3530c
+baseClassLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@2313a6c5
 buildDir: /home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build
 buildFile: /home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build.gradle
 buildHomePage: task ':buildHomePage'
 buildPath: :
-buildScriptSource: org.gradle.groovy.scripts.TextResourceScriptSource@b54aa7b
-buildscript: org.gradle.api.internal.initialization.DefaultScriptHandler@7bcbaee1
+buildScriptSource: org.gradle.groovy.scripts.TextResourceScriptSource@71f9feba
+buildscript: org.gradle.api.internal.initialization.DefaultScriptHandler@7b7a1eb7
 check: task ':check'
 checkstyle: extension 'checkstyle'
 checkstyleMain: task ':checkstyleMain'
@@ -30,7 +30,7 @@ checkstyleTest: task ':checkstyleTest'
 childProjects: {}
 childProjectsUnchecked: {}
 class: class org.gradle.api.internal.project.DefaultProject_Decorated
-classLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@12213b3b
+classLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@2439ac1c
 classes: task ':classes'
 clean: task ':clean'
 clearPages: task ':clearPages'
@@ -38,24 +38,24 @@ commitWebsite: task ':commitWebsite'
 compileJava: task ':compileJava'
 compileTestJava: task ':compileTestJava'
 components: SoftwareComponent container
-configurationActions: org.gradle.configuration.project.DefaultProjectConfigurationActionContainer@63625cbb
-configurationTargetIdentifier: org.gradle.configuration.ConfigurationTargetIdentifier$1@5f3508e8
+configurationActions: org.gradle.configuration.project.DefaultProjectConfigurationActionContainer@5c2c1ebc
+configurationTargetIdentifier: org.gradle.configuration.ConfigurationTargetIdentifier$1@6237ae72
 configurations: configuration container
-convention: org.gradle.internal.extensibility.DefaultConvention@711c7607
-conventionMapping: org.gradle.internal.extensibility.ConventionAwareHelper@57866263
+convention: org.gradle.internal.extensibility.DefaultConvention@5c8590a0
+conventionMapping: org.gradle.internal.extensibility.ConventionAwareHelper@77a1b221
 copyDocumentation: task ':copyDocumentation'
 copyJBakeTemplates: task ':copyJBakeTemplates'
 copyReports: task ':copyReports'
 copyReportsForWebsite: task ':copyReportsForWebsite'
 copyWebsite: task ':copyWebsite'
-crossProjectModelAccess: org.gradle.api.internal.project.DefaultCrossProjectModelAccess@26706bac
+crossProjectModelAccess: org.gradle.api.internal.project.DefaultCrossProjectModelAccess@4bc48b97
 defaultArtifacts: extension 'defaultArtifacts'
 defaultTasks: []
-deferredProjectConfiguration: org.gradle.api.internal.project.DeferredProjectConfiguration@51f555c2
-dependencies: org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler_Decorated@43cbadb5
-dependencyFactory: org.gradle.api.internal.artifacts.DefaultDependencyFactory@273a4ad5
-dependencyLocking: org.gradle.internal.locking.DefaultDependencyLockingHandler_Decorated@2b26895
-dependencyMetaDataProvider: org.gradle.internal.service.scopes.ProjectScopeServices$ProjectBackedModuleMetaDataProvider@79926644
+deferredProjectConfiguration: org.gradle.api.internal.project.DeferredProjectConfiguration@14dff8a3
+dependencies: org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler_Decorated@64af6a08
+dependencyFactory: org.gradle.api.internal.artifacts.DefaultDependencyFactory@1e65ec06
+dependencyLocking: org.gradle.internal.locking.DefaultDependencyLockingHandler_Decorated@7192546e
+dependencyMetaDataProvider: org.gradle.internal.service.scopes.ProjectScopeServices$ProjectBackedModuleMetaDataProvider@1a63b01f
 dependencyReport: task ':dependencyReport'
 deployReports: task ':deployReports'
 depth: 0
@@ -71,15 +71,15 @@ doAllTheCopying: task ':doAllTheCopying'
 docsDir: /home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/docs
 docsDirName: docs
 executableDir: bin
-ext: org.gradle.internal.extensibility.DefaultExtraPropertiesExtension@672adac6
-extensions: org.gradle.internal.extensibility.DefaultConvention@711c7607
-fileOperations: org.gradle.api.internal.file.DefaultFileOperations@12b34814
-fileResolver: org.gradle.api.internal.file.BaseDirFileResolver@3547c17
+ext: org.gradle.internal.extensibility.DefaultExtraPropertiesExtension@5836671
+extensions: org.gradle.internal.extensibility.DefaultConvention@5c8590a0
+fileOperations: org.gradle.api.internal.file.DefaultFileOperations@3437bf1b
+fileResolver: org.gradle.api.internal.file.BaseDirFileResolver@5765bcd7
 gradle: build 'semester-project-website-analysis-thursday-4'
 group: 
 htmlDependencyReport: task ':htmlDependencyReport'
 identityPath: :
-inheritedScope: org.gradle.internal.extensibility.ExtensibleDynamicObject$InheritedDynamicObject@699e9a7f
+inheritedScope: org.gradle.internal.extensibility.ExtensibleDynamicObject$InheritedDynamicObject@50810d6c
 internalStatus: property(java.lang.Object, fixed(class java.lang.String, integration))
 jacoco: extension 'jacoco'
 jacocoAggregatedReport: task ':jacocoAggregatedReport'
@@ -90,37 +90,37 @@ java: extension 'java'
 javaToolchains: extension 'javaToolchains'
 javadoc: task ':javadoc'
 jbake: extension 'jbake'
-layout: org.gradle.api.internal.file.DefaultProjectLayout@58d38160
+layout: org.gradle.api.internal.file.DefaultProjectLayout@4e2f49e3
 libsDirName: libs
 libsDirectory: extension 'base' property 'libsDirectory'
-listenerBuildOperationDecorator: org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator@50a88186
-logger: org.gradle.internal.logging.slf4j.OutputEventListenerBackedLogger@70bcfb40
-logging: org.gradle.internal.logging.services.DefaultLoggingManager@6d6cca4a
+listenerBuildOperationDecorator: org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator@47e9f85a
+logger: org.gradle.internal.logging.slf4j.OutputEventListenerBackedLogger@3d906774
+logging: org.gradle.internal.logging.services.DefaultLoggingManager@65a2e7c7
 mainClassName: null
 model: root project 'semester-project-website-analysis-thursday-4'
 modelIdentityDisplayName: null
-modelRegistry: org.gradle.model.internal.registry.DefaultModelRegistry@29f09e06
+modelRegistry: org.gradle.model.internal.registry.DefaultModelRegistry@5176cac1
 name: semester-project-website-analysis-thursday-4
-normalization: org.gradle.normalization.internal.DefaultInputNormalizationHandler_Decorated@3d408e0f
-objects: org.gradle.api.internal.model.DefaultObjectFactory@2a31141c
+normalization: org.gradle.normalization.internal.DefaultInputNormalizationHandler_Decorated@59d5c39d
+objects: org.gradle.api.internal.model.DefaultObjectFactory@67c0b414
 owner: root project 'semester-project-website-analysis-thursday-4'
 parent: null
 parentIdentifier: null
 path: :
 pluginContext: false
-pluginManager: org.gradle.api.internal.plugins.DefaultPluginManager_Decorated@2104b58a
-plugins: [org.gradle.api.plugins.HelpTasksPlugin$Inject@606cb0d9, org.gradle.buildinit.plugins.BuildInitPlugin$Inject@5187872, org.gradle.buildinit.plugins.WrapperPlugin$Inject@58d93c47, org.gradle.language.base.plugins.LifecycleBasePlugin$Inject@ffc9edf, org.gradle.api.plugins.BasePlugin$Inject@16b161da, org.gradle.api.plugins.JvmEcosystemPlugin$Inject@43148865, org.gradle.api.plugins.ReportingBasePlugin$Inject@1ad6b82e, org.gradle.api.plugins.JvmToolchainsPlugin$Inject@727514f, org.gradle.api.plugins.JavaBasePlugin$Inject@1a54200f, org.gradle.testing.base.plugins.TestSuiteBasePlugin$Inject@1433f0bc, org.gradle.api.plugins.JvmTestSuitePlugin$Inject@3b942a48, org.gradle.api.plugins.JavaPlugin$Inject@519860ef, org.gradle.api.distribution.plugins.DistributionPlugin$Inject@3d681e6c, org.gradle.api.plugins.ApplicationPlugin$Inject@66468392, org.gradle.testing.jacoco.plugins.JacocoPlugin$Inject@633c970, org.barfuin.gradle.jacocolog.JacocoLogPlugin@61144f09, org.gradle.api.plugins.quality.PmdPlugin$Inject@14dc595f, com.github.spotbugs.snom.SpotBugsBasePlugin@34e3cb12, com.github.spotbugs.snom.SpotBugsPlugin@36ce1ca6, org.gradle.api.plugins.quality.CheckstylePlugin$Inject@166c1b38, org.gradle.api.plugins.ProjectReportsPlugin$Inject@50aea92f, org.jbake.gradle.JBakePlugin@74be00d4]
+pluginManager: org.gradle.api.internal.plugins.DefaultPluginManager_Decorated@15aefbf4
+plugins: [org.gradle.api.plugins.HelpTasksPlugin$Inject@3c710d98, org.gradle.buildinit.plugins.BuildInitPlugin$Inject@43e68f83, org.gradle.buildinit.plugins.WrapperPlugin$Inject@2f2d8a97, org.gradle.language.base.plugins.LifecycleBasePlugin$Inject@3723724b, org.gradle.api.plugins.BasePlugin$Inject@2eece96e, org.gradle.api.plugins.JvmEcosystemPlugin$Inject@459df787, org.gradle.api.plugins.ReportingBasePlugin$Inject@436d303c, org.gradle.api.plugins.JvmToolchainsPlugin$Inject@18b750e4, org.gradle.api.plugins.JavaBasePlugin$Inject@3022f130, org.gradle.testing.base.plugins.TestSuiteBasePlugin$Inject@1118bc0d, org.gradle.api.plugins.JvmTestSuitePlugin$Inject@6e17c33f, org.gradle.api.plugins.JavaPlugin$Inject@588a8ffb, org.gradle.api.distribution.plugins.DistributionPlugin$Inject@55ae1301, org.gradle.api.plugins.ApplicationPlugin$Inject@2f002d7f, org.gradle.testing.jacoco.plugins.JacocoPlugin$Inject@14474ce, org.barfuin.gradle.jacocolog.JacocoLogPlugin@51617c9f, org.gradle.api.plugins.quality.PmdPlugin$Inject@5120378e, com.github.spotbugs.snom.SpotBugsBasePlugin@efffaf8, com.github.spotbugs.snom.SpotBugsPlugin@1da7483c, org.gradle.api.plugins.quality.CheckstylePlugin$Inject@25e9312e, org.gradle.api.plugins.ProjectReportsPlugin$Inject@6fad4b27, org.jbake.gradle.JBakePlugin@3a30a6e7]
 pmd: extension 'pmd'
 pmdMain: task ':pmdMain'
 pmdTest: task ':pmdTest'
-processOperations: org.gradle.process.internal.DefaultExecActionFactory$DecoratingExecActionFactory@ca91f02
+processOperations: org.gradle.process.internal.DefaultExecActionFactory$DecoratingExecActionFactory@72690b42
 processResources: task ':processResources'
 processTestResources: task ':processTestResources'
 project: root project 'semester-project-website-analysis-thursday-4'
-projectConfigurator: org.gradle.api.internal.project.BuildOperationCrossProjectConfigurator@35a0c86e
+projectConfigurator: org.gradle.api.internal.project.BuildOperationCrossProjectConfigurator@5d7e7b9
 projectDir: /home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4
 projectEvaluationBroadcaster: ProjectEvaluationListener broadcast
-projectEvaluator: org.gradle.configuration.project.LifecycleProjectEvaluator@1793bb32
+projectEvaluator: org.gradle.configuration.project.LifecycleProjectEvaluator@67d59303
 projectPath: :
 projectReport: task ':projectReport'
 projectReportDir: /home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/reports/project
@@ -128,20 +128,20 @@ projectReportDirName: project
 projects: [root project 'semester-project-website-analysis-thursday-4']
 properties: {...}
 propertyReport: task ':propertyReport'
-providers: org.gradle.api.internal.provider.DefaultProviderFactory_Decorated@133ff4af
+providers: org.gradle.api.internal.provider.DefaultProviderFactory_Decorated@546b556
 publicType: org.gradle.api.plugins.ApplicationPluginConvention
 pushWebsite: task ':pushWebsite'
 reporting: extension 'reporting'
 reports: task ':reports'
 repositories: repository container
-resources: org.gradle.api.internal.resources.DefaultResourceHandler@57aaa8c5
+resources: org.gradle.api.internal.resources.DefaultResourceHandler@3f4f8da7
 rootDir: /home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4
 rootProject: root project 'semester-project-website-analysis-thursday-4'
 rootScript: false
 script: false
-scriptHandlerFactory: org.gradle.api.internal.initialization.DefaultScriptHandlerFactory@64fae9e6
-scriptPluginFactory: org.gradle.configuration.ScriptPluginFactorySelector@6e3a8460
-serviceRegistryFactory: org.gradle.internal.service.scopes.BuildScopeServiceRegistryFactory@24c8f84
+scriptHandlerFactory: org.gradle.api.internal.initialization.DefaultScriptHandlerFactory@51f5fd8
+scriptPluginFactory: org.gradle.configuration.ScriptPluginFactorySelector@4e9999f3
+serviceRegistryFactory: org.gradle.internal.service.scopes.BuildScopeServiceRegistryFactory@7ec56973
 services: ProjectScopeServices
 setUpWebsite: task ':setUpWebsite'
 sourceCompatibility: 11
@@ -149,12 +149,12 @@ sourceSets: SourceSet container
 spotbugs: extension 'spotbugs'
 spotbugsMain: task ':spotbugsMain'
 spotbugsTest: task ':spotbugsTest'
-standardOutputCapture: org.gradle.internal.logging.services.DefaultLoggingManager@6d6cca4a
+standardOutputCapture: org.gradle.internal.logging.services.DefaultLoggingManager@65a2e7c7
 state: project state 'EXECUTED'
 status: integration
 subprojects: []
 targetCompatibility: 11
-taskDependencyFactory: org.gradle.api.internal.tasks.DefaultTaskDependencyFactory@22e388
+taskDependencyFactory: org.gradle.api.internal.tasks.DefaultTaskDependencyFactory@3d24f1b9
 taskReport: task ':taskReport'
 taskThatOwnsThisObject: null
 tasks: task set

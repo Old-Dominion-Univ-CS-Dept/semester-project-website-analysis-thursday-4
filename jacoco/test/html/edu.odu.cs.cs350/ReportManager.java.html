@@ -33,17 +33,25 @@ public class ReportManager
 <span class="fc" id="L33">        this.site = sourceData;</span>
 <span class="fc" id="L34">    }</span>
 
+ 
     /**
      * Determines the base file name.
      *
      */
     public void determineBaseFileName()
     {   
-        // Datetime logic...
-<span class="fc" id="L43">        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&quot;yyyy_MM_dd_HH_mm_ss&quot;);  </span>
-<span class="fc" id="L44">        LocalDateTime now = LocalDateTime.now();  </span>
-<span class="fc" id="L45">        this.baseFilename = dtf.format(now);</span>
-<span class="fc" id="L46">    }</span>
+<span class="fc" id="L43">        this.baseFilename = null;</span>
+        // Datetime logic
+<span class="fc" id="L45">        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&quot;yyyyMMdd_HHmmss&quot;);  </span>
+<span class="fc" id="L46">        LocalDateTime now = LocalDateTime.now();  </span>
+<span class="fc" id="L47">        this.baseFilename = dtf.format(now) + &quot;-summary&quot;;</span>
+      
+<span class="fc" id="L49">        System.out.println(&quot;Base file name: &quot; + this.baseFilename);</span>
+        
+<span class="fc" id="L51">    }</span>
+
+    
+
 
     /**
      * Writes report names to the  BufferedWriter in the format &quot;{baseFilename}.{extension}&quot;.
@@ -56,17 +64,17 @@ public class ReportManager
     public void writeReportNames(BufferedWriter nameWriter)
         throws IOException
     {
-<span class="fc" id="L59">        String reportName = String.format(&quot;%s.txt&quot;, this.baseFilename);</span>
-<span class="fc" id="L60">        nameWriter.write(reportName + &quot;\n&quot;);</span>
+<span class="fc" id="L67">        String reportName = String.format(&quot;%s.txt&quot;, this.baseFilename);</span>
+<span class="fc" id="L68">        nameWriter.write(reportName + &quot;\n&quot;);</span>
 
-<span class="fc" id="L62">        reportName = String.format(&quot;%s.json&quot;, this.baseFilename);</span>
-<span class="fc" id="L63">        nameWriter.write(reportName + &quot;\n&quot;);</span>
+<span class="fc" id="L70">        reportName = String.format(&quot;%s.json&quot;, this.baseFilename);</span>
+<span class="fc" id="L71">        nameWriter.write(reportName + &quot;\n&quot;);</span>
 
-<span class="fc" id="L65">        reportName = String.format(&quot;%s.xlsx&quot;, this.baseFilename);</span>
-<span class="fc" id="L66">        nameWriter.write(reportName + &quot;\n&quot;);</span>
+<span class="fc" id="L73">        reportName = String.format(&quot;%s.xlsx&quot;, this.baseFilename);</span>
+<span class="fc" id="L74">        nameWriter.write(reportName + &quot;\n&quot;);</span>
 
-<span class="fc" id="L68">        nameWriter.flush();</span>
-<span class="fc" id="L69">    }</span>
+<span class="fc" id="L76">        nameWriter.flush();</span>
+<span class="fc" id="L77">    }</span>
 
     /**
      * Retrieves the base file name.
@@ -74,7 +82,7 @@ public class ReportManager
      * @return The base file name as a string.
      */
     public String getBaseFilename() {
-<span class="fc" id="L77">        return this.baseFilename;</span>
+<span class="fc" id="L85">        return this.baseFilename;</span>
     }
 
     /**
@@ -83,7 +91,7 @@ public class ReportManager
      * @return The source data as a Website object.
      */
     public Website getSourceData() {
-<span class="fc" id="L86">        return this.site;</span>
+<span class="fc" id="L94">        return this.site;</span>
     }
 
 
@@ -93,19 +101,24 @@ public class ReportManager
      *
      * @throws IOException If an I/O error occurs.
      */
-    public void writeAll()
-        throws IOException 
+    public void writeAll() throws IOException 
     {
-<span class="nc" id="L99">        ReportWriter writer = null;</span>
+<span class="nc" id="L106">        determineBaseFileName();</span>
+
+<span class="nc" id="L108">        ReportWriter writer = null;</span>
+    
+
         //TODO: finish text report implementation
         // writer = new TextReportWriter();
         // writer.setSourceData(this.site);
         // writer.setBaseName(this.baseFilename);
         // writer.writeReport();
 
-<span class="nc" id="L106">        writer = new JSONReportWriter();</span>
-<span class="nc" id="L107">        writer.setSourceData(this.site);</span>
-<span class="nc" id="L108">        writer.setBaseName(this.baseFilename);</span>
+<span class="nc" id="L117">        writer = new JSONReportWriter();</span>
+<span class="nc" id="L118">        writer.setSourceData(this.site);</span>
+<span class="nc" id="L119">        writer.setBaseName(this.baseFilename);</span>
+<span class="nc" id="L120">        writer.writeReport(this.site);</span>
+
         // writer.writeReport();
 
 
@@ -115,6 +128,7 @@ public class ReportManager
         // writer.setSourceData(this.site);
         // writer.setBaseName(this.baseFilename);
         // writer.writeReport();
-<span class="nc" id="L118">    }</span>
+<span class="nc" id="L131">        writer.writeReport(this.site);</span>
+<span class="nc" id="L132">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
