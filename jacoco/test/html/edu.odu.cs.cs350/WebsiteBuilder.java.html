@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -33,11 +32,11 @@ public class WebsiteBuilder
      * @throws IllegalArgumentException if the path is not a directory.
      */
     public WebsiteBuilder withPath(Path basePath) {
-<span class="pc bpc" id="L36" title="2 of 4 branches missed.">        if (basePath == null || !Files.isDirectory(basePath)) {</span>
-<span class="nc" id="L37">            throw new IllegalArgumentException(&quot;Path must be a directory: &quot; + basePath);</span>
+<span class="pc bpc" id="L35" title="2 of 4 branches missed.">        if (basePath == null || !Files.isDirectory(basePath)) {</span>
+<span class="nc" id="L36">            throw new IllegalArgumentException(&quot;Path must be a directory: &quot; + basePath);</span>
         }
-<span class="fc" id="L39">        this.basePath = basePath;</span>
-<span class="fc" id="L40">        return this;</span>
+<span class="fc" id="L38">        this.basePath = basePath;</span>
+<span class="fc" id="L39">        return this;</span>
     }
 
     /**
@@ -47,11 +46,11 @@ public class WebsiteBuilder
      * @return This WebsiteBuilder instance.
      */
     public WebsiteBuilder withURL(URL url) {
-<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        if (this.urls == null) {</span>
-<span class="nc" id="L51">            this.urls = new ArrayList&lt;&gt;();</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        if (this.urls == null) {</span>
+<span class="nc" id="L50">            this.urls = new ArrayList&lt;&gt;();</span>
         }
-<span class="fc" id="L53">        this.urls.add(url);</span>
-<span class="fc" id="L54">        return this;</span>
+<span class="fc" id="L52">        this.urls.add(url);</span>
+<span class="fc" id="L53">        return this;</span>
     }
 
     /**
@@ -60,8 +59,8 @@ public class WebsiteBuilder
      * @return This WebsiteBuilder instance.
      */
     public WebsiteBuilder withURLs(Collection&lt;URL&gt; urls) {
-<span class="fc" id="L63">        this.urls = urls;</span>
-<span class="fc" id="L64">        return this;</span>
+<span class="fc" id="L62">        this.urls = urls;</span>
+<span class="fc" id="L63">        return this;</span>
     }
 
     
@@ -74,22 +73,22 @@ public class WebsiteBuilder
      * Constructs a new WebsiteBuilder.
     * Initializes the 'basePath' and 'url' fields to null.
      */
-<span class="fc" id="L77">    public WebsiteBuilder() {</span>
-<span class="fc" id="L78">        this.basePath = null;</span>
-<span class="fc" id="L79">        this.urls = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L76">    public WebsiteBuilder() {</span>
+<span class="fc" id="L77">        this.basePath = null;</span>
+<span class="fc" id="L78">        this.urls = new ArrayList&lt;&gt;();</span>
  
         
-<span class="fc" id="L82">    }</span>
+<span class="fc" id="L81">    }</span>
 
     /**
      * Constructs a new WebsiteBuilder.
     * takes arguments for   'basePath', 'url', and 'documents' fields to null.
      */
-<span class="fc" id="L88">    public WebsiteBuilder(Path basePath, Collection&lt;URL&gt; urls) {</span>
-<span class="fc" id="L89">        this.basePath = basePath;</span>
-<span class="fc" id="L90">        this.urls = urls;</span>
+<span class="fc" id="L87">    public WebsiteBuilder(Path basePath, Collection&lt;URL&gt; urls) {</span>
+<span class="fc" id="L88">        this.basePath = basePath;</span>
+<span class="fc" id="L89">        this.urls = urls;</span>
     
-<span class="fc" id="L92">    }</span>
+<span class="fc" id="L91">    }</span>
 
 
       /**
@@ -98,7 +97,7 @@ public class WebsiteBuilder
      * @return the base path of the website
      */
     public Path getBasePath() {
-<span class="fc" id="L101">        return this.basePath;</span>
+<span class="fc" id="L100">        return this.basePath;</span>
     }
 
     /**
@@ -107,7 +106,7 @@ public class WebsiteBuilder
      * @return the URLs of the website
      */
     public Collection&lt;URL&gt; getUrls() {
-<span class="fc" id="L110">        return this.urls;</span>
+<span class="fc" id="L109">        return this.urls;</span>
     }
 
   /**
@@ -119,24 +118,24 @@ public class WebsiteBuilder
  */
         
     public List&lt;Path&gt; walkDirectory() throws IOException {
-<span class="fc" id="L122">        Path pathToExamine = basePath;</span>
-<span class="fc" id="L123">        List&lt;Path&gt; directories = examineDirectory(pathToExamine);</span>
+<span class="fc" id="L121">        Path pathToExamine = basePath;</span>
+<span class="fc" id="L122">        List&lt;Path&gt; directories = examineDirectory(pathToExamine);</span>
         
         
-<span class="fc" id="L126">        List&lt;Path&gt; allFiles = new ArrayList&lt;&gt;();</span>
-<span class="fc bfc" id="L127" title="All 2 branches covered.">        for(Path directory : directories) {</span>
-<span class="fc" id="L128">            allFiles.addAll(directoryWalker(directory));</span>
+<span class="fc" id="L125">        List&lt;Path&gt; allFiles = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L126" title="All 2 branches covered.">        for(Path directory : directories) {</span>
+<span class="fc" id="L127">            allFiles.addAll(directoryWalker(directory));</span>
           
-<span class="fc" id="L130">        }</span>
+<span class="fc" id="L129">        }</span>
 
-<span class="pc bpc" id="L132" title="1 of 2 branches missed.">        if (allFiles.size()&lt;1){</span>
-<span class="nc" id="L133">            errorMessages.underSize();</span>
+<span class="pc bpc" id="L131" title="1 of 2 branches missed.">        if (allFiles.size()&lt;1){</span>
+<span class="nc" id="L132">            errorMessages.underSize();</span>
         }
-<span class="pc bpc" id="L135" title="1 of 2 branches missed.">        if (allFiles.size()&gt;1000){</span>
-<span class="nc" id="L136">            errorMessages.overSize();</span>
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">        if (allFiles.size()&gt;1000){</span>
+<span class="nc" id="L135">            errorMessages.overSize();</span>
         }
         
-<span class="fc" id="L139">        return allFiles;</span>
+<span class="fc" id="L138">        return allFiles;</span>
     }
 
     /**
@@ -148,14 +147,14 @@ public class WebsiteBuilder
      * @throws IOException if an I/O error occurs when opening the directory.
      */
     private List&lt;Path&gt; examineDirectory(Path pathToExamine) throws IOException {
-<span class="fc" id="L151">        List&lt;Path&gt; directoryList = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L152">        Files.walk(pathToExamine)</span>
-<span class="fc" id="L153">            .forEach((Path path) -&gt; {</span>
-<span class="fc bfc" id="L154" title="All 2 branches covered.">                if (Files.isDirectory(path)) {</span>
-<span class="fc" id="L155">                    directoryList.add(path);</span>
+<span class="fc" id="L150">        List&lt;Path&gt; directoryList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L151">        Files.walk(pathToExamine)</span>
+<span class="fc" id="L152">            .forEach((Path path) -&gt; {</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">                if (Files.isDirectory(path)) {</span>
+<span class="fc" id="L154">                    directoryList.add(path);</span>
                 }
-<span class="fc" id="L157">            });</span>
-<span class="fc" id="L158">        return directoryList;</span>
+<span class="fc" id="L156">            });</span>
+<span class="fc" id="L157">        return directoryList;</span>
     }
 
     /**
@@ -166,14 +165,14 @@ public class WebsiteBuilder
      * @throws IOException if an I/O error occurs when opening the directory.
      */
     private List&lt;Path&gt; directoryWalker(Path directory) throws IOException {
-<span class="fc" id="L169">        List&lt;Path&gt; fileList = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L170">        Files.walk(directory, 1)</span>
-<span class="fc" id="L171">            .forEach((Path path) -&gt; {</span>
-<span class="fc bfc" id="L172" title="All 2 branches covered.">                if (Files.isRegularFile(path)) {</span>
-<span class="fc" id="L173">                    fileList.add(path);</span>
+<span class="fc" id="L168">        List&lt;Path&gt; fileList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L169">        Files.walk(directory, 1)</span>
+<span class="fc" id="L170">            .forEach((Path path) -&gt; {</span>
+<span class="fc bfc" id="L171" title="All 2 branches covered.">                if (Files.isRegularFile(path)) {</span>
+<span class="fc" id="L172">                    fileList.add(path);</span>
                 }
-<span class="fc" id="L175">            });</span>
-<span class="fc" id="L176">        return fileList;</span>
+<span class="fc" id="L174">            });</span>
+<span class="fc" id="L175">        return fileList;</span>
     }
 
     /**
@@ -189,24 +188,24 @@ public class WebsiteBuilder
 
      
      public Collection&lt;Path&gt; mapUrlsToLocalPath(Collection&lt;URL&gt; urls, Path basePath) throws IOException  {
-<span class="nc" id="L192">        List&lt;Path&gt; localPaths = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L193">        String commonUrlPrefix = findCommonPrefix(urls);</span>
+<span class="nc" id="L191">        List&lt;Path&gt; localPaths = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L192">        String commonUrlPrefix = findCommonPrefix(urls);</span>
     
-<span class="nc bnc" id="L195" title="All 2 branches missed.">        for (URL url : urls) {</span>
-<span class="nc" id="L196">            String urlPath = url.getPath();</span>
+<span class="nc bnc" id="L194" title="All 2 branches missed.">        for (URL url : urls) {</span>
+<span class="nc" id="L195">            String urlPath = url.getPath();</span>
         
             // Remove the common prefix from the URL path
-<span class="nc" id="L199">            String localPath = urlPath.replaceFirst(commonUrlPrefix, &quot;&quot;);  </span>
+<span class="nc" id="L198">            String localPath = urlPath.replaceFirst(commonUrlPrefix, &quot;&quot;);  </span>
         
-<span class="nc bnc" id="L201" title="All 2 branches missed.">            if (localPath.startsWith(&quot;/&quot;)) {</span>
-<span class="nc" id="L202">                localPath = localPath.substring(1);</span>
+<span class="nc bnc" id="L200" title="All 2 branches missed.">            if (localPath.startsWith(&quot;/&quot;)) {</span>
+<span class="nc" id="L201">                localPath = localPath.substring(1);</span>
             }
         
-<span class="nc" id="L205">            Path transformedPath = basePath.resolve(localPath);</span>
-<span class="nc" id="L206">            localPaths.add(transformedPath);</span>
-<span class="nc" id="L207">        }</span>
+<span class="nc" id="L204">            Path transformedPath = basePath.resolve(localPath);</span>
+<span class="nc" id="L205">            localPaths.add(transformedPath);</span>
+<span class="nc" id="L206">        }</span>
         
-<span class="nc" id="L209">        return localPaths;</span>
+<span class="nc" id="L208">        return localPaths;</span>
     }
     
     
@@ -222,16 +221,16 @@ public class WebsiteBuilder
      */
     
     public String findCommonPrefix(Collection&lt;URL&gt; urls) {
-<span class="nc" id="L225">        String commonPrefix = urls.stream()</span>
-<span class="nc" id="L226">                .map(URL::getPath)</span>
-<span class="nc" id="L227">                .reduce((s1, s2) -&gt; {</span>
-<span class="nc" id="L228">                    int i = 0;</span>
-<span class="nc bnc" id="L229" title="All 6 branches missed.">                    while (i &lt; s1.length() &amp;&amp; i &lt; s2.length() &amp;&amp; s1.charAt(i) == s2.charAt(i)) {</span>
-<span class="nc" id="L230">                        i++;</span>
+<span class="nc" id="L224">        String commonPrefix = urls.stream()</span>
+<span class="nc" id="L225">                .map(URL::getPath)</span>
+<span class="nc" id="L226">                .reduce((s1, s2) -&gt; {</span>
+<span class="nc" id="L227">                    int i = 0;</span>
+<span class="nc bnc" id="L228" title="All 6 branches missed.">                    while (i &lt; s1.length() &amp;&amp; i &lt; s2.length() &amp;&amp; s1.charAt(i) == s2.charAt(i)) {</span>
+<span class="nc" id="L229">                        i++;</span>
                     }
-<span class="nc" id="L232">                    return s1.substring(0, i);</span>
-<span class="nc" id="L233">                }).orElse(&quot;&quot;);</span>
-<span class="nc" id="L234">        return commonPrefix;</span>
+<span class="nc" id="L231">                    return s1.substring(0, i);</span>
+<span class="nc" id="L232">                }).orElse(&quot;&quot;);</span>
+<span class="nc" id="L233">        return commonPrefix;</span>
     }
     
     
@@ -243,8 +242,8 @@ public class WebsiteBuilder
      * @param basePath the base directory as a Path object.
      */
     public void setBasePath(Path basePath) {
-<span class="fc" id="L246">        this.basePath = basePath;</span>
-<span class="fc" id="L247">    }</span>
+<span class="fc" id="L245">        this.basePath = basePath;</span>
+<span class="fc" id="L246">    }</span>
     
     /**
      * Sets a collection of URLs for the website.
@@ -253,8 +252,8 @@ public class WebsiteBuilder
      * @return This WebsiteBuilder instance.
      */
     public WebsiteBuilder setUrls(Collection&lt;URL&gt; urls) {
-<span class="nc" id="L256">        this.urls = urls;</span>
-<span class="nc" id="L257">        return this;</span>
+<span class="nc" id="L255">        this.urls = urls;</span>
+<span class="nc" id="L256">        return this;</span>
     }
     
     
@@ -271,15 +270,15 @@ public class WebsiteBuilder
      * @return List of HTML file paths.
      */
     public List&lt;Path&gt; pruneNonHTMLFiles(List&lt;Path&gt; files) {
-<span class="fc" id="L274">        List&lt;Path&gt; htmlFiles = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L273">        List&lt;Path&gt; htmlFiles = new ArrayList&lt;&gt;();</span>
         
-<span class="fc bfc" id="L276" title="All 2 branches covered.">        for (Path file : files) {</span>
-<span class="fc bfc" id="L277" title="All 4 branches covered.">            if (file.toString().endsWith(&quot;.html&quot;) || file.toString().endsWith(&quot;.htm&quot;)) {</span>
-<span class="fc" id="L278">                htmlFiles.add(file);</span>
+<span class="fc bfc" id="L275" title="All 2 branches covered.">        for (Path file : files) {</span>
+<span class="fc bfc" id="L276" title="All 4 branches covered.">            if (file.toString().endsWith(&quot;.html&quot;) || file.toString().endsWith(&quot;.htm&quot;)) {</span>
+<span class="fc" id="L277">                htmlFiles.add(file);</span>
             }
-<span class="fc" id="L280">        }</span>
+<span class="fc" id="L279">        }</span>
     
-<span class="fc" id="L282">        return htmlFiles;</span>
+<span class="fc" id="L281">        return htmlFiles;</span>
     }
     
 
@@ -292,30 +291,30 @@ public class WebsiteBuilder
     */
     public Website build() throws IOException {
         // Walk the directory and prune non-html files
-<span class="nc" id="L295">        List&lt;Path&gt; files = walkDirectory();</span>
-<span class="nc" id="L296">        List&lt;Path&gt; prunedFiles = pruneNonHTMLFiles(files);</span>
+<span class="nc" id="L294">        List&lt;Path&gt; files = walkDirectory();</span>
+<span class="nc" id="L295">        List&lt;Path&gt; prunedFiles = pruneNonHTMLFiles(files);</span>
 
-<span class="nc" id="L298">        Collection&lt;HTMLDocument&gt; parsedDocuments = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L297">        Collection&lt;HTMLDocument&gt; parsedDocuments = new ArrayList&lt;&gt;();</span>
 
-<span class="nc bnc" id="L300" title="All 2 branches missed.">        for (Path htmlFile : prunedFiles) {</span>
+<span class="nc bnc" id="L299" title="All 2 branches missed.">        for (Path htmlFile : prunedFiles) {</span>
             // Open the file for reading
-<span class="nc" id="L302">            BufferedReader buffer = Files.newBufferedReader(htmlFile);</span>
+<span class="nc" id="L301">            BufferedReader buffer = Files.newBufferedReader(htmlFile);</span>
 
             // Parse the HTML document
-<span class="nc" id="L305">            HTMLDocumentBuilder docBuilder = new HTMLDocumentBuilder();</span>
-<span class="nc" id="L306">            docBuilder.withContentFrom(buffer);</span>
-<span class="nc" id="L307">            docBuilder.withWebsiteBaseDir(this.basePath);  // needed for path normalization</span>
-<span class="nc" id="L308">            docBuilder.withBaseURLs(this.urls);  // needed for internal/external classification</span>
-<span class="nc" id="L309">            docBuilder.extractContent();  // exceptions can be thrown by this function</span>
+<span class="nc" id="L304">            HTMLDocumentBuilder docBuilder = new HTMLDocumentBuilder();</span>
+<span class="nc" id="L305">            docBuilder.withContentFrom(buffer);</span>
+<span class="nc" id="L306">            docBuilder.withWebsiteBaseDir(this.basePath);  // needed for path normalization</span>
+<span class="nc" id="L307">            docBuilder.withBaseURLs(this.urls);  // needed for internal/external classification</span>
+<span class="nc" id="L308">            docBuilder.extractContent();  // exceptions can be thrown by this function</span>
 
-<span class="nc" id="L311">            HTMLDocument doc = docBuilder.build();</span>
-<span class="nc" id="L312">            parsedDocuments.add(doc);</span>
-<span class="nc" id="L313">        }</span>
+<span class="nc" id="L310">            HTMLDocument doc = docBuilder.build();</span>
+<span class="nc" id="L311">            parsedDocuments.add(doc);</span>
+<span class="nc" id="L312">        }</span>
 
    
-<span class="nc" id="L316">        Website site = new Website(this.basePath, this.urls, parsedDocuments);</span>
+<span class="nc" id="L315">        Website site = new Website(this.basePath, this.urls, parsedDocuments);</span>
 
-<span class="nc" id="L318">        return site;</span>
+<span class="nc" id="L317">        return site;</span>
     }
 
 }

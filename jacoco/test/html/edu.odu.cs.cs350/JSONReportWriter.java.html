@@ -18,33 +18,28 @@ import com.cedarsoftware.util.io.JsonWriter;
  * It uses the JsonWriter library to convert data into a JSON string
  * and writes it to a file.
  * 
- * Currently this class takes a Map containing test report data,
- * After further development, this method will take a Website object as a parameter.
  */
 public class JSONReportWriter extends ReportWriter {
     private static final String OUTPUT_FILE_NAME = &quot;src/main/data/report.json&quot;;
-    private Map&lt;String, Object&gt; sourceData;
     private File outputFile;
 
    /**
      * Default constructor initializing the outputFile with the 
      * filename &quot;report.json&quot;.
      */
-<span class="nc" id="L33">    public JSONReportWriter() {</span>
-<span class="nc" id="L34">        this.outputFile = new File(OUTPUT_FILE_NAME);</span>
+<span class="nc" id="L30">    public JSONReportWriter() {</span>
+<span class="nc" id="L31">        this.outputFile = new File(OUTPUT_FILE_NAME);</span>
 
-        ///Added to simplfy CLI output
-<span class="nc" id="L37">        System.out.println(OUTPUT_FILE_NAME + &quot;/n&quot;);</span>
-<span class="nc" id="L38">    }</span>
+<span class="nc" id="L33">    }</span>
 
     /**
      * Constructor allows specifying the output file.
      * 
      * @param outputFile The output file where the report will be written.
      */
-<span class="fc" id="L45">    public JSONReportWriter(File outputFile) {</span>
-<span class="fc" id="L46">        this.outputFile = outputFile;</span>
-<span class="fc" id="L47">    }</span>
+<span class="fc" id="L40">    public JSONReportWriter(File outputFile) {</span>
+<span class="fc" id="L41">        this.outputFile = outputFile;</span>
+<span class="fc" id="L42">    }</span>
 
 
     /**
@@ -53,78 +48,56 @@ public class JSONReportWriter extends ReportWriter {
      * @return File The output file object where the report will be written.
      */
     public File getOutputFile() {
-<span class="fc" id="L56">        return outputFile;</span>
+<span class="fc" id="L51">        return outputFile;</span>
     }
-
-       /**
-     * Overrides the writeReport (not yet written) method from the ReportWriter class.
-     * This method receives a Map containing the report data, converts it to a JSON string 
-     * and writes it to the output file.
-     *
-     * @param reportData A map of report data to be written into the file.
-     */
-
-    /**
-     * Getter method for the source data.
-     *
-     * @return Map The source data of the report.
-     */
-    public Map&lt;String, Object&gt; getSourceData() {
-<span class="fc" id="L73">        return sourceData;</span>
-    }
-
-    /**
-     * Writes a string to a file using a FileWriter.
-     *
-     * @param fileWriter The FileWriter to be used for writing the string.
-     * @param jsonString The string to be written to the file.
-     * @throws IOException If an I/O error occurs.
-     */
-     private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
-<span class="fc" id="L84">        writer.write(jsonString);</span>
-<span class="fc" id="L85">     }</span>
 
     /**
      * Overrides the writeReport method from the ReportWriter class.
-     * This method receives a map containing the report data, converts it to a JSON string,
+     * This method receives a Website object, converts it to a JSON string,
      * and writes it to the output file.
      *
-     * @param reportData A map of report data to be written into the file.
+     * @param website A Website object to be written into the file.
      * @throws IOException If an I/O error occurs.
      */
-     @Override
-     public void writeReport(Map&lt;String, Object&gt; reportData) throws IOException {
-        // Check if file exists, and if not, create it
-<span class="pc bpc" id="L98" title="1 of 2 branches missed.">        if (!outputFile.exists()) {</span>
-<span class="nc" id="L99">            outputFile.getParentFile().mkdirs(); // Create parent directories if not exist</span>
-<span class="nc" id="L100">            outputFile.createNewFile(); // Create the file itself</span>
-        }
     
-<span class="fc" id="L103">        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {</span>
-<span class="fc" id="L104">            String jsonString = convertToJson(reportData);</span>
-<span class="fc" id="L105">            writeToFile(bufferedWriter, jsonString);</span>
-<span class="fc" id="L106">            this.sourceData = reportData;</span>
-        }
-<span class="fc" id="L108">    }</span>
 
-    /**
-     * Converts the report data into a JSON string.
+        /**
+     * Converts the Website data into a JSON string.
      *
-     * @param reportData A map of report data to be converted into a JSON string.
-     * @return  The JSON string representation of the report data.
+     * @param website A Website object to be converted into a JSON string.
+     * @return  The JSON string representation of the Website data.
      */
-    private String convertToJson(Map&lt;String, Object&gt; reportData) {
-<span class="fc" id="L117">        Map&lt;String, Object&gt; args = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L118">        args.put(JsonWriter.TYPE, false);</span>
-<span class="fc" id="L119">        args.put(JsonWriter.PRETTY_PRINT, true); // Enable pretty print for readable JSON output</span>
-<span class="fc" id="L120">        return JsonWriter.objectToJson(reportData, args);</span>
+    private String convertToJson(Website website) {
+<span class="fc" id="L71">        Map&lt;String, Object&gt; args = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L72">        args.put(JsonWriter.TYPE, false);</span>
+<span class="fc" id="L73">        args.put(JsonWriter.PRETTY_PRINT, true); // Enable pretty print for readable JSON output</span>
+<span class="fc" id="L74">        return JsonWriter.objectToJson(website, args);</span>
     }
 
-  
-     
+
+     @Override
+     public void writeReport(Website website) throws IOException {
+         // Check if file exists, and if not, create it
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">         if (!outputFile.exists()) {</span>
+<span class="nc" id="L82">             outputFile.getParentFile().mkdirs(); // Create parent directories if not exist</span>
+<span class="nc" id="L83">             outputFile.createNewFile(); // Create the file itself</span>
+         }
+ 
+<span class="fc" id="L86">         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFile))) {</span>
+<span class="fc" id="L87">             String jsonString = convertToJson(website);</span>
+<span class="fc" id="L88">             writeToFile(bufferedWriter, jsonString);</span>
+         }
+<span class="fc" id="L90">     }</span>
+    /**
+     * Writes a string to a file using a BufferedWriter.
+     *
+     * @param writer The BufferedWriter to be used for writing the string.
+     * @param jsonString The string to be written to the file.
+     * @throws IOException If an I/O error occurs.
+     */
+    private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
+<span class="fc" id="L99">        writer.write(jsonString);</span>
+<span class="fc" id="L100">        writer.write(&quot;\n&quot;);  </span>
+<span class="fc" id="L101">    }</span>
 }
-
-
-
-
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

@@ -27,7 +27,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10};
+var data = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -141,10 +141,7 @@ extends <a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWrit
  overrides its method to write reports in JSON format.
  
  It uses the JsonWriter library to convert data into a JSON string
- and writes it to a file.
- 
- Currently this class takes a Map containing test report data,
- After further development, this method will take a Website object as a parameter.</div>
+ and writes it to a file.</div>
 </li>
 </ul>
 </div>
@@ -220,17 +217,10 @@ extends <a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWrit
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>java.util.Map&lt;java.lang.String,&#8203;java.lang.Object&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSourceData()">getSourceData</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Getter method for the source data.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeReport(java.util.Map)">writeReport</a></span>&#8203;(java.util.Map&lt;java.lang.String,&#8203;java.lang.Object&gt;&nbsp;reportData)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeReport(edu.odu.cs.cs350.Website)">writeReport</a></span>&#8203;(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)</code></th>
 <td class="colLast">
-<div class="block">Overrides the writeReport method from the ReportWriter class.</div>
+<div class="block">Abstract method to write a report to various format depending on the subclass.</div>
 </td>
 </tr>
 </table>
@@ -313,36 +303,20 @@ extends <a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWrit
 </dl>
 </li>
 </ul>
-<a id="getSourceData()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSourceData</h4>
-<pre class="methodSignature">public&nbsp;java.util.Map&lt;java.lang.String,&#8203;java.lang.Object&gt;&nbsp;getSourceData()</pre>
-<div class="block">Getter method for the source data.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Map The source data of the report.</dd>
-</dl>
-</li>
-</ul>
-<a id="writeReport(java.util.Map)">
+<a id="writeReport(edu.odu.cs.cs350.Website)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>writeReport</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;writeReport&#8203;(java.util.Map&lt;java.lang.String,&#8203;java.lang.Object&gt;&nbsp;reportData)
+<pre class="methodSignature">public&nbsp;void&nbsp;writeReport&#8203;(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)
                  throws java.io.IOException</pre>
-<div class="block">Overrides the writeReport method from the ReportWriter class.
- This method receives a map containing the report data, converts it to a JSON string,
- and writes it to the output file.</div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="ReportWriter.html#writeReport(edu.odu.cs.cs350.Website)">ReportWriter</a></code></span></div>
+<div class="block">Abstract method to write a report to various format depending on the subclass. 
+ JSON,  XML, and text.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="ReportWriter.html#writeReport(java.util.Map)">writeReport</a></code>&nbsp;in class&nbsp;<code><a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWriter</a></code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>reportData</code> - A map of report data to be written into the file.</dd>
+<dd><code><a href="ReportWriter.html#writeReport(edu.odu.cs.cs350.Website)">writeReport</a></code>&nbsp;in class&nbsp;<code><a href="ReportWriter.html" title="class in edu.odu.cs.cs350">ReportWriter</a></code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - If an I/O error occurs.</dd>
 </dl>
