@@ -1,125 +1,81 @@
 {
-  "basePath":{
-    "fs":{
-      "@id":1,
-      "provider":{
-        "theFileSystem":{"@ref":1}
-      },
-      "defaultDirectory":[
-        47,85,115,101,114,115,47,105,103,97,114,114,101,110,116,111,110,47,68,111,99,117,109,101,110,116,115,47,99,115,47,51,53,48,47,112,114,111,106,101,99,116,47,115,101,109,101,115,116,101,114,45,112,114,111,106,101,99,116,45,119,101,98,115,105,116,101,45,97,110,97,108,121,115,105,115,45,116,104,117,114,115,100,97,121,45,52
-      ],
-      "needToResolveAgainstDefaultDirectory":false,
-      "rootDirectory":{
-        "fs":{"@ref":1},
-        "path":[
-          47
-        ],
-        "stringValue":null,
-        "hash":0,
-        "offsets":null
-      }
-    },
-    "path":[
-      115,114,99,47,116,101,115,116,47,114,101,115,111,117,114,99,101,115
-    ],
-    "stringValue":null,
-    "hash":0,
-    "offsets":null
-  },
   "urls":[
-    {
-      "protocol":"http",
-      "host":"example1.com",
-      "port":-1,
-      "file":"",
-      "authority":"example1.com",
-      "ref":null,
-      "hashCode":-1
-    },
-    {
-      "protocol":"http",
-      "host":"example2.com",
-      "port":-1,
-      "file":"",
-      "authority":"example2.com",
-      "ref":null,
-      "hashCode":-1
-    }
+    "http://example1.com",
+    "http://example2.com"
   ],
+  "basePath":"src/test/resources",
   "documents":[
     {
-      "scripts":[
-        {
-          "@id":3,
-          "typeOfResource":{
-            "name":"SCRIPT"
-          },
-          "location":{
-            "name":"INTERNAL"
-          },
-          "sizeOfFile":500,
-          "path":{
-            "fs":{"@ref":1},
-            "path":[
-              115,114,99,47,116,101,115,116,47,114,101,115,111,117,114,99,101,115,47,114,101,115,111,117,114,99,101,49,46,106,115
-            ],
-            "stringValue":null,
-            "hash":0,
-            "offsets":null
-          },
-          "url":{
-            "protocol":"http",
-            "host":"example1.com",
-            "port":-1,
-            "file":"/resource1.js",
-            "authority":"example1.com",
-            "ref":null,
-            "hashCode":-1
-          }
-        }
-      ],
-      "stylesheets":[],
       "images":[
         {
-          "@id":2,
-          "typeOfResource":{
-            "name":"IMAGE"
-          },
+          "path":"src/test/resources/resource2.jpg",
+          "size":"1000",
+          "sizeOfFile":1000,
           "location":{
             "name":"EXTERNAL"
           },
-          "sizeOfFile":1000,
-          "path":{
-            "fs":{"@ref":1},
-            "path":[
-              115,114,99,47,116,101,115,116,47,114,101,115,111,117,114,99,101,115,47,114,101,115,111,117,114,99,101,50,46,106,112,103
-            ],
-            "stringValue":null,
-            "hash":0,
-            "offsets":null
+          "typeOfResource":{
+            "name":"IMAGE"
           },
-          "url":{
-            "protocol":"http",
-            "host":"example2.com",
-            "port":-1,
-            "file":"/resource2.jpg",
-            "authority":"example2.com",
-            "ref":null,
-            "hashCode":-1
-          }
+          "type":"IMAGE",
+          "classification":"class edu.odu.cs.cs350.Resource",
+          "url":"http://example2.com/resource2.jpg"
         }
       ],
-      "anchors":[]
+      "stylesheets":[],
+      "anchors":[],
+      "scripts":[
+        {
+          "path":"src/test/resources/resource1.js",
+          "size":"500",
+          "sizeOfFile":500,
+          "location":{
+            "name":"INTERNAL"
+          },
+          "typeOfResource":{
+            "name":"SCRIPT"
+          },
+          "type":"SCRIPT",
+          "classification":"class edu.odu.cs.cs350.Resource",
+          "url":"http://example1.com/resource1.js"
+        }
+      ]
     },
     {
-      "scripts":[],
-      "stylesheets":[
-        {"@ref":3}
-      ],
       "images":[],
+      "stylesheets":[
+        {
+          "path":"src/test/resources/resource1.js",
+          "size":"500",
+          "sizeOfFile":500,
+          "location":{
+            "name":"INTERNAL"
+          },
+          "typeOfResource":{
+            "name":"SCRIPT"
+          },
+          "type":"SCRIPT",
+          "classification":"class edu.odu.cs.cs350.Resource",
+          "url":"http://example1.com/resource1.js"
+        }
+      ],
       "anchors":[
-        {"@ref":2}
-      ]
+        {
+          "path":"src/test/resources/resource2.jpg",
+          "size":"1000",
+          "sizeOfFile":1000,
+          "location":{
+            "name":"EXTERNAL"
+          },
+          "typeOfResource":{
+            "name":"IMAGE"
+          },
+          "type":"IMAGE",
+          "classification":"class edu.odu.cs.cs350.Resource",
+          "url":"http://example2.com/resource2.jpg"
+        }
+      ],
+      "scripts":[]
     }
   ]
 }
