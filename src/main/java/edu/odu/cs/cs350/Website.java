@@ -1,17 +1,19 @@
-/**
- * This class represents a Website.  It contains  a base path, a collection of URLs, and a collection of HTML document objects.
- */
+
 package edu.odu.cs.cs350;
 
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
-/**
- * @author bonham36
- *
- */
 
+/**
+ * Website represents a model of a website to be parsed or analyzed.
+ * It contains a local directory path that serves as the base path for the website,
+ * a collection of URLs, and a collection of parsed HTML documents.
+ * 
+ * A Website object is built from a local directory, and URLs are 
+ * mapped to local files within that directory.
+ */
 
 public class Website {
     
