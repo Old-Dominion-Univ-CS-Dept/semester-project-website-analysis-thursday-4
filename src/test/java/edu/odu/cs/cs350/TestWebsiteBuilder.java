@@ -246,6 +246,55 @@ public void testWithPath() {
             assertThat(actualDocuments, is(notNullValue())); 
             assertThat(actualDocuments.size(), is(0)); 
         }
+
+        @Test
+        public void testBuildWithEmptyDirectory() throws IOException {
+            
+            Path emptyDir = Files.createTempDirectory("emptyDir");
+            builder.withPath(emptyDir);  
+            Website website = builder.build();
+    
+            assertThat(website.getHtmlDocuments(), is(empty()));
+        }
+
+        @Test
+        public void testBuildWithNonHtmlFiles() throws IOException {
+    
+            Path dir = Files.createTempDirectory("dir");
+            Files.createFile(dir.resolve("file1.txt"));
+            Files.createFile(dir.resolve("file2.jpg"));
+            builder.withPath(dir);
+
+            Website website = builder.build();
+            assertThat(website.getHtmlDocuments(), is(empty()));
+        }
+
+
+        @Test
+        public void testBuildWithHtmlFiles() throws IOException {
+        
+            Path dir = Files.createTempDirectory("dir");
+            Files.createFile(dir.resolve("file1.html"));
+            Files.createFile(dir.resolve("file2.htm"));
+            builder.withPath(dir);
+
+            Website website = builder.build();
+            assertThat(website.getHtmlDocuments().size(), is(2));
+        }
+
+        @Test
+        public void testBuildWithSubdirectories() throws IOException {
+            Path dir = Files.createTempDirectory("dir");
+            Path subDir = Files.createDirectory(dir.resolve("subdir"));
+
+            Files.createFile(dir.resolve("file1.html"));
+            Files.createFile(subDir.resolve("file2.html"));
+            builder.withPath(dir);
+
+            Website website = builder.build();
+            assertThat(website.getHtmlDocuments().size(), is(2));
+        }
+
     }
 
 
