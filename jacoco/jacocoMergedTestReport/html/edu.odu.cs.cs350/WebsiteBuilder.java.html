@@ -128,8 +128,8 @@ public class WebsiteBuilder
           
 <span class="fc" id="L129">        }</span>
 
-<span class="pc bpc" id="L131" title="1 of 2 branches missed.">        if (allFiles.size()&lt;1){</span>
-<span class="nc" id="L132">            errorMessages.underSize();</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">        if (allFiles.size()&lt;1){</span>
+<span class="fc" id="L132">            errorMessages.underSize();</span>
         }
 <span class="pc bpc" id="L134" title="1 of 2 branches missed.">        if (allFiles.size()&gt;1000){</span>
 <span class="nc" id="L135">            errorMessages.overSize();</span>
@@ -291,30 +291,30 @@ public class WebsiteBuilder
     */
     public Website build() throws IOException {
         // Walk the directory and prune non-html files
-<span class="nc" id="L294">        List&lt;Path&gt; files = walkDirectory();</span>
-<span class="nc" id="L295">        List&lt;Path&gt; prunedFiles = pruneNonHTMLFiles(files);</span>
+<span class="fc" id="L294">        List&lt;Path&gt; files = walkDirectory();</span>
+<span class="fc" id="L295">        List&lt;Path&gt; prunedFiles = pruneNonHTMLFiles(files);</span>
 
-<span class="nc" id="L297">        Collection&lt;HTMLDocument&gt; parsedDocuments = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L297">        Collection&lt;HTMLDocument&gt; parsedDocuments = new ArrayList&lt;&gt;();</span>
 
-<span class="nc bnc" id="L299" title="All 2 branches missed.">        for (Path htmlFile : prunedFiles) {</span>
+<span class="fc bfc" id="L299" title="All 2 branches covered.">        for (Path htmlFile : prunedFiles) {</span>
             // Open the file for reading
-<span class="nc" id="L301">            BufferedReader buffer = Files.newBufferedReader(htmlFile);</span>
+<span class="fc" id="L301">            BufferedReader buffer = Files.newBufferedReader(htmlFile);</span>
 
             // Parse the HTML document
-<span class="nc" id="L304">            HTMLDocumentBuilder docBuilder = new HTMLDocumentBuilder();</span>
-<span class="nc" id="L305">            docBuilder.withContentFrom(buffer);</span>
-<span class="nc" id="L306">            docBuilder.withWebsiteBaseDir(this.basePath);  // needed for path normalization</span>
-<span class="nc" id="L307">            docBuilder.withBaseURLs(this.urls);  // needed for internal/external classification</span>
-<span class="nc" id="L308">            docBuilder.extractContent();  // exceptions can be thrown by this function</span>
+<span class="fc" id="L304">            HTMLDocumentBuilder docBuilder = new HTMLDocumentBuilder();</span>
+<span class="fc" id="L305">            docBuilder.withContentFrom(buffer);</span>
+<span class="fc" id="L306">            docBuilder.withWebsiteBaseDir(this.basePath);  // needed for path normalization</span>
+<span class="fc" id="L307">            docBuilder.withBaseURLs(this.urls);  // needed for internal/external classification</span>
+<span class="fc" id="L308">            docBuilder.extractContent();  // exceptions can be thrown by this function</span>
 
-<span class="nc" id="L310">            HTMLDocument doc = docBuilder.build();</span>
-<span class="nc" id="L311">            parsedDocuments.add(doc);</span>
-<span class="nc" id="L312">        }</span>
+<span class="fc" id="L310">            HTMLDocument doc = docBuilder.build();</span>
+<span class="fc" id="L311">            parsedDocuments.add(doc);</span>
+<span class="fc" id="L312">        }</span>
 
    
-<span class="nc" id="L315">        Website site = new Website(this.basePath, this.urls, parsedDocuments);</span>
+<span class="fc" id="L315">        Website site = new Website(this.basePath, this.urls, parsedDocuments);</span>
 
-<span class="nc" id="L317">        return site;</span>
+<span class="fc" id="L317">        return site;</span>
     }
 
 }

@@ -121,7 +121,7 @@ public class HTMLDocumentBuilder
 <span class="fc" id="L121">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;a&quot;, &quot;href&quot;); </span>
 <span class="fc" id="L122">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="pc bpc" id="L124" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">        for (String uriAsString : extractedStrings)</span>
         {
 <span class="fc" id="L126">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
 <span class="fc" id="L127">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
@@ -150,7 +150,7 @@ public class HTMLDocumentBuilder
 <span class="nc" id="L150">            this.anchors.add(anchor); </span>
 <span class="nc" id="L151">        }</span>
 
-<span class="nc" id="L153">        return this.anchors; </span>
+<span class="fc" id="L153">        return this.anchors; </span>
     }
     
     /**
@@ -165,7 +165,7 @@ public class HTMLDocumentBuilder
 <span class="fc" id="L165">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;img&quot;, &quot;src&quot;); </span>
 <span class="fc" id="L166">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
 
-<span class="pc bpc" id="L168" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">        for (String uriAsString : extractedStrings)</span>
         {
 <span class="fc" id="L170">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
 <span class="fc" id="L171">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
@@ -194,7 +194,7 @@ public class HTMLDocumentBuilder
 <span class="nc" id="L194">            this.images.add(image); </span>
 <span class="nc" id="L195">        }</span>
 
-<span class="nc" id="L197">        return this.images; </span>
+<span class="fc" id="L197">        return this.images; </span>
     }
     
     /**
@@ -209,7 +209,7 @@ public class HTMLDocumentBuilder
 <span class="fc" id="L209">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;script&quot;, &quot;src&quot;); </span>
 <span class="fc" id="L210">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="pc bpc" id="L212" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="fc bfc" id="L212" title="All 2 branches covered.">        for (String uriAsString : extractedStrings)</span>
         {
 <span class="fc" id="L214">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
 <span class="fc" id="L215">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
@@ -238,7 +238,7 @@ public class HTMLDocumentBuilder
 <span class="nc" id="L238">            this.scripts.add(script); </span>
 <span class="nc" id="L239">        }</span>
 
-<span class="nc" id="L241">        return this.scripts; </span>
+<span class="fc" id="L241">        return this.scripts; </span>
     }
     
     /**
@@ -253,7 +253,7 @@ public class HTMLDocumentBuilder
 <span class="fc" id="L253">        SimpleHTMLParser parser = new SimpleHTMLParser(&quot;link&quot;, &quot;href&quot;); </span>
 <span class="fc" id="L254">        List&lt;String&gt; extractedStrings = parser.extractAllURIs(this.readBuffer); </span>
         
-<span class="pc bpc" id="L256" title="1 of 2 branches missed.">        for (String uriAsString : extractedStrings)</span>
+<span class="fc bfc" id="L256" title="All 2 branches covered.">        for (String uriAsString : extractedStrings)</span>
         {
 <span class="fc" id="L258">            String baseSiteDirectory = this.baseDirectory.toString(); </span>
 <span class="fc" id="L259">            Locality location = this.determineLocality(uriAsString, baseSiteDirectory, extractedStrings,</span>
@@ -282,7 +282,7 @@ public class HTMLDocumentBuilder
 <span class="nc" id="L282">            this.stylesheets.add(stylesheet); </span>
 <span class="nc" id="L283">        }</span>
 
-<span class="nc" id="L285">        return this.stylesheets; </span>
+<span class="fc" id="L285">        return this.stylesheets; </span>
     }
 
     /**
@@ -291,11 +291,11 @@ public class HTMLDocumentBuilder
     public void extractContent() 
         throws IOException, FileNotFoundException
     {
-<span class="nc" id="L294">        this.extractAnchors(); </span>
-<span class="nc" id="L295">        this.extractImages(); </span>
-<span class="nc" id="L296">        this.extractScripts(); </span>
-<span class="nc" id="L297">        this.extractStylesheets(); </span>
-<span class="nc" id="L298">    }</span>
+<span class="fc" id="L294">        this.extractAnchors(); </span>
+<span class="fc" id="L295">        this.extractImages(); </span>
+<span class="fc" id="L296">        this.extractScripts(); </span>
+<span class="fc" id="L297">        this.extractStylesheets(); </span>
+<span class="fc" id="L298">    }</span>
     
     /**
      * Builds an HTMLDocument object that contains the scripts, stylesheets, 

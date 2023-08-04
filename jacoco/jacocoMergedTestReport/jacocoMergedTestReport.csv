@@ -1,6 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,Website,6,27,0,0,2,8,1,4,1,4
-semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,HTMLDocumentBuilder,170,360,8,26,47,80,11,24,3,15
+semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,HTMLDocumentBuilder,145,385,4,30,38,89,6,29,2,16
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,Anchor.LinkType,34,0,0,0,4,0,1,0,1,0
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,Locality,0,34,0,0,0,4,0,1,0,1
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,Image,0,6,0,0,0,3,0,1,0,1
@@ -16,8 +16,8 @@ semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,Resource,0,53,0,0,
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,Stylesheet,0,6,0,0,0,3,0,1,0,1
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,SimpleHTMLParser,0,107,0,4,0,25,0,8,0,6
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,Anchor,6,54,2,2,2,18,4,5,2,5
-semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,WebsiteBuilder,77,256,7,27,21,69,8,28,2,17
-semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,errorMessages,19,0,0,0,9,0,5,0,5,0
+semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,WebsiteBuilder,15,318,4,30,5,85,5,31,1,18
+semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,errorMessages,15,4,0,0,7,2,4,1,4,1
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,AudioAnalysis.AudioInfo,51,0,0,0,13,0,5,0,5,0
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,ResourceBuilder,0,15,0,0,0,5,0,2,0,2
 semester-project-website-analysis-thursday-4,edu.odu.cs.cs350,CLIOutput.new FilenameFilter() {...},7,0,0,0,2,0,2,0,2,0
