@@ -167,20 +167,7 @@ public class JSONReportWriter extends ReportWriter {
     
 
     
-        /**
-         * Converts an array of ASCII values into a string.
-         *
-         * @param asciiValues The array of ASCII values to be converted.
-         * @return The resulting string after conversion.
-         */
-
-        private String asciiToString(Object[] asciiValues) {
-            StringBuilder sb = new StringBuilder();
-            for (Object value : asciiValues) {
-                sb.append((char)((int)value));
-            }
-            return sb.toString();
-        }
+      
         /**
          * Writes a string to a file using a BufferedWriter.
          *
