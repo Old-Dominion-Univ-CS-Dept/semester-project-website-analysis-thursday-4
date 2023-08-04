@@ -167,20 +167,7 @@ public class JSONReportWriter extends ReportWriter {
     
 
     
-        /**
-         * Converts an array of ASCII values into a string.
-         *
-         * @param asciiValues The array of ASCII values to be converted.
-         * @return The resulting string after conversion.
-         */
-
-        private String asciiToString(Object[] asciiValues) {
-<span class="nc" id="L178">            StringBuilder sb = new StringBuilder();</span>
-<span class="nc bnc" id="L179" title="All 2 branches missed.">            for (Object value : asciiValues) {</span>
-<span class="nc" id="L180">                sb.append((char)((int)value));</span>
-            }
-<span class="nc" id="L182">            return sb.toString();</span>
-        }
+      
         /**
          * Writes a string to a file using a BufferedWriter.
          *
@@ -189,8 +176,8 @@ public class JSONReportWriter extends ReportWriter {
          * @throws IOException If an I/O error occurs.
          */
         private void writeToFile(BufferedWriter writer, String jsonString) throws IOException {
-<span class="fc" id="L192">            writer.write(jsonString);</span>
-<span class="fc" id="L193">            writer.write(&quot;\n&quot;);  </span>
-<span class="fc" id="L194">        }</span>
+<span class="fc" id="L179">            writer.write(jsonString);</span>
+<span class="fc" id="L180">            writer.write(&quot;\n&quot;);  </span>
+<span class="fc" id="L181">        }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

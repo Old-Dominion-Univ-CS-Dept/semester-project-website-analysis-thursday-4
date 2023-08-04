@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.21.0" timestamp="2023-08-04T00:36:20.639">
+    version="6.21.0" timestamp="2023-08-04T00:56:26.498">
 <file name="/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/src/main/java/edu/odu/cs/cs350/Anchor.java">
 <violation beginline="12" endline="107" begincolumn="9" endcolumn="1" rule="DataClass" ruleset="Design" package="edu.odu.cs.cs350" class="Anchor" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#dataclass" priority="3">
 The class 'Anchor' is suspected to be a Data Class (WOC=14.286%, NOPA=0, NOAM=4, WMC=8)
@@ -914,28 +914,10 @@ Avoid instantiating FileInputStream, FileOutputStream, FileReader, or FileWriter
 <violation beginline="162" endline="162" begincolumn="14" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="writeReport" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
 Local variable 'jsonString' could be declared final
 </violation>
-<violation beginline="177" endline="177" begincolumn="24" endcolumn="58" rule="UnusedPrivateMethod" ruleset="Best Practices" package="edu.odu.cs.cs350" class="JSONReportWriter" method="asciiToString" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedprivatemethod" priority="3">
-Avoid unused private methods such as 'asciiToString(Object)'.
-</violation>
-<violation beginline="177" endline="177" begincolumn="38" endcolumn="57" rule="UseVarargs" ruleset="Best Practices" package="edu.odu.cs.cs350" class="JSONReportWriter" method="asciiToString" variable="asciiValues" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#usevarargs" priority="4">
-Consider using varargs for methods or constructors which take an array the last parameter.
-</violation>
-<violation beginline="177" endline="177" begincolumn="38" endcolumn="57" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="asciiToString" variable="asciiValues" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
-Parameter 'asciiValues' is not assigned and could be declared final
-</violation>
-<violation beginline="178" endline="178" begincolumn="27" endcolumn="28" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="asciiToString" variable="sb" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
-Avoid variables with short names like sb
-</violation>
-<violation beginline="178" endline="178" begincolumn="13" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="asciiToString" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'sb' could be declared final
-</violation>
-<violation beginline="179" endline="179" begincolumn="18" endcolumn="29" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="asciiToString" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
-Local variable 'value' could be declared final
-</violation>
-<violation beginline="191" endline="191" begincolumn="57" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="writeToFile" variable="jsonString" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="178" endline="178" begincolumn="57" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="writeToFile" variable="jsonString" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'jsonString' is not assigned and could be declared final
 </violation>
-<violation beginline="191" endline="191" begincolumn="34" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="writeToFile" variable="writer" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+<violation beginline="178" endline="178" begincolumn="34" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs.cs350" class="JSONReportWriter" method="writeToFile" variable="writer" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
 Parameter 'writer' is not assigned and could be declared final
 </violation>
 </file>

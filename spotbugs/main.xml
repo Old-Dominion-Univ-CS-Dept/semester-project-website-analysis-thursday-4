@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="4.7.3" sequence="0" timestamp="1691109389515" analysisTimestamp="1691109389515" release="">
+<BugCollection version="4.7.3" sequence="0" timestamp="1691110593217" analysisTimestamp="1691110593217" release="">
   <Project projectName="semester-project-website-analysis-thursday-4 (spotbugsMain)">
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Script.class</Jar>
     <Jar>/home/runner/work/semester-project-website-analysis-thursday-4/semester-project-website-analysis-thursday-4/build/classes/java/main/edu/odu/cs/cs350/Website.class</Jar>
@@ -682,8 +682,8 @@
     <ShortMessage>Reliance on default encoding</ShortMessage>
     <LongMessage>Found reliance on default encoding in edu.odu.cs.cs350.JSONReportWriter.writeReport(Website): new java.io.FileWriter(File)</LongMessage>
     <Class classname="edu.odu.cs.cs350.JSONReportWriter" primary="true">
-      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="32" end="194" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
-        <Message>At JSONReportWriter.java:[lines 32-194]</Message>
+      <SourceLine classname="edu.odu.cs.cs350.JSONReportWriter" start="32" end="181" sourcefile="JSONReportWriter.java" sourcepath="edu/odu/cs/cs350/JSONReportWriter.java" relSourcepath="java/edu/odu/cs/cs350/JSONReportWriter.java">
+        <Message>At JSONReportWriter.java:[lines 32-181]</Message>
       </SourceLine>
       <Message>In class edu.odu.cs.cs350.JSONReportWriter</Message>
     </Class>
@@ -1188,7 +1188,7 @@ object explicitly.</p>
     <Description>Confusing method name</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Fri, 4 Aug 2023 00:36:29 +0000" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="12.19" clock_seconds="9.25" peak_mbytes="202.86" alloc_mbytes="1734.00" gc_seconds="0.21" priority_2="33" priority_1="3">
+  <FindBugsSummary timestamp="Fri, 4 Aug 2023 00:56:33 +0000" total_classes="0" referenced_classes="0" total_bugs="36" total_size="0" num_packages="1" java_version="11.0.20" vm_version="11.0.20+8" cpu_seconds="8.71" clock_seconds="6.53" peak_mbytes="209.20" alloc_mbytes="1734.00" gc_seconds="0.23" priority_2="33" priority_1="3">
     <FileStats path="edu/odu/cs/cs350/Anchor.java" bugCount="1" size="0" bugHash="96cdc67bb690db4cc3dd7b80afbe276f"/>
     <FileStats path="edu/odu/cs/cs350/CreateTextFile.java" bugCount="1" size="0" bugHash="e99242b9915fa85df09c40646c1ffa24"/>
     <FileStats path="edu/odu/cs/cs350/HTMLDocument.java" bugCount="12" size="0" bugHash="617a622636b596266333c69be67101ae"/>
