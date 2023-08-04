@@ -230,6 +230,7 @@ public void testWithPath() {
          * @throws MalformedURLException
          */
         public void testBuild() {
+            System.out.println("testBuild started.");
             Collection<HTMLDocument> documents = new ArrayList<>();
             Website website = new Website(basePath, urls, documents);
         
@@ -245,6 +246,7 @@ public void testWithPath() {
             assertThat(website.getUrls(), containsInAnyOrder(urls.toArray(new URL[0])));
             assertThat(actualDocuments, is(notNullValue())); 
             assertThat(actualDocuments.size(), is(0)); 
+            System.out.println("testBuild ended.");
         }
 
         @Test
@@ -294,6 +296,22 @@ public void testWithPath() {
             Website website = builder.build();
             assertThat(website.getHtmlDocuments().size(), is(2));
         }
+
+
+        @Test
+        public void testSetUrls() throws Exception {
+            Collection<URL> testUrls = new ArrayList<>(
+                    Arrays.asList(
+                            new URL("http://example1.com"),
+                            new URL("http://example2.com"),
+                            new URL("http://example3.com")
+                    )
+            );
+            builder.setUrls(testUrls);
+            assertThat(builder.getUrls(), containsInAnyOrder(testUrls.toArray()));
+    }
+
+        
 
     }
 
